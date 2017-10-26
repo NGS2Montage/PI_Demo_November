@@ -4,7 +4,13 @@ from urlparse import urlparse
 import requests
 
 
-constants.csx_paper_url
+cwd = None
+
+def get_url(doi):
+    url = constants.csx_paper_url
+    url = url.replace ('__DOI__', doi)
+    return url
+
 
 def get_doi_from_url(url):
     res = None
@@ -21,7 +27,22 @@ def get_doi_from_url(url):
         print('Malformed URL or No doi query parameter!')
     return None
 
-def _validate_doi(doi):
+
+def nav_to_data_dir():
+    global cwd
+    cwd = os.getcwd()
+    os.chdir (constants.data_dir_location)
+    os.chdir (constants.data_dir)
+    return
+
+
+def nav_to_src():
+    global cwd
+    os.chdir (cwd)
+    return
+
+
+def validate_doi(doi):
     url = constants.csx_paper_url
     url = url.replace ('__DOI__', doi)
     r = requests.get (url)
