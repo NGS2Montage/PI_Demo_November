@@ -96,7 +96,4 @@ class mongoDBI:
 
         # ----------------------------------------------------------------#
 
-# mdb.insert_obj( "rh" , '_id', "2012-10-12", 'data' , np.random.rand(5,2));
-# mdb.insert_obj( "rh" , '_id', "2013-10-12", 'data' , np.random.rand(5,6));
-# r = mdb.find( "rel_hum", 'id' ,'def','data');
-# mdb.find_last()
+
