@@ -1,0 +1,4 @@
+*.xml
+*.tar.gz.*
+./original_data/*
+
