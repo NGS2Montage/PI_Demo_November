@@ -20,12 +20,22 @@ class mongoDBI:
         self.db_name = db_name
         self.conn = MongoClient ()
 
+    ##################################
+    # Performs Upsert [ Update/Insert ]
+    # Removes Duplicates
+    ##################################
     def insert_obj(self, table, key_label, key_contents, value_label, value_contents):
         var_obj = ".".join ([ "self.conn", self.db_name, table ])
         collection = eval (var_obj)
-        dict = self.get_insert_dict (key_label, key_contents, value_label, value_contents)
+        dict_el = self.get_insert_dict (key_label, key_contents, value_label, value_contents)
+        
         try:
-            collection.insert (dict);
+            collection.remove ({constants.id_key : dict_el[ constants.id_key ]})
+	except:
+            pass
+	
+	try:
+            collection.insert (dict_el);
         except:
             'Error in inserting to db. Table ' + table
         return;
@@ -42,7 +52,7 @@ class mongoDBI:
         result = cPickle.loads (k[ value_label ])
         return result;
 
-
+    #---------------------------------------------#
     # Return a dict such that it can be used in insert or insert_many
     # _id makes the record unique
     # _id overwrite is not used!!
@@ -57,14 +67,7 @@ class mongoDBI:
         return dict
 
 
-    def find_last(self, table):
-        var_obj = ".".join ([ "self.conn", self.db_name, table ])
-        collection = eval (var_obj)
-        for p in collection.find ().sort ("id", pymongo.ASCENDING):
-            print p
-        return;
-
-    # ----------------------------------------------------------------#
+    # -----------------------------------------------#
     # IMPLEMENTS UPDATE
     # Input dict { 'table' : list of data_dict, ... }
     # Each data_dict is obtained by calling get_insert_dict
@@ -94,6 +97,10 @@ class mongoDBI:
 
 
 
-        # ----------------------------------------------------------------#
+ # ----------------------------------------------------------------#
+
+
+
+
 
 
