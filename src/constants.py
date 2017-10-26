@@ -7,3 +7,4 @@ graph_file ="citegraph.txt"
  
 csx_paper_url="http://citeseerx.ist.psu.edu/viewdoc/similar?doi=__DOI__&type=sc"
 
+id_key = 'id'
