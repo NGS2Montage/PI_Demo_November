@@ -28,18 +28,17 @@ class mongoDBI:
         var_obj = ".".join ([ "self.conn", self.db_name, table ])
         collection = eval (var_obj)
         dict_el = self.get_insert_dict (key_label, key_contents, value_label, value_contents)
-        
+
         try:
-            collection.remove ({constants.id_key : dict_el[ constants.id_key ]})
-	except:
+            collection.remove ({constants.id_key: dict_el[ constants.id_key ]})
+        except:
             pass
-	
-	try:
+
+        try:
             collection.insert (dict_el);
         except:
             'Error in inserting to db. Table ' + table
         return;
-
 
     def find(self, table, key_label, key_contents, value_label):
         var_obj = ".".join ([ "self.conn", self.db_name, table ])
@@ -52,12 +51,12 @@ class mongoDBI:
         result = cPickle.loads (k[ value_label ])
         return result;
 
-    #---------------------------------------------#
+    # ---------------------------------------------#
     # Return a dict such that it can be used in insert or insert_many
     # _id makes the record unique
     # _id overwrite is not used!!
     # check constants.id_key
-  
+
     @staticmethod
     def get_insert_dict(key_label, key_contents, value_label, value_contents):
         p_value = Binary (cPickle.dumps (value_contents))
@@ -66,7 +65,6 @@ class mongoDBI:
                 value_label: p_value}
         return dict
 
-
     # -----------------------------------------------#
     # IMPLEMENTS UPDATE
     # Input dict { 'table' : list of data_dict, ... }
@@ -74,7 +72,7 @@ class mongoDBI:
     #
     def insert_bulk(self, map_table_data):
 
-        for  table,list_dict in map_table_data.iteritems ():
+        for table, list_dict in map_table_data.iteritems ():
 
             if len (list_dict) == 0:
                 continue;
@@ -97,10 +95,4 @@ class mongoDBI:
 
 
 
- # ----------------------------------------------------------------#
-
-
-
-
-
-
+        # ----------------------------------------------------------------#
