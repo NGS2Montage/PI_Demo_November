@@ -20,7 +20,7 @@ def download_files():
     op2 = "CSXCitegraph.tar.gz"
     dir = "CSXClusters"
     os.system ("wget " + file1_url + " -O " + op2)
-    os.system ("tar xvf " + op2)
+    os.system ("tar xvf " + op2 + " -C " + dir)
     os.system (" cp -r " + dir + "/" + constants.graph_file + " ../.")
 
 
@@ -28,7 +28,7 @@ def download_files():
     op1 = "papers_data.tar.gz"
     dir = "papers_data"
     os.system ("wget " + file1_url + " -O " + op1)
-    os.system ("tar xvf " + op1)
+    os.system ("tar xvf " + op1 + " -C " + dir)
     os.system (" cp -r "+ dir + "/"+ constants.paper_dir + " ../.")
 
 
@@ -36,7 +36,7 @@ def download_files():
     op3 = "CSXClusters.tar.gz"
     dir = "CSXClusters"
     os.system ("wget " + file1_url + " -O " + op3)
-    os.system ("tar xvf " + op3)
+    os.system ("tar xvf " + op3 + " -C " + dir)
     os.system (" cp -r " + dir + "/" + constants.clusters_file + " ../.")
 
     os.chdir("../.")
@@ -52,17 +52,17 @@ def init_checks():
     cwd = os.getcwd()
     file_path = constants.data_dir_location
     os.chdir (file_path)
-    cwd = "../." + cwd
+
 
     if not os.path.exists(constants.data_dir):
         os.makedirs (constants.data_dir)
 
     os.chdir(constants.data_dir)
-    cwd = "../." + cwd
 
     # files are not presen, Download them
     if not os.path.exists (constants.graph_file) or not os.path.exists (constants.clusters_file) or True:
         download_files()
+
     os.chdir(cwd)
     return
 
