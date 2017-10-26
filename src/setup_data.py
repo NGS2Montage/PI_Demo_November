@@ -28,7 +28,7 @@ def download_files():
     op1 = "papers_data.tar.gz"
     dir = "papers_data"
     os.system ("wget " + file1_url + " -O " + op1)
-    os.system ("tar xvf " + op1 + " -C " + dir)
+    os.system ("tar xvf " + op1 )
     os.system (" mv k0.7j-nsw-3g-t-citeseerx-pub/papers"  + "  ../." )
 
     file1_url = "https://www.dropbox.com/s/9w9bkpe6mu5t6of/CSXClusters-2014-01-13.tar.gz?dl=0"
