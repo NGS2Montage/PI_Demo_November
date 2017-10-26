@@ -154,7 +154,7 @@ def search_citations(map):
 
 
 parser = argparse.ArgumentParser ()
-parser.add_argument ("--doi", help="Comma separated value of doi s for papers [Without SPACE] ")
+parser.add_argument ("--doi", help="Comma separated values of doi s for papers [Without SPACE] ")
 args = parser.parse_args ()
 doi = args.doi
 doi_list = doi.split (",")
