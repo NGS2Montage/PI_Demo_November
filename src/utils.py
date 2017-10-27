@@ -35,6 +35,13 @@ def nav_to_data_dir():
     os.chdir (constants.data_dir)
     return
 
+def nav_to_op_dir():
+    global cwd 
+    cwd = os.getcwd()
+    os.chdir (constants.op_dir_location)
+    os.chdir (constants.op_dir)
+    return
+
 
 def nav_to_src():
     global cwd

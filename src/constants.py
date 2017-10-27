@@ -1,5 +1,7 @@
 import os
 
+op_dir = "output"
+op_dir_location = "../."
 data_dir_location = "../."
 data_dir = "data_dir"
 paper_dir = "papers"

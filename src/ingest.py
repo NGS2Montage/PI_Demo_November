@@ -92,15 +92,16 @@ def ingest_citegraph():
     table = constants.citeGraph_table
 
     data_map = {}
-    data_map[ table ] = [ ]
+    data_map[table] = [ ]
 
     for cluster_id, cluster_list in citegraph_map.iteritems ():
         key_label = 'cluster_id'
         key_contents = cluster_id
         value_label = constants.value_label
-        value_contents = cluster_list
+        value_contents = cluster_list	
         element = dbi.get_insert_dict (key_label, key_contents, value_label, value_contents)
         data_map[ table ].append (element)
+    
     dbi.insert_bulk (data_map)
     utils.nav_to_src ()
     return;
