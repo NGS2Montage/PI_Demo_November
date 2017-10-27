@@ -16,5 +16,5 @@ pip install --user sklearn
 pip install --user networkx
 pip install --user sets
 pip install --user xmltodict
-
+pip install --user spacy
 
