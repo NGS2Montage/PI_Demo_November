@@ -57,19 +57,45 @@ def search_citations(doi):
     value_label = constants.value_label
     data = dbi.find (table, key_label, key_contents, value_label)
     cluster_id = data[0]
-
-    table = constants.doi_clusterId_table
-    key_label = 'clusterId'
+	
+    table = constants.citeGraph_table
+    key_label = 'cluster_id'
     key_contents = cluster_id
     value_label = constants.value_label
     citation_list_doi = dbi.find (table, key_label, key_contents, value_label)
+    
     url_list = []
-
-    for doi in citation_list_doi:
+    doi_list = []
+    for c in citation_list_doi:
+	table = constants.clusterId_doi_table
+	key = 'cluster_id'
+	key_contents = c
+	value_label = constants.value_label	
+	doi_c = dbi.find (table, key_label, key_contents, value_label)
+	if doi_c is not None:
+	    doi_list.append( doi_c[0])
+ 
+    for doi in doi_list:
         url_list.append (utils.get_url (doi))
 
     return citation_list_doi, url_list
 
+
+
+def write_output(doi,data):
+    utils.nav_to_op_dir()
+    
+    op_file_temp = doi + '_temp.json'
+    op_file = doi + '.json'
+
+    json_data = json.dumps (data)
+    f = open (op_file_temp, 'w')
+    f.write (json_data)
+    f.close ()
+    os.system(" cat "+ op_file_temp +" | python -m json.tool > " + op_file);
+    os.system("rm "+ op_file_temp)
+    utils.nav_to_src()
+    return
 
 def fetch_data(doi):
     citation_list_doi, citation_list_url = search_citations (doi)
@@ -82,12 +108,10 @@ def fetch_data(doi):
     data['cited_paper_doi'] = citation_list_doi
     data['cited_paper_url'] = citation_list_url
     data['citation_contexts'] = citation_contexts
-
     op_file = doi + '.json'
-    json_data = json.dumps (data)
-    f = open (op_file, 'w')
-    f.write (json_data)
-    f.close ()
+    
+    # Write to file
+    write_output(doi,data)
     return
 
     # ------------------------------------------------------------------------------ #
@@ -103,6 +127,7 @@ doi = args.doi
 url = args.url
 
 doi_list = []
+
 
 if doi is not None:
     doi_list = doi.split (",")
