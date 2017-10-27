@@ -18,6 +18,8 @@ https://www.dropbox.com/s/9w9bkpe6mu5t6of/CSXClusters-2014-01-13.tar.gz?dl=0
 
 ------
 
+
+
 For Initial setup + ingestion :
 python ingest.py
 
@@ -27,10 +29,30 @@ Call setup_data.py - init_checks()
 
 -------
 
-To get the output :
-src/main.py --url
-src/main.py --doi
-For help , src/main.py -h
+Ensure directory structure :
+src
+data_dir
+output
+( setup_data takes care of it )
 
 -------
+
+To get the output :
+
+src/main.py --url
+
+src/main.py --doi
+
+For help , src/main.py -h
+
+Then check:          output/<doi>.json
+
+-------
+
+Example :
+
+python main.py --url http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.61.2545
+
+python main.py --doi 10.1.1.61.2545
+
 
