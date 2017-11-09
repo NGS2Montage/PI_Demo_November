@@ -22,7 +22,7 @@ from redlev import views as redlev_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^rec-sys/', rec_views.index),
+    url(r'^rec-sys/', include('rec.urls')),
     url(r'^ab-loop/', abloop_views.index),
     url(r'^red-lev/', redlev_views.index),
     url(r'^$', rec_views.index),

@@ -3,16 +3,34 @@
 {% load static %}
 
 {% block extra_head %}
-    <link href="{% static "css/recsys.css" %}" rel="stylesheet">
-    <script src="{% static "js/recsys.js" %}"></script>
+<link href="{% static "css/recsys.css" %}" rel="stylesheet">
+
+<script src="{% static "vendor/jquery-3.2.1.min.js" %}"></script>
+<script src="{% static "js/recsys.js" %}"></script>
 {% endblock extra_head %}
 
 {% block content %}
 
-<div class="row justify-content-center">
+<div class="row justify-content-center mt-4">
   <div class="col-8">
-    RecSys stuff goes here.
+    <form id="doi-form" class="form-inline" novalidate>
+      <div class="form-group">
+        <input type="string" class="form-control" id="doi-input" placeholder="Paste URL of paper here...">
+        <button class="btn btn-primary">Get recommendations</button>
+      </div>
+    </form>
   </div>
-</div>  
+  <div class="col-4">
+    <form class="form-inline">
+      <div class="form-group">
+        <input type="string" class="form-control" id="filter-input" placeholder="Filter results">
+        <button class="btn btn-primary">Filter</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="row">
+
+</div>
 
 {% endblock content %}
