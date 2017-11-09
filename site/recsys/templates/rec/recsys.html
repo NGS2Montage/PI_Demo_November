@@ -4,8 +4,14 @@
 
 {% block extra_head %}
 <link href="{% static "css/recsys.css" %}" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css">
 
 <script src="{% static "vendor/jquery-3.2.1.min.js" %}"></script>
+<script src="{% static "vendor/popper.min.js" %}"></script>
+<script src="{% static "vendor/bootstrap.min.js" %}"></script>
+<script src="{% static "vendor/rivets.min.js" %}"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
 <script src="{% static "js/recsys.js" %}"></script>
 {% endblock extra_head %}
 
@@ -29,8 +35,29 @@
     </form>
   </div>
 </div>
-<div class="row">
+<div id="app-view" class="row">
+  <div class="col">
+  <h4>{ app.title }</h4>
+  <div>
+    <a data-toggle="collapse" href="#collapseAbstract" aria-expanded="false" aria-controls="collapseAbstract"><i class="fa fa-caret-right" aria-hidden="true"></i> Abstract</a>
+  </div>
+  <div class="collapse" id="collapseAbstract">
+    <div class="card card-body">
+      { app.abstract }
+    </div>
+  </div>
 
+  <div>
+    <ul>
+      <li rv-each-author="app.authors">
+        { author }
+      </li>
+    </ul>
+  </div>
+
+  <table id="rec-table" class="table table-striped table-sm"></table>
+
+  </div>
 </div>
 
 {% endblock content %}

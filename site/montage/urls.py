@@ -16,13 +16,13 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 
-from rec import views as rec_views
+from recsys import views as rec_views
 from abloop import views as abloop_views
 from redlev import views as redlev_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^rec-sys/', include('rec.urls')),
+    url(r'^rec-sys/', include('recsys.urls')),
     url(r'^ab-loop/', abloop_views.index),
     url(r'^red-lev/', redlev_views.index),
     url(r'^$', rec_views.index),

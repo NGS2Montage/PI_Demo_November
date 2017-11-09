@@ -1,6 +1,43 @@
+var app = {
+  title: "",
+  abstract: "",
+  authors: [],
+
+  refill: function (msg) {
+    app.title = msg.title;
+    app.abstract = msg.abstract;
+    app.authors = msg.author;
+
+    var recData = msg.cited_paper_data.map(function (cite) {
+      return [cite.title, cite.Author, cite.Year];
+    });
+
+    $('#rec-table').dataTable().fnClearTable();
+    $('#rec-table').dataTable().fnAddData(recData);
+  },
+
+  init: function () {
+    $('#rec-table').DataTable({
+        data: [],
+        paging: false,
+        searching: false,
+        info: false,
+        columns: [
+            {title: "Title"},
+            {title: "Author"},
+            {title: "Year"},
+        ],
+    });
+  }
+};
+
+
 (function() {
 
   window.addEventListener('load', function() {
+    rivets.bind(document.getElementById('app-view'), {app: app});
+    app.init();
+
     var form = document.getElementById('doi-form');
     form.addEventListener('submit', function(event) {
       // if (form.checkValidity() === false) {
@@ -19,6 +56,7 @@
       })
         .done(function( msg ) {
           console.log(msg);
+          app.refill(msg);
         });
 
     }, false);
