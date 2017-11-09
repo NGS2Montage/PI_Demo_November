@@ -7,4 +7,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, 'rec/index.html', {})
+    return render(request, 'rec/recsys.html', {})

@@ -5,4 +5,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'adloop/index.html', {})
+    return render(request, 'abloop/abloop.html', {})

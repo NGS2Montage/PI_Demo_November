@@ -5,4 +5,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def index(request):
-    return render(request, 'redlev/index.html', {})
+    return render(request, 'redlev/redlev.html', {})
