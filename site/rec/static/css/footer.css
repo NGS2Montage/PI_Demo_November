@@ -1,0 +1,32 @@
+
+.dac-stacked {
+    display: block;
+    text-indent: -9999em;
+    background: transparent url(/static/img/daclogo.svg) scroll no-repeat 50% 50%/contain;
+    width: 11.25rem;
+    height: 7rem;
+}
+
+.footer-container {
+  margin-top: 2em;
+  padding: 2em 0;
+  /*border-top: 3px solid #f0f1e9;*/
+}
+
+.footer-container a {
+  color: rgb(42, 97, 128);
+}
+
+.footer-div {
+    padding-top: 1rem;
+    background: #f0f1e9;
+}
+
+.footer-div .copyright {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.footer-div .locations {
+  font-size: 17px;
+}
