@@ -38,11 +38,12 @@
 
   <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}">
   <link rel="stylesheet" type="text/css" href="{% static "css/footer.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "css/dac_nav.css" %}">
   {% block styles %}{% endblock styles %}
 </head>
 
 <body>
-  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
+  <nav id="navbar" class="navbar navbar-expand-lg d-flex justify-content-between">
     <div id="navbar-left-pull">
       <a class="navbar-brand" href="/">
         <img src="{% static "img/logo_stacked.svg" %}" width="30" height="30" class="d-inline-block align-top" alt="">
