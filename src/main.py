@@ -97,7 +97,7 @@ def write_output(doi,data):
     utils.nav_to_src()
     return
 
-def fetch_data(doi):
+def fetch_data_helper(doi):
     citation_list_doi, citation_list_url = search_citations (doi)
     title, author, abstract, citation_contexts = get_info (doi)
     data = {}
@@ -109,9 +109,12 @@ def fetch_data(doi):
     data['cited_paper_url'] = citation_list_url
     data['citation_contexts'] = citation_contexts
     op_file = doi + '.json'
+    return data
+
+def fetch_data(doi):
     
     # Write to file
-    write_output(doi,data)
+    write_output(doi, fetch_data_helper(doi))
     return
 
     # ------------------------------------------------------------------------------ #
