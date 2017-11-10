@@ -57,7 +57,7 @@ def search_citations(doi):
     value_label = constants.value_label
     data = dbi.find (table, key_label, key_contents, value_label)
     cluster_id = data[0]
-	
+
     table = constants.citeGraph_table
     key_label = 'cluster_id'
     key_contents = cluster_id
@@ -67,13 +67,13 @@ def search_citations(doi):
     url_list = []
     doi_list = []
     for c in citation_list_doi:
-	table = constants.clusterId_doi_table
-	key = 'cluster_id'
-	key_contents = c
-	value_label = constants.value_label	
-	doi_c = dbi.find (table, key_label, key_contents, value_label)
-	if doi_c is not None:
-	    doi_list.append( doi_c[0])
+        table = constants.clusterId_doi_table
+        key = 'cluster_id'
+        key_contents = c
+        value_label = constants.value_label	
+        doi_c = dbi.find (table, key_label, key_contents, value_label)
+        if doi_c is not None:
+            doi_list.append( doi_c[0])
  
     for doi in doi_list:
         url_list.append (utils.get_url (doi))
