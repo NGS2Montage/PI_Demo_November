@@ -122,23 +122,24 @@ def fetch_data(doi):
     # ------------------------------------------------------------------------------ #
 
 
-parser = argparse.ArgumentParser ()
-parser.add_argument ("--doi", help="Comma separated values of doi s for papers [Without SPACE] ")
-parser.add_argument ("--url", help="URL of teh CiteSeer paper , with a doi")
-args = parser.parse_args ()
-doi = args.doi
-url = args.url
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser ()
+    parser.add_argument ("--doi", help="Comma separated values of doi s for papers [Without SPACE] ")
+    parser.add_argument ("--url", help="URL of teh CiteSeer paper , with a doi")
+    args = parser.parse_args ()
+    doi = args.doi
+    url = args.url
 
-doi_list = []
-
-
-if doi is not None:
-    doi_list = doi.split (",")
-
-if url is not None:
-    doi_list.append (utils.get_doi_from_url (url))
+    doi_list = []
 
 
-for doi in doi_list:
-    fetch_data (doi)
+    if doi is not None:
+        doi_list = doi.split (",")
+
+    if url is not None:
+        doi_list.append (utils.get_doi_from_url (url))
+
+
+    for doi in doi_list:
+        fetch_data (doi)
 

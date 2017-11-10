@@ -8,8 +8,12 @@ var app = {
     app.abstract = msg.abstract;
     app.authors = msg.author;
 
-    var recData = msg.cited_paper_data.map(function (cite) {
-      return [cite.title, cite.Author, cite.Year];
+    // var recData = msg.cited_paper_data.map(function (cite) {
+    //   return [cite.title, cite.Author, cite.Year];
+    // });
+
+    var recData = msg.cited_paper_url.map(function (cite) {
+      return [cite, '', ''];
     });
 
     $('#rec-table').dataTable().fnClearTable();
@@ -27,6 +31,12 @@ var app = {
             {title: "Author"},
             {title: "Year"},
         ],
+        columnDefs: [{
+            "targets": [0],
+            render: function (data, type, row) {
+              return '<a rel="noopener noreferrer" target="_blank" href="' + data + '">' + data.substring(49) + '</a>'
+            },
+        }],
     });
   }
 };
