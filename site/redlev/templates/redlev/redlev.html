@@ -1,18 +1,148 @@
 {% extends "base.html" %}
-
 {% load static %}
 
+{% block title%}Montage - Reductive Leverage{% endblock title%}
+
 {% block extra_head %}
-    <link href="{% static "css/redlev.css" %}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static "css/redlev.css" %}" rel="stylesheet">
+    <script src="{% static "vendor/jquery-3.2.1.min.js" %}"></script>
+	 <script src="{% static "vendor/popper.min.js" %}"></script>
+	 <script src="{% static "vendor/bootstrap.min.js" %}"></script>    
     <script src="{% static "js/redlev.js" %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
 {% endblock extra_head %}
+
 
 {% block content %}
 
 <div class="row justify-content-center">
-  <div class="col-8">
-    RedLev stuff goes here.
+  <div id="redlev-container" class="col-12">
+    <h1>Reductive Leverage Calculator (RedLev)</h1>
+    <h2>Mean Square Error Models</h2>
+    <p>
+    	Reductive Leverage is the process by which the usefulness of a model is calculated with respect to the reported error.
+    	Models are often evaluated in terms of aggregate estimates of model error.
+    	However, for critical applications, we care about the impact that the model has on the individual error.
+    	In this case, we investigate how the mean squared error (MSE) translates into probabilities for making individual errors.
+    	Reductive Leverage, in this form, evaluates how well the overall model-prediction system is working within a defined application context.
+    </p>
+    <div id="workspace" style="padding: 15px; background-color: lightgray;">
+    
+<!-- Nav tabs -->
+<nav id="box-nav" class="navbar navbar-light bg-faded">
+<h1 class="navbar-brand" style="color: black;">Reductive Leverage Calculator</h1>
+<ul class="nav nav-tabs justify-content-end" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" data-toggle="tab" href="#chart" role="tab">Surface Plot</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#zoom" role="tab">Error Distribution</a>
+  </li>
+</ul>
+</nav>
+
+    	<div class="row" style="height: 100%; width: 100%;">
+    	<div class="col-3">
+    		<form>
+    			<div class="form-group">
+    				<label for="form-N">Number of Samples:</label>
+    				<input id="form-N" type="text" name="N" placeholder="128" value="128" class="form-control text" readonly>
+    			</div>
+    			
+    			<div class="form-group">
+    				<label for="form-n_errors">Number of Errors:</label>
+					<input id="form-n_errors" type="text" name="n_errors" class="form-control text">
+    			</div>
+    			
+				<div class="form-group">
+					<label for="form-alpha">Alpha:</label>
+					<input id="form-alpha" type="text" name="alpha" class="form-control text">
+				</div>
+				
+				<div class="form-group">
+					<label for="form-probability">Mean Square Error:</label>
+					<input id="form-probability" type="text" name="probability" class="form-control text">
+				</div>
+				<button class="btn btn-primary">Reset</button>
+				<button class="btn btn-primary" type="submit">Calculate</button>
+    		</form>
+    	</div>
+    	
+    	<!-- Tab panes -->
+      <div id="RL-Chart" class="col-9" style="position: relative; height: 100%; border: 1px solid black;">
+			<div class="tab-content">
+  				<div class="tab-pane active" id="chart" role="tabpanel">
+					<canvas id="myChart" style="position: relative; height: 100%" ></canvas>  				
+  				</div>
+  				<div class="tab-pane" id="zoom" role="tabpanel">Zoom</div>
+			</div>			    
+    	</div>
+    	</div>
+		<div class="row" style="margin-top: 10px; border-top: 1px solid black;">    	
+    	<div>
+    		<h4>Result Summary.</h4>
+    	</div>  
+    	</div>
+    </div>
+    <h2>Instructions</h2>
+    <p> Stuff Here. </p>
+    <h2>More Information, References, Applications</h2>
+    <ul>
+		<li>
+			<a href="{% static "/ref/ffc-sage-v4.pdf"%}">Fragile Families Challenge - Paper (pre-print)</a> [
+			<a href="https://dac.cs.vt.edu/person/brian-j-goode/">B. Goode</a>, 
+			<a href="#">D. Datta</a>, 
+			<a href="https://dac.cs.vt.edu/person/naren-ramakrishnan/">N. Ramakrishnan</a>]
+		</li>
+		<li>
+			<a href="{% static "/ref/ffc-sage-appendix.pdf"%}">Fragile Families Challenge - Appendix (pre-print)</a>
+		</li>
+		<li><a href="{% static "/ref/MonthlyReport_20170915-Appendix-RL.pdf"%}">Technical Report</a></li>    
+    </ul>
+
+
+<script>
+var ctx = document.getElementById("myChart").getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>    
+    
   </div>
 </div>  
+
 
 {% endblock content %}
