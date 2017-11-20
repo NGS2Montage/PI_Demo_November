@@ -1,0 +1,25 @@
+{
+    "abstract": "The installation of high-speed networks using optical fiber and high bandwidth messsage forwarding gateways is changing the physical capabilities of information systems. These capabilities must be complemented with corresponding software systems advances to obtain a real benefit. Without smart software we will gain access to more data, but not improve access to the type and quality of information needed for decision making. To develop the concepts needed for future information systems we model information processing as an interaction of data and knowledge. This model provides criteria for a high-level functional partitioning. These partitions are mapped into information process-ing modules. The modules are assigned to nodes of the distributed information systems. A central role is assigned to modules that mediate between the users ' workstations and data re-sources. Mediators contain the administrative and technical knowledge to create information needed for decision-making. Software which mediates is common today, but the structure, the interfaces, and implementations vary greatly, so that automation of integration is awkward. By formalizing and implementing mediation we establish a partitioned information sys-",
+    "author": "Gio Wiederhold",
+    "citation_contexts": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+    ],
+    "cited_paper_doi": [
+        "1318632",
+        "1318633",
+        "1318634",
+        "1318635",
+        "289335",
+        "3180490",
+        "3180491",
+        "4842448"
+    ],
+    "cited_paper_url": [],
+    "doi": "10.1.1.11.8981",
+    "title": "Mediators in the Architecture of Future Information Systems."
+}
