@@ -1,26 +1,75 @@
 from pathlib import Path
 import os
 import json
-import spacy
 from collections import OrderedDict
+import clean_text_manual as ctm
 
-import pprint
+# Set up spaCy
+from spacy.lang.en import English
+
+# Setup nltk and other preprocessor
+import nltk
+import string
+from sklearn.feature_extraction.text import TfidfVectorizer
+
+nltk.download('punkt') # if necessary...
+
+stemmer = nltk.stem.porter.PorterStemmer()
+remove_punctuation_map = dict((ord(char), None) for char in string.punctuation)
 
 
+def stem_tokens(tokens):
+    return [stemmer.stem(item) for item in tokens]
 
 
-# Clean text
-def clean_text(text):
+def normalize(text):
+    '''remove punctuation, lowercase, stem'''
+    return stem_tokens(nltk.word_tokenize(text.lower().translate(remove_punctuation_map)))
+
+vectorizer = TfidfVectorizer(tokenizer=normalize, stop_words='english')
+
+
+def cosine_sim(text1, text2):
+    tfidf = vectorizer.fit_transform([text1, text2])
+    return ((tfidf * tfidf.T).A)[0,1]
+
+
+# Parse text using spacy
+def parse_text_spacy(text):
     # Load English tokenizer, tagger, parser, NER and word vectors
-    nlp = spacy.load('en')
+    parser = English()
     # Process a document, of any size
-    doc = nlp(text)
+    parsedData = parser(text)
 
+
+
+    print '\n\n\n'
+    '''
     # Find named entities, phrases and concepts
-    for entity in doc.ents:
+    for entity in parsedData.ents:
         print(entity.text, entity.label_)
 
-    return doc
+    # Let's look at the tokens
+    # All you have to do is iterate through the parsedData
+    # Each token is an object with lots of different properties
+    # A property with an underscore at the end returns the string representation
+    # while a property without the underscore returns an index (int) into spaCy's vocabulary
+    # The probability estimate is based on counts from a 3 billion word
+    # corpus, smoothed using the Simple Good-Turing method.
+    for i, token in enumerate(parsedData):
+        print("original:", token.orth, token.orth_)
+        print("lowercased:", token.lower, token.lower_)
+        print("lemma:", token.lemma, token.lemma_)
+        print("shape:", token.shape, token.shape_)
+        print("prefix:", token.prefix, token.prefix_)
+        print("suffix:", token.suffix, token.suffix_)
+        print("log probability:", token.prob)
+        print("Brown cluster id:", token.cluster)
+        print("----------------------------------------")
+    '''
+
+    return parsedData
+
 
 def access_feature(feat_name, feat):
 
@@ -32,7 +81,6 @@ def access_feature(feat_name, feat):
                 return None
         else:
             flag = False
-            print(feat)
             txt_str = u''
             # Check if this list is empty or not
             for i in range(len(feat)):
@@ -41,10 +89,10 @@ def access_feature(feat_name, feat):
                     txt_str = txt_str + feat[i]
 
             if flag:  # It is empty, return None
-                print(txt_str)
                 return txt_str
             else:
                 return None
+
     else:
         return None
 
@@ -73,20 +121,54 @@ for file_name in filenames:
     if not paper_keys:
         paper_keys = data.keys()
 
+    # Filtering the corrupt files to get the abstract and context (if exists)
     txt_str = u''
     str1 = access_feature('abstract', data['abstract'])
     str2 = access_feature('citation_contexts', data['citation_contexts'])
 
+    # Aggregate the abstract and the citation_contexts into one string (either should exist)
     if bool(str1) or bool(str2):
 
         if bool(str1):
             txt_str = txt_str + str1
-            print str1
 
         if bool(str2):
-            txt_str = txt_str + str2
-            print str2
+            txt_str = txt_str + u' ' + str2
 
-        cited_data[data['doi']] = txt_str
+        '''
+        parsedText = parse_text_spacy(txt_str)  # Parse the aggregated text via spacy parser
 
+        # Aggregate the parsed text into a string
+        txt_str = ''
+        for entity in parsedText:
+            txt_str = txt_str + str(entity)
+            txt_str = txt_str + ' '
+        '''
+        if file_name == ref_paper:
+            ref_doc = txt_str
+        else:
+            cited_data[data['doi']] = txt_str
+        '''
+
+        # Manual package written by me
+        if file_name == ref_paper:
+            ref_doc = ctm.text_to_clean(txt_str)
+        else:
+            cited_data[data['doi']] = ctm.text_to_clean(txt_str)
+        '''
+
+similarity_score = OrderedDict()
+
+'''
+# Find the similarity of the reference document with the other documents
 for key in cited_data.keys():
+    similarity_score[key] = ref_doc.similarity(cited_data[key])
+    print key, similarity_score[key]
+'''
+print ref_doc, '\n\n'
+# Find the cosine similarity of the documents
+for key in cited_data.keys():
+    similarity_score[key] = cosine_sim(ref_doc, cited_data[key])
+    print key, similarity_score[key]
+
+
