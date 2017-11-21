@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'recsys',
     'abloop',
     'redlev',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [

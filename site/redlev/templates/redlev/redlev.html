@@ -10,6 +10,9 @@
 	 <script src="{% static "vendor/bootstrap.min.js" %}"></script>    
     <script src="{% static "js/redlev.js" %}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js"></script>
+    
+    
 {% endblock extra_head %}
 
 
@@ -38,10 +41,13 @@
   <li class="nav-item">
     <a class="nav-link" data-toggle="tab" href="#zoom" role="tab">Error Distribution</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" data-toggle="tab" href="#mse-threshold" role="tab">MSE-Threshold</a>
+  </li>
 </ul>
 </nav>
 
-    	<div class="row" style="height: 100%; width: 100%;">
+    	<div class="row" style="height: 500px; width: 100%;">
     	<div class="col-3">
     		<form>
     			<div class="form-group">
@@ -51,38 +57,48 @@
     			
     			<div class="form-group">
     				<label for="form-n_errors">Number of Errors:</label>
-					<input id="form-n_errors" type="text" name="n_errors" class="form-control text">
+					<input id="form-n_errors" type="text" name="n_errors" class="form-control text" value="{{nErrors}}">
     			</div>
     			
 				<div class="form-group">
 					<label for="form-alpha">Alpha:</label>
-					<input id="form-alpha" type="text" name="alpha" class="form-control text">
+					<input id="form-alpha" type="text" name="alpha" class="form-control text" value="{{alpha}}">
 				</div>
 				
 				<div class="form-group">
-					<label for="form-probability">Mean Square Error:</label>
-					<input id="form-probability" type="text" name="probability" class="form-control text">
+					<label for="form-threshold">Threshold:</label>
+					<input id="form-threshold" type="text" name="threshold" class="form-control text" value="{{threshold}}">
 				</div>
+				
+				<div class="form-group">
+					<label for="form-mse">Mean Square Error:</label>
+					<input id="form-mse" type="text" name="mse" class="form-control text" value="{{mse}}">
+				</div>
+				
 				<button class="btn btn-primary">Reset</button>
 				<button class="btn btn-primary" type="submit">Calculate</button>
     		</form>
     	</div>
     	
     	<!-- Tab panes -->
-      <div id="RL-Chart" class="col-9" style="position: relative; height: 100%; border: 1px solid black;">
+      <div id="RL-Chart" class="col-9" style="position: relative; height: 100%;">
 			<div class="tab-content">
   				<div class="tab-pane active" id="chart" role="tabpanel">
-					<canvas id="myChart" style="position: relative; height: 100%" ></canvas>  				
+					<canvas id="myChart" style="position: relative; height: 400px" ></canvas>  				
   				</div>
-  				<div class="tab-pane" id="zoom" role="tabpanel">Zoom</div>
-			</div>			    
+  				<div class="tab-pane" id="zoom" role="tabpanel">
+					<canvas id="errorChart" style="position: relative; height: 400px" ></canvas>  				
+  				</div>
+  				<div class="tab-pane" id="mse-threshold" role="tabpanel">
+					<canvas id="mseChart" style="position: relative; height: 400px" ></canvas>   				
+  				</div>
+			</div>
+			<div style="border-top: 1px solid black;">
+    			<h5>Result Summary.</h5>
+    		</div>			    
     	</div>
     	</div>
-		<div class="row" style="margin-top: 10px; border-top: 1px solid black;">    	
-    	<div>
-    		<h4>Result Summary.</h4>
-    	</div>  
-    	</div>
+
     </div>
     <h2>Instructions</h2>
     <p> Stuff Here. </p>
@@ -98,51 +114,30 @@
 			<a href="{% static "/ref/ffc-sage-appendix.pdf"%}">Fragile Families Challenge - Appendix (pre-print)</a>
 		</li>
 		<li><a href="{% static "/ref/MonthlyReport_20170915-Appendix-RL.pdf"%}">Technical Report</a></li>    
-    </ul>
-
-
-<script>
-var ctx = document.getElementById("myChart").getContext('2d');
-var myChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-        datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero:true
-                }
-            }]
-        }
-    }
-});
-</script>    
+    </ul>    
     
   </div>
 </div>  
 
+{% if complete %}
+<script type="text/javascript" >
+	var ctx = document.getElementById("myChart").getContext('2d');	
+	var contour_json = JSON.parse('{{ contours | escapejs}}');
+	
+	var ctx_error = document.getElementById("errorChart").getContext("2d");
+	var error_json = JSON.parse('{{ errorDist | escapejs}}');
+	
+	var ctx_mse = document.getElementById("mseChart").getContext("2d");
+	var mse_json = JSON.parse('{{ mseThreshold | escapejs}}');
+	
+	var xi = {{xi_location}};
+	var nObs = {{nObs}};
+	var nErr = {{nErrors|default_if_none:-100}};
+	
+</script>
+<script src="{% static "js/chart-surface.js" %}"></script>
+<script src="{% static "js/chart-errorDist.js" %}"></script>
+<script src="{% static "js/chart-mse-threshold.js" %}"></script>
+{% endif %}
 
 {% endblock content %}
