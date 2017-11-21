@@ -1,0 +1,30 @@
+{
+    "abstract": "In this paper, we introduce ephemeral interest groups for supporting informal communication. Ephemeral interest groups are electronic discussion groups that, in contrast to bulletin boards and the like, are short-lived and ad hoc. They are designed as a medium for informal discussions of items broadcast to a wider community. We have implemented a prototype system to explore ephemeral interest groups. We discuss the goals of the system, characterize its evolution over the last ten months of deployment, and sketch our plans for future developments.",
+    "author": [
+        "Laurence Brothers",
+        "James D. Hollan",
+        "Jakob Neilsen",
+        "Scott Stornetta",
+        "Steven P. Abney",
+        "George W. Furnas",
+        "Michael L. Littman"
+    ],
+    "citation_contexts": [
+        null,
+        null,
+        null,
+        null
+    ],
+    "cited_paper_doi": [
+        "162421",
+        "39539",
+        "750607",
+        "6717338"
+    ],
+    "cited_paper_url": [
+        "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.124.1996&type=sc",
+        "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.161.3944&type=sc"
+    ],
+    "doi": "10.1.1.216.4270",
+    "title": "Supporting Informal Communication via Ephemeral Interest Groups."
+}

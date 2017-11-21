@@ -1,0 +1,32 @@
+{
+    "abstract": "This paper describes a technique for making personalized recommendations from any type of database to a user based on similarities between the interest profile of that user and those of other users. In particular, we discuss the implementation of a networked system called Ringo, which makes personalized recommendations for music albums and artists. Ringo's database of users and artists grows dynamically as more people use the system and enter more information. Four different algorithms for making recommendations by using social information filtering were tested and compared. We present quantitative and qualitative results obtained from the use of Ringo by more than 2000 people.",
+    "author": [
+        "Upendra Shardanand",
+        "Pattie Maes"
+    ],
+    "citation_contexts": [
+        "s we really want and need, and to rid us of the things we do not want to be bothered with. The common and obvious approach used to tackle the problem of information filtering is contentbasedsfiltering=-=[1]-=-. Keyword-based filtering and latent semantic indexing [2] are some example content-based filtering techniques. Content-based filtering techniques recommend items for the user's consumption based on c",
+        "do not want to be bothered with. The common and obvious approach used to tackle the problem of information filtering is contentbasedsfiltering[1]. Keyword-based filtering and latent semantic indexing =-=[2]-=- are some example content-based filtering techniques. Content-based filtering techniques recommend items for the user's consumption based on correlations between the content of the items and the user'",
+        "son, people enjoy Ringo and use it on a regular basis. RELATED WORK Several other attemps have been made at building filtering services that rely on patterns among multiple users. The Tapestry system =-=[3]-=- makes it possible to request Netnews documents that have been approved by other users. However, users must themselves know who these similar people are and specifically request documents annotated by",
+        "l information filtering is still left to the user. During the development of Ringo, we learned about the existence of similar projects in a similar state of development. One such example is Grouplens =-=[4]-=-, a system applying social information filtering to the personalized selection of Netnews. GroupLens employs Pearson r correlation coefficients to determine similarity between users. On our dataset, t",
+        "sign that user to one of a finite set of handbuilt, predefined user classes or stereotypes. Based on the stereotype the user belongs to, the system then makes recommendations to the user. For example =-=[5]-=- recommends novels to users based on a stereotype classification. This method is far less personalized than the social information filtering method described in this paper. The reason is that in socia",
+        "igure 1). A seven point scale was selected since studies have shown that the reliability of data collected in surveys does not increase substantially if the number of choices is increased beyond seven=-=[6]-=-. Ratings are not normalized because as we expected, users rate albums in very different ways. For example, some users only give ratings to music they like (e.g. they only use 6's and 7's), while othe",
+        "They are up there. 5 : Good Stuff. 4 : Doesn't turn me on, doesn't bother me. 3 : Eh. Not really my thing. 2 : Barely tolerable. 1 : Pass the earplugs. Figure 1: Ringo's scale for rating music. Ringo=-=[7]-=- is a social information filtering system which makes personalized music recommendations. People describe their listening pleasures to the system by rating some music. These ratings constitute the per  Every recommendation includes a measure of confidence which depends on factors such as the number of similar users used to make this prediction, the consistency among those users' values, etc. (cfr. =-=[7]-=- for details. ) Ringo's reply does not include any information about the identity of the other users whose profiles were used to make the recommendations. Ringo provides a range of functions apart fro ing algorithms were evaluated. Due to space limitations, the algorithms are described here briefly. Exact mathematical descriptions as well as more detailed analysis of the algorithms can be found in =-=[7]-=-. The Mean Squared Differences Algorithm. The first algorithm measures the degree of dissimilarity between two user profiles, U x and U y by the mean squared differencesbetween the two profiles: (U x  tist, L = 0:7 1.1 1.4 1.1 1.5 65 Table 1: Summary of results. Results A summary of some of our results (for different values of the threshold L) are presented in table 1. More details can be found in =-=[7]-=-. Overall, in terms of accuracy and the percentage of target values which can be predicted, the constrained Pearson r algorithm performed the best on our dataset if we take into account the error as w"
+    ],
+    "cited_paper_doi": [
+        "11219",
+        "44084",
+        "9133",
+        "32125",
+        "248615",
+        "771993"
+    ],
+    "cited_paper_url": [
+        "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.108.8490&type=sc",
+        "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.104.3739&type=sc",
+        "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.136.4322&type=sc",
+        "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.146.3168&type=sc"
+    ],
+    "doi": "10.1.1.30.6583",
+    "title": "Social Information Filtering: Algorithms for Automating \"Word of Mouth\"."
+}

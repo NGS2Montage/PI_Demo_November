@@ -1,0 +1,43 @@
+{
+    "abstract": "predicated on the belief that information filtering can be more effective when humans are involved in the filtering process. Tapestry was designed to support both content-based filtering and collaborative filtering, which entails people collaborating to help each other perform filtering by recording their reactions to documents they read. The reactions are called annotations; they can be accessed by other people\u2019s filters. Tapestry is intended to handle any incoming stream of electronic documents and serves both as a mail filter and repository; its components are the indexer, document store, annotation store, filterer, little box, remailer, appraiser and reader/browser. Tapestry\u2019s client/server architecture, its various components, and the Tapestry query language are described.",
+    "author": [
+        "David Goldberg",
+        "David A. Nichols",
+        "Brian M. Oki",
+        "Douglas B. Terry"
+    ],
+    "citation_contexts": [
+        "filtering documents, with the filters specified as queries. Hence, choosing the language in with filter queries are written was one of the important design decisions. One obvious choice was to use SQL=-=[1]-=-, the widely used standard query language for relational databases. Adopting it as the Tapestry query language would have had the additional advantage of simplifying the implementation, because Tapest",
+        "t the Xerox Palo Alto Research Center. The motivation for Tapestry comes from the increasing use of electronic mail, which is resulting in users being inundated by a huge stream of incoming documents =-=[2, 7, 12]-=-. One way to handle large volumes of mail is to provide mailing lists, enabling users to subscribe only to those lists of interest to them. However, as illustrated in Figure 1, the set of documents of",
+        "solution is for a user to specify a filter that scans all lists, selecting interesting documents no matter what list they are in. Several mail systems support filtering based on a document\u2019s contents =-=[3, 5, 6, 8]-=-. A basic tenet of the Tapestry work is that more effective filtering can be done by involving humans in the filtering process. In addition to content-based filtering, the Tapestry system was designed",
+        "e and selected by a certain filter query. To experiment with a different type of appraiser function, we added prioritizing queries to the Cedar-based mail reader developed at Xerox PARC called Walnut =-=[4]-=-. Users can supply a set of queries that can be applied to all incoming messages. As with the FLAMES rule, these queries can look for the special header field indicating that a message is from the Tap",
+        "solution is for a user to specify a filter that scans all lists, selecting interesting documents no matter what list they are in. Several mail systems support filtering based on a document\u2019s contents =-=[3, 5, 6, 8]-=-. A basic tenet of the Tapestry work is that more effective filtering can be done by involving humans in the filtering process. In addition to content-based filtering, the Tapestry system was designed",
+        "solution is for a user to specify a filter that scans all lists, selecting interesting documents no matter what list they are in. Several mail systems support filtering based on a document\u2019s contents =-=[3, 5, 6, 8]-=-. A basic tenet of the Tapestry work is that more effective filtering can be done by involving humans in the filtering process. In addition to content-based filtering, the Tapestry system was designed",
+        "t the Xerox Palo Alto Research Center. The motivation for Tapestry comes from the increasing use of electronic mail, which is resulting in users being inundated by a huge stream of incoming documents =-=[2, 7, 12]-=-. One way to handle large volumes of mail is to provide mailing lists, enabling users to subscribe only to those lists of interest to them. However, as illustrated in Figure 1, the set of documents of",
+        "solution is for a user to specify a filter that scans all lists, selecting interesting documents no matter what list they are in. Several mail systems support filtering based on a document\u2019s contents =-=[3, 5, 6, 8]-=-. A basic tenet of the Tapestry work is that more effective filtering can be done by involving humans in the filtering process. In addition to content-based filtering, the Tapestry system was designed",
+        "nteracting with the Tapestry service, it has allowed us to quickly make use of the filtering capabilities. Some Tapestry clients use the Andrew Messages reader developed at Carnegie Mellon University =-=[9]-=-. Like most modern mail readers, it provides a nice user interface for reading messages and moving them into mail folders. Moreover, it supports the &quot;FLAMES&quot; language, which allows users to write a si",
+        "han a mail system, because it is designed to handle any incoming stream of electronic documents. Electronic mail is only one example of such a stream: others are newswire stories and NetNews articles =-=[10]-=-. Moreover, Tapestry is not only a mechanism of filtering mail, it is also a repository of mail sent in the past. Tapestry unifies ad hoc queries over this repository with the filtering of incoming da",
+        "various components of the current Tapestry system. Database Manager Tapestry stores documents, annotations, and filter queries in a commercial relational database management system provided by Sybase =-=[11]-=-. Information about messages is stored in a set of relational tables. A single table does not suffice since this information does not fit cleanly into the relational model. In particular, there is no",
+        "t the Xerox Palo Alto Research Center. The motivation for Tapestry comes from the increasing use of electronic mail, which is resulting in users being inundated by a huge stream of incoming documents =-=[2, 7, 12]-=-. One way to handle large volumes of mail is to provide mailing lists, enabling users to subscribe only to those lists of interest to them. However, as illustrated in Figure 1, the set of documents of",
+        "ctical. This remainder of this section gives an overview of techniques for providing continuous semantics in an effective and efficient manner. An earlier paper gives full details of how this is done =-=[13]-=-. The key to providing efficient continuous semantics is the following observation: Given a query whose result set is nondecreasing over time, the simple technique of periodically executing the query  ACM Dec 1992 v35 n12 p61(10) Page 8 Using collaborative filtering to weave an information Tapestry. dependent on the overall size of the database. See our paper on continuous queries for more details =-=[13]-=-. Remailer Messages that are selected by a user\u2019s filter queries are queued up for delivery to that user. These queues, which constitute the users\u2019 \u2019little boxes\u2019, are also stored in the Tapestry data"
+    ],
+    "cited_paper_doi": [
+        "734796",
+        "108358",
+        "734797",
+        "734798",
+        "152612",
+        "446475",
+        "734799",
+        "734800",
+        "734801",
+        "734802",
+        "734803",
+        "46380"
+    ],
+    "cited_paper_url": [
+        "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.366.4995&type=sc"
+    ],
+    "doi": "10.1.1.104.3739",
+    "title": "Using Collaborative Filtering to Weave an Information Tapestry."
+}

@@ -1,0 +1,26 @@
+{
+    "abstract": "The experimental evidence accumulated over the past 20 years indicates that text indexing systems based on the assignment of appropriately weighted single terms produce retrieval results that are superior to those obtainable with other more elaborate text representations. These results depend crucially on the choice of effective term-weighting systems. This article summarizes the insights gained in automatic term weighting, and provides baseline single-term-indexing models with which other more elaborate content analysis procedures can be compared.",
+    "author": [
+        "Gerard Salton",
+        "Chris Buckley"
+    ],
+    "citation_contexts": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+    ],
+    "cited_paper_doi": [
+        "37581",
+        "197260",
+        "1441",
+        "467408",
+        "457491",
+        "467409"
+    ],
+    "cited_paper_url": [],
+    "doi": "10.1.1.101.9086",
+    "title": "Term-Weighting Approaches in Automatic Text Retrieval."
+}
