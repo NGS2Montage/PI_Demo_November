@@ -1,0 +1,23 @@
+Django==1.11.7
+django-environ==0.4.4
+pytz==2017.3
+six==1.11.0
+
+# For Debanjan
+numpy
+scipy
+sklearn
+pyproj
+matplotlib
+bson
+pymongo
+datetime
+pandas
+seaborn
+rpy2==2.7.2
+requests
+beautifulsoup
+networkx
+sets
+xmltodict
+#pygrib

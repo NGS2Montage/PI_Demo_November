@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_head %}
+    <link href="{% static "css/redlev.css" %}" rel="stylesheet">
+    <script src="{% static "js/redlev.js" %}"></script>
+{% endblock extra_head %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+  <div class="col-8">
+    RedLev stuff goes here.
+  </div>
+</div>  
+
+{% endblock content %}

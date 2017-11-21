@@ -2,3 +2,8 @@
 *.tar.gz.*
 ./original_data/*
 
+*.pyc
+.DS_Store
+*.sqlite3
+site/static/
+site/logs/*.log

@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/favicon-96x96.png" sizes="96x96">
+  <meta name="application-name" content="VT Discovery Analytics Center">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-square70x70logo" content="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/ms-icon-70x70.png">
+  <meta name="msapplication-TileImage" content="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/ms-icon-144x144.png">
+  <meta name="msapplication-square150x150logo" content="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/ms-icon-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/ms-icon-310x150.png">
+  <meta name="msapplication-square310x310logo" content="https://dac.cs.vt.edu/wp-content/themes/FoundationPress/assets/favicons/ms-icon-310x310.png">        
+  <title>{% block title%}Montage - DAC@VT{% endblock title%}</title>
+
+  <link href="{% static "vendor/bootstrap.min.css" %}" rel="stylesheet">       
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|Noto+Serif:400,700,400italic,700italic">
+
+<!--
+  <script src="{% static "vendor/jquery-3.2.1.min.js" %}"></script>
+  <script src="{% static "vendor/popper.min.js" %}"></script>
+  <script src="{% static "vendor/bootstrap.min.js" %}"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+-->
+
+  <link rel="stylesheet" type="text/css" href="{% static "css/base.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "css/footer.css" %}">
+  <link rel="stylesheet" type="text/css" href="{% static "css/dac_nav.css" %}">
+  {% block extra_head %}{% endblock extra_head %}
+</head>
+
+<body>
+  <nav id="navbar" class="navbar navbar-expand-lg d-flex justify-content-between">
+    <div id="navbar-left-pull">
+      <a class="navbar-brand" href="/">
+        <img src="{% static "img/logo_stacked.svg" %}" width="30" height="30" class="d-inline-block align-top" alt="">
+        Montage Software Demo
+      </a>
+      
+      {% block extra_navbar %}
+
+      {% endblock extra_navbar %}
+
+    </div>
+
+    <div id="navbar-right-pull">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/rec-sys/">RecSys</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/ab-loop/">AbLoop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/red-lev/">RedLev</a>
+        </li>
+      </ul>
+    </div>
+
+  </nav>
+
+  <main role="main" class="container">
+    {% block content %}{% endblock content %}
+  </main>
+
+  <div class="row justify-content-md-center footer-container">
+    <div class="col-md-4 footer-div" style="height: 200px; text-align:center">
+      <div class="row justify-content-center">
+        <a class="dac-stacked" href="http://dac.cs.vt.edu/">Discovery Analytics Center</a>
+      </div>
+      <p class="copyright">
+        Copyright © 2017 Discovery Analytics Center
+      </p>
+      <p class="locations">
+        <a href="http://dac.cs.vt.edu/about/locations#torg">Blacksburg</a> | 
+        <a href="http://dac.cs.vt.edu/about/locations#nova">Falls Church</a> | 
+        <a href="http://dac.cs.vt.edu/about/locations#arlington">Arlington</a>
+      </p>
+    </div>
+  </div>
+</body>
+
+</html>

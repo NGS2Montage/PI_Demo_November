@@ -57,7 +57,7 @@ def search_citations(doi):
     value_label = constants.value_label
     data = dbi.find (table, key_label, key_contents, value_label)
     cluster_id = data[0]
-	
+
     table = constants.citeGraph_table
     key_label = 'cluster_id'
     key_contents = cluster_id
@@ -67,13 +67,13 @@ def search_citations(doi):
     url_list = []
     doi_list = []
     for c in citation_list_doi:
-	table = constants.clusterId_doi_table
-	key = 'cluster_id'
-	key_contents = c
-	value_label = constants.value_label	
-	doi_c = dbi.find (table, key_label, key_contents, value_label)
-	if doi_c is not None:
-	    doi_list.append( doi_c[0])
+        table = constants.clusterId_doi_table
+        key = 'cluster_id'
+        key_contents = c
+        value_label = constants.value_label	
+        doi_c = dbi.find (table, key_label, key_contents, value_label)
+        if doi_c is not None:
+            doi_list.append( doi_c[0])
  
     for doi in doi_list:
         url_list.append (utils.get_url (doi))
@@ -97,7 +97,7 @@ def write_output(doi,data):
     utils.nav_to_src()
     return
 
-def fetch_data(doi):
+def fetch_data_helper(doi):
     citation_list_doi, citation_list_url = search_citations (doi)
     title, author, abstract, citation_contexts = get_info (doi)
     data = {}
@@ -109,9 +109,12 @@ def fetch_data(doi):
     data['cited_paper_url'] = citation_list_url
     data['citation_contexts'] = citation_contexts
     op_file = doi + '.json'
+    return data
+
+def fetch_data(doi):
     
     # Write to file
-    write_output(doi,data)
+    write_output(doi, fetch_data_helper(doi))
     return
 
     # ------------------------------------------------------------------------------ #
@@ -119,23 +122,24 @@ def fetch_data(doi):
     # ------------------------------------------------------------------------------ #
 
 
-parser = argparse.ArgumentParser ()
-parser.add_argument ("--doi", help="Comma separated values of doi s for papers [Without SPACE] ")
-parser.add_argument ("--url", help="URL of teh CiteSeer paper , with a doi")
-args = parser.parse_args ()
-doi = args.doi
-url = args.url
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser ()
+    parser.add_argument ("--doi", help="Comma separated values of doi s for papers [Without SPACE] ")
+    parser.add_argument ("--url", help="URL of teh CiteSeer paper , with a doi")
+    args = parser.parse_args ()
+    doi = args.doi
+    url = args.url
 
-doi_list = []
-
-
-if doi is not None:
-    doi_list = doi.split (",")
-
-if url is not None:
-    doi_list.append (utils.get_doi_from_url (url))
+    doi_list = []
 
 
-for doi in doi_list:
-    fetch_data (doi)
+    if doi is not None:
+        doi_list = doi.split (",")
+
+    if url is not None:
+        doi_list.append (utils.get_doi_from_url (url))
+
+
+    for doi in doi_list:
+        fetch_data (doi)
 
