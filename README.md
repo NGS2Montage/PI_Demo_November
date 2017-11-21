@@ -51,8 +51,8 @@ Then check:          output/<doi>.json
 
 Example :
 
-python main.py --url http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.61.2545
+python main.py --url http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.30.6583
 
-python main.py --doi 10.1.1.61.2545
+python main.py --doi 10.1.1.30.6583
 
 
