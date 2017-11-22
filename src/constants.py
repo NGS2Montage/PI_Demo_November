@@ -16,3 +16,6 @@ validate_ingest_url = False
 db_name = 'montage'
 key_label = 'key'
 value_label = 'data'
+
+paper_key_label = 'paper_key'
+papers_table = 'raw_papers'

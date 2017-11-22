@@ -78,8 +78,7 @@ def search_citations(doi):
     for doi in doi_list:
         url_list.append (utils.get_url (doi))
 
-    return citation_list_doi, url_list
-
+    return doi_list, url_list
 
 
 def write_output(doi,data):
@@ -97,6 +96,16 @@ def write_output(doi,data):
     utils.nav_to_src()
     return
 
+#
+# "cited_paper_data": [
+# 	{"url" : "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.1673&type=sc" ,
+#          "title" : "Some Dummy title ",
+# 	 "Author" : "Geoffrey Hinton, Luke Skywalker",
+# 	 "Year" : "2015"
+# 	}
+#     ],
+#
+
 def fetch_data_helper(doi):
     citation_list_doi, citation_list_url = search_citations (doi)
     title, author, abstract, citation_contexts = get_info (doi)
@@ -108,8 +117,8 @@ def fetch_data_helper(doi):
     data['cited_paper_doi'] = citation_list_doi
     data['cited_paper_url'] = citation_list_url
     data['citation_contexts'] = citation_contexts
-    op_file = doi + '.json'
     return data
+
 
 def fetch_data(doi):
     
