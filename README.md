@@ -18,14 +18,16 @@ https://www.dropbox.com/s/9w9bkpe6mu5t6of/CSXClusters-2014-01-13.tar.gz?dl=0
 
 ------
 
-
-
 For Initial setup + ingestion :
 python ingest.py
 
 For just downloading the data ( recommended on server, since dat on db already set up)
 
 Call setup_data.py - init_checks() 
+
+To ingest all papers into mongoDB
+
+python setup_scripts/ingest_papers.py
 
 -------
 

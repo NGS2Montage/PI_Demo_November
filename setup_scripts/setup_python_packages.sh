@@ -16,10 +16,6 @@ pip install --user sklearn
 pip install --user networkx
 pip install --user sets
 pip install --user xmltodict
-<<<<<<< HEAD
-pip install --user glob
-
-=======
+pip install --user joblib
 pip install --user spacy
->>>>>>> 240631ba599e991d7de5b8202a98ff11b7f3b62d
 
