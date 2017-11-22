@@ -60,7 +60,7 @@ def process_all():
 def test_sample():
     dbi = mongoDBI.mongoDBI (db_name=db_name)
     key_label = constants.paper_key_label
-    key_contents = '10.1.1.61.2545'
+    key_contents = '10.1.1.127.3891'
     value_label = constants.value_label
     z = dbi.find (table, key_label, key_contents, value_label)
     print z

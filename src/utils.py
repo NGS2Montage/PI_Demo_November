@@ -7,6 +7,8 @@ import requests
 cwd = None
 
 def get_url(doi):
+    if doi is None :
+        return None
     url = constants.csx_paper_url
     url = url.replace ('__DOI__', doi)
     return url

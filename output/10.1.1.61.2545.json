@@ -1,0 +1,837 @@
+{
+    "abstract": "Wireless meshnet8Ex8 (WMNs)consist of meshrout6L and meshclient8 where meshroutfix have minimal mobilit  and formtr backbone of WMNs. They provide netide access for bot mesh andconvent1)fi8 clientt TheintL gratLfl of WMNs wit ot8 net8866 such as t1Int6fiPx1 cellular, IEEE 802.11, IEEE 802.15, IEEE 802.16, sensor netsor1L ets can be accomplishedtccomp tc gatomp and bridging functng1 in t1 meshroutfijx Meshclient can be eit8fi st8fij1)6x or mobile, and can form aclient meshnet16S amongtng1fifiELj and wit meshroutLfifi WMNs are antLfifl1)6fl t resolvets limit18fiflfl andt significantfl improvetp performance of ad hocnetLEP8L wireless local area net1Pxx (WLANs), wireless personal areanet16fij (WPANs), and wirelessmetess1fifljfl areanet1LPS (WMANs). They are undergoing rapid progress and inspiring numerousdeploymentS WMNs will deliver wireless services for a largevariet ofapplicat6fifl in personal, local, campus, andmet8Lfix1)6fi areas. Despit recent advances in wireless mesh netjLfiP1)6 many research challenges remain in allprotjfiS layers. This paperpresent adetEfl81 stEonrecent advances and open research issues in WMNs. Syst1 architL881)6 andapplicat)68 of WMNs are described, followed by discussingts critssi factss influencingprotenc design.Theoret8fiL netore capacit and tdst1LLSjx tt1LL protLLSj for WMNs are exploredwit anobjectE1 t point out a number of open research issues. Finally,tnal beds,indust681 pract68 andcurrent strent actntx1) relatt t WMNs arehighlight8x  # 2004 Elsevier B.V. Allrl rl  KedI7-8 Wireless meshnet186flfl Ad hocnet8jEES Wireless sensornetor16fl Medium accessconts1fi Routs1 prots1fiS Transport protspor ScalabilitS Securiti Powermanagement andcontfi8fl Timingsynchronizat ion 1389-1286/$ - seefront matt # 2004 Elsevier B.V. Allright reserved. doi:10....",
+    "author": [
+        "Ian F. Akyildiz",
+        "Xudong Wang 0001",
+        "Weilin Wang"
+    ],
+    "citation_contexts": {
+        "10.1.1.20.1673": [],
+        "10.1.1.221.1142": [],
+        "10.1.1.3.5380": [],
+        "10.1.1.61.2545": [
+            ", and other factors, the change may be frequent and may cause large variations in RTT. This will degrade the TCP performance, because the normal operation of TCP relies on a smooth measurement of RTT =-=[1]-=-. How to enhance a TCP so that it is robust to large RTT variations has not been thoroughly studied for both mobile ad hoc networks and WMNs. 10.1.2. Entirely new transport protocols As discussed befo",
+            "within the global network is difficult to achieve [62]. Thus, distributed multiple access schemes such as CSMA/ CA are more favorable. However, CSMA/CA has very low frequency spatial-reuse efficiency =-=[2]-=-, which significantly limits the scalability of CSMA/CA-based multi-hop networks. To improve the scalability of WMNs, designing a hybrid multiple access scheme with CSMA/CA and TDMA or CDMA is an inte ped for the purpose of reducing power consumptions [33,147,131]. These schemes reduce exposed nodes problem, especially in a dense network, and thus, improve the spectrum spatial-reuse factor in WMNs =-=[2]-=-. However, hidden nodes still exist and may become worse because lower transmission power level reduces the possibility of detecting a potential interfering node [72]. \u2022 Proposing innovative MAC proto",
+            "ks 47 (2005) 445\u2013487 455 capacity and flexibility of wireless systems. Typical examples include directional and smart antennas [117,124], MIMO systems [139,126], and multi-radio/multi-channel systems =-=[122,3]-=-. To date, MIMO has become one of the key technologies for IEEE 802.11n [64], the high speed extension of Wi-Fi. Multi-radio chipsets and their development platforms are available on the market [44].  ach radio contains both MAC and physical layers, in order to make a multi-radio network work as a single node, a virtual MAC protocol is usually required to coordinate the communication in all radios =-=[3]-=-. For a wireless network, the frequency band is a very precious resource. However, many of existing allocated frequency bands (both licensed and unlicensed) have not been utilized efficiently. Measure  has multiple radios each with its own MAC and physical layers. Communications in these radios are totally independent. Thus, a virtual MAC protocol such as the multi-radio unification protocol (MUP) =-=[3]-=- is required on top of MAC to coordinate communications in all channels. In fact one radio can have multiple channels. However, for simplicity of design and application, a single channel is used in ea number of hops and nodes. \u2022 The channel switching time may be much larger than 224 ls [122]. A larger channel switching time will significantly degrade the performance of a multi-channel MAC protocol =-=[3]-=-. \u2022 Channel selection criterion based on the lowest number of source\u2013destination pairs for each I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 463 channel is not always appropriate. Using  IM/ATIMACK (for default channel) procedures. In MUP, there are multiple wireless network interface cards (NICs) on each node. Channels on all NICs are orthogonal and fixed. The major functions of MUP =-=[3]-=- include: \u2022 Discovering neighbors. After the discovering procedures, neighbors are classified into MUPenabled and legacy nodes. \u2022 Selecting a NIC based on one-hop round trip time (RTT) measurements. M",
+            "performance, and this implies that packets with routing implications should be scheduled for transmission ahead of users data packets. MIT\u00d5s Roofnet is an experimental multi-hop 802.11b mesh network =-=[4,5]-=-. It consists of about 50 wireless nodes to interconnect the Ethernet networks (with Internet gateways) in apartments in Cambridge, MA. A primary feature of Roofnet is that it requires no configuratio",
+            "performance, and this implies that packets with routing implications should be scheduled for transmission ahead of users data packets. MIT\u00d5s Roofnet is an experimental multi-hop 802.11b mesh network =-=[4,5]-=-. It consists of about 50 wireless nodes to interconnect the Ethernet networks (with Internet gateways) in apartments in Cambridge, MA. A primary feature of Roofnet is that it requires no configuratio",
+            "is the most effective. However, this result may not be applicable to WMNs, since multiple wireless links are on the path between receiver and sender. An analytical rate control scheme is proposed in =-=[6]-=- for end-to-end transmission of real-time traffic over both wired and wireless links. However, the scheme has not considered factors such as the ad hoc architecture and mobility as in WMNs. Therefore,",
+            "these networks will make the integration be complicated and costly. As a consequence, proposing an adaptive TCP is the most promising solution for WMNs. An adaptive transport protocol is proposed in =-=[7]-=- for an integrated network of wireless LANs, cellular networks, Internet backbone, and satellite networks. However, due to the hybrid ad hoc and infrastructure architecture, an integrated WMN is much",
+            "nt. Thus, the MAC or routing protocols optimized for mesh routers may not be appropriate for mesh clients such as sensors, because power efficiency is the primary concern for wireless sensor networks =-=[8,9]-=-. \u2022 Compatibility and interoperability with existing wireless networks. For example, WMNs built based on IEEE 802.11 technologies [133,69] must be compatible with IEEE 802.11 standards in the sense of an be avoided. In this application, wireless mesh routers have no constraints on power consumptions and mobility. Thus, protocols proposed for mobile ad hoc networks [34] and wireless sensor networks =-=[8,9]-=- are too cumbersome to achieve satisfactory performance in this application. On the other hand, Wi-Fi\u00d5s are not capable of supporting ad hoc multi-hop networking. As a consequence, WMNs are wellsuited",
+            "nt. Thus, the MAC or routing protocols optimized for mesh routers may not be appropriate for mesh clients such as sensors, because power efficiency is the primary concern for wireless sensor networks =-=[8,9]-=-. \u2022 Compatibility and interoperability with existing wireless networks. For example, WMNs built based on IEEE 802.11 technologies [133,69] must be compatible with IEEE 802.11 standards in the sense of an be avoided. In this application, wireless mesh routers have no constraints on power consumptions and mobility. Thus, protocols proposed for mobile ad hoc networks [34] and wireless sensor networks =-=[8,9]-=- are too cumbersome to achieve satisfactory performance in this application. On the other hand, Wi-Fi\u00d5s are not capable of supporting ad hoc multi-hop networking. As a consequence, WMNs are wellsuited",
+            "ment Many management functions are needed to maintain the appropriate operation of WMNs. 12.1. Mobility management Mobility management consists of two important tasks: location and handoff management =-=[10]-=-. Location management handles location registration and call delivery, while handoff managements472 I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 is responsible for handoff initiation, ne",
+            "05) 445\u2013487 is responsible for handoff initiation, new connection generation, and data flow control for call handoff. The mobility management schemes developed for cellular [10] or mobile IP networks =-=[11]-=- could be useful for WMNs. However, the centralized scheme is generally not applicable on WMNs which are based on distributed and ad hoc architecture. Thus, distributed mobility management is a prefer",
+            "I) is available. However, usually partial information of channel state is available at the transmitter. To achieve diversity under this situation, a commonly used technique is space\u2013time coding (STC) =-=[12]-=-, where signals transmitted at different antennas in different symbol periods are processed with a certain coding technique. The received signals are then combined at the receiver through an appropria",
+            "receiver processing MIMO systems. The processing techniques can be based on maximum likelihood detection (MLD), vertical Bell Lab Layered Space\u2013Time (V-BLAST) [51], singular value decomposition (SVD) =-=[13]-=-, and space\u2013time coding. So far only few results have been reported on the research of applying STC and MIMO to WMNs as well as other ad hoc networks. Since multiple channels are usually available in",
+            "to improve system capacity. To coordinate transmissions between network nodes under this situation, protocols such as the multi-channel MAC in [122] and the seed-slotted channel hopping (SSCH) scheme =-=[14]-=- are needed. SSCH is actually a virtual MAC protocol, since it works on top of IEEE 802.11 MAC and does not need changes in the IEEE 802.11 MAC. \u2022 Multi-channel multi-transceiver MAC. In this scenario",
+            "To date, a large number of reliable transport protocols have been proposed for ad hoc networks. They can be classified into two types: TCP variants and entirely new transport protocols. TCP variants =-=[15,29,59,92]-=- include transport protocols that are an enhanced version of the classical TCP for wired networks. In an entirely new transport protocol [127], the reliable transport mechanism is designed from a fres ted by network asymmetry which is defined as the situation where the forward direction of a network is significantly different from the reverse direction in terms of bandwidth, loss rate, and latency =-=[15]-=-. In WMNs, TCP data and TCP ACK packets may take different paths, and thus experience different packet losssrate, latency, or bandwidth. Even if the same path is taken by TCP data and ACK packets, the e to time. Consequently, TCP has poor performance for wireless multihop ad hoc networks [110,141]. To solve the network asymmetry problem, schemes such as ACK filtering, ACK congestion control, etc., =-=[15]-=- have been proposed. However, a different network architecture is studied in [15], i.e., the effectiveness of these schemes in WMNs needs investigation. In WMNs, mesh routers and mesh clients are conn",
+            "is useful for infrastructure WMNs with minimal mobility. When the mobility is a concern as in hybrid WMNs, no theoretical results are reported so far. Some experimental studies have been performed in =-=[16]-=-, where the simulation results of a stationary network validate the theoretical results of [81]. Analytical lower and upper bounds of network capacity are given in [54]. From the analytical results, i",
+            ". Thus, how to design an effective multi-path routing protocol with appropriate performance metrics is an interesting research topic. 9.4. Hierarchical routing Numerous hierarchical routing protocols =-=[17, 120,140]-=- have been proposed in recent years. Instead of addressing each of them, we describe the common principle of these routing protocols. In hierarchical routing, a certain self-organization scheme is em",
+            "icable to WMNs and other ad hoc networks. However, their performance in WMNs or any other ad hoc networks needs more evaluation. Examples of analyzing smart antenna systems for MANETs are reported in =-=[18,117]-=-. Due to complexity and cost, a fully adaptive smart antenna system is only used in base stations of cellular networks. On-going research and development efforts are still needed to implement fully ad",
+            "rence between nodes that are two hops away. Thus, the 802.16 mesh suffers from the hidden terminal problem. To enhance the 802.16 mesh, several proposals have been submitted to the standard committee =-=[19]-=-. A group within 802.16, the Mesh Ad Hoc committee, is investigating ways to improve the performance of mesh networking. It is understood that only a small amount of meshing is required to see a large",
+            "dvantage. However, the second way can achieve much better performance by considering an optimized interaction between protocol layers. Cross-layer design can significantly improve network performance =-=[20,84,32]-=-. However, certain issues must be considered when carrying out crosslayer protocol design [77]: cross-layer design have risks due to loss of protocol layer abstraction, incompatibility with existing p",
+            "are needed. In order to further increase capacity and mitigate the impairment by fading, delay-spread, and co-channel interference, multiple-antenna systems have been used for wireless communication =-=[104,21]-=-. Considering communications between nodes A and B in Fig. 12, node A is assumed to have M antennas for transmission and N antennas for reception, while in node B there are K antennas for transmission",
+            "MAC may be misused by some attacking nodes, which cause the network to be always congested by these malicious nodes [55]. Attackers may sneak into the network by misusing the cryptographic primitives =-=[22]-=-. In a cryptographic protocol, the exchange of information among users occurs frequently. The users employ a fair exchange protocol which depends on a trusted third party. However, this trusted party",
+            "lose the stateless property of single-path greedy routing [48]. In order to keep the stateless property and guarantee delivery, planar-graph based geographic routing algorithms are proposed recently =-=[23,38]-=-. However, open issues still remain in these algorithms. For example, in the face routing algorithm [23], the communication overhead is much higher than in the single-path greedy routing algorithm [48",
+            "not perform well in terms of end-to-end delay and throughput in WMNs. Currently, the research is focused on adaptive protocols for transport layer, routing and MAC layers and their cross-layer design =-=[24]-=-. These protocols are developed and evaluated on the BWN-Mesh testbed. The approaches being explored in the BWN lab are not merely limited to Wi-Fi mesh networks but also applicable for wireless senso",
+            "the centralized scheme is not scalable in WMNs. Similar to mobile ad hoc networks, WMNs still lack efficient and scalable security solutions because their security is easier to be compromised due to =-=[143,25]-=-: vulnerability of channels and nodes in the shared wireless medium, absence of infrastructure, and dynamic change of network topology. The attacks may advertise routing updates in [60] and [145] for",
+            "orks 47 (2005) 445\u2013487 473 tional exchange, must be used. Rational exchange ensures that a misbehaving party cannot gain anything from misbehavior, and thus, will not have any incentives to misbehave =-=[26]-=-. The key management is one of the most important tasks for network security. However, the key management for WMNs becomes much more difficult, because there is no central authority, trusted third par",
+            "nel MAC There are three approaches in this case: \u2022 Improving existing MAC protocols. Currently several MAC protocols have been proposed for multi-hop ad hoc networks by enhancing the CSMA/CA protocol =-=[27,116]-=-. These schemes usually adjust parameters of CSMA/CA such as contention window size and modify backoff procedures. They may improve throughput fors462 I.F. Akyildiz et al. / Computer Networks 47 (2005",
+            "differentiation between losses caused by congestion or wireless channels need to be taken into account with RCP. Various loss differentiation algorithms (LDAs) with congestion control are studied in =-=[28]-=-, where only one wireless link is considered on the path between sender and receiver. It is shown in [28] that the hybrid LDA is the most effective. However, this result may not be applicable to WMNs,",
+            "To date, a large number of reliable transport protocols have been proposed for ad hoc networks. They can be classified into two types: TCP variants and entirely new transport protocols. TCP variants =-=[15,29,59,92]-=- include transport protocols that are an enhanced version of the classical TCP for wired networks. In an entirely new transport protocol [127], the reliable transport mechanism is designed from a fres en non-congestion losses occur, the network throughput quickly drops. Moreover, once wireless channels are back to the normal operation, the classical TCP cannot be recovered quickly. The protocol in =-=[29]-=- enhances TCP through a feedback mechanism to differentiate between losses caused by congestion or wireless channels. This concept can be adopted to WMNs. However, how to design a loss differentiation",
+            "stributed mobility management is a preferred solution for WMNs. Mobility management schemes of ad hoc networks are mainly comprised of two types: distributed [56] and hierarchical mobility management =-=[125,30]-=-. These schemes may not perform well for WMNs due to the specific features of WMNs. More specifically, the backbone of WMNs does not have high mobility as mobile nodes in ad hoc networks, but connecti",
+            "s are able to support multiple transmission rates by a combination of different modulation and coding rates [67,68]. With such modes, adaptive error resilience can be provided through link adaptation =-=[115,31,52]-=-. It should be noted that under a frequency selective fading environment, a link adaptation algorithm cannot take signal-to-noise ratio (SNR) or carrier-to-interference ratio (CIR) as a single input f",
+            "dvantage. However, the second way can achieve much better performance by considering an optimized interaction between protocol layers. Cross-layer design can significantly improve network performance =-=[20,84,32]-=-. However, certain issues must be considered when carrying out crosslayer protocol design [77]: cross-layer design have risks due to loss of protocol layer abstraction, incompatibility with existing p",
+            "face other difficulties such as cost, system complexity, and practicality of fast steerable directional antennas. The second set of schemes is developed for the purpose of reducing power consumptions =-=[33,147,131]-=-. These schemes reduce exposed nodes problem, especially in a dense network, and thus, improve the spectrum spatial-reuse factor in WMNs [2]. However, hidden nodes still exist and may become worse bec",
+            "ongestion due to backhaul access can be avoided. In this application, wireless mesh routers have no constraints on power consumptions and mobility. Thus, protocols proposed for mobile ad hoc networks =-=[34]-=- and wireless sensor networks [8,9] are too cumbersome to achieve satisfactory performance in this application. On the other hand, Wi-Fi\u00d5s are not capable of supporting ad hoc multi-hop networking. As",
+            "pansions460 I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 [104]. To date, if CSI is not available, no solution has been developed yet for smart antennas at a transmitter. Schemes such as =-=[35]-=- still assume that CSI is perfectly known. If multiple antennas are in both the transmitter and the receiver, i.e., M >1,L >1orK >1,N >1, the multiple-antenna system is an MIMO system, where both dive",
+            "mitigated and thus, network capacity can be improved [124,118]. Directional antenna can also improve energy efficiency [123]. However, directional antennas bring challenges to the MAC protocol design =-=[144,105,82,36]-=-. If multiple antennas are in the transmitter and single antenna in the receiver, i.e., N =1, L =1 and either K >1or M > 1, antenna diversity or smart antenna cannot be applied unless the channel stat d. Otherwise, the advantages brought by such physical layer techniques will be significantly compromised. For directional and smart antennas, many MAC protocols have been proposed for ad hoc networks =-=[144,105,82,36]-=-. A MAC protocol for MIMO systems is studied in [126]. However, for multi-antenna systems, an efficient MAC protocol to achieve significant throughput improvement is still needed, as will be discussed y reduced due to the accumulating effect on the multihop path. \u2022 Cross-layer design with advanced physical layer techniques. Two major schemes exist in this category: MAC based on directional antenna =-=[82,36]-=- and MAC with power control [112]. The first set of schemes eliminates exposed nodes if antenna beam is assumed to be perfect. However, due to the directional transmission, more hidden nodes are produ",
+            "is not consistent with the routing protocol. Moreover, the attacker may sneak into the network, and impersonate a legitimate node and does not follow the required specifications of a routing protocol =-=[37]-=-. Some malicious nodes may create wormhole and shortcut the normal flows among legitimate nodes [61]. Same types of attacks as in routing protocols may also occur in MAC protocols. For example, the ba",
+            "lose the stateless property of single-path greedy routing [48]. In order to keep the stateless property and guarantee delivery, planar-graph based geographic routing algorithms are proposed recently =-=[23,38]-=-. However, open issues still remain in these algorithms. For example, in the face routing algorithm [23], the communication overhead is much higher than in the single-path greedy routing algorithm [48",
+            "ity source routing (LQSR) is proposed on the basis of DSR. LQSR aims to select a routing path according to link quality metrics. Three performance metrics, i.e., the expected transmission count (ETX) =-=[39]-=-, per-hop RTT, and perhop packet pair are implemented separately in LQSR. The performance of the routing protocol with these three performance metrics is also compared with the method using the minimu",
+            "sh can only support around 100 subscribers due to centralized scheduling message structures. \u2022 The 802.16 mesh is based on a connectionless MAC, so QoS of real-time services is difficult to guarantee =-=[40]-=-. I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 481 \u2022 It is assumed no interference between nodes that are two hops away. Thus, the 802.16 mesh suffers from the hidden terminal problem. T",
+            "e segment between the source and destination as given in the analysis, because the routing protocol determines a path according to certain metrics such as the number of hop counts, link quality, etc. =-=[41]-=-. As a result, the applicability of the theoretical results on practical network architectures still remains unclear. A close match between the theoretical results in [54] and IEEE 802.11 based ad hoc ting protocols applicable to WMNs and emphasize the open research issues. 9.1. Routing protocols with various performance metrics The impact of performance metrics on a routing protocol is studied in =-=[41]-=-, where the link quality source routing (LQSR) is proposed on the basis of DSR. LQSR aims to select a routing path according to link quality metrics. Three performance metrics, i.e., the expected tran trics when nodes are mobile. The reason is that, as the sender moves, the ETX metric cannot quickly track the change in the link quality. This result illustrates that the link quality metrics used in =-=[41]-=- are still not enough for WMNs when mobility is concerned. Better performance metrics need to be developed, and routing protocols integrating multiple performance metrics are necessary for WMNs. 9.2.",
+            "Ns. 9.2. Multi-radio routing In WMNs, multi-radio per node may be a preferred architecture, because the capacity can be increased without modifying the MAC protocol. A routing protocol is proposed in =-=[42]-=- for multi-radio WMNs. A new performance metric, called the weighted cumulative expected transmission time (WCETT) is proposed for the routing protocol. WCETT takes into account both link quality metr ith good quality and channel diversity in the same routing protocol. In WMNs, multi-channel per radio is another alternative to improve the capacity. For this type of networks, the scheme proposed in =-=[42]-=- is not applicable because significant differences exist between a multi-channel node and a multi-radio node as explained in Section 8. 9.3. Multi-path routing for load balancing and fault tolerance T",
+            "for location service is still an open research topic. Mobility management is closely related to multiple layers of network protocols. The development of multi-layer mobility management schemes as in =-=[43]-=- is an interesting topic. 12.2. Power management The goal of power management for WMNs varies. Usually, mesh routers do not have a constraint on power consumption; power management aims to control con",
+            "122,3]. To date, MIMO has become one of the key technologies for IEEE 802.11n [64], the high speed extension of Wi-Fi. Multi-radio chipsets and their development platforms are available on the market =-=[44]-=-. To further improve the performance of a wireless radio and control by higher layer protocols, more advanced radio technologies such as reconfigurable radios, frequency agile/cognitive radios [97,89] oncern of cost and system complexity, a wireless radio with multiple transceivers has not become a mature technique yet, although IEEE 802.11 chipsets with multiple transceivers are already available =-=[44]-=-. In some situations, the system capacity of a network node can be improved by using multiple radios each with single or multiple channels. Since each radio contains both MAC and physical layers, in o to support several simultaneous channels. On top of the physical layer, there is only one MAC layer to coordinate the functions of multiple channels. Engim multi-channel wireless LAN switching engine =-=[44]-=- belongs to this category. However, how to design an efficient MACsprotocol for this type of physical layer platform is still an open research topic. \u2022 Multi-radio MAC. In this scenario, a network nod p cards with external antennas and place the external antennas slightly away from each other. Yet another option is to use the upcoming Engim chipsets which solve the interference problem at RF-level =-=[44]-=-. California Institute for Telecommunications and Information Technology (Cal-(IT) 2 ) has established a basic Wi-Fi MAC development platform called CalRADIO-I [132]. This is a Wi-Fi research and deve",
+            "wever, many of existing allocated frequency bands (both licensed and unlicensed) have not been utilized efficiently. Measurements by the FCC show that around 70% of allocated spectrum is not utilized =-=[45,89]-=-. In addition, the time scale of spectrum occupancy can vary from milliseconds to hours [45]. Therefore, abundant spectrum is still available for wireless communication. Furthermore, in a large scale",
+            "ized the promising future of this technique and pushes to enable it to a full realization. In order to implement cognitive radios, software defined radio (SDR) is one of the most convenient platforms =-=[46]-=- because programmability exists in all components of a radio such as programmable RF bands, channel access modes, and channel modulations [102]. SDR is not a mature technique yet, although testbeds ar",
+            "cols in this section. Since WMNs share common features with ad hoc networks, the routing protocols developed for ad hoc networks can be applied to WMNs. For example, mesh routers of Firetide Networks =-=[47]-=- are based on topology broadcast based on reverse-path forwarding (TBRPF) protocol [108], Microsoft mesh networks [101] are built based on dynamic source routing (DSR) [73], and many other companies [",
+            "9.5. Geographic routing Compared to topology-based routing schemes, geographic routing schemes forward packets by only using the position information of nodes in the vicinity and the destination node =-=[48]-=-. Thus, topology change has less impact on the geographic routing than other routing protocols. Early geographic routing algorithms are actually a type of single-path greedy routing schemes in which p ooding and keeping the past routing information can help to guarantee delivery. However, these approaches increase communication overhead and lose the stateless property of single-path greedy routing =-=[48]-=-. In order to keep the stateless property and guarantee delivery, planar-graph based geographic routing algorithms are proposed recently [23,38]. However, open issues still remain in these algorithms.",
+            "rched further. To date, few rate control schemes are available for mobile ad hoc networks. Recently, an adaptive detection rate control (ADTFRC) scheme has been proposed for mobile ad hoc networks in =-=[49]-=-, where an end-to-end multi-metric joint detection approach is developed for TCP-friendly rate control schemes. However, to really support realtime delivery for multimedia traffic, the accuracys470 I. diz et al. / Computer Networks 47 (2005) 445\u2013487 of the detection approach is still insufficient. In addition, all non-congestion packet losses due to different problems are processed in the same way =-=[49]-=-. This may degrade the performance of the rate control scheme. To date, no RCP has been proposed for WMNs. In addition, no effective RCPs for ad hoc networks can be adopted and tailored for WMNs. Thus",
+            "infeasible if the shortest path is taken as the routing performance metric. Unless a large number of shortest paths are selected, load distribution is almost the same as single shortest path routing =-=[50]-=-. Thus, how to design an effective multi-path routing protocol with appropriate performance metrics is an interesting research topic. 9.4. Hierarchical routing Numerous hierarchical routing protocols",
+            "rocessing only, and both transmitter and receiver processing MIMO systems. The processing techniques can be based on maximum likelihood detection (MLD), vertical Bell Lab Layered Space\u2013Time (V-BLAST) =-=[51]-=-, singular value decomposition (SVD) [13], and space\u2013time coding. So far only few results have been reported on the research of applying STC and MIMO to WMNs as well as other ad hoc networks. Since mu",
+            "s are able to support multiple transmission rates by a combination of different modulation and coding rates [67,68]. With such modes, adaptive error resilience can be provided through link adaptation =-=[115,31,52]-=-. It should be noted that under a frequency selective fading environment, a link adaptation algorithm cannot take signal-to-noise ratio (SNR) or carrier-to-interference ratio (CIR) as a single input f",
+            "testbed results confirm that 802.11 MAC limits full exploitation of multihop throughput. As a means to enhance multihop throughput, it advocates spatial-reuse through carrier sensing threshold tuning =-=[53]-=-. Another potential solution experimented was the concept of heterogeneous networks: an 802.11 mesh network comprised of four high-end nodes, such as Intel XScale based nodes, is overlaid on a 50-sens",
+            "studies have been performed in [16], where the simulation results of a stationary network validate the theoretical results of [81]. Analytical lower and upper bounds of network capacity are given in =-=[54]-=-. From the analytical results, it follows that the throughput capacity per node reduces significantly when the node density increases. An important implication is derived in [54] as a guideline to imp e capacity of ad hoc networks, however, it may still not be favored by many applications because wired connections between base stations do not exist in many ad hoc networks. The implication given in =-=[54]-=- can also be reflected in [130]. The scheme proposed in [130] increases the network capacity of ad hoc networks by utilizing the node mobility. When a node needs to send packets to another node, it wi y, a node only communicates with its nearby nodes. This scheme has a limitation: The transmission delay may become large and the required buffer for a node may be infinite. The analytical approach in =-=[54]-=- has significantly driven the progress in capacity research of ad hoc networks. However, it contains limitations. The networking protocols have not been fully captured by the analysis. For example, po p counts, link quality, etc. [41]. As a result, the applicability of the theoretical results on practical network architectures still remains unclear. A close match between the theoretical results in =-=[54]-=- and IEEE 802.11 based ad hoc networks is reported in [90]. However, this study relies on the assumption that the traffic pattern in a large ad hoc network tends to be local and thus, nodes usually co  Networks 47 (2005) 445\u2013487 nodes. This assumption is not always valid in a network unless it is intentionally designed so. Most of the existing analytical approaches are based on asymptotic analysis =-=[54]-=-. The upper or lower capacity bounds derived from these approaches do not reveal the exact capacity of an ad hoc network with a given number of nodes, in particular when the number is small. Recently,",
+            "or example, the backoff procedures and NAV for virtual carrier sense of IEEE 802.11 MAC may be misused by some attacking nodes, which cause the network to be always congested by these malicious nodes =-=[55]-=-. Attackers may sneak into the network by misusing the cryptographic primitives [22]. In a cryptographic protocol, the exchange of information among users occurs frequently. The users employ a fair ex",
+            "tributed and ad hoc architecture. Thus, distributed mobility management is a preferred solution for WMNs. Mobility management schemes of ad hoc networks are mainly comprised of two types: distributed =-=[56]-=- and hierarchical mobility management [125,30]. These schemes may not perform well for WMNs due to the specific features of WMNs. More specifically, the backbone of WMNs does not have high mobility as",
+            "k of scalability in the MAC protocol, resulting in poor network performance. A working group within IEEE 802.11, called 802.11s, has been formed recently to standardize the extended service set (ESS) =-=[57]-=-. 802.11s aims to define MAC and PHY layers for mesh networks that extended coverage with no single point of failure. In such networks, 802.11 cellular wireless LAN access points relay information fro",
+            "differ in the optimization criterion applied in the forwarding decision. To improve power efficiency, a greedy algorithm is I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 467 proposed in =-=[58]-=-, which reduces signaling overhead by eliminating the periodic hello messages in other greedy routing algorithms. However, all greedy routing algorithms have a common problem: Delivery is not guarante",
+            "To date, a large number of reliable transport protocols have been proposed for ad hoc networks. They can be classified into two types: TCP variants and entirely new transport protocols. TCP variants =-=[15,29,59,92]-=- include transport protocols that are an enhanced version of the classical TCP for wired networks. In an entirely new transport protocol [127], the reliable transport mechanism is designed from a fres ents, link failure may still happen. To enhance TCP performance, congestion losses and link failure also need to be differentiated. Schemes similar to explicit link failure notification (ELFN) scheme =-=[59]-=- can perform such differentiations. TCP is critically dependent on ACK, so its performance can be severely impacted by network asymmetry which is defined as the situation where the forward direction o",
+            "sed due to [143,25]: vulnerability of channels and nodes in the shared wireless medium, absence of infrastructure, and dynamic change of network topology. The attacks may advertise routing updates in =-=[60]-=- and [145] for DSR and AODV, respectively. Another type of attacks is packet forwarding, i.e., the attacker may not change routing tables, but the packets on the routing path may be lead to a differen d MAC protocols or to develop security monitoring and response systems to detect attacks, monitor service disruption, and respond quickly to attacks. To date, many secure protocols have been proposed =-=[60,145]-=-. However, their role of defending attacks is very limited, because schemes located in a single protocol layer cannot solve problems in other layers. However, security attacks in a network may come si",
+            "impersonate a legitimate node and does not follow the required specifications of a routing protocol [37]. Some malicious nodes may create wormhole and shortcut the normal flows among legitimate nodes =-=[61]-=-. Same types of attacks as in routing protocols may also occur in MAC protocols. For example, the backoff procedures and NAV for virtual carrier sense of IEEE 802.11 MAC may be misused by some attacki",
+            "rogrammable MAC, need to be developed. \u2022 Scalability. Multi-hop communication is common in WMNs. For multi-hop networking, it is well known that communication protocols suffer from scalability issues =-=[62,72]-=-, i.e., when the size of network increases, the network performance degrades significantly. Routing protocols may not be able to find a reliable routing path, transport protocols may loose connections n timing synchronization for TDMA (and code management for CDMA). When a distributed multi-hop network is considered, accurate timing synchronization within the global network is difficult to achieve =-=[62]-=-. Thus, distributed multiple access schemes such as CSMA/ CA are more favorable. However, CSMA/CA has very low frequency spatial-reuse efficiency [2], which significantly limits the scalability of CSM function (TSF) in IEEE 802.11 for both infrastructure and ad hoc modes. To improve performance of the standard synchronization scheme, especially the scalability, some solutions have been proposed in =-=[62,87]-=-. However, the TSF in IEEE 802.11 standard and in [62,87] cannot be directly applied to large WMNs, because the synchronization information may take a long time. To date, timing synchronization for WM",
+            "ause there is no central authority, trusted third party or server to manage security keys. Key management in WMNs need to be performed in a distributed way. A self-organization scheme was proposed in =-=[63]-=- to distribute and manage the security keys. In this self-organizing key management system, certificates are stored and distributed by users themselves. When the public keys of two users need to be ve",
+            "as RF and circuit design for wireless communications evolve. Most of existing wireless radios are able to support multiple transmission rates by a combination of different modulation and coding rates =-=[67,68]-=-. With such modes, adaptive error resilience can be provided through link adaptation [115,31,52]. It should be noted that under a frequency selective fading environment, a link adaptation algorithm ca",
+            "as RF and circuit design for wireless communications evolve. Most of existing wireless radios are able to support multiple transmission rates by a combination of different modulation and coding rates =-=[67,68]-=-. With such modes, adaptive error resilience can be provided through link adaptation [115,31,52]. It should be noted that under a frequency selective fading environment, a link adaptation algorithm ca",
+            "r efficiency is the primary concern for wireless sensor networks [8,9]. \u2022 Compatibility and interoperability with existing wireless networks. For example, WMNs built based on IEEE 802.11 technologies =-=[133,69]-=- must be compatible with IEEE 802.11 standards in the sense of supporting both meshcapable and conventional Wi-Fi clients. Such WMNs also need to be inter-operable with other wireless networks such as",
+            "dressing the technical challenges of multi-hop mesh networks. Early work at the Intel Research-Berkeley Lab, affiliated with the University of California, Berkeley, has resulted in small sensor motes =-=[70]-=- which form self-configuring, low-cost adaptive networks. Additional work within Intel\u00d5s Network Architecture Lab is aimed at overcoming many of the challenges faced by mesh networks. Low-cost and low r Networks 47 (2005) 445\u2013487 and result in improved performance since the number of nodes that the data has to pass through is much lower, leading to improved reliability and lower energy consumption =-=[70]-=-. This experiment has shown that, without the top level mesh network (XScale nodes), the average data age doubled, from approximately 10 s to 20\u201325 s, and the network lifetime increased by 20%. Nortel",
+            "or nodes, have been developed to enable further research on security, traffic characterization, dynamic routing and configuration, and QoS problems. A demonstration was discussed in various occasions =-=[71]-=-, consisting of a collection of Centrino laptop computers and IXP425 network processor based routers running AODV and 802.11b MAC protocols. The testbed results confirm that 802.11 MAC limits full exp",
+            "rogrammable MAC, need to be developed. \u2022 Scalability. Multi-hop communication is common in WMNs. For multi-hop networking, it is well known that communication protocols suffer from scalability issues =-=[62,72]-=-, i.e., when the size of network increases, the network performance degrades significantly. Routing protocols may not be able to find a reliable routing path, transport protocols may loose connections ctrum spatial-reuse factor in WMNs [2]. However, hidden nodes still exist and may become worse because lower transmission power level reduces the possibility of detecting a potential interfering node =-=[72]-=-. \u2022 Proposing innovative MAC protocols. In order to fundamentally resolve the issue of low endto-end throughput in a multi-hop ad hoc environment such as WMNs, innovative solutions are necessary. Dete",
+            "outers of Firetide Networks [47] are based on topology broadcast based on reverse-path forwarding (TBRPF) protocol [108], Microsoft mesh networks [101] are built based on dynamic source routing (DSR) =-=[73]-=-, and many other companies [80] are using ad hoc on-demand distance vector (AODV) routing [109]. Despite the availability of several routing protocols for ad hoc networks, the design of routing protoc  stationary nodes, five car mounted nodes that drive around the testbed site, and 1car mounted roving node that enters and leaves the site. Packets are routed between the nodes using the DSR protocol =-=[73]-=- which also integrates the ad hoc network into the Internet via a gateway. They experimented with the network behavior under different levels of traffic load, including audio and video streams, and de",
+            "ad hoc networks, and wireless sensor networks, from the perspective of WMNs. Industrial standards groups are also actively working on new specifications for mesh networking. For example, IEEE 802.11 =-=[64,74]-=-, IEEE 802.15 [65,79], and IEEE 802.16 [66,111,135] all have established sub-working groups to focus on new standards for WMNs. The remainder of the paper is organized as follows. In Section 2, we pre",
+            "al mobility, while mesh clients can be stationary or mobile nodes. \u2022 Multiple types of network access. In WMNs, both backhaul access to the Internet and peerto-peer (P2P) communications are supported =-=[75]-=-. In addition, the integration of WMNs with other wireless networks and providing services to end-users of these networks can be accomplished through WMNs.s450 I.F. Akyildiz et al. / Computer Networks rived from these approaches do not reveal the exact capacity of an ad hoc network with a given number of nodes, in particular when the number is small. Recently, an analytical approach is proposed in =-=[75]-=- to study the exact capacity of WMNs. The analysis is simplified by taking advantage of the low mobility feature of WMNs. However, the analytical model in [75] contains three assumptions that are not",
+            "systems have been researched for years. However, their complexity and cost are still too high to be widely accepted for WMNs. An example of low-cost directional antenna implementation is reported in =-=[76]-=-. Frequency agile techniques are still in the early phase. Many challenging issues need to be resolved before they can be accepted for commercial use [89].sSecond, to best utilize the advanced feature",
+            "teraction between protocol layers. Cross-layer design can significantly improve network performance [20,84,32]. However, certain issues must be considered when carrying out crosslayer protocol design =-=[77]-=-: cross-layer design have risks due to loss of protocol layer abstraction, incompatibility with existing protocols, unforeseen impact on the future design of the network, andsdifficulty in maintenance",
+            "n an ad hoc multi-hop network, random access protocols such as CSMA/CA are not an efficient solution. Thus, revisiting the design of MAC protocols based on TDMA or CDMA is an important research topic =-=[78,134]-=-. To date, few TDMA or CDMA MAC protocols have been proposed for WMNs. This is probably because of two factors. One is the complexity and cost of developing a distributed and cooperative MAC with TDMA",
+            "wireless sensor networks, from the perspective of WMNs. Industrial standards groups are also actively working on new specifications for mesh networking. For example, IEEE 802.11 [64,74], IEEE 802.15 =-=[65,79]-=-, and IEEE 802.16 [66,111,135] all have established sub-working groups to focus on new standards for WMNs. The remainder of the paper is organized as follows. In Section 2, we present possible system",
+            "] are based on topology broadcast based on reverse-path forwarding (TBRPF) protocol [108], Microsoft mesh networks [101] are built based on dynamic source routing (DSR) [73], and many other companies =-=[80]-=- are using ad hoc on-demand distance vector (AODV) routing [109]. Despite the availability of several routing protocols for ad hoc networks, the design of routing protocols for WMNs is still an active sh\u2019\u2019 solution with its ad hoc meshing capability. Kiyon is in conduction field trials with building automation and \u2018\u2018small office home office\u2019\u2019 (SOHO) customers of its broadband wireless mesh routers =-=[80]-=-. Its technology is a layer-2/3 solution that implements a hybrid CSMA/CA and distributed TDMA MAC protocol atop an 802.11g/a physical layer. This is tightly coupled with a multi-metric \u2018\u2018Attribute Ro",
+            "opted to investigate the capacity of WMNs. For a stationary multi-hop network, it has been shown that the optimum transmission power level of a node is reached when the node has six neighboring nodes =-=[81]-=-. With this value, an optimum tradeoff is achieved between the number of hops from source to destination and the channel spatial-reuse efficiency. This result is useful for infrastructure WMNs with mi ybrid WMNs, no theoretical results are reported so far. Some experimental studies have been performed in [16], where the simulation results of a stationary network validate the theoretical results of =-=[81]-=-. Analytical lower and upper bounds of network capacity are given in [54]. From the analytical results, it follows that the throughput capacity per node reduces significantly when the node density inc",
+            "mitigated and thus, network capacity can be improved [124,118]. Directional antenna can also improve energy efficiency [123]. However, directional antennas bring challenges to the MAC protocol design =-=[144,105,82,36]-=-. If multiple antennas are in the transmitter and single antenna in the receiver, i.e., N =1, L =1 and either K >1or M > 1, antenna diversity or smart antenna cannot be applied unless the channel stat d. Otherwise, the advantages brought by such physical layer techniques will be significantly compromised. For directional and smart antennas, many MAC protocols have been proposed for ad hoc networks =-=[144,105,82,36]-=-. A MAC protocol for MIMO systems is studied in [126]. However, for multi-antenna systems, an efficient MAC protocol to achieve significant throughput improvement is still needed, as will be discussed y reduced due to the accumulating effect on the multihop path. \u2022 Cross-layer design with advanced physical layer techniques. Two major schemes exist in this category: MAC based on directional antenna =-=[82,36]-=- and MAC with power control [112]. The first set of schemes eliminates exposed nodes if antenna beam is assumed to be perfect. However, due to the directional transmission, more hidden nodes are produ",
+            "use it is difficult to manage clusters in a distributed system. I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 457 Nevertheless, this implication has motivated other research work such as =-=[83,93]-=-, where a hybrid network architecture is considered to improve the capacity of ad hoc networks. In the hybrid architecture, nodes only communicate with nearby nodes. If they need to communicate with n",
+            "dvantage. However, the second way can achieve much better performance by considering an optimized interaction between protocol layers. Cross-layer design can significantly improve network performance =-=[20,84,32]-=-. However, certain issues must be considered when carrying out crosslayer protocol design [77]: cross-layer design have risks due to loss of protocol layer abstraction, incompatibility with existing p",
+            "without direct line-of-sight I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 449 Fig. 5. Hybrid WMNs. (LOS) links. To meet these requirements, the mesh-style multi-hopping is indispensable =-=[85]-=-, which achieves higher throughput without sacrificing effective radio range via shorter link distances, less interference between the nodes, and more efficient frequency re-use. \u2022 Support for ad hoc",
+            ". 12.2. Power management The goal of power management for WMNs varies. Usually, mesh routers do not have a constraint on power consumption; power management aims to control connectivity, interference =-=[86]-=-, spectrum spatial-reuse, and topology [91]. If a single channel is used in each network node, the interference among the nodes directly impacts the spectrum spatial-reuse factor. Reducing transmissio",
+            "function (TSF) in IEEE 802.11 for both infrastructure and ad hoc modes. To improve performance of the standard synchronization scheme, especially the scalability, some solutions have been proposed in =-=[62,87]-=-. However, the TSF in IEEE 802.11 standard and in [62,87] cannot be directly applied to large WMNs, because the synchronization information may take a long time. To date, timing synchronization for WM",
+            "thm cannot take signal-to-noise ratio (SNR) or carrier-to-interference ratio (CIR) as a single input from the physical layer, because SNR or CIR alone does not adequately describe the channel quality =-=[88]-=-. In order to increase the capacity of wireless networks, various high-speed physical techniques have been invented. For example, orthogonalsfrequency multiple access (OFDM) has significantly increase",
+            "et [44]. To further improve the performance of a wireless radio and control by higher layer protocols, more advanced radio technologies such as reconfigurable radios, frequency agile/cognitive radios =-=[97,89]-=-, and even software radios [102] have been used in wireless communication. Although these radio technologies are still in their infancy, they are expected to be the future platform for wireless networ wever, many of existing allocated frequency bands (both licensed and unlicensed) have not been utilized efficiently. Measurements by the FCC show that around 70% of allocated spectrum is not utilized =-=[45,89]-=-. In addition, the time scale of spectrum occupancy can vary from milliseconds to hours [45]. Therefore, abundant spectrum is still available for wireless communication. Furthermore, in a large scale  planning, and thus, conventional static frequency planning becomes impossible [96]. To achieve much better spectrum utilization and viable frequency planning, frequency agile [97] or cognitive radios =-=[89]-=- are being developed to dynamically capture this unoccupied spectrum. The FCC has recognized the promising future of this technique and pushes to enable it to a full realization. In order to implement ctional antenna implementation is reported in [76]. Frequency agile techniques are still in the early phase. Many challenging issues need to be resolved before they can be accepted for commercial use =-=[89]-=-.sSecond, to best utilize the advanced features provided by physical layer, higher layer protocols, especially MAC protocols, need to be carefully designed. Otherwise, the advantages brought by such p",
+            "ability of the theoretical results on practical network architectures still remains unclear. A close match between the theoretical results in [54] and IEEE 802.11 based ad hoc networks is reported in =-=[90]-=-. However, this study relies on the assumption that the traffic pattern in a large ad hoc network tends to be local and thus, nodes usually communicate with nearbys458 I.F. Akyildiz et al. / Computer",
+            "lti-hop distances. This can significantly improve the MAC performance in a multi-hop environment. In some circumstances, network self-organization based on power control can optimize network topology =-=[91]-=-, minimize the interference between neighboring nodes, and thus, improve the network capacity. \u2022 Mobility affects the performance of MAC. Mobility dynamically changes network configuration, and thus,  management for WMNs varies. Usually, mesh routers do not have a constraint on power consumption; power management aims to control connectivity, interference [86], spectrum spatial-reuse, and topology =-=[91]-=-. If a single channel is used in each network node, the interference among the nodes directly impacts the spectrum spatial-reuse factor. Reducing transmission power level decreases the interference an",
+            "To date, a large number of reliable transport protocols have been proposed for ad hoc networks. They can be classified into two types: TCP variants and entirely new transport protocols. TCP variants =-=[15,29,59,92]-=- include transport protocols that are an enhanced version of the classical TCP for wired networks. In an entirely new transport protocol [127], the reliable transport mechanism is designed from a fres ode, both wireless and wired links may exist, which requires the enhanced TCP in WMNs and can work together with classical TCPs for wired networks. For example, the intermediate-layer concept of ATCP =-=[92]-=- can be adopted for WMNs. Besides the Internet, WMNs will also be integrated with various wireless networks such as IEEE 802.11, 802.16, 802.15, etc. The characteristics of these networks may be signi",
+            "use it is difficult to manage clusters in a distributed system. I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 457 Nevertheless, this implication has motivated other research work such as =-=[83,93]-=-, where a hybrid network architecture is considered to improve the capacity of ad hoc networks. In the hybrid architecture, nodes only communicate with nearby nodes. If they need to communicate with n",
+            ">1,N >1, the multiple-antenna system is an MIMO system, where both diversity and simultaneous transmissions exist. Thus, MIMO can potentially increase the system capacity by three times or even more =-=[94]-=-. Currently MIMO is being adopted into IEEE 802.11n [64]. Depending on where the MIMO processing is placed, MIMO systems can be categorized into three types: receiver processing only, transmitter proc",
+            "ve established to carry out research and development for WMNs. 16.1. Academic research testbeds One of the earliest mesh network testbeds is Carnegie-Mellon University\u00d5s mobile ad hoc network testbed =-=[95]-=-. It consists of seven nodes: two stationary nodes, five car mounted nodes that drive around the testbed site, and 1car mounted roving node that enters and leaves the site. Packets are routed between",
+            "still available for wireless communication. Furthermore, in a large scale ad hoc network, the complexity is beyond human planning, and thus, conventional static frequency planning becomes impossible =-=[96]-=-. To achieve much better spectrum utilization and viable frequency planning, frequency agile [97] or cognitive radios [89] are being developed to dynamically capture this unoccupied spectrum. The FCC",
+            "et [44]. To further improve the performance of a wireless radio and control by higher layer protocols, more advanced radio technologies such as reconfigurable radios, frequency agile/cognitive radios =-=[97,89]-=-, and even software radios [102] have been used in wireless communication. Although these radio technologies are still in their infancy, they are expected to be the future platform for wireless networ mplexity is beyond human planning, and thus, conventional static frequency planning becomes impossible [96]. To achieve much better spectrum utilization and viable frequency planning, frequency agile =-=[97]-=- or cognitive radios [89] are being developed to dynamically capture this unoccupied spectrum. The FCC has recognized the promising future of this technique and pushes to enable it to a full realizati",
+            "uently, through an integrated WMN, the users of existing network can be provided with otherwise impossible services of these networks. WMN is a promising wireless technology for numerous applications =-=[98]-=-, e.g., broadband home networking, community and neighborhood networks, enterprise networking, building automation, etc. It is gaining significant attention as a possible way for cash strapped Interne",
+            "e system. Multiple field trials have been reported since late 2003. MeshNetworks\u00d5 initial attempt to commercializing mesh technology was its quadrature division multiple access (QDMA) radio platform. =-=[99]-=-. The QDMA radio is designed for mobile ad hoc broadband networking. It uses multi-channel MAC and PHY to overcome the effects of Doppler shifting, rapid Raleigh fading and multipath encountered in a",
+            "tworking. It uses multi-channel MAC and PHY to overcome the effects of Doppler shifting, rapid Raleigh fading and multipath encountered in a mobile system. The MeshNetworks\u00d5 scalable routing protocol =-=[100]-=- is implemented above QDMA radios. The scalable routing technology utilizes a hybrid ad hoc routing algorithm that combines both proactive and reactive routing techniques. To adapt the routing protoco",
+            "c networks can be applied to WMNs. For example, mesh routers of Firetide Networks [47] are based on topology broadcast based on reverse-path forwarding (TBRPF) protocol [108], Microsoft mesh networks =-=[101]-=- are built based on dynamic source routing (DSR) [73], and many other companies [80] are using ad hoc on-demand distance vector (AODV) routing [109]. Despite the availability of several routing protoc et, WSNs, WSANs, and WiMAX. 16.2. Industrial practice Microsoft Research Lab (MSR) implements ad hoc routing and link quality measurement in a software module called the mesh connectivity layer (MCL) =-=[101]-=-. Architecturally, MCL is a loadable Windows driver. It implements a virtual network adapter, so that the ad hoc network appears as an additional (virtual) network link to the rest of the system. MCL",
+            "rformance of a wireless radio and control by higher layer protocols, more advanced radio technologies such as reconfigurable radios, frequency agile/cognitive radios [97,89], and even software radios =-=[102]-=- have been used in wireless communication. Although these radio technologies are still in their infancy, they are expected to be the future platform for wireless networks due to their capability of dy fined radio (SDR) is one of the most convenient platforms [46] because programmability exists in all components of a radio such as programmable RF bands, channel access modes, and channel modulations =-=[102]-=-. SDR is not a mature technique yet, although testbeds are available now [139]. However, for the long term, SDR will be a key technique for wireless communications. It cannot only realize the cognitiv",
+            "ned in Section 8. 9.3. Multi-path routing for load balancing and fault tolerance The main objective of using multi-path routing is to perform better load balancing and to provide high fault tolerance =-=[103]-=-. Multiple paths are selected between source and destination. Packets flow in one of these selected paths. When link is broken on a path due to a bad channel quality or mobility, another path in the s",
+            "are needed. In order to further increase capacity and mitigate the impairment by fading, delay-spread, and co-channel interference, multiple-antenna systems have been used for wireless communication =-=[104,21]-=-. Considering communications between nodes A and B in Fig. 12, node A is assumed to have M antennas for transmission and N antennas for reception, while in node B there are K antennas for transmission na uncorrelation is usually achieved through space, polarization, or pattern diversity, and the processing technologies for diversity include switch diversity, equal gain, and maximum ratio combining =-=[104]-=-. When strong interference Node A . . . N M Fig. 12. Multiple-antenna systems. I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 459 L K . . . Node B is present, diversity processing alone is uch as maximum likelihood detection (MLD). STC is a promising technique that achieves second order diversity without bandwidth expansions460 I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 =-=[104]-=-. To date, if CSI is not available, no solution has been developed yet for smart antennas at a transmitter. Schemes such as [35] still assume that CSI is perfectly known. If multiple antennas are in b",
+            "mitigated and thus, network capacity can be improved [124,118]. Directional antenna can also improve energy efficiency [123]. However, directional antennas bring challenges to the MAC protocol design =-=[144,105,82,36]-=-. If multiple antennas are in the transmitter and single antenna in the receiver, i.e., N =1, L =1 and either K >1or M > 1, antenna diversity or smart antenna cannot be applied unless the channel stat d. Otherwise, the advantages brought by such physical layer techniques will be significantly compromised. For directional and smart antennas, many MAC protocols have been proposed for ad hoc networks =-=[144,105,82,36]-=-. A MAC protocol for MIMO systems is studied in [126]. However, for multi-antenna systems, an efficient MAC protocol to achieve significant throughput improvement is still needed, as will be discussed",
+            "he top level mesh network (XScale nodes), the average data age doubled, from approximately 10 s to 20\u201325 s, and the network lifetime increased by 20%. Nortel\u00d5s commercial roll out of the WMN products =-=[106]-=- includes wireless access point (WAP) which is a dual radio system supporting a 2.4 GHz access link and a 5 GHz transit link, equipped with smart antennas. Along with Nortel\u00d5s wireless gateway routers",
+            "on the standard 802.11 MAC protocol for a large mesh network, many of the throughput performance impairments remain unresolved.sPacketHop\u00d5s core technology was developed in the SRI International lab =-=[107]-=-. It consists of a network controller, performing gateway, QoS, security, and roaming functions, a network management system, and the Windows software for ad hoc mesh routing. This is largely a layer-",
+            "g protocols developed for ad hoc networks can be applied to WMNs. For example, mesh routers of Firetide Networks [47] are based on topology broadcast based on reverse-path forwarding (TBRPF) protocol =-=[108]-=-, Microsoft mesh networks [101] are built based on dynamic source routing (DSR) [73], and many other companies [80] are using ad hoc on-demand distance vector (AODV) routing [109]. Despite the availab",
+            "ing (TBRPF) protocol [108], Microsoft mesh networks [101] are built based on dynamic source routing (DSR) [73], and many other companies [80] are using ad hoc on-demand distance vector (AODV) routing =-=[109]-=-. Despite the availability of several routing protocols for ad hoc networks, the design of routing protocols for WMNs is still an active research area for several reasons. First of all, new performanc",
+            "ey still face network asymmetry problem, because the channel condition and bandwidth on the path varies from time to time. Consequently, TCP has poor performance for wireless multihop ad hoc networks =-=[110,141]-=-. To solve the network asymmetry problem, schemes such as ACK filtering, ACK congestion control, etc., [15] have been proposed. However, a different network architecture is studied in [15], i.e., the",
+            ", from the perspective of WMNs. Industrial standards groups are also actively working on new specifications for mesh networking. For example, IEEE 802.11 [64,74], IEEE 802.15 [65,79], and IEEE 802.16 =-=[66,111,135]-=- all have established sub-working groups to focus on new standards for WMNs. The remainder of the paper is organized as follows. In Section 2, we present possible system architectures of WMNs. The cha",
+            "ffect on the multihop path. \u2022 Cross-layer design with advanced physical layer techniques. Two major schemes exist in this category: MAC based on directional antenna [82,36] and MAC with power control =-=[112]-=-. The first set of schemes eliminates exposed nodes if antenna beam is assumed to be perfect. However, due to the directional transmission, more hidden nodes are produced in this case. Thus, new solut",
+            "on the type of mesh nodes. Mesh routers usually do not have strict constraints on power consumption. However, mesh clients may require power efficient protocols. As an example, a mesh-capable sensor =-=[113,114]-=- requires its communication protocols to be power efficient. Thus, the MAC or routing protocols optimized for mesh routers may not be appropriate for mesh clients such as sensors, because power effici",
+            "on the type of mesh nodes. Mesh routers usually do not have strict constraints on power consumption. However, mesh clients may require power efficient protocols. As an example, a mesh-capable sensor =-=[113,114]-=- requires its communication protocols to be power efficient. Thus, the MAC or routing protocols optimized for mesh routers may not be appropriate for mesh clients such as sensors, because power effici",
+            "s are able to support multiple transmission rates by a combination of different modulation and coding rates [67,68]. With such modes, adaptive error resilience can be provided through link adaptation =-=[115,31,52]-=-. It should be noted that under a frequency selective fading environment, a link adaptation algorithm cannot take signal-to-noise ratio (SNR) or carrier-to-interference ratio (CIR) as a single input f",
+            "nel MAC There are three approaches in this case: \u2022 Improving existing MAC protocols. Currently several MAC protocols have been proposed for multi-hop ad hoc networks by enhancing the CSMA/CA protocol =-=[27,116]-=-. These schemes usually adjust parameters of CSMA/CA such as contention window size and modify backoff procedures. They may improve throughput fors462 I.F. Akyildiz et al. / Computer Networks 47 (2005",
+            "hes have been proposed to increase I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 455 capacity and flexibility of wireless systems. Typical examples include directional and smart antennas =-=[117,124]-=-, MIMO systems [139,126], and multi-radio/multi-channel systems [122,3]. To date, MIMO has become one of the key technologies for IEEE 802.11n [64], the high speed extension of Wi-Fi. Multi-radio chip icable to WMNs and other ad hoc networks. However, their performance in WMNs or any other ad hoc networks needs more evaluation. Examples of analyzing smart antenna systems for MANETs are reported in =-=[18,117]-=-. Due to complexity and cost, a fully adaptive smart antenna system is only used in base stations of cellular networks. On-going research and development efforts are still needed to implement fully ad",
+            "tched directional antenna system can be tuned to a certain direction. By using directional transmission, interference between network nodes can be mitigated and thus, network capacity can be improved =-=[124,118]-=-. Directional antenna can also improve energy efficiency [123]. However, directional antennas bring challenges to the MAC protocol design [144,105,82,36]. If multiple antennas are in the transmitter a",
+            "ms. The low multihop throughput reflects the problem typical in all 802.11 MAC based multihop networks. University of Illinois at Urbana-Champaign has reported a 4-node multi-channel 802.11b testbed =-=[119]-=-. Each node is equipped with 2 cards whose channels were determined based on the load-aware channel assignment algorithm. The multi-channel network achieves 2.63 times the throughput as compared to th",
+            ". Thus, how to design an effective multi-path routing protocol with appropriate performance metrics is an interesting research topic. 9.4. Hierarchical routing Numerous hierarchical routing protocols =-=[17, 120,140]-=- have been proposed in recent years. Instead of addressing each of them, we describe the common principle of these routing protocols. In hierarchical routing, a certain self-organization scheme is em teway. Routing within a cluster and routing between clusters may use different mechanisms. For example, inter-cluster routing can be a proactive protocol, while intra-cluster routing can be on demand =-=[120]-=-. When the node density is high, hierarchical routing protocols tend to achieve much better performance because of less overhead, shorter average routing path, and quicker set-up procedure of routing",
+            "is not always fixed due to mobility in mesh clients or possible failures in some mesh routers. Thus, monitoring the network topology is a desired feature for WMNs. A few network management protocols =-=[121]-=- have been proposed for ad hoc networks. However, the efficiency of these schemes needs to be improved for a large scale mesh network. In addition, in order to accurately detect abnormal operation of",
+            "ks 47 (2005) 445\u2013487 455 capacity and flexibility of wireless systems. Typical examples include directional and smart antennas [117,124], MIMO systems [139,126], and multi-radio/multi-channel systems =-=[122,3]-=-. To date, MIMO has become one of the key technologies for IEEE 802.11n [64], the high speed extension of Wi-Fi. Multi-radio chipsets and their development platforms are available on the market [44].  ay operate on different channels simultaneously in order to improve system capacity. To coordinate transmissions between network nodes under this situation, protocols such as the multi-channel MAC in =-=[122]-=- and the seed-slotted channel hopping (SSCH) scheme [14] are needed. SSCH is actually a virtual MAC protocol, since it works on top of IEEE 802.11 MAC and does not need changes in the IEEE 802.11 MAC.  design and application, a single channel is used in each radio. To illustrate typical issues existing in multichannel MAC protocols, here we explain two protocols in detail: multi-channel MAC (MMAC) =-=[122]-=- and multi-radio unification protocol (MUP) [3]. As far as MMAC is concerned, there are three main functions: \u2022 Maintaining data structure of all channels in each node. Channels of a node are classifi all nodes. \u2022 Selecting a channel. The criterion is to use a channel with the lowest count of source\u2013destination pairs that have selected the channel. Several problems have not been solved in the MMAC =-=[122]-=-. \u2022 It is assumed that RTS/CTS always work in IEEE 802.11 DCF. In reality, RTS/CTS is an optional function of DCF, and it may cause a high standard. \u2022 Global synchronization in the network is difficul ation pairs for each I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 463 channel is not always appropriate. Using pending packets as a metric to select a channel achieve better performance =-=[122]-=-. \u2022 The MMAC eliminates multi-channel hidden nodes, but it also generates many exposed nodes because of using RTS/CTS and ATIM/ATIMACK (for default channel) procedures. In MUP, there are multiple wire",
+            null,
+            "hes have been proposed to increase I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 455 capacity and flexibility of wireless systems. Typical examples include directional and smart antennas =-=[117,124]-=-, MIMO systems [139,126], and multi-radio/multi-channel systems [122,3]. To date, MIMO has become one of the key technologies for IEEE 802.11n [64], the high speed extension of Wi-Fi. Multi-radio chip tched directional antenna system can be tuned to a certain direction. By using directional transmission, interference between network nodes can be mitigated and thus, network capacity can be improved =-=[124,118]-=-. Directional antenna can also improve energy efficiency [123]. However, directional antennas bring challenges to the MAC protocol design [144,105,82,36]. If multiple antennas are in the transmitter a",
+            "stributed mobility management is a preferred solution for WMNs. Mobility management schemes of ad hoc networks are mainly comprised of two types: distributed [56] and hierarchical mobility management =-=[125,30]-=-. These schemes may not perform well for WMNs due to the specific features of WMNs. More specifically, the backbone of WMNs does not have high mobility as mobile nodes in ad hoc networks, but connecti",
+            "o increase I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 455 capacity and flexibility of wireless systems. Typical examples include directional and smart antennas [117,124], MIMO systems =-=[139,126]-=-, and multi-radio/multi-channel systems [122,3]. To date, MIMO has become one of the key technologies for IEEE 802.11n [64], the high speed extension of Wi-Fi. Multi-radio chipsets and their developme ntennas can reduce exposed nodes, but they also generate more hidden nodes. Thus, MAC protocols need to be re-designed to resolve this issue. As for MIMO systems, new MAC protocols are also necessary =-=[126]-=-. When software radios are considered, much more powerful MAC protocols, such as programmable MAC, need to be developed. \u2022 Scalability. Multi-hop communication is common in WMNs. For multi-hop network hniques will be significantly compromised. For directional and smart antennas, many MAC protocols have been proposed for ad hoc networks [144,105,82,36]. A MAC protocol for MIMO systems is studied in =-=[126]-=-. However, for multi-antenna systems, an efficient MAC protocol to achieve significant throughput improvement is still needed, as will be discussed in Section 8. Communication protocols for cognitive",
+            "nd entirely new transport protocols. TCP variants [15,29,59,92] include transport protocols that are an enhanced version of the classical TCP for wired networks. In an entirely new transport protocol =-=[127]-=-, the reliable transport mechanism is designed from a fresh start, with an objective to avoid fundamental problems in TCP. 10.1.1. TCP variants The performance of classical TCPs degrades significantly irely new transport protocols As discussed before, many fundamental problems exist in TCP. Therefore, some researchers have started to develop entirely new transport protocols for ad hoc networks. In =-=[127]-=-, the ad hoc transport protocol (ATP) is proposed for ad hoc networks. Transmissions in ATP are rate-based, and quick start is used for initial rate estimation. The congestion detection is a delay-bas better performance (e.g., delay, throughput, and fairness) than the TCP variants. Despite its advantages, an entirely new transport protocol is not favored by WMNs due to the compatibility issue. ATP =-=[127]-=- assumes that the wireless network can be stand-alone. While this may be true for mobile ad hoc networks, it is invaI.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 469 lid for WMNs, since W",
+            "n. WMNs enhance network performance, because of flexible network architecture, easy deployment and configuration, fault tolerance, and mesh connectivity, i.e., multipoint-to-multipoint communications =-=[128]-=-. Due to these features, WMNs have low upfront investment requirement, and the network can grow gradually as needed. \u2022 Mobility dependence on the type of mesh nodes. Mesh routers usually have minimal",
+            "ology. However, other approaches such as route diversity will help resolve security issues. Tropos Networks employs a cellular Wi-Fi network architecture to support \u2018\u2018infrastructure mesh\u2019\u2019 networking =-=[129]-=-, using its a layer-3 network operating system (NOS) called Tropos Sphere, that runs on standard 802.11 hardware and software. Tropos Sphere operates on every (small sized) Tropos Wi-Fi cell and conta",
+            "however, it may still not be favored by many applications because wired connections between base stations do not exist in many ad hoc networks. The implication given in [54] can also be reflected in =-=[130]-=-. The scheme proposed in [130] increases the network capacity of ad hoc networks by utilizing the node mobility. When a node needs to send packets to another node, it will not send until the destinati of MAC. Mobility dynamically changes network configuration, and thus, may significantly impact the performance of the MAC protocol. In order to be adaptive to mobility or even to utilize the mobility =-=[130]-=-, the network nodes need to exchange network topology information. These differences must be considered in order to design a scalable MAC for WMNs. The scalability of WMNs can be addressed by the MAC",
+            "face other difficulties such as cost, system complexity, and practicality of fast steerable directional antennas. The second set of schemes is developed for the purpose of reducing power consumptions =-=[33,147,131]-=-. These schemes reduce exposed nodes problem, especially in a dense network, and thus, improve the spectrum spatial-reuse factor in WMNs [2]. However, hidden nodes still exist and may become worse bec",
+            "he interference problem at RF-level [44]. California Institute for Telecommunications and Information Technology (Cal-(IT) 2 ) has established a basic Wi-Fi MAC development platform called CalRADIO-I =-=[132]-=-. This is a Wi-Fi research and development device that consists of a TI 5410 DSP, a 16-bit stereo CODEC, external Flash and SRAM memories, and support of as476 I.F. Akyildiz et al. / Computer Networks",
+            "r efficiency is the primary concern for wireless sensor networks [8,9]. \u2022 Compatibility and interoperability with existing wireless networks. For example, WMNs built based on IEEE 802.11 technologies =-=[133,69]-=- must be compatible with IEEE 802.11 standards in the sense of supporting both meshcapable and conventional Wi-Fi clients. Such WMNs also need to be inter-operable with other wireless networks such as",
+            "n an ad hoc multi-hop network, random access protocols such as CSMA/CA are not an efficient solution. Thus, revisiting the design of MAC protocols based on TDMA or CDMA is an important research topic =-=[78,134]-=-. To date, few TDMA or CDMA MAC protocols have been proposed for WMNs. This is probably because of two factors. One is the complexity and cost of developing a distributed and cooperative MAC with TDMA buted TDMA MAC for IEEE 802.16 mesh is still being researched. In WMNs based on IEEE 802.11, how to design a distributed TDMA MAC protocol overlaying CSMA/CA is an interesting but challenging problem =-=[134]-=-. For distributed TDMA or CDMA MAC protocols, network self-organization based on topology control and/or power control must also be considered. 8.2. Multi-channel MAC A multi-channel MAC can be implem olve partial problems of the overall issue, but raise other problems. Thus, how to fundamentally improve the scalability of CSMA/CA is a challenging problem. A distributed TDMA MAC overlaying CSMA/CA =-=[134]-=- addressed one possible solution to this problem. For networks based on techniques other than CSMA/CA, both TDMA and CDMA can be applied to WMNs, if a distributed scheme can be developed to locally el architecture. To our knowledge, there are several IEEE 802.11 chipset manufacturers that have eliminated firmware in their MAC implementation architecture. With such an architecture, a true soft MAC =-=[134]-=- or even a programmable MAC can be implemented. When software radios become mature enough for commercial use, more flexible and powerful MAC protocols can be easily developed. 9. Network layer WMNs wi",
+            ", from the perspective of WMNs. Industrial standards groups are also actively working on new specifications for mesh networking. For example, IEEE 802.11 [64,74], IEEE 802.15 [65,79], and IEEE 802.16 =-=[66,111,135]-=- all have established sub-working groups to focus on new standards for WMNs. The remainder of the paper is organized as follows. In Section 2, we present possible system architectures of WMNs. The cha",
+            "ytime. Moreover, the gateway/bridge functionalities in mesh routers enable the integration of WMNs with various existing wireless networks such as cellular, wireless sensor, wireless-fidelity (Wi-Fi) =-=[136]-=-, worldwide inter-operability for microwave access (WiMAX) [137], WiMedia [138] networks. Consequently, through an integrated WMN, the users of existing network can be provided with otherwise impossib",
+            "ers enable the integration of WMNs with various existing wireless networks such as cellular, wireless sensor, wireless-fidelity (Wi-Fi) [136], worldwide inter-operability for microwave access (WiMAX) =-=[137]-=-, WiMedia [138] networks. Consequently, through an integrated WMN, the users of existing network can be provided with otherwise impossible services of these networks. WMN is a promising wireless techn",
+            "integration of WMNs with various existing wireless networks such as cellular, wireless sensor, wireless-fidelity (Wi-Fi) [136], worldwide inter-operability for microwave access (WiMAX) [137], WiMedia =-=[138]-=- networks. Consequently, through an integrated WMN, the users of existing network can be provided with otherwise impossible services of these networks. WMN is a promising wireless technology for numer to USB, IEEE 1394, and with the capability to address the convergence of PC, consumer electronics and IP mobile phones. Vendors planning to produce 802.15.3a products have formed the WiMedia Alliance =-=[138]-=-, a branding and testing organization that will certify standards compliance. UWB networks hold many advantages over other wireless networks, such as covert communications, low power and cost requirem",
+            "o increase I.F. Akyildiz et al. / Computer Networks 47 (2005) 445\u2013487 455 capacity and flexibility of wireless systems. Typical examples include directional and smart antennas [117,124], MIMO systems =-=[139,126]-=-, and multi-radio/multi-channel systems [122,3]. To date, MIMO has become one of the key technologies for IEEE 802.11n [64], the high speed extension of Wi-Fi. Multi-radio chipsets and their developme mability exists in all components of a radio such as programmable RF bands, channel access modes, and channel modulations [102]. SDR is not a mature technique yet, although testbeds are available now =-=[139]-=-. However, for the long term, SDR will be a key technique for wireless communications. It cannot only realize the cognitive radios, but can also easily implement all other advanced physical techniques",
+            ". Thus, how to design an effective multi-path routing protocol with appropriate performance metrics is an interesting research topic. 9.4. Hierarchical routing Numerous hierarchical routing protocols =-=[17, 120,140]-=- have been proposed in recent years. Instead of addressing each of them, we describe the common principle of these routing protocols. In hierarchical routing, a certain self-organization scheme is em",
+            "ey still face network asymmetry problem, because the channel condition and bandwidth on the path varies from time to time. Consequently, TCP has poor performance for wireless multihop ad hoc networks =-=[110,141]-=-. To solve the network asymmetry problem, schemes such as ACK filtering, ACK congestion control, etc., [15] have been proposed. However, a different network architecture is studied in [15], i.e., the",
+            "tal problems in TCP and the corresponding solutions. One of the well-known reasons for TCP performance degradation is that the classical TCPs do not differentiate congestion and non-congestion losses =-=[142]-=-. As a result, when non-congestion losses occur, the network throughput quickly drops. Moreover, once wireless channels are back to the normal operation, the classical TCP cannot be recovered quickly.",
+            "the centralized scheme is not scalable in WMNs. Similar to mobile ad hoc networks, WMNs still lack efficient and scalable security solutions because their security is easier to be compromised due to =-=[143,25]-=-: vulnerability of channels and nodes in the shared wireless medium, absence of infrastructure, and dynamic change of network topology. The attacks may advertise routing updates in [60] and [145] for",
+            "mitigated and thus, network capacity can be improved [124,118]. Directional antenna can also improve energy efficiency [123]. However, directional antennas bring challenges to the MAC protocol design =-=[144,105,82,36]-=-. If multiple antennas are in the transmitter and single antenna in the receiver, i.e., N =1, L =1 and either K >1or M > 1, antenna diversity or smart antenna cannot be applied unless the channel stat d. Otherwise, the advantages brought by such physical layer techniques will be significantly compromised. For directional and smart antennas, many MAC protocols have been proposed for ad hoc networks =-=[144,105,82,36]-=-. A MAC protocol for MIMO systems is studied in [126]. However, for multi-antenna systems, an efficient MAC protocol to achieve significant throughput improvement is still needed, as will be discussed",
+            "o [143,25]: vulnerability of channels and nodes in the shared wireless medium, absence of infrastructure, and dynamic change of network topology. The attacks may advertise routing updates in [60] and =-=[145]-=- for DSR and AODV, respectively. Another type of attacks is packet forwarding, i.e., the attacker may not change routing tables, but the packets on the routing path may be lead to a different destinat d MAC protocols or to develop security monitoring and response systems to detect attacks, monitor service disruption, and respond quickly to attacks. To date, many secure protocols have been proposed =-=[60,145]-=-. However, their role of defending attacks is very limited, because schemes located in a single protocol layer cannot solve problems in other layers. However, security attacks in a network may come si",
+            "ity scheme is desired for network protocols. For a security monitoring system, a cross-layer framework also needs to be developed. A framework of intrusion detection in ad hoc networks is proposed in =-=[146]-=-. However, how to design and implement a practical security monitoring system, including cross-layer secure network protocols and various intrusion detection algorithms, is a challenging research topi",
+            "face other difficulties such as cost, system complexity, and practicality of fast steerable directional antennas. The second set of schemes is developed for the purpose of reducing power consumptions =-=[33,147,131]-=-. These schemes reduce exposed nodes problem, especially in a dense network, and thus, improve the spectrum spatial-reuse factor in WMNs [2]. However, hidden nodes still exist and may become worse bec",
+            "ible with IEEE 802.11 standards in the sense of supporting both meshcapable and conventional Wi-Fi clients. Such WMNs also need to be inter-operable with other wireless networks such as WiMAX, ZigBee =-=[148]-=-, and cellular networks. Based on their characteristics, WMNs are generally considered as a type of ad-hoc networks due to the lack of wired infrastructure that exists in cellular or Wi-Fi networks th minism while assigning contentionbased, best-effort access periods. IEEE 802.15.4 is intended for telemetry with low data rate, long battery life and low device cost requirements. The ZigBee Alliance =-=[148]-=- is developing higher-level protocols that will run over 802.15.4 MAC and PHY layers that operate in unlicensed bands worldwide. Raw data rates of 250 Kbps can be achieved at 2.4 GHz (16 channels), 40"
+        ]
+    },
+    "cited_paper_doi": [
+        "10.1.1.20.1673",
+        "10.1.1.77.6772",
+        "10.1.1.3.5380",
+        "10.1.1.221.1142",
+        "10.1.1.221.2247",
+        "10.1.1.15.3014",
+        "10.1.1.200.4981",
+        "10.1.1.1.2405",
+        "10.1.1.131.6584",
+        "10.1.1.83.6019",
+        "10.1.1.58.2667",
+        "10.1.1.21.7931",
+        "10.1.1.20.836",
+        "10.1.1.111.6423",
+        "10.1.1.12.4550",
+        "10.1.1.137.7197",
+        "10.1.1.58.3631",
+        "10.1.1.14.4547",
+        "10.1.1.101.5323",
+        "10.1.1.25.3759",
+        "10.1.1.10.5015",
+        "10.1.1.112.2848",
+        "10.1.1.114.2307",
+        "10.1.1.128.7155",
+        "10.1.1.137.2493",
+        "10.1.1.138.3623",
+        "10.1.1.116.8816",
+        "10.1.1.10.3898",
+        "10.1.1.132.4609",
+        "10.1.1.113.4100",
+        "10.1.1.58.1857",
+        "10.1.1.130.6088",
+        "10.1.1.127.3891",
+        "10.1.1.4.5139",
+        "10.1.1.96.5516",
+        "10.1.1.41.838",
+        "10.1.1.330.8026",
+        "10.1.1.1.5244",
+        "10.1.1.13.4941",
+        "10.1.1.11.3061",
+        "10.1.1.117.6416",
+        "10.1.1.128.9649",
+        "10.1.1.12.8061",
+        "10.1.1.320.6180",
+        "10.1.1.92.4343",
+        "10.1.1.374.252",
+        "10.1.1.23.904",
+        "10.1.1.106.2623",
+        "10.1.1.7.5779",
+        "10.1.1.3.4523",
+        "10.1.1.4.7783",
+        "10.1.1.20.3861",
+        "10.1.1.117.453",
+        "10.1.1.106.9714",
+        "10.1.1.5.9823",
+        "10.1.1.111.4133",
+        "10.1.1.16.8298",
+        "10.1.1.138.2480",
+        "10.1.1.10.7211",
+        "10.1.1.2.6760",
+        "10.1.1.109.7830",
+        "10.1.1.12.8453",
+        "10.1.1.76.3622",
+        "10.1.1.105.1024",
+        "10.1.1.41.838",
+        "10.1.1.13.1261",
+        "10.1.1.124.7605",
+        "10.1.1.10.5015",
+        "10.1.1.12.75",
+        "10.1.1.6.951",
+        "10.1.1.119.8052",
+        "10.1.1.137.634",
+        "10.1.1.117.6416",
+        "10.1.1.132.9399",
+        "10.1.1.138.3981",
+        "10.1.1.19.6069",
+        "10.1.1.9.5266",
+        "10.1.1.221.3971",
+        "10.1.1.145.8046",
+        "10.1.1.113.2393",
+        "10.1.1.17.3677",
+        "10.1.1.115.4540",
+        "10.1.1.133.9025",
+        "10.1.1.136.4408",
+        "10.1.1.37.7442",
+        "10.1.1.50.4621",
+        "10.1.1.6.1358",
+        "10.1.1.23.3256",
+        "10.1.1.30.5903",
+        "10.1.1.218.8371",
+        "10.1.1.43.8941",
+        "10.1.1.121.5087",
+        "10.1.1.22.1407",
+        "10.1.1.154.9133",
+        "10.1.1.153.3289",
+        "10.1.1.20.7245",
+        "10.1.1.16.8597",
+        "10.1.1.96.3971"
+    ],
+    "cited_paper_url": [
+        {
+            "author": [
+                "Alhussein A. Abouzeid",
+                "Sumit Roy 0001"
+            ],
+            "title": "Stochastic Modeling of TCP in Networks with Abrupt Delay Variations.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.1673&type=sc",
+            "year": "Stochastic Modeling of TCP in Networks with Abrupt Delay Variations."
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.77.6772&type=sc",
+            "year": null
+        },
+        {
+            "author": [
+                "Daniel Aguayo",
+                "John C. Bicket",
+                "Sanjit Biswas",
+                "Glenn Judd",
+                "Robert Morris"
+            ],
+            "title": "Link-level measurements from an 802.11b mesh network.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.3.5380&type=sc",
+            "year": "Link-level measurements from an 802.11b mesh network."
+        },
+        {
+            "author": [
+                "\u00d6zg\u00fcr B. Akan",
+                "Ian F. Akyildiz"
+            ],
+            "title": "ATL: an adaptive transport layer suite for next-generation wireless Internet.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.221.1142&type=sc",
+            "year": "ATL: an adaptive transport layer suite for next-generation wireless Internet."
+        },
+        {
+            "author": [
+                "Ian F. Akyildiz",
+                "Weilian Su",
+                "Yogesh Sankarasubramaniam",
+                "Erdal Cayirci"
+            ],
+            "title": "Wireless sensor networks: a survey.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.221.2247&type=sc",
+            "year": "Wireless sensor networks: a survey."
+        },
+        {
+            "author": "Ian F. Akyildiz",
+            "title": "Mobility Management in Next Generation Wireless Systems.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.15.3014&type=sc",
+            "year": "Mobility Management in Next Generation Wireless Systems."
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.200.4981&type=sc",
+            "year": null
+        },
+        {
+            "author": [
+                "Paramvir Bahl",
+                "Ranveer Chandra",
+                "John Dunagan"
+            ],
+            "title": "SSCH: slotted seeded channel hopping for capacity improvement in IEEE 802.11 ad-hoc wireless networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.1.2405&type=sc",
+            "year": "SSCH: slotted seeded channel hopping for capacity improvement in IEEE 802.11 ad-hoc wireless networks."
+        },
+        {
+            "author": [
+                "Elizabeth M. Royer",
+                "P. Michael Melliar-Smith",
+                "Louise E. Moser"
+            ],
+            "title": "An analysis of the optimum node density for ad hoc mobile networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.131.6584&type=sc",
+            "year": "An analysis of the optimum node density for ad hoc mobile networks."
+        },
+        {
+            "author": "Elizabeth M. Belding-Royer",
+            "title": "Multi-Level Hierarchies for Scalable Ad hoc Routing.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.83.6019&type=sc",
+            "year": "Multi-Level Hierarchies for Scalable Ad hoc Routing."
+        },
+        {
+            "author": [
+                "Randeep Bhatia",
+                "Murali S. Kodialam"
+            ],
+            "title": "On Power Efficient Communication over Multi-hop Wireless Networks: Joint Routing, Scheduling and Power Control.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.58.2667&type=sc",
+            "year": "On Power Efficient Communication over Multi-hop Wireless Networks: Joint Routing, Scheduling and Power Control."
+        },
+        {
+            "author": [
+                "Nikita Borisov",
+                "Ian Goldberg",
+                "David Wagner"
+            ],
+            "title": "Intercepting mobile communications: the insecurity of 802.11.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.21.7931&type=sc",
+            "year": "Intercepting mobile communications: the insecurity of 802.11."
+        },
+        {
+            "author": [
+                "Levente Butty\u00e1n",
+                "Jean-Pierre Hubaux"
+            ],
+            "title": "Report on a working session on security in wireless ad hoc networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.836&type=sc",
+            "year": "Report on a working session on security in wireless ad hoc networks."
+        },
+        {
+            "author": [
+                "Federico Cal\u00ec",
+                "Marco Conti",
+                "Enrico Gregori"
+            ],
+            "title": "Dynamic tuning of the IEEE 802.11 protocol to achieve a theoretical throughput limit.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.111.6423&type=sc",
+            "year": "Dynamic tuning of the IEEE 802.11 protocol to achieve a theoretical throughput limit."
+        },
+        {
+            "author": [
+                "Song Cen",
+                "Pamela C. Cosman",
+                "Geoffrey M. Voelker"
+            ],
+            "title": "End-to-end differentiation of congestion and wireless losses.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.4550&type=sc",
+            "year": "End-to-end differentiation of congestion and wireless losses."
+        },
+        {
+            "author": [
+                "Kartik Chandran",
+                "Sudarshan Raghunathan",
+                "S. Venkatesan",
+                "Ravi Prakash"
+            ],
+            "title": "A Feedback Based Scheme for Improving TCP Performance in Ad-Hoc Wireless Networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.137.7197&type=sc",
+            "year": "A Feedback Based Scheme for Improving TCP Performance in Ad-Hoc Wireless Networks."
+        },
+        {
+            "author": "Mung Chiang",
+            "title": "To Layer or not to Layer: Balancing Transport and Physical Layers in Wireless Multihop Networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.58.3631&type=sc",
+            "year": "To Layer or not to Layer: Balancing Transport and Physical Layers in Wireless Multihop Networks."
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.14.4547&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.5323&type=sc",
+            "year": null
+        },
+        {
+            "author": [
+                "Susanta Datta",
+                "Ivan Stojmenovic",
+                "Jie Wu 0001"
+            ],
+            "title": "Internal Node and Shortcut Based Routing with Guaranteed Delivery in Wireless Networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.25.3759&type=sc",
+            "year": "Internal Node and Shortcut Based Routing with Guaranteed Delivery in Wireless Networks."
+        },
+        {
+            "author": [
+                "Douglas S. J. De Couto",
+                "Daniel Aguayo",
+                "John C. Bicket",
+                "Robert Morris"
+            ],
+            "title": "a high-throughput path metric for multi-hop wireless routing.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.5015&type=sc",
+            "year": "a high-throughput path metric for multi-hop wireless routing."
+        },
+        {
+            "author": [
+                "Richard Draves",
+                "Jitendra Padhye",
+                "Brian Zill"
+            ],
+            "title": "Comparison of routing metrics for static multi-hop wireless networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.112.2848&type=sc",
+            "year": "Comparison of routing metrics for static multi-hop wireless networks."
+        },
+        {
+            "author": [
+                "Richard Draves",
+                "Jitendra Padhye",
+                "Brian Zill"
+            ],
+            "title": "Routing in multi-radio, multi-hop wireless mesh networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.114.2307&type=sc",
+            "year": "Routing in multi-radio, multi-hop wireless mesh networks."
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.128.7155&type=sc",
+            "year": null
+        },
+        {
+            "author": [
+                "Zhenghua Fu",
+                "Xiaoqiao Meng",
+                "Songwu Lu"
+            ],
+            "title": "A transport protocol for supporting multimedia streaming in mobile ad hoc networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.137.2493&type=sc",
+            "year": "A transport protocol for supporting multimedia streaming in mobile ad hoc networks."
+        },
+        {
+            "author": [
+                "Piyush Gupta",
+                "P. R. Kumar"
+            ],
+            "title": "The capacity of wireless networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.138.3623&type=sc",
+            "year": "The capacity of wireless networks."
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.116.8816&type=sc",
+            "year": null
+        },
+        {
+            "author": [
+                "Marc Heissenb\u00fcttel",
+                "Torsten Braun",
+                "Thomas Bernoulli",
+                "Markus W\u00e4lchli"
+            ],
+            "title": "BLR: beacon-less routing algorithm for mobile ad hoc networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.3898&type=sc",
+            "year": "BLR: beacon-less routing algorithm for mobile ad hoc networks."
+        },
+        {
+            "author": [
+                "Yih-Chun Hu",
+                "Adrian Perrig",
+                "David B. Johnson"
+            ],
+            "title": "Ariadne: A Secure On-Demand Routing Protocol for Ad Hoc Networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.132.4609&type=sc",
+            "year": "Ariadne: A Secure On-Demand Routing Protocol for Ad Hoc Networks."
+        },
+        {
+            "author": [
+                "Yih-Chun Hu",
+                "Adrian Perrig",
+                "David B. Johnson"
+            ],
+            "title": "Packet Leashes: A Defense against Wormhole Attacks in Wireless Networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.4100&type=sc",
+            "year": "Packet Leashes: A Defense against Wormhole Attacks in Wireless Networks."
+        },
+        {
+            "author": [
+                "Lifei Huang",
+                "Ten-Hwang Lai"
+            ],
+            "title": "On the scalability of IEEE 802.11 ad hoc networks.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.58.1857&type=sc",
+            "year": "On the scalability of IEEE 802.11 ad hoc networks."
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.130.6088&type=sc",
+            "year": null
+        },
+        {
+            "author": [
+                "Kamal Jain",
+                "Jitendra Padhye",
+                "Venkata N. Padmanabhan",
+                "Lili Qiu"
+            ],
+            "title": "Impact of Interference on Multi-Hop Wireless Network Performance.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.127.3891&type=sc",
+            "year": "Impact of Interference on Multi-Hop Wireless Network Performance."
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.4.5139&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.96.5516&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.41.838&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.330.8026&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.1.5244&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.4941&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.3061&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.6416&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.128.9649&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.8061&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.320.6180&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.92.4343&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.374.252&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.23.904&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.106.2623&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.7.5779&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.3.4523&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.4.7783&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.3861&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.453&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.106.9714&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.5.9823&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.111.4133&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.16.8298&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.138.2480&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.7211&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.2.6760&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.109.7830&type=sc",
+            "year": null
+        },
+        {
+            "author": null,
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.8453&type=sc",
+            "year": null
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.76.3622&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.105.1024&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.41.838&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.1261&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.124.7605&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.5015&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.75&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.6.951&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.119.8052&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.137.634&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.6416&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.132.9399&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.138.3981&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.19.6069&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.9.5266&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.221.3971&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.145.8046&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.2393&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.17.3677&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.115.4540&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.133.9025&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.136.4408&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.37.7442&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.50.4621&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.6.1358&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.23.3256&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.30.5903&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.218.8371&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.43.8941&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.121.5087&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.22.1407&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.154.9133&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.153.3289&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.7245&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.16.8597&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.96.3971&type=sc"
+        }
+    ],
+    "doi": "10.1.1.61.2545",
+    "title": "Wireless mesh networks: a survey."
+}
