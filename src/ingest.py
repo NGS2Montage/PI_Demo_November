@@ -95,6 +95,7 @@ def ingest_citegraph():
     data_map[table] = [ ]
 
     for cluster_id, cluster_list in citegraph_map.iteritems ():
+
         key_label = 'cluster_id'
         key_contents = cluster_id
         value_label = constants.value_label

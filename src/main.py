@@ -1,56 +1,105 @@
 import argparse
 import constants
 import os
-import requests
 import utils
 import mongoDBI
-import xmltodict
 import json
+from joblib import Parallel, delayed
+
+# open a single connection to speed up things
+dbi = mongoDBI.mongoDBI (constants.db_name)
+num_parallel = 5
+
+#Fetch Title, Author, Year
+def fetch_base_details(doi):
+    # dbi instance to aid concurrency
+    dbi = mongoDBI.mongoDBI (constants.db_name)
+    table = constants.papers_table
+    key_label = constants.paper_key_label
+    key_contents = doi
+    value_label = constants.value_label
+    result = dbi.find (table, key_label, key_contents, value_label)
+    if result is None:
+        return None, None, None
+    try:
+        title = result['title']
+    except:
+        title = None
+    try:
+        author = result['author']
+    except:
+        author = None
+    try:
+        year = result['title']
+    except:
+        year = None
+
+    return title,author,year
 
 
-def fetch_all_info_from_xml(file_name):
-    doc = None
-    with  open (file_name) as f:
-        doc = xmltodict.parse (f.read ())
+def fetch_context(doi):
 
-    if doc is None:
+    print 'entering fetch_context : ',doi
+    # dbi instance to aid concurrency
+    dbi = mongoDBI.mongoDBI (constants.db_name)
+    table = constants.papers_table
+    key_label = constants.paper_key_label
+    key_contents = doi
+    value_label = constants.value_label
+    result = dbi.find (table, key_label, key_contents, value_label)
+
+    if result is None :
         return None
 
-    cit_context = []
-    top_node = doc['paper']
-    title = top_node['title']
-    author = top_node['author']
-    abstract = top_node['abstract']
-    citation_node = top_node['citations']['citation']
+    if result['citations'] is None or len (result['citations']) == 0:
+        return None
+
+    citation_node = result['citations']
     count = len (citation_node)
+    cit_context = []
 
     for i in range (count):
-        text = citation_node[i]['contexts']
-        cit_context.append (text)
+        try:
+            text = citation_node[i]['contexts']
+            cit_context.append (text)
+        except :
+            pass
 
-    return title, author, abstract, cit_context
+    print 'returning from fetch_context : ', doi
+    return { doi: cit_context }
 
+def fetch_all_info_from_db(doi):
+    global dbi
+    table = constants.papers_table
+    key_label = constants.paper_key_label
+    key_contents = doi
+    value_label = constants.value_label
+    result = dbi.find (table, key_label, key_contents, value_label)
 
-def get_info(doi):
-    title = None
-    abstract = None
-    author = None
-    citation_contexts = None
-    utils.nav_to_data_dir ()
-    os.chdir (constants.paper_dir)
-    file_name = doi + ".xml"
+    title = result['title']
+    author = result['author']
+    abstract = result['abstract']
+    citation_node = result['citations']
+    count = len (citation_node)
+    cit_context = []
 
-    if os.path.exists (file_name):
-        title, author, abstract, citation_contexts = fetch_all_info_from_xml (file_name)
+    for i in range(count):
+        try:
+            text = citation_node[i]['contexts']
+            cit_context.append (text)
+        except:
+            pass
 
-    os.chdir ("../.")
-    utils.nav_to_src ()
-    return title, author, abstract, citation_contexts
+    cit_context_dict = { doi: cit_context }
+    print cit_context_dict
+    return title, author, abstract, cit_context_dict
+
 
 
 def search_citations(doi):
+
+    global dbi
     # find Cluster id
-    dbi = mongoDBI.mongoDBI (constants.db_name)
     table = constants.doi_clusterId_table
     key_label = 'doi'
     key_contents = doi
@@ -63,29 +112,33 @@ def search_citations(doi):
     key_contents = cluster_id
     value_label = constants.value_label
     citation_list_doi = dbi.find (table, key_label, key_contents, value_label)
-    
-    url_list = []
+
+    if citation_list_doi is None:
+        return []
+
     doi_list = []
+
     for c in citation_list_doi:
         table = constants.clusterId_doi_table
         key = 'cluster_id'
         key_contents = c
         value_label = constants.value_label	
         doi_c = dbi.find (table, key_label, key_contents, value_label)
+
         if doi_c is not None:
             doi_list.append( doi_c[0])
- 
-    for doi in doi_list:
-        url_list.append (utils.get_url (doi))
 
-    return doi_list, url_list
+    return doi_list
 
 
-def write_output(doi,data):
+def write_output(doi,data, file_name = None):
     utils.nav_to_op_dir()
-    
     op_file_temp = doi + '_temp.json'
-    op_file = doi + '.json'
+
+    if file_name is None:
+        op_file = doi + '.json'
+    else:
+        op_file = file_name
 
     json_data = json.dumps (data)
     f = open (op_file_temp, 'w')
@@ -96,39 +149,91 @@ def write_output(doi,data):
     utils.nav_to_src()
     return
 
-#
-# "cited_paper_data": [
-# 	{"url" : "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.1673&type=sc" ,
-#          "title" : "Some Dummy title ",
-# 	 "Author" : "Geoffrey Hinton, Luke Skywalker",
-# 	 "Year" : "2015"
-# 	}
-#     ],
-#
+
+def add_2nd_hop_data( data ):
+    print ' in add_2nd_hop_data '
+
+    base_citation_list_doi = data['cited_paper_doi']
+    base_citation_list_url = data['cited_paper_url']
+    base_cit_context = data['citation_contexts']
+
+    augmented_doi_list = []
+    augmented_citation_list_url = []
+    augmented_cit_contexts = base_cit_context
+
+    augmented_doi_list.extend(base_citation_list_doi)
+    augmented_citation_list_url.extend(base_citation_list_url)
+
+    for doi in base_citation_list_doi:
+        cit_doi_list = search_citations (doi)
+        augmented_doi_list.extend(cit_doi_list)
+        list_enriched_cit_urls = enriched_cit_urls(cit_doi_list,details = False)
+        augmented_citation_list_url.extend(list_enriched_cit_urls)
+
+    add_cit_context = Parallel (n_jobs=num_parallel) (delayed (fetch_context) (doi) for doi in base_citation_list_doi)
+    print len(add_cit_context)
+    for item in add_cit_context:
+        if type(item) is not dict:
+            continue
+        for doi_key,cit_context in item.iteritems():
+            if cit_context is None:
+                continue
+            augmented_cit_contexts[doi_key] = cit_context
+
+    print augmented_cit_contexts
+
+    data['cited_paper_doi'] = augmented_doi_list
+    data['cited_paper_url'] = augmented_citation_list_url
+    data['citation_contexts'] = augmented_cit_contexts
+    return data
+
+def create_cit_url_dict(doi , details = False):
+    print 'create_cit_url_dict' , doi
+    cit_dict = {}
+    if details:
+        title, author, year = fetch_base_details (doi)
+        cit_dict['title'] = title
+        cit_dict['author'] = author
+        cit_dict['year'] = year
+    cit_dict['url'] = utils.get_url (doi)
+    return cit_dict
+
+
+def enriched_cit_urls(doi_list , details = False):
+    result = Parallel (n_jobs = num_parallel) (delayed (create_cit_url_dict) (doi, details) for doi in  doi_list )
+    return result
+
 
 def fetch_data_helper(doi):
-    citation_list_doi, citation_list_url = search_citations (doi)
-    title, author, abstract, citation_contexts = get_info (doi)
+    citation_list_doi = search_citations (doi)
+    title, author, abstract, citation_contexts = fetch_all_info_from_db(doi)
     data = {}
     data['title'] = title
     data['doi'] = doi
     data['author'] = author
     data['abstract'] = abstract
     data['cited_paper_doi'] = citation_list_doi
-    data['cited_paper_url'] = citation_list_url
+    data['cited_paper_url'] = enriched_cit_urls(citation_list_doi, True)
     data['citation_contexts'] = citation_contexts
     return data
 
 
 def fetch_data(doi):
-    
     # Write to file
-    write_output(doi, fetch_data_helper(doi))
+    data = fetch_data_helper(doi)
+    data = add_2nd_hop_data (data)
+    write_output(doi, data)
     return
 
-    # ------------------------------------------------------------------------------ #
-    # Set up and Parse Arguements
-    # ------------------------------------------------------------------------------ #
+def fetch_augmented_data(doi):
+    data = fetch_data_helper(doi)
+    augmented_data = add_2nd_hop_data (data)
+    return augmented_data
+
+
+# ------------------------------------------------------------------------------ #
+# Set up and Parse Arguements
+# ------------------------------------------------------------------------------ #
 
 
 if __name__ == "__main__":
@@ -141,13 +246,11 @@ if __name__ == "__main__":
 
     doi_list = []
 
-
     if doi is not None:
         doi_list = doi.split (",")
 
     if url is not None:
         doi_list.append (utils.get_doi_from_url (url))
-
 
     for doi in doi_list:
         fetch_data (doi)
