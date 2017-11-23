@@ -1,5 +1,10 @@
 {
-    "abstract": "Wireless meshnet8Ex8 (WMNs)consist of meshrout6L and meshclient8 where meshroutfix have minimal mobilit  and formtr backbone of WMNs. They provide netide access for bot mesh andconvent1)fi8 clientt TheintL gratLfl of WMNs wit ot8 net8866 such as t1Int6fiPx1 cellular, IEEE 802.11, IEEE 802.15, IEEE 802.16, sensor netsor1L ets can be accomplishedtccomp tc gatomp and bridging functng1 in t1 meshroutfijx Meshclient can be eit8fi st8fij1)6x or mobile, and can form aclient meshnet16S amongtng1fifiELj and wit meshroutLfifi WMNs are antLfifl1)6fl t resolvets limit18fiflfl andt significantfl improvetp performance of ad hocnetLEP8L wireless local area net1Pxx (WLANs), wireless personal areanet16fij (WPANs), and wirelessmetess1fifljfl areanet1LPS (WMANs). They are undergoing rapid progress and inspiring numerousdeploymentS WMNs will deliver wireless services for a largevariet ofapplicat6fifl in personal, local, campus, andmet8Lfix1)6fi areas. Despit recent advances in wireless mesh netjLfiP1)6 many research challenges remain in allprotjfiS layers. This paperpresent adetEfl81 stEonrecent advances and open research issues in WMNs. Syst1 architL881)6 andapplicat)68 of WMNs are described, followed by discussingts critssi factss influencingprotenc design.Theoret8fiL netore capacit and tdst1LLSjx tt1LL protLLSj for WMNs are exploredwit anobjectE1 t point out a number of open research issues. Finally,tnal beds,indust681 pract68 andcurrent strent actntx1) relatt t WMNs arehighlight8x  # 2004 Elsevier B.V. Allrl rl  KedI7-8 Wireless meshnet186flfl Ad hocnet8jEES Wireless sensornetor16fl Medium accessconts1fi Routs1 prots1fiS Transport protspor ScalabilitS Securiti Powermanagement andcontfi8fl Timingsynchronizat ion 1389-1286/$ - seefront matt # 2004 Elsevier B.V. Allright reserved. doi:10....",
+    "abstract": {
+        "10.1.1.20.1673": "An analytical model of TCP (Transport Control Protocol) over an end-to-end path with random abrupt round-trip time (RTT) changes is presented. Modeling the RTT as a stochastic process, we analytically quantify and compare between the degree of degradation of the steadystate average throughput and window size due to spurious retransmissions for the different versions of TCP (Reno/NewReno versus Tahoe). The modeling methodology in this paper is used for evaluating different design alternatives for TCP for highly dynamic networks.",
+        "10.1.1.221.1142": "The next-generation wireless Internet (NGWI) is expected to provide a wide range of services including high-speed data and real-time multimedia to mobile users. To realize this expectation, a diverse set of challenges need to be addressed, which are posed by heterogeneous wireless networking environments within NGWI and the according application requirements. Furthermore, the architectural heterogeneities must be captured dynamically, while mobile users may roam during their connection duration. Current existing transport layer protocols have been developed for a specific network paradigm in mind, e.g., for wireless local area networks (WLANs), micro/macro wireless systems, or for satellite systems. Using these existing different transport layer protocols for NGWI to support global roaming of mobile users is not a practical solution due to processing and memory constraints of wireless terminals. Thus, there is a need",
+        "10.1.1.3.5380": "This paper anal yzes the causes of packetl oss in a 38-node urban mul ti-hop 802.11b network. The patterns and causes oflv# are important in the design of routing and errorcorrection proto colv as wel as in networkplqq\"(v The paper makes the fol l owing observations. The distribution of inter-nodel oss rates is rel'RfivD' uniform over the wh ol range oflv$ rates; there is no clq$ threshol separating \"in range\" and \"out of range.\" Mostls ks have relj tivel stabl el oss rates from one second to the next, though a smal l minority have very burstyl osses at that time scal e. Sign al to-noise ratio and distance have lv tl e predictive val e forl oss rate. Thel arge number of lv ks with intermediate l oss rates is probabl y due to mul ti-path fading rather than attenuation or interference. The phenomena discussed here are al l wel l -known. The contributions of this paper are an understanding of their rel ative importance, of how they interact, and of the impl ications for MAC and routing protocol design.",
+        "10.1.1.61.2545": "Wireless meshnet8Ex8 (WMNs)consist of meshrout6L and meshclient8 where meshroutfix have minimal mobilit  and formtr backbone of WMNs. They provide netide access for bot mesh andconvent1)fi8 clientt TheintL gratLfl of WMNs wit ot8 net8866 such as t1Int6fiPx1 cellular, IEEE 802.11, IEEE 802.15, IEEE 802.16, sensor netsor1L ets can be accomplishedtccomp tc gatomp and bridging functng1 in t1 meshroutfijx Meshclient can be eit8fi st8fij1)6x or mobile, and can form aclient meshnet16S amongtng1fifiELj and wit meshroutLfifi WMNs are antLfifl1)6fl t resolvets limit18fiflfl andt significantfl improvetp performance of ad hocnetLEP8L wireless local area net1Pxx (WLANs), wireless personal areanet16fij (WPANs), and wirelessmetess1fifljfl areanet1LPS (WMANs). They are undergoing rapid progress and inspiring numerousdeploymentS WMNs will deliver wireless services for a largevariet ofapplicat6fifl in personal, local, campus, andmet8Lfix1)6fi areas. Despit recent advances in wireless mesh netjLfiP1)6 many research challenges remain in allprotjfiS layers. This paperpresent adetEfl81 stEonrecent advances and open research issues in WMNs. Syst1 architL881)6 andapplicat)68 of WMNs are described, followed by discussingts critssi factss influencingprotenc design.Theoret8fiL netore capacit and tdst1LLSjx tt1LL protLLSj for WMNs are exploredwit anobjectE1 t point out a number of open research issues. Finally,tnal beds,indust681 pract68 andcurrent strent actntx1) relatt t WMNs arehighlight8x  # 2004 Elsevier B.V. Allrl rl  KedI7-8 Wireless meshnet186flfl Ad hocnet8jEES Wireless sensornetor16fl Medium accessconts1fi Routs1 prots1fiS Transport protspor ScalabilitS Securiti Powermanagement andcontfi8fl Timingsynchronizat ion 1389-1286/$ - seefront matt # 2004 Elsevier B.V. Allright reserved. doi:10...."
+    },
     "author": [
         "Ian F. Akyildiz",
         "Xudong Wang 0001",
@@ -157,571 +162,124 @@
             "ible with IEEE 802.11 standards in the sense of supporting both meshcapable and conventional Wi-Fi clients. Such WMNs also need to be inter-operable with other wireless networks such as WiMAX, ZigBee =-=[148]-=-, and cellular networks. Based on their characteristics, WMNs are generally considered as a type of ad-hoc networks due to the lack of wired infrastructure that exists in cellular or Wi-Fi networks th minism while assigning contentionbased, best-effort access periods. IEEE 802.15.4 is intended for telemetry with low data rate, long battery life and low device cost requirements. The ZigBee Alliance =-=[148]-=- is developing higher-level protocols that will run over 802.15.4 MAC and PHY layers that operate in unlicensed bands worldwide. Raw data rates of 250 Kbps can be achieved at 2.4 GHz (16 channels), 40"
         ]
     },
-    "cited_paper_doi": [
-        "10.1.1.20.1673",
-        "10.1.1.77.6772",
-        "10.1.1.3.5380",
-        "10.1.1.221.1142",
-        "10.1.1.221.2247",
-        "10.1.1.15.3014",
-        "10.1.1.200.4981",
-        "10.1.1.1.2405",
-        "10.1.1.131.6584",
-        "10.1.1.83.6019",
-        "10.1.1.58.2667",
-        "10.1.1.21.7931",
-        "10.1.1.20.836",
-        "10.1.1.111.6423",
-        "10.1.1.12.4550",
-        "10.1.1.137.7197",
-        "10.1.1.58.3631",
-        "10.1.1.14.4547",
-        "10.1.1.101.5323",
-        "10.1.1.25.3759",
-        "10.1.1.10.5015",
-        "10.1.1.112.2848",
-        "10.1.1.114.2307",
-        "10.1.1.128.7155",
-        "10.1.1.137.2493",
-        "10.1.1.138.3623",
-        "10.1.1.116.8816",
-        "10.1.1.10.3898",
-        "10.1.1.132.4609",
-        "10.1.1.113.4100",
-        "10.1.1.58.1857",
-        "10.1.1.130.6088",
-        "10.1.1.127.3891",
-        "10.1.1.4.5139",
-        "10.1.1.96.5516",
-        "10.1.1.41.838",
-        "10.1.1.330.8026",
-        "10.1.1.1.5244",
-        "10.1.1.13.4941",
-        "10.1.1.11.3061",
-        "10.1.1.117.6416",
-        "10.1.1.128.9649",
-        "10.1.1.12.8061",
-        "10.1.1.320.6180",
-        "10.1.1.92.4343",
-        "10.1.1.374.252",
-        "10.1.1.23.904",
-        "10.1.1.106.2623",
-        "10.1.1.7.5779",
-        "10.1.1.3.4523",
-        "10.1.1.4.7783",
-        "10.1.1.20.3861",
-        "10.1.1.117.453",
-        "10.1.1.106.9714",
-        "10.1.1.5.9823",
-        "10.1.1.111.4133",
-        "10.1.1.16.8298",
-        "10.1.1.138.2480",
-        "10.1.1.10.7211",
-        "10.1.1.2.6760",
-        "10.1.1.109.7830",
-        "10.1.1.12.8453",
-        "10.1.1.76.3622",
-        "10.1.1.105.1024",
-        "10.1.1.41.838",
-        "10.1.1.13.1261",
-        "10.1.1.124.7605",
-        "10.1.1.10.5015",
-        "10.1.1.12.75",
-        "10.1.1.6.951",
-        "10.1.1.119.8052",
-        "10.1.1.137.634",
-        "10.1.1.117.6416",
-        "10.1.1.132.9399",
-        "10.1.1.138.3981",
-        "10.1.1.19.6069",
-        "10.1.1.9.5266",
-        "10.1.1.221.3971",
-        "10.1.1.145.8046",
-        "10.1.1.113.2393",
-        "10.1.1.17.3677",
-        "10.1.1.115.4540",
-        "10.1.1.133.9025",
-        "10.1.1.136.4408",
-        "10.1.1.37.7442",
-        "10.1.1.50.4621",
-        "10.1.1.6.1358",
-        "10.1.1.23.3256",
-        "10.1.1.30.5903",
-        "10.1.1.218.8371",
-        "10.1.1.43.8941",
-        "10.1.1.121.5087",
-        "10.1.1.22.1407",
-        "10.1.1.154.9133",
-        "10.1.1.153.3289",
-        "10.1.1.20.7245",
-        "10.1.1.16.8597",
-        "10.1.1.96.3971"
-    ],
+    "cited_paper_doi": {
+        "10.1.1.221.1142": [
+            "10.1.1.9.5266",
+            "10.1.1.221.3971",
+            "10.1.1.145.8046",
+            "10.1.1.113.2393",
+            "10.1.1.17.3677",
+            "10.1.1.115.4540",
+            "10.1.1.133.9025",
+            "10.1.1.136.4408",
+            "10.1.1.37.7442",
+            "10.1.1.50.4621",
+            "10.1.1.6.1358",
+            "10.1.1.23.3256",
+            "10.1.1.30.5903",
+            "10.1.1.218.8371",
+            "10.1.1.43.8941",
+            "10.1.1.121.5087",
+            "10.1.1.22.1407",
+            "10.1.1.154.9133",
+            "10.1.1.153.3289",
+            "10.1.1.20.7245",
+            "10.1.1.16.8597",
+            "10.1.1.96.3971"
+        ],
+        "10.1.1.3.5380": [
+            "10.1.1.124.7605",
+            "10.1.1.10.5015",
+            "10.1.1.12.75",
+            "10.1.1.6.951",
+            "10.1.1.119.8052",
+            "10.1.1.137.634",
+            "10.1.1.117.6416",
+            "10.1.1.132.9399",
+            "10.1.1.138.3981",
+            "10.1.1.19.6069"
+        ],
+        "10.1.1.61.2545": [
+            "10.1.1.20.1673",
+            "10.1.1.77.6772",
+            "10.1.1.3.5380",
+            "10.1.1.221.1142",
+            "10.1.1.221.2247",
+            "10.1.1.15.3014",
+            "10.1.1.200.4981",
+            "10.1.1.1.2405",
+            "10.1.1.131.6584",
+            "10.1.1.83.6019",
+            "10.1.1.58.2667",
+            "10.1.1.21.7931",
+            "10.1.1.20.836",
+            "10.1.1.111.6423",
+            "10.1.1.12.4550",
+            "10.1.1.137.7197",
+            "10.1.1.58.3631",
+            "10.1.1.14.4547",
+            "10.1.1.101.5323",
+            "10.1.1.25.3759",
+            "10.1.1.10.5015",
+            "10.1.1.112.2848",
+            "10.1.1.114.2307",
+            "10.1.1.128.7155",
+            "10.1.1.137.2493",
+            "10.1.1.138.3623",
+            "10.1.1.116.8816",
+            "10.1.1.10.3898",
+            "10.1.1.132.4609",
+            "10.1.1.113.4100",
+            "10.1.1.58.1857",
+            "10.1.1.130.6088",
+            "10.1.1.127.3891",
+            "10.1.1.4.5139",
+            "10.1.1.96.5516",
+            "10.1.1.41.838",
+            "10.1.1.330.8026",
+            "10.1.1.1.5244",
+            "10.1.1.13.4941",
+            "10.1.1.11.3061",
+            "10.1.1.117.6416",
+            "10.1.1.128.9649",
+            "10.1.1.12.8061",
+            "10.1.1.320.6180",
+            "10.1.1.92.4343",
+            "10.1.1.374.252",
+            "10.1.1.23.904",
+            "10.1.1.106.2623",
+            "10.1.1.7.5779",
+            "10.1.1.3.4523",
+            "10.1.1.4.7783",
+            "10.1.1.20.3861",
+            "10.1.1.117.453",
+            "10.1.1.106.9714",
+            "10.1.1.5.9823",
+            "10.1.1.111.4133",
+            "10.1.1.16.8298",
+            "10.1.1.138.2480",
+            "10.1.1.10.7211",
+            "10.1.1.2.6760",
+            "10.1.1.109.7830",
+            "10.1.1.12.8453"
+        ],
+        "10.1.1.77.6772": [
+            "10.1.1.76.3622",
+            "10.1.1.105.1024",
+            "10.1.1.41.838",
+            "10.1.1.13.1261"
+        ]
+    },
     "cited_paper_url": [
         {
             "author": [
-                "Alhussein A. Abouzeid",
-                "Sumit Roy 0001"
-            ],
-            "title": "Stochastic Modeling of TCP in Networks with Abrupt Delay Variations.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.1673&type=sc",
-            "year": "Stochastic Modeling of TCP in Networks with Abrupt Delay Variations."
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.77.6772&type=sc",
-            "year": null
-        },
-        {
-            "author": [
-                "Daniel Aguayo",
-                "John C. Bicket",
-                "Sanjit Biswas",
-                "Glenn Judd",
-                "Robert Morris"
-            ],
-            "title": "Link-level measurements from an 802.11b mesh network.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.3.5380&type=sc",
-            "year": "Link-level measurements from an 802.11b mesh network."
-        },
-        {
-            "author": [
-                "\u00d6zg\u00fcr B. Akan",
-                "Ian F. Akyildiz"
-            ],
-            "title": "ATL: an adaptive transport layer suite for next-generation wireless Internet.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.221.1142&type=sc",
-            "year": "ATL: an adaptive transport layer suite for next-generation wireless Internet."
-        },
-        {
-            "author": [
                 "Ian F. Akyildiz",
-                "Weilian Su",
-                "Yogesh Sankarasubramaniam",
-                "Erdal Cayirci"
+                "Xudong Wang 0001",
+                "Weilin Wang"
             ],
-            "title": "Wireless sensor networks: a survey.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.221.2247&type=sc",
-            "year": "Wireless sensor networks: a survey."
-        },
-        {
-            "author": "Ian F. Akyildiz",
-            "title": "Mobility Management in Next Generation Wireless Systems.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.15.3014&type=sc",
-            "year": "Mobility Management in Next Generation Wireless Systems."
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.200.4981&type=sc",
-            "year": null
-        },
-        {
-            "author": [
-                "Paramvir Bahl",
-                "Ranveer Chandra",
-                "John Dunagan"
-            ],
-            "title": "SSCH: slotted seeded channel hopping for capacity improvement in IEEE 802.11 ad-hoc wireless networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.1.2405&type=sc",
-            "year": "SSCH: slotted seeded channel hopping for capacity improvement in IEEE 802.11 ad-hoc wireless networks."
-        },
-        {
-            "author": [
-                "Elizabeth M. Royer",
-                "P. Michael Melliar-Smith",
-                "Louise E. Moser"
-            ],
-            "title": "An analysis of the optimum node density for ad hoc mobile networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.131.6584&type=sc",
-            "year": "An analysis of the optimum node density for ad hoc mobile networks."
-        },
-        {
-            "author": "Elizabeth M. Belding-Royer",
-            "title": "Multi-Level Hierarchies for Scalable Ad hoc Routing.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.83.6019&type=sc",
-            "year": "Multi-Level Hierarchies for Scalable Ad hoc Routing."
-        },
-        {
-            "author": [
-                "Randeep Bhatia",
-                "Murali S. Kodialam"
-            ],
-            "title": "On Power Efficient Communication over Multi-hop Wireless Networks: Joint Routing, Scheduling and Power Control.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.58.2667&type=sc",
-            "year": "On Power Efficient Communication over Multi-hop Wireless Networks: Joint Routing, Scheduling and Power Control."
-        },
-        {
-            "author": [
-                "Nikita Borisov",
-                "Ian Goldberg",
-                "David Wagner"
-            ],
-            "title": "Intercepting mobile communications: the insecurity of 802.11.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.21.7931&type=sc",
-            "year": "Intercepting mobile communications: the insecurity of 802.11."
-        },
-        {
-            "author": [
-                "Levente Butty\u00e1n",
-                "Jean-Pierre Hubaux"
-            ],
-            "title": "Report on a working session on security in wireless ad hoc networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.836&type=sc",
-            "year": "Report on a working session on security in wireless ad hoc networks."
-        },
-        {
-            "author": [
-                "Federico Cal\u00ec",
-                "Marco Conti",
-                "Enrico Gregori"
-            ],
-            "title": "Dynamic tuning of the IEEE 802.11 protocol to achieve a theoretical throughput limit.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.111.6423&type=sc",
-            "year": "Dynamic tuning of the IEEE 802.11 protocol to achieve a theoretical throughput limit."
-        },
-        {
-            "author": [
-                "Song Cen",
-                "Pamela C. Cosman",
-                "Geoffrey M. Voelker"
-            ],
-            "title": "End-to-end differentiation of congestion and wireless losses.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.4550&type=sc",
-            "year": "End-to-end differentiation of congestion and wireless losses."
-        },
-        {
-            "author": [
-                "Kartik Chandran",
-                "Sudarshan Raghunathan",
-                "S. Venkatesan",
-                "Ravi Prakash"
-            ],
-            "title": "A Feedback Based Scheme for Improving TCP Performance in Ad-Hoc Wireless Networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.137.7197&type=sc",
-            "year": "A Feedback Based Scheme for Improving TCP Performance in Ad-Hoc Wireless Networks."
-        },
-        {
-            "author": "Mung Chiang",
-            "title": "To Layer or not to Layer: Balancing Transport and Physical Layers in Wireless Multihop Networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.58.3631&type=sc",
-            "year": "To Layer or not to Layer: Balancing Transport and Physical Layers in Wireless Multihop Networks."
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.14.4547&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.5323&type=sc",
-            "year": null
-        },
-        {
-            "author": [
-                "Susanta Datta",
-                "Ivan Stojmenovic",
-                "Jie Wu 0001"
-            ],
-            "title": "Internal Node and Shortcut Based Routing with Guaranteed Delivery in Wireless Networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.25.3759&type=sc",
-            "year": "Internal Node and Shortcut Based Routing with Guaranteed Delivery in Wireless Networks."
-        },
-        {
-            "author": [
-                "Douglas S. J. De Couto",
-                "Daniel Aguayo",
-                "John C. Bicket",
-                "Robert Morris"
-            ],
-            "title": "a high-throughput path metric for multi-hop wireless routing.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.5015&type=sc",
-            "year": "a high-throughput path metric for multi-hop wireless routing."
-        },
-        {
-            "author": [
-                "Richard Draves",
-                "Jitendra Padhye",
-                "Brian Zill"
-            ],
-            "title": "Comparison of routing metrics for static multi-hop wireless networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.112.2848&type=sc",
-            "year": "Comparison of routing metrics for static multi-hop wireless networks."
-        },
-        {
-            "author": [
-                "Richard Draves",
-                "Jitendra Padhye",
-                "Brian Zill"
-            ],
-            "title": "Routing in multi-radio, multi-hop wireless mesh networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.114.2307&type=sc",
-            "year": "Routing in multi-radio, multi-hop wireless mesh networks."
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.128.7155&type=sc",
-            "year": null
-        },
-        {
-            "author": [
-                "Zhenghua Fu",
-                "Xiaoqiao Meng",
-                "Songwu Lu"
-            ],
-            "title": "A transport protocol for supporting multimedia streaming in mobile ad hoc networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.137.2493&type=sc",
-            "year": "A transport protocol for supporting multimedia streaming in mobile ad hoc networks."
-        },
-        {
-            "author": [
-                "Piyush Gupta",
-                "P. R. Kumar"
-            ],
-            "title": "The capacity of wireless networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.138.3623&type=sc",
-            "year": "The capacity of wireless networks."
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.116.8816&type=sc",
-            "year": null
-        },
-        {
-            "author": [
-                "Marc Heissenb\u00fcttel",
-                "Torsten Braun",
-                "Thomas Bernoulli",
-                "Markus W\u00e4lchli"
-            ],
-            "title": "BLR: beacon-less routing algorithm for mobile ad hoc networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.3898&type=sc",
-            "year": "BLR: beacon-less routing algorithm for mobile ad hoc networks."
-        },
-        {
-            "author": [
-                "Yih-Chun Hu",
-                "Adrian Perrig",
-                "David B. Johnson"
-            ],
-            "title": "Ariadne: A Secure On-Demand Routing Protocol for Ad Hoc Networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.132.4609&type=sc",
-            "year": "Ariadne: A Secure On-Demand Routing Protocol for Ad Hoc Networks."
-        },
-        {
-            "author": [
-                "Yih-Chun Hu",
-                "Adrian Perrig",
-                "David B. Johnson"
-            ],
-            "title": "Packet Leashes: A Defense against Wormhole Attacks in Wireless Networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.4100&type=sc",
-            "year": "Packet Leashes: A Defense against Wormhole Attacks in Wireless Networks."
-        },
-        {
-            "author": [
-                "Lifei Huang",
-                "Ten-Hwang Lai"
-            ],
-            "title": "On the scalability of IEEE 802.11 ad hoc networks.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.58.1857&type=sc",
-            "year": "On the scalability of IEEE 802.11 ad hoc networks."
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.130.6088&type=sc",
-            "year": null
-        },
-        {
-            "author": [
-                "Kamal Jain",
-                "Jitendra Padhye",
-                "Venkata N. Padmanabhan",
-                "Lili Qiu"
-            ],
-            "title": "Impact of Interference on Multi-Hop Wireless Network Performance.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.127.3891&type=sc",
-            "year": "Impact of Interference on Multi-Hop Wireless Network Performance."
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.4.5139&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.96.5516&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.41.838&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.330.8026&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.1.5244&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.4941&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.3061&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.6416&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.128.9649&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.8061&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.320.6180&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.92.4343&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.374.252&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.23.904&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.106.2623&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.7.5779&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.3.4523&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.4.7783&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.3861&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.453&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.106.9714&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.5.9823&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.111.4133&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.16.8298&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.138.2480&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.7211&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.2.6760&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.109.7830&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.8453&type=sc",
-            "year": null
+            "title": "Wireless mesh networks: a survey.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.61.2545&type=sc",
+            "year": "Wireless mesh networks: a survey."
         },
         {
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.76.3622&type=sc"
