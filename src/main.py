@@ -37,9 +37,8 @@ def fetch_base_details(doi):
     return title,author,year
 
 
-def fetch_context(doi):
+def fetch_abstract_context(doi):
 
-    print 'entering fetch_context : ',doi
     # dbi instance to aid concurrency
     dbi = mongoDBI.mongoDBI (constants.db_name)
     table = constants.papers_table
@@ -48,25 +47,31 @@ def fetch_context(doi):
     value_label = constants.value_label
     result = dbi.find (table, key_label, key_contents, value_label)
 
+    context_res = None
+    abstract_res = None
+
     if result is None :
-        return None
+        return [abstract_res,context_res]
+
+    if result['abstract'] is not None:
+        abstract_res = { doi : result['abstract'] }
 
     if result['citations'] is None or len (result['citations']) == 0:
-        return None
+        context_res = None
+    else :
+        citation_node = result['citations']
+        count = len (citation_node)
+        cit_context = []
 
-    citation_node = result['citations']
-    count = len (citation_node)
-    cit_context = []
+        for i in range (count):
+            try:
+                text = citation_node[i]['contexts']
+                cit_context.append (text)
+            except :
+                pass
+        context_res = { doi: cit_context }
 
-    for i in range (count):
-        try:
-            text = citation_node[i]['contexts']
-            cit_context.append (text)
-        except :
-            pass
-
-    print 'returning from fetch_context : ', doi
-    return { doi: cit_context }
+    return [abstract_res, context_res]
 
 def fetch_all_info_from_db(doi):
     global dbi
@@ -78,7 +83,7 @@ def fetch_all_info_from_db(doi):
 
     title = result['title']
     author = result['author']
-    abstract = result['abstract']
+    abstract = { doi : result['abstract'] }
     citation_node = result['citations']
     count = len (citation_node)
     cit_context = []
@@ -91,7 +96,7 @@ def fetch_all_info_from_db(doi):
             pass
 
     cit_context_dict = { doi: cit_context }
-    print cit_context_dict
+
     return title, author, abstract, cit_context_dict
 
 
@@ -114,7 +119,7 @@ def search_citations(doi):
     citation_list_doi = dbi.find (table, key_label, key_contents, value_label)
 
     if citation_list_doi is None:
-        return []
+        return None
 
     doi_list = []
 
@@ -128,7 +133,7 @@ def search_citations(doi):
         if doi_c is not None:
             doi_list.append( doi_c[0])
 
-    return doi_list
+    return { doi : doi_list }
 
 
 def write_output(doi,data, file_name = None):
@@ -156,31 +161,45 @@ def add_2nd_hop_data( data ):
     base_citation_list_doi = data['cited_paper_doi']
     base_citation_list_url = data['cited_paper_url']
     base_cit_context = data['citation_contexts']
+    base_abstract = data['abstract']
 
-    augmented_doi_list = []
     augmented_citation_list_url = []
     augmented_cit_contexts = base_cit_context
+    augmented_abstract = base_abstract
 
-    augmented_doi_list.extend(base_citation_list_doi)
+    augmented_doi_list = base_citation_list_doi
     augmented_citation_list_url.extend(base_citation_list_url)
 
-    for doi in base_citation_list_doi:
+    base_doi_list = base_citation_list_doi.values()[0]
+
+    for doi in base_doi_list:
         cit_doi_list = search_citations (doi)
-        augmented_doi_list.extend(cit_doi_list)
-        list_enriched_cit_urls = enriched_cit_urls(cit_doi_list,details = False)
+        if cit_doi_list is None:
+            continue
+        for _doi,_doi_list in cit_doi_list.iteritems():
+            augmented_doi_list[_doi] = _doi_list
+
+        # augmented_doi_list.extend(cit_doi_list)
+        list_enriched_cit_urls = enriched_cit_urls(cit_doi_list.values()[0],details = False)
         augmented_citation_list_url.extend(list_enriched_cit_urls)
 
-    add_cit_context = Parallel (n_jobs=num_parallel) (delayed (fetch_context) (doi) for doi in base_citation_list_doi)
-    print len(add_cit_context)
-    for item in add_cit_context:
-        if type(item) is not dict:
-            continue
-        for doi_key,cit_context in item.iteritems():
-            if cit_context is None:
-                continue
-            augmented_cit_contexts[doi_key] = cit_context
+    add_abs_context = Parallel (n_jobs=num_parallel) (delayed (fetch_abstract_context) (doi) for doi in base_doi_list)
 
-    print augmented_cit_contexts
+    for item in add_abs_context:
+        _abs = item[0]
+        _context = item[1]
+
+        if type(_abs) is dict:
+            for doi_key, _doi_abs in _abs.iteritems():
+                if _doi_abs is None:
+                    continue
+                augmented_abstract[doi_key] = _doi_abs
+
+        if type (_context) is dict:
+            for doi_key, _doi_cxt in _context.iteritems ():
+                if _doi_cxt is None:
+                    continue
+                augmented_cit_contexts[doi_key] = _doi_cxt
 
     data['cited_paper_doi'] = augmented_doi_list
     data['cited_paper_url'] = augmented_citation_list_url
@@ -188,7 +207,6 @@ def add_2nd_hop_data( data ):
     return data
 
 def create_cit_url_dict(doi , details = False):
-    print 'create_cit_url_dict' , doi
     cit_dict = {}
     if details:
         title, author, year = fetch_base_details (doi)
