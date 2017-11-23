@@ -1,9 +1,10 @@
 {
     "abstract": {
-        "10.1.1.20.1673": "An analytical model of TCP (Transport Control Protocol) over an end-to-end path with random abrupt round-trip time (RTT) changes is presented. Modeling the RTT as a stochastic process, we analytically quantify and compare between the degree of degradation of the steadystate average throughput and window size due to spurious retransmissions for the different versions of TCP (Reno/NewReno versus Tahoe). The modeling methodology in this paper is used for evaluating different design alternatives for TCP for highly dynamic networks.",
-        "10.1.1.221.1142": "The next-generation wireless Internet (NGWI) is expected to provide a wide range of services including high-speed data and real-time multimedia to mobile users. To realize this expectation, a diverse set of challenges need to be addressed, which are posed by heterogeneous wireless networking environments within NGWI and the according application requirements. Furthermore, the architectural heterogeneities must be captured dynamically, while mobile users may roam during their connection duration. Current existing transport layer protocols have been developed for a specific network paradigm in mind, e.g., for wireless local area networks (WLANs), micro/macro wireless systems, or for satellite systems. Using these existing different transport layer protocols for NGWI to support global roaming of mobile users is not a practical solution due to processing and memory constraints of wireless terminals. Thus, there is a need",
-        "10.1.1.3.5380": "This paper anal yzes the causes of packetl oss in a 38-node urban mul ti-hop 802.11b network. The patterns and causes oflv# are important in the design of routing and errorcorrection proto colv as wel as in networkplqq\"(v The paper makes the fol l owing observations. The distribution of inter-nodel oss rates is rel'RfivD' uniform over the wh ol range oflv$ rates; there is no clq$ threshol separating \"in range\" and \"out of range.\" Mostls ks have relj tivel stabl el oss rates from one second to the next, though a smal l minority have very burstyl osses at that time scal e. Sign al to-noise ratio and distance have lv tl e predictive val e forl oss rate. Thel arge number of lv ks with intermediate l oss rates is probabl y due to mul ti-path fading rather than attenuation or interference. The phenomena discussed here are al l wel l -known. The contributions of this paper are an understanding of their rel ative importance, of how they interact, and of the impl ications for MAC and routing protocol design.",
-        "10.1.1.61.2545": "Wireless meshnet8Ex8 (WMNs)consist of meshrout6L and meshclient8 where meshroutfix have minimal mobilit  and formtr backbone of WMNs. They provide netide access for bot mesh andconvent1)fi8 clientt TheintL gratLfl of WMNs wit ot8 net8866 such as t1Int6fiPx1 cellular, IEEE 802.11, IEEE 802.15, IEEE 802.16, sensor netsor1L ets can be accomplishedtccomp tc gatomp and bridging functng1 in t1 meshroutfijx Meshclient can be eit8fi st8fij1)6x or mobile, and can form aclient meshnet16S amongtng1fifiELj and wit meshroutLfifi WMNs are antLfifl1)6fl t resolvets limit18fiflfl andt significantfl improvetp performance of ad hocnetLEP8L wireless local area net1Pxx (WLANs), wireless personal areanet16fij (WPANs), and wirelessmetess1fifljfl areanet1LPS (WMANs). They are undergoing rapid progress and inspiring numerousdeploymentS WMNs will deliver wireless services for a largevariet ofapplicat6fifl in personal, local, campus, andmet8Lfix1)6fi areas. Despit recent advances in wireless mesh netjLfiP1)6 many research challenges remain in allprotjfiS layers. This paperpresent adetEfl81 stEonrecent advances and open research issues in WMNs. Syst1 architL881)6 andapplicat)68 of WMNs are described, followed by discussingts critssi factss influencingprotenc design.Theoret8fiL netore capacit and tdst1LLSjx tt1LL protLLSj for WMNs are exploredwit anobjectE1 t point out a number of open research issues. Finally,tnal beds,indust681 pract68 andcurrent strent actntx1) relatt t WMNs arehighlight8x  # 2004 Elsevier B.V. Allrl rl  KedI7-8 Wireless meshnet186flfl Ad hocnet8jEES Wireless sensornetor16fl Medium accessconts1fi Routs1 prots1fiS Transport protspor ScalabilitS Securiti Powermanagement andcontfi8fl Timingsynchronizat ion 1389-1286/$ - seefront matt # 2004 Elsevier B.V. Allright reserved. doi:10...."
+        "10.1.1.131.6584": "Abstract\u2014An ad hoc mobile network is a collection of nodes, each of which communicates over wireless channels and is capable of movement. Wireless nodes have the unique capability of transmission at different power levels. As the transmission power is varied, a tradeoff exists between the number of hops from source to destination and the overall bandwidth available to individual nodes. Because both battery life and channel bandwidth are limited resources in mobile networks, it is important to ascertain the effects different transmission powers have on the overall performance of the network. This paper explores the nature of this transmission power tradeoff in mobile networks to determine the optimum node density for delivering the maximum number of data packets. It is shown that there does not exist a global optimum density, but rather that, to achieve this maximum, the node density should increase as the rate of node movement increases.",
+        "10.1.1.132.4609": "An ad hoc network is a group of wireless mobile computers (or nodes), in which individual nodes cooperate by forwarding packets for each other to allow nodes to communicate beyond direct wireless transmission range. Prior research in ad hoc networking has generally studied the routing problem in a non-adversarial setting, assuming a trusted environment. In this paper, we present attacks against routing in ad hoc networks, and we present the design and performance evaluation of a new secure on-demand ad hoc network routing protocol, called Ariadne. Ariadne prevents attackers or compromised nodes from tampering with uncompromised routes consisting of uncompromised nodes, and also prevents a large number of types of Denial-of-Service attacks. In addition, Ariadne is efficient, using only highly efficient symmetric cryptographic primitives.",
+        "10.1.1.138.3623": "Abstract\u2014When identical randomly located nodes, each capable of transmitting at bits per second and using a fixed range, form a wireless network, the throughput @ A obtainable by each node for a randomly chosen destination is 2 bits per second under a noninterference protocol. If the nodes are optimally placed in a disk of unit area, traffic patterns are optimally assigned, and each transmission\u2019s range is optimally chosen, the bit\u2013distance product that can be transported by the network per second is 2 @ A bit-meters per second. Thus even under optimal circumstances, the throughput is only 2 bits per second for each node for a destination nonvanishingly far away. Similar results also hold under an alternate physical model where a required signal-to-interference ratio is specified for successful receptions. Fundamentally, it is the need for every node all over the domain to share whatever portion of the channel it is utilizing with nodes in its local neighborhood that is the reason for the constriction in capacity. Splitting the channel into several subchannels does not change any of the results. Some implications may be worth considering by designers. Since the throughput furnished to each user diminishes to zero as the number of users is increased, perhaps networks connecting smaller numbers of users, or featuring connections mostly with nearby neighbors, may be more likely to be find acceptance. Index Terms\u2014Ad hoc networks, capacity, multihop radio networks, throughput, wireless networks. I.",
+        "10.1.1.61.2545": "Wireless meshnet8Ex8 (WMNs)consist of meshrout6L and meshclient8 where meshroutfix have minimal mobilit  and formtr backbone of WMNs. They provide netide access for bot mesh andconvent1)fi8 clientt TheintL gratLfl of WMNs wit ot8 net8866 such as t1Int6fiPx1 cellular, IEEE 802.11, IEEE 802.15, IEEE 802.16, sensor netsor1L ets can be accomplishedtccomp tc gatomp and bridging functng1 in t1 meshroutfijx Meshclient can be eit8fi st8fij1)6x or mobile, and can form aclient meshnet16S amongtng1fifiELj and wit meshroutLfifi WMNs are antLfifl1)6fl t resolvets limit18fiflfl andt significantfl improvetp performance of ad hocnetLEP8L wireless local area net1Pxx (WLANs), wireless personal areanet16fij (WPANs), and wirelessmetess1fifljfl areanet1LPS (WMANs). They are undergoing rapid progress and inspiring numerousdeploymentS WMNs will deliver wireless services for a largevariet ofapplicat6fifl in personal, local, campus, andmet8Lfix1)6fi areas. Despit recent advances in wireless mesh netjLfiP1)6 many research challenges remain in allprotjfiS layers. This paperpresent adetEfl81 stEonrecent advances and open research issues in WMNs. Syst1 architL881)6 andapplicat)68 of WMNs are described, followed by discussingts critssi factss influencingprotenc design.Theoret8fiL netore capacit and tdst1LLSjx tt1LL protLLSj for WMNs are exploredwit anobjectE1 t point out a number of open research issues. Finally,tnal beds,indust681 pract68 andcurrent strent actntx1) relatt t WMNs arehighlight8x  # 2004 Elsevier B.V. Allrl rl  KedI7-8 Wireless meshnet186flfl Ad hocnet8jEES Wireless sensornetor16fl Medium accessconts1fi Routs1 prots1fiS Transport protspor ScalabilitS Securiti Powermanagement andcontfi8fl Timingsynchronizat ion 1389-1286/$ - seefront matt # 2004 Elsevier B.V. Allright reserved. doi:10....",
+        "10.1.1.83.6019": "Ad hoc networks have the notable capability of enabling spontaneous networks. These networks are self-initializing, self-configuring, and self-maintaining, even though the underlying topology is often continually changing. Because research has only begun to scratch the surface of the potential applications of this technology, it is important to prepare for the widespread use of these networks. In anticipation of their ubiquity, the protocols designed for these networks must be scalable. This includes scaling to both networks with many nodes, and networks with rapidly changing topologies. This paper presents two hierarchical clustering protocols that improve the scalability of ad hoc routing protocols. The Adaptive Routing using Clusters (ARC) protocol creates a one-level clustered hierarchy across an ad hoc network, while the Adaptive Routing using Clustered Hierarchies (ARCH) protocol creates a multi-level hierarchy which is able to dynamically adjust the depth of the hierarchy in response to the changing network topology. It is experimentally shown that these protocols, when coupled with an ad hoc routing protocol, produce throughput improvements of up to 80 % over the ad hoc routing protocol alone. 1"
     },
     "author": [
         "Ian F. Akyildiz",
@@ -11,9 +12,9 @@
         "Weilin Wang"
     ],
     "citation_contexts": {
-        "10.1.1.20.1673": [],
-        "10.1.1.221.1142": [],
-        "10.1.1.3.5380": [],
+        "10.1.1.131.6584": [],
+        "10.1.1.132.4609": [],
+        "10.1.1.138.3623": [],
         "10.1.1.61.2545": [
             ", and other factors, the change may be frequent and may cause large variations in RTT. This will degrade the TCP performance, because the normal operation of TCP relies on a smooth measurement of RTT =-=[1]-=-. How to enhance a TCP so that it is robust to large RTT variations has not been thoroughly studied for both mobile ad hoc networks and WMNs. 10.1.2. Entirely new transport protocols As discussed befo",
             "within the global network is difficult to achieve [62]. Thus, distributed multiple access schemes such as CSMA/ CA are more favorable. However, CSMA/CA has very low frequency spatial-reuse efficiency =-=[2]-=-, which significantly limits the scalability of CSMA/CA-based multi-hop networks. To improve the scalability of WMNs, designing a hybrid multiple access scheme with CSMA/CA and TDMA or CDMA is an inte ped for the purpose of reducing power consumptions [33,147,131]. These schemes reduce exposed nodes problem, especially in a dense network, and thus, improve the spectrum spatial-reuse factor in WMNs =-=[2]-=-. However, hidden nodes still exist and may become worse because lower transmission power level reduces the possibility of detecting a potential interfering node [72]. \u2022 Proposing innovative MAC proto",
@@ -160,114 +161,250 @@
             "ity scheme is desired for network protocols. For a security monitoring system, a cross-layer framework also needs to be developed. A framework of intrusion detection in ad hoc networks is proposed in =-=[146]-=-. However, how to design and implement a practical security monitoring system, including cross-layer secure network protocols and various intrusion detection algorithms, is a challenging research topi",
             "face other difficulties such as cost, system complexity, and practicality of fast steerable directional antennas. The second set of schemes is developed for the purpose of reducing power consumptions =-=[33,147,131]-=-. These schemes reduce exposed nodes problem, especially in a dense network, and thus, improve the spectrum spatial-reuse factor in WMNs [2]. However, hidden nodes still exist and may become worse bec",
             "ible with IEEE 802.11 standards in the sense of supporting both meshcapable and conventional Wi-Fi clients. Such WMNs also need to be inter-operable with other wireless networks such as WiMAX, ZigBee =-=[148]-=-, and cellular networks. Based on their characteristics, WMNs are generally considered as a type of ad-hoc networks due to the lack of wired infrastructure that exists in cellular or Wi-Fi networks th minism while assigning contentionbased, best-effort access periods. IEEE 802.15.4 is intended for telemetry with low data rate, long battery life and low device cost requirements. The ZigBee Alliance =-=[148]-=- is developing higher-level protocols that will run over 802.15.4 MAC and PHY layers that operate in unlicensed bands worldwide. Raw data rates of 250 Kbps can be achieved at 2.4 GHz (16 channels), 40"
-        ]
+        ],
+        "10.1.1.83.6019": []
     },
     "cited_paper_doi": {
-        "10.1.1.221.1142": [
-            "10.1.1.9.5266",
-            "10.1.1.221.3971",
-            "10.1.1.145.8046",
-            "10.1.1.113.2393",
-            "10.1.1.17.3677",
-            "10.1.1.115.4540",
-            "10.1.1.133.9025",
-            "10.1.1.136.4408",
-            "10.1.1.37.7442",
-            "10.1.1.50.4621",
-            "10.1.1.6.1358",
-            "10.1.1.23.3256",
-            "10.1.1.30.5903",
-            "10.1.1.218.8371",
-            "10.1.1.43.8941",
-            "10.1.1.121.5087",
-            "10.1.1.22.1407",
-            "10.1.1.154.9133",
-            "10.1.1.153.3289",
-            "10.1.1.20.7245",
-            "10.1.1.16.8597",
-            "10.1.1.96.3971"
+        "10.1.1.10.8094": [
+            "10.1.1.16.1408",
+            "10.1.1.165.574",
+            "10.1.1.20.9595",
+            "10.1.1.29.3606",
+            "10.1.1.138.3623",
+            "10.1.1.10.8652",
+            "10.1.1.113.4100",
+            "10.1.1.132.4609",
+            "10.1.1.130.6088",
+            "10.1.1.377.5273",
+            "10.1.1.129.426",
+            "10.1.1.108.762",
+            "10.1.1.192.7018",
+            "10.1.1.156.3699",
+            "10.1.1.20.1862",
+            "10.1.1.118.9511",
+            "10.1.1.10.1548",
+            "10.1.1.17.5360",
+            "10.1.1.13.1596",
+            "10.1.1.24.7320",
+            "10.1.1.11.4819",
+            "10.1.1.10.5263",
+            "10.1.1.13.1450",
+            "10.1.1.100.4755",
+            "10.1.1.13.8133"
         ],
-        "10.1.1.3.5380": [
-            "10.1.1.124.7605",
-            "10.1.1.10.5015",
-            "10.1.1.12.75",
-            "10.1.1.6.951",
-            "10.1.1.119.8052",
-            "10.1.1.137.634",
-            "10.1.1.117.6416",
-            "10.1.1.132.9399",
-            "10.1.1.138.3981",
-            "10.1.1.19.6069"
+        "10.1.1.10.8652": [
+            "10.1.1.20.8248",
+            "10.1.1.117.2921",
+            "10.1.1.20.9595",
+            "10.1.1.11.4819",
+            "10.1.1.44.8982",
+            "10.1.1.132.4609",
+            "10.1.1.130.6088",
+            "10.1.1.129.426",
+            "10.1.1.108.762",
+            "10.1.1.21.9663",
+            "10.1.1.20.5356",
+            "10.1.1.113.555",
+            "10.1.1.10.1548",
+            "10.1.1.16.1868",
+            "10.1.1.13.1596",
+            "10.1.1.24.7320",
+            "10.1.1.13.1450",
+            "10.1.1.13.8133"
+        ],
+        "10.1.1.116.5688": [
+            "10.1.1.15.3815",
+            "10.1.1.35.5130",
+            "10.1.1.135.9318",
+            "10.1.1.14.5452"
+        ],
+        "10.1.1.131.6584": [
+            "10.1.1.101.2658",
+            "10.1.1.117.2921",
+            "10.1.1.37.5539",
+            "10.1.1.199.5994",
+            "10.1.1.78.1446"
+        ],
+        "10.1.1.132.4609": [
+            "10.1.1.10.8094",
+            "10.1.1.165.574",
+            "10.1.1.10.8652",
+            "10.1.1.108.762",
+            "10.1.1.54.1407",
+            "10.1.1.134.8430",
+            "10.1.1.29.3606",
+            "10.1.1.11.7750",
+            "10.1.1.153.7538",
+            "10.1.1.130.6088",
+            "10.1.1.20.9595",
+            "10.1.1.117.2921",
+            "10.1.1.11.2745",
+            "10.1.1.11.4819",
+            "10.1.1.113.4100",
+            "10.1.1.377.5273",
+            "10.1.1.125.7013",
+            "10.1.1.192.7018",
+            "10.1.1.31.6796",
+            "10.1.1.16.730",
+            "10.1.1.129.426",
+            "10.1.1.115.2071"
+        ],
+        "10.1.1.135.8418": [
+            "10.1.1.52.3155",
+            "10.1.1.115.5210"
+        ],
+        "10.1.1.138.3623": [
+            "10.1.1.24.4120",
+            "10.1.1.153.7538",
+            "10.1.1.44.7888",
+            "10.1.1.135.5655",
+            "10.1.1.135.9814",
+            "10.1.1.18.1007"
+        ],
+        "10.1.1.138.7893": [
+            "10.1.1.377.5273",
+            "10.1.1.113.555"
+        ],
+        "10.1.1.153.7538": [
+            "10.1.1.132.3407"
+        ],
+        "10.1.1.165.574": [
+            "10.1.1.126.7059",
+            "10.1.1.29.3606",
+            "10.1.1.15.7059",
+            "10.1.1.156.4218"
+        ],
+        "10.1.1.192.7018": [
+            "10.1.1.221.6245",
+            "10.1.1.111.9051",
+            "10.1.1.40.1244",
+            "10.1.1.10.117",
+            "10.1.1.137.5264",
+            "10.1.1.53.9705",
+            "10.1.1.129.426",
+            "10.1.1.113.555",
+            "10.1.1.24.4120",
+            "10.1.1.117.2921",
+            "10.1.1.43.2248",
+            "10.1.1.22.1127",
+            "10.1.1.34.6916",
+            "10.1.1.34.5771",
+            "10.1.1.41.8709",
+            "10.1.1.20.5356"
+        ],
+        "10.1.1.20.5356": [
+            "10.1.1.4.7923",
+            "10.1.1.24.6112",
+            "10.1.1.67.6716",
+            "10.1.1.113.555",
+            "10.1.1.21.9663",
+            "10.1.1.129.426"
+        ],
+        "10.1.1.21.5598": [
+            "10.1.1.92.4082"
+        ],
+        "10.1.1.29.5228": [
+            "10.1.1.100.5145",
+            "10.1.1.330.2279",
+            "10.1.1.44.3969",
+            "10.1.1.101.2658",
+            "10.1.1.102.1879",
+            "10.1.1.117.2921"
+        ],
+        "10.1.1.320.6180": [
+            "10.1.1.69.5504",
+            "10.1.1.21.5598",
+            "10.1.1.116.5688",
+            "10.1.1.135.8418"
         ],
         "10.1.1.61.2545": [
-            "10.1.1.20.1673",
-            "10.1.1.77.6772",
-            "10.1.1.3.5380",
-            "10.1.1.221.1142",
-            "10.1.1.221.2247",
-            "10.1.1.15.3014",
-            "10.1.1.200.4981",
-            "10.1.1.1.2405",
-            "10.1.1.131.6584",
+            "10.1.1.320.6180",
+            "10.1.1.7.5779",
             "10.1.1.83.6019",
+            "10.1.1.132.4609",
+            "10.1.1.14.4547",
+            "10.1.1.10.7211",
+            "10.1.1.374.252",
+            "10.1.1.58.3631",
+            "10.1.1.128.7155",
+            "10.1.1.25.3759",
+            "10.1.1.12.4550",
+            "10.1.1.2.6760",
+            "10.1.1.116.8816",
             "10.1.1.58.2667",
             "10.1.1.21.7931",
-            "10.1.1.20.836",
-            "10.1.1.111.6423",
-            "10.1.1.12.4550",
-            "10.1.1.137.7197",
-            "10.1.1.58.3631",
-            "10.1.1.14.4547",
-            "10.1.1.101.5323",
-            "10.1.1.25.3759",
-            "10.1.1.10.5015",
-            "10.1.1.112.2848",
-            "10.1.1.114.2307",
-            "10.1.1.128.7155",
-            "10.1.1.137.2493",
-            "10.1.1.138.3623",
-            "10.1.1.116.8816",
-            "10.1.1.10.3898",
-            "10.1.1.132.4609",
-            "10.1.1.113.4100",
+            "10.1.1.3.5380",
+            "10.1.1.96.5516",
+            "10.1.1.15.3014",
+            "10.1.1.221.1142",
+            "10.1.1.200.4981",
+            "10.1.1.11.3061",
+            "10.1.1.12.8061",
             "10.1.1.58.1857",
             "10.1.1.130.6088",
-            "10.1.1.127.3891",
-            "10.1.1.4.5139",
-            "10.1.1.96.5516",
-            "10.1.1.41.838",
-            "10.1.1.330.8026",
-            "10.1.1.1.5244",
-            "10.1.1.13.4941",
-            "10.1.1.11.3061",
-            "10.1.1.117.6416",
-            "10.1.1.128.9649",
-            "10.1.1.12.8061",
-            "10.1.1.320.6180",
-            "10.1.1.92.4343",
-            "10.1.1.374.252",
-            "10.1.1.23.904",
             "10.1.1.106.2623",
-            "10.1.1.7.5779",
-            "10.1.1.3.4523",
-            "10.1.1.4.7783",
-            "10.1.1.20.3861",
-            "10.1.1.117.453",
-            "10.1.1.106.9714",
-            "10.1.1.5.9823",
+            "10.1.1.1.5244",
             "10.1.1.111.4133",
-            "10.1.1.16.8298",
+            "10.1.1.128.9649",
+            "10.1.1.114.2307",
             "10.1.1.138.2480",
-            "10.1.1.10.7211",
-            "10.1.1.2.6760",
-            "10.1.1.109.7830",
-            "10.1.1.12.8453"
-        ],
-        "10.1.1.77.6772": [
-            "10.1.1.76.3622",
-            "10.1.1.105.1024",
+            "10.1.1.221.2247",
             "10.1.1.41.838",
-            "10.1.1.13.1261"
+            "10.1.1.23.904",
+            "10.1.1.137.7197",
+            "10.1.1.20.1673",
+            "10.1.1.117.453",
+            "10.1.1.4.5139",
+            "10.1.1.127.3891",
+            "10.1.1.12.8453",
+            "10.1.1.20.836",
+            "10.1.1.77.6772",
+            "10.1.1.330.8026",
+            "10.1.1.92.4343",
+            "10.1.1.16.8298",
+            "10.1.1.109.7830",
+            "10.1.1.117.6416",
+            "10.1.1.112.2848",
+            "10.1.1.111.6423",
+            "10.1.1.13.4941",
+            "10.1.1.10.5015",
+            "10.1.1.106.9714",
+            "10.1.1.131.6584",
+            "10.1.1.20.3861",
+            "10.1.1.4.7783",
+            "10.1.1.137.2493",
+            "10.1.1.138.3623",
+            "10.1.1.10.3898",
+            "10.1.1.113.4100",
+            "10.1.1.5.9823",
+            "10.1.1.1.2405",
+            "10.1.1.3.4523",
+            "10.1.1.101.5323"
+        ],
+        "10.1.1.7.5779": [
+            "10.1.1.153.7538",
+            "10.1.1.41.838",
+            "10.1.1.138.3623",
+            "10.1.1.192.7018",
+            "10.1.1.23.5864"
+        ],
+        "10.1.1.83.6019": [
+            "10.1.1.138.7893",
+            "10.1.1.20.5356",
+            "10.1.1.131.6584",
+            "10.1.1.29.5228",
+            "10.1.1.160.9380",
+            "10.1.1.47.1724",
+            "10.1.1.25.1878",
+            "10.1.1.117.2921",
+            "10.1.1.10.4428",
+            "10.1.1.101.2658",
+            "10.1.1.129.426",
+            "10.1.1.21.9663",
+            "10.1.1.21.8591",
+            "10.1.1.192.7018",
+            "10.1.1.100.5145",
+            "10.1.1.24.1544"
         ]
     },
     "cited_paper_url": [
@@ -282,112 +419,433 @@
             "year": "Wireless mesh networks: a survey."
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.76.3622&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.135.8418&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.105.1024&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.116.5688&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.21.5598&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.69.5504&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.138.3623&type=sc"
         },
         {
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.41.838&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.1261&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.192.7018&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.124.7605&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.153.7538&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.5015&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.23.5864&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.75&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.2658&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.6.951&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.1544&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.119.8052&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.21.8591&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.137.634&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.2921&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.6416&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.138.7893&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.132.9399&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.47.1724&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.138.3981&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.29.5228&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.19.6069&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.426&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.9.5266&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.192.7018&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.221.3971&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.100.5145&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.145.8046&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.21.9663&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.2393&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.5356&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.17.3677&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.25.1878&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.115.4540&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.131.6584&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.133.9025&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.4428&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.136.4408&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.160.9380&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.37.7442&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.134.8430&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.50.4621&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.153.7538&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.6.1358&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.165.574&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.23.3256&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.2921&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.30.5903&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.9595&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.218.8371&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.29.3606&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.43.8941&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.4819&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.121.5087&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.54.1407&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.22.1407&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.31.6796&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.154.9133&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.125.7013&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.153.3289&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.8652&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.7245&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.4100&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.16.8597&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.8094&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.96.3971&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.130.6088&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.377.5273&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.426&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.108.762&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.7750&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.192.7018&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.2745&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.115.2071&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.16.730&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.92.4082&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.15.3815&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.35.5130&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.135.9318&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.14.5452&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.52.3155&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.115.5210&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.132.3407&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.4120&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.153.7538&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.44.7888&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.135.5655&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.135.9814&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.18.1007&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.221.6245&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.111.9051&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.1244&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.117&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.137.5264&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.53.9705&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.426&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.555&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.4120&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.2921&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.43.2248&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.22.1127&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.34.6916&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.34.5771&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.41.8709&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.5356&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.377.5273&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.555&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.4.7923&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.6112&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.67.6716&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.555&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.21.9663&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.426&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.2658&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.2921&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.37.5539&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.199.5994&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.78.1446&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.100.5145&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.330.2279&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.44.3969&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.2658&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.102.1879&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.2921&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.16.1408&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.165.574&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.9595&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.29.3606&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.138.3623&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.8652&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.4100&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.132.4609&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.130.6088&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.377.5273&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.426&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.108.762&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.192.7018&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.156.3699&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.1862&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.118.9511&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.1548&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.17.5360&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.1596&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.7320&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.4819&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.5263&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.1450&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.100.4755&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.8133&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.126.7059&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.29.3606&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.15.7059&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.156.4218&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.8248&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.2921&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.9595&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.4819&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.44.8982&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.132.4609&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.130.6088&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.426&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.108.762&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.21.9663&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.5356&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.555&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.1548&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.16.1868&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.1596&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.7320&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.1450&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.8133&type=sc"
         }
     ],
     "doi": "10.1.1.61.2545",
