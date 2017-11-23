@@ -269,9 +269,9 @@ def fetch_augmented_data(doi):
     augmented_data, added_doi = add_more_data (data, doi)
     for a_doi in added_doi:
         data, new_dois = add_more_data (data, a_doi)
-        if len(data['abstracts']) >= threshold:
-            break;
-        added_doi.append(new_dois)
+        # if len(data['abstracts']) >= threshold:
+        #     break;
+        # added_doi.append(new_dois)
 
     return augmented_data
 
