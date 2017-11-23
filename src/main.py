@@ -245,11 +245,19 @@ def fetch_data_helper(doi):
 
 def fetch_data(doi):
     # Write to file
+    global threshold
     data = fetch_data_helper (doi)
     data, added_doi = add_more_data (data, doi)
 
+    added_doi_1 = []
     for a_doi in added_doi:
+        data, addn_doi  = add_more_data (data, a_doi)
+        added_doi_1.append(addn_doi)
+
+    for a_doi in added_doi_1:
         data, _ = add_more_data (data, a_doi)
+        if len(data['abstracts']) >= threshold:
+            break
 
     write_output (doi, data)
     return
@@ -291,4 +299,4 @@ if __name__ == "__main__":
 
     for doi in doi_list:
         fetch_data (doi)
-        
+
