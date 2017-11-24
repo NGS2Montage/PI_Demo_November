@@ -12,6 +12,7 @@ dbi = mongoDBI.mongoDBI (constants.db_name)
 num_parallel = 5
 threshold = 15
 
+
 # Fetch Title, Author, Year
 def fetch_base_details(doi):
     # dbi instance to aid concurrency
@@ -61,9 +62,12 @@ def fetch_abstract_context(doi):
         context_res = None
     else:
         citation_node = result['citations']
+
+        if type (citation_node) is not list:
+            citation_node = result['citations']['citation']
+
         count = len (citation_node)
         cit_context = []
-
         for i in range (count):
             try:
                 text = citation_node[i]['contexts']
@@ -86,7 +90,11 @@ def fetch_all_info_from_db(doi):
     title = result['title']
     author = result['author']
     abstract = {doi: result['abstract']}
+
     citation_node = result['citations']
+    if type (citation_node) is not list:
+        citation_node = result['citations']['citation']
+
     count = len (citation_node)
     cit_context = []
 
@@ -170,10 +178,13 @@ def add_more_data(data, base_doi):
 
     augmented_doi_list = base_citation_list_doi
     augmented_citation_list_url.extend (base_citation_list_url)
+    try:
+        base_doi_list = base_citation_list_doi[base_doi]
+    except:
+        return data, []
 
-    base_doi_list = base_citation_list_doi[base_doi]
     random.shuffle (base_doi_list)
-
+    # base_doi_list = base_doi_list[0:5]
     for b_doi in base_doi_list:
 
         cit_doi_list = search_citations (b_doi)
@@ -251,12 +262,12 @@ def fetch_data(doi):
 
     added_doi_1 = []
     for a_doi in added_doi:
-        data, addn_doi  = add_more_data (data, a_doi)
-        added_doi_1.append(addn_doi)
+        data, addn_doi = add_more_data (data, a_doi)
+        added_doi_1.append (addn_doi)
 
     for a_doi in added_doi_1:
         data, _ = add_more_data (data, a_doi)
-        if len(data['abstracts']) >= threshold:
+        if len (data['abstract']) >= threshold:
             break
 
     write_output (doi, data)
@@ -267,11 +278,16 @@ def fetch_augmented_data(doi):
     data = fetch_data_helper (doi)
     global threshold
     augmented_data, added_doi = add_more_data (data, doi)
+
+    added_doi_1 = []
     for a_doi in added_doi:
-        data, new_dois = add_more_data (data, a_doi)
-        # if len(data['abstracts']) >= threshold:
-        #     break;
-        # added_doi.append(new_dois)
+        data, addn_doi = add_more_data (data, a_doi)
+        added_doi_1.append (addn_doi)
+
+    for a_doi in added_doi_1:
+        data, _ = add_more_data (data, a_doi)
+        if len (data['abstract']) >= threshold:
+            break
 
     return augmented_data
 
@@ -299,4 +315,3 @@ if __name__ == "__main__":
 
     for doi in doi_list:
         fetch_data (doi)
-
