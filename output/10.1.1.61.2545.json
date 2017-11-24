@@ -1,10 +1,11 @@
 {
     "abstract": {
-        "10.1.1.131.6584": "Abstract\u2014An ad hoc mobile network is a collection of nodes, each of which communicates over wireless channels and is capable of movement. Wireless nodes have the unique capability of transmission at different power levels. As the transmission power is varied, a tradeoff exists between the number of hops from source to destination and the overall bandwidth available to individual nodes. Because both battery life and channel bandwidth are limited resources in mobile networks, it is important to ascertain the effects different transmission powers have on the overall performance of the network. This paper explores the nature of this transmission power tradeoff in mobile networks to determine the optimum node density for delivering the maximum number of data packets. It is shown that there does not exist a global optimum density, but rather that, to achieve this maximum, the node density should increase as the rate of node movement increases.",
+        "10.1.1.10.5015": "This paper presents the expected transmission count metric (ETX), which finds high-throughput paths on multi-hop wireless networks. ETX minimizes the expected total number of packet transmissions (including retransmissions) required to successfully deliver a packet to the ultimate destination. The ETX metric incorporates the effects of link loss ratios, asymmetry in the loss ratios between the two directions of each link, and interference among the successive links of a path. In contrast, the minimum hop-count metric chooses arbitrarily among the different paths of the same minimum length, regardless of the often large differences in throughput among those paths, and ignoring the possibility that a longer path might offer higher throughput.",
+        "10.1.1.113.4100": "Abstract \u2014 As mobile ad hoc network applications are deployed, security emerges as a central requirement. In this paper, we introduce the wormhole attack, a severe attack in ad hoc networks that is particularly challenging to defend against. The wormhole attack is possible even if the attacker has not compromised any hosts, and even if all communication provides authenticity and confidentiality. In the wormhole attack, an attacker records packets (or bits) at one location in the network, tunnels them (possibly selectively) to another location, and retransmits them there into the network. The wormhole attack can form a serious threat in wireless networks, especially against many ad hoc network routing protocols and location-based wireless security systems. For example, most existing ad hoc network routing protocols, without some mechanism to defend against the wormhole attack, would be unable to find routes longer than one or two hops, severely disrupting communication. We present a new, general mechanism, called packet leashes, for detecting and thus defending against wormhole attacks, and we present a specific protocol, called TIK, that implements leashes. I.",
         "10.1.1.132.4609": "An ad hoc network is a group of wireless mobile computers (or nodes), in which individual nodes cooperate by forwarding packets for each other to allow nodes to communicate beyond direct wireless transmission range. Prior research in ad hoc networking has generally studied the routing problem in a non-adversarial setting, assuming a trusted environment. In this paper, we present attacks against routing in ad hoc networks, and we present the design and performance evaluation of a new secure on-demand ad hoc network routing protocol, called Ariadne. Ariadne prevents attackers or compromised nodes from tampering with uncompromised routes consisting of uncompromised nodes, and also prevents a large number of types of Denial-of-Service attacks. In addition, Ariadne is efficient, using only highly efficient symmetric cryptographic primitives.",
-        "10.1.1.138.3623": "Abstract\u2014When identical randomly located nodes, each capable of transmitting at bits per second and using a fixed range, form a wireless network, the throughput @ A obtainable by each node for a randomly chosen destination is 2 bits per second under a noninterference protocol. If the nodes are optimally placed in a disk of unit area, traffic patterns are optimally assigned, and each transmission\u2019s range is optimally chosen, the bit\u2013distance product that can be transported by the network per second is 2 @ A bit-meters per second. Thus even under optimal circumstances, the throughput is only 2 bits per second for each node for a destination nonvanishingly far away. Similar results also hold under an alternate physical model where a required signal-to-interference ratio is specified for successful receptions. Fundamentally, it is the need for every node all over the domain to share whatever portion of the channel it is utilizing with nodes in its local neighborhood that is the reason for the constriction in capacity. Splitting the channel into several subchannels does not change any of the results. Some implications may be worth considering by designers. Since the throughput furnished to each user diminishes to zero as the number of users is increased, perhaps networks connecting smaller numbers of users, or featuring connections mostly with nearby neighbors, may be more likely to be find acceptance. Index Terms\u2014Ad hoc networks, capacity, multihop radio networks, throughput, wireless networks. I.",
-        "10.1.1.61.2545": "Wireless meshnet8Ex8 (WMNs)consist of meshrout6L and meshclient8 where meshroutfix have minimal mobilit  and formtr backbone of WMNs. They provide netide access for bot mesh andconvent1)fi8 clientt TheintL gratLfl of WMNs wit ot8 net8866 such as t1Int6fiPx1 cellular, IEEE 802.11, IEEE 802.15, IEEE 802.16, sensor netsor1L ets can be accomplishedtccomp tc gatomp and bridging functng1 in t1 meshroutfijx Meshclient can be eit8fi st8fij1)6x or mobile, and can form aclient meshnet16S amongtng1fifiELj and wit meshroutLfifi WMNs are antLfifl1)6fl t resolvets limit18fiflfl andt significantfl improvetp performance of ad hocnetLEP8L wireless local area net1Pxx (WLANs), wireless personal areanet16fij (WPANs), and wirelessmetess1fifljfl areanet1LPS (WMANs). They are undergoing rapid progress and inspiring numerousdeploymentS WMNs will deliver wireless services for a largevariet ofapplicat6fifl in personal, local, campus, andmet8Lfix1)6fi areas. Despit recent advances in wireless mesh netjLfiP1)6 many research challenges remain in allprotjfiS layers. This paperpresent adetEfl81 stEonrecent advances and open research issues in WMNs. Syst1 architL881)6 andapplicat)68 of WMNs are described, followed by discussingts critssi factss influencingprotenc design.Theoret8fiL netore capacit and tdst1LLSjx tt1LL protLLSj for WMNs are exploredwit anobjectE1 t point out a number of open research issues. Finally,tnal beds,indust681 pract68 andcurrent strent actntx1) relatt t WMNs arehighlight8x  # 2004 Elsevier B.V. Allrl rl  KedI7-8 Wireless meshnet186flfl Ad hocnet8jEES Wireless sensornetor16fl Medium accessconts1fi Routs1 prots1fiS Transport protspor ScalabilitS Securiti Powermanagement andcontfi8fl Timingsynchronizat ion 1389-1286/$ - seefront matt # 2004 Elsevier B.V. Allright reserved. doi:10....",
-        "10.1.1.83.6019": "Ad hoc networks have the notable capability of enabling spontaneous networks. These networks are self-initializing, self-configuring, and self-maintaining, even though the underlying topology is often continually changing. Because research has only begun to scratch the surface of the potential applications of this technology, it is important to prepare for the widespread use of these networks. In anticipation of their ubiquity, the protocols designed for these networks must be scalable. This includes scaling to both networks with many nodes, and networks with rapidly changing topologies. This paper presents two hierarchical clustering protocols that improve the scalability of ad hoc routing protocols. The Adaptive Routing using Clusters (ARC) protocol creates a one-level clustered hierarchy across an ad hoc network, while the Adaptive Routing using Clustered Hierarchies (ARCH) protocol creates a multi-level hierarchy which is able to dynamically adjust the depth of the hierarchy in response to the changing network topology. It is experimentally shown that these protocols, when coupled with an ad hoc routing protocol, produce throughput improvements of up to 80 % over the ad hoc routing protocol alone. 1"
+        "10.1.1.137.7197": "Ad hoc networks are completely wireless networks of mobile hosts, in which the topology rapidly changes due to the movement of mobile hosts. This frequent topology change may lead to sudden packet losses and delays. Transport protocols like TCP, which have been designed for reliable fixed networks, misinterpret this packet loss as congestion and invoke congestion control, leading to unnecessary retransmissions and loss of throughput. To overcome this problem, a feedback scheme is proposed so that the source can distinguish between a route failure and network congestion. When a route is disrupted, the source is sent a Route Failure Notification packet, allowing it to invalidate its timers and stop sending packets. When the route is reestablished, the source is informed through a Route Reestablishment Notification packet, upon which it resumes packet transmissions. Simulation experiments show that in the event of route failures, as the route reestablishment time increases, the use of feedback provides significant improvements in performance.",
+        "10.1.1.21.7931": "The 802.11 standard for wireless networks includes a Wired Equivalent Privacy (WEP) protocol, used to protect link-layer communications from eavesdropping and other attacks. We have discovered several serious security flaws in the protocol, stemming from misapplication of cryptographic primitives. The flaws lead to a number of practical attacks that demonstrate that WEP fails to achieve its security goals. In this paper, we discuss in detail each of the flaws, the underlying security principle violations, and the ensuing attacks.  1.",
+        "10.1.1.61.2545": "Wireless meshnet8Ex8 (WMNs)consist of meshrout6L and meshclient8 where meshroutfix have minimal mobilit  and formtr backbone of WMNs. They provide netide access for bot mesh andconvent1)fi8 clientt TheintL gratLfl of WMNs wit ot8 net8866 such as t1Int6fiPx1 cellular, IEEE 802.11, IEEE 802.15, IEEE 802.16, sensor netsor1L ets can be accomplishedtccomp tc gatomp and bridging functng1 in t1 meshroutfijx Meshclient can be eit8fi st8fij1)6x or mobile, and can form aclient meshnet16S amongtng1fifiELj and wit meshroutLfifi WMNs are antLfifl1)6fl t resolvets limit18fiflfl andt significantfl improvetp performance of ad hocnetLEP8L wireless local area net1Pxx (WLANs), wireless personal areanet16fij (WPANs), and wirelessmetess1fifljfl areanet1LPS (WMANs). They are undergoing rapid progress and inspiring numerousdeploymentS WMNs will deliver wireless services for a largevariet ofapplicat6fifl in personal, local, campus, andmet8Lfix1)6fi areas. Despit recent advances in wireless mesh netjLfiP1)6 many research challenges remain in allprotjfiS layers. This paperpresent adetEfl81 stEonrecent advances and open research issues in WMNs. Syst1 architL881)6 andapplicat)68 of WMNs are described, followed by discussingts critssi factss influencingprotenc design.Theoret8fiL netore capacit and tdst1LLSjx tt1LL protLLSj for WMNs are exploredwit anobjectE1 t point out a number of open research issues. Finally,tnal beds,indust681 pract68 andcurrent strent actntx1) relatt t WMNs arehighlight8x  # 2004 Elsevier B.V. Allrl rl  KedI7-8 Wireless meshnet186flfl Ad hocnet8jEES Wireless sensornetor16fl Medium accessconts1fi Routs1 prots1fiS Transport protspor ScalabilitS Securiti Powermanagement andcontfi8fl Timingsynchronizat ion 1389-1286/$ - seefront matt # 2004 Elsevier B.V. Allright reserved. doi:10...."
     },
     "author": [
         "Ian F. Akyildiz",
@@ -12,9 +13,179 @@
         "Weilin Wang"
     ],
     "citation_contexts": {
-        "10.1.1.131.6584": [],
-        "10.1.1.132.4609": [],
-        "10.1.1.138.3623": [],
+        "10.1.1.10.5015": [
+            "r. The DSDV protocol is implemented following the description by Perkins and Bhagwat [25], with ambiguities resolved by consulting Broch et al. [5] and the Rice/CMU implementation in the ns simulator =-=[1, 27]-=-. The DSR implementation follows the IETF Internet-Draft, version 9 [16]. 4.1 Operation of DSDV DSDV is a distance-vector protocol, which uses sequence numbers to ensure freshness, and a settling time",
+            "ratios. As argued in Section 3, this metric is likely to use low-loss paths with many hops in situations where a path with a smaller number of higher loss links would perform better. Awerbuch et al. =-=[2]-=- present a metric to help find high-throughput paths when different links can run at different bit-rates. Since their metric does not account for losses, it is complementary to ETX. One solution to hi",
+            "ion to high link loss ratios is to improve the apparent loss ratio with some form of redundancy. Forward error correction, MAC-level acknowledgment and retransmission, and solutions such as Snoop-TCP =-=[3]-=- and Tulip [24] all take this approach. 1 1.2 1.4 1.6 1.8 1 1.2 1.4 1.6 1.8 Actual count Predicted count Run R5: 30 mW, 104-byte packets y=x Figure 15: Because ETX measures with 134-byte probes, it un",
+            "on't ordinarily cause it to be lost. This won't always be true, however, since 802.11b broadcasts are vulnerable to collisions from hidden terminals, and the 802.11b MAC can be unfair under high load =-=[4]-=-. As a result, a node might never be able to send its probes, causing its neighbors to believe that the reverse delivery ratio had become zero. If the highest-throughput path has three or fewer hops,",
+            "ansmission failure notification from the 802.11 MAC layer. The DSDV protocol is implemented following the description by Perkins and Bhagwat [25], with ambiguities resolved by consulting Broch et al. =-=[5]-=- and the Rice/CMU implementation in the ns simulator [1, 27]. The DSR implementation follows the IETF Internet-Draft, version 9 [16]. 4.1 Operation of DSDV DSDV is a distance-vector protocol, which us mber is heard. The second change is that our implementation does not use linklevel feedback (i.e. 802.11b transmission failures) to detect broken links and produce broken-route messages. Broch et al. =-=[5]-=- report that broken-route messages typically cause all routes to the particular destination to be broken throughout the whole network, not just those that use the broken link. Our implementation still",
+            "n time or frequency division MAC layers to provide bandwidth guarantees [7, 13, 21, 23, 34], while others treat the MAC as opaque, and rely upon it for bandwidth and delay information and constraints =-=[6, 30, 31]-=-. These approaches are only successful if the lower layers can provide accurate information about the actual links, such as the average number of usable transmission slots, or the achievable throughpu",
+            "of-Service (QoS) algorithms approach route selection from the top down. Some techniques explicitly schedule transmission slots in time or frequency division MAC layers to provide bandwidth guarantees =-=[7, 13, 21, 23, 34]-=-, while others treat the MAC as opaque, and rely upon it for bandwidth and delay information and constraints [6, 30, 31]. These approaches are only successful if the lower layers can provide accurate",
+            "on of ETX's gains comes from avoiding extremely asymmetric links. The problem of routing when there are asymmetric links has been addressed in previous work by Lundgren et al. [22] and by Chin et al. =-=[8]-=-. These authors propose a link handshaking scheme to detect and avoid asymmetric links. In this scheme, a node X only accepts route updates from a neighboring node Y if Y is advertising a direct route rm &quot;gray zones&quot; to refer to links that deliver routing protocol data but not data traffic. They propose using link handshaking and counting route broadcasts to filter out gray zone links. Ch=-=in et al. [8]-=- also propose link handshaking to filter out asymmetric links. Hu and Johnson [14] describe how to preemptively issue DSR route requests, based on link SNR values. 0 0.2 0.4 0.6 0.8 1 0 50 100 150 200 ink capacity and generate interference. A number of existing ad hoc wireless routing algorithms collect per-link signal strength information and apply a threshold to avoid links with high loss ratios =-=[8, 9, 10, 11, 14, 17, 22, 28]-=-. This approach may eliminate links that are necessary for connectivity, or fail to distinguish accurately between links; both of these are likely to be issues if many links have intermediate loss rat",
+            "ink capacity and generate interference. A number of existing ad hoc wireless routing algorithms collect per-link signal strength information and apply a threshold to avoid links with high loss ratios =-=[8, 9, 10, 11, 14, 17, 22, 28]-=-. This approach may eliminate links that are necessary for connectivity, or fail to distinguish accurately between links; both of these are likely to be issues if many links have intermediate loss rat",
+            "ink capacity and generate interference. A number of existing ad hoc wireless routing algorithms collect per-link signal strength information and apply a threshold to avoid links with high loss ratios =-=[8, 9, 10, 11, 14, 17, 22, 28]-=-. This approach may eliminate links that are necessary for connectivity, or fail to distinguish accurately between links; both of these are likely to be issues if many links have intermediate loss rat",
+            "ink capacity and generate interference. A number of existing ad hoc wireless routing algorithms collect per-link signal strength information and apply a threshold to avoid links with high loss ratios =-=[8, 9, 10, 11, 14, 17, 22, 28]-=-. This approach may eliminate links that are necessary for connectivity, or fail to distinguish accurately between links; both of these are likely to be issues if many links have intermediate loss rat",
+            "that radios have a fixed transmit power level. With variable power radios, it might be preferable to maximize hop-count, thereby decreasing interference and minimizing the energy used by each packet =-=[29, 12, 18]-=-. ETX does not attempt to route around congested links, and thus should not suffer from the oscillations that sometimes plague loadadaptive routing metrics such as end-to-end delay. To a first approxi low transmit power levels to be changed to make links better behaved. Existing systems exploit this idea, often with a focus on minimizing the energy consumption required to successfully deliver data =-=[12, 18, 29]-=-. 7. Conclusions This paper introduces a new metric for multi-hop wireless networks, called ETX. Route selection using ETX accounts for link loss ratios, the asymmetry of the loss ratios in the two di",
+            "of-Service (QoS) algorithms approach route selection from the top down. Some techniques explicitly schedule transmission slots in time or frequency division MAC layers to provide bandwidth guarantees =-=[7, 13, 21, 23, 34]-=-, while others treat the MAC as opaque, and rely upon it for bandwidth and delay information and constraints [6, 30, 31]. These approaches are only successful if the lower layers can provide accurate",
+            "traffic. They propose using link handshaking and counting route broadcasts to filter out gray zone links. Chin et al. [8] also propose link handshaking to filter out asymmetric links. Hu and Johnson =-=[14]-=- describe how to preemptively issue DSR route requests, based on link SNR values. 0 0.2 0.4 0.6 0.8 1 0 50 100 150 200 250 300 350 400 450 Cumulative fraction of node pairs Packets per second delivere ink capacity and generate interference. A number of existing ad hoc wireless routing algorithms collect per-link signal strength information and apply a threshold to avoid links with high loss ratios =-=[8, 9, 10, 11, 14, 17, 22, 28]-=-. This approach may eliminate links that are necessary for connectivity, or fail to distinguish accurately between links; both of these are likely to be issues if many links have intermediate loss rat",
+            "m '03, September 14--19, 2003, San Diego, California, USA. Copyright 2003 ACM 1-58113-753-2/03/0009 ...$5.00. 1. Introduction Much of the recent work in ad hoc routing protocols for wireless networks =-=[25, 15, 26]-=- has focused on coping with mobile nodes, rapidly changing topologies, and scalability. Less attention has been paid to finding high-quality paths in the face of lossy wireless links. This paper prese ess throughput than the best available. Second, it presents the design, implementation, and evaluation of the ETX metric. Third, it describes a set of detailed design changes to the DSDV [25] and DSR =-=[15]-=- protocols (to which ETX is an extension), that enable them to more accurately choose routes with the best metric. This work is part of an effort to deploy a production-quality multi-hop rooftop 802.1",
+            "d Bhagwat [25], with ambiguities resolved by consulting Broch et al. [5] and the Rice/CMU implementation in the ns simulator [1, 27]. The DSR implementation follows the IETF Internet-Draft, version 9 =-=[16]-=-. 4.1 Operation of DSDV DSDV is a distance-vector protocol, which uses sequence numbers to ensure freshness, and a settling time mechanism to avoid unnecessarily propagating routes with inferior metri d in Section 4.2. The WST parameters 0.12 and 0.88 are chosen to produce a reasonable average. 4.3 DSR Implementation Our DSR implementation follows revision 9 of the IETF InternetDraft specification =-=[16]-=-, following the requirements for networks which require bidirectional links to send unicast data. The implementation is based on one developed by Audun Tornquist at the University of Colorado at Bould",
+            "ink capacity and generate interference. A number of existing ad hoc wireless routing algorithms collect per-link signal strength information and apply a threshold to avoid links with high loss ratios =-=[8, 9, 10, 11, 14, 17, 22, 28]-=-. This approach may eliminate links that are necessary for connectivity, or fail to distinguish accurately between links; both of these are likely to be issues if many links have intermediate loss rat",
+            "that radios have a fixed transmit power level. With variable power radios, it might be preferable to maximize hop-count, thereby decreasing interference and minimizing the energy used by each packet =-=[29, 12, 18]-=-. ETX does not attempt to route around congested links, and thus should not suffer from the oscillations that sometimes plague loadadaptive routing metrics such as end-to-end delay. To a first approxi low transmit power levels to be changed to make links better behaved. Existing systems exploit this idea, often with a focus on minimizing the energy consumption required to successfully deliver data =-=[12, 18, 29]-=-. 7. Conclusions This paper introduces a new metric for multi-hop wireless networks, called ETX. Route selection using ETX accounts for link loss ratios, the asymmetry of the loss ratios in the two di",
+            "adeoff between the accuracy of link measurements and the protocol's responsiveness to mobility. 4. Implementation The routing system in which ETX is implemented has four main parts: the Click toolkit =-=[19]-=-, and Click-based implementations of DSDV, DSR, and the ETX link measurement algorithms. The implementations can run in user-space, but running in the kernel allows use of the priority queuing describ",
+            "k loss ratio measurements to make fine-grained decisions between routes. . ETX penalizes routes with more hops, which have lower throughput due to interference between different hops of the same path =-=[20]-=-. . ETX tends to minimize spectrum use, which should maximize overall system capacity. In addition, ETX may decrease the energy consumed per packet, as each transmission or retransmission may increase t-throughput path has three or fewer hops, ETX is likely to choose it: the throughput of such paths is determined by the total number of transmissions, since all of the hops interfere with each other =-=[20]-=-. If the best path has four or more hops, ETX may choose a slower path that has fewer hops, since the increased number of transmissions required by extra hops does not slow down throughput beyond thre",
+            "of-Service (QoS) algorithms approach route selection from the top down. Some techniques explicitly schedule transmission slots in time or frequency division MAC layers to provide bandwidth guarantees =-=[7, 13, 21, 23, 34]-=-, while others treat the MAC as opaque, and rely upon it for bandwidth and delay information and constraints [6, 30, 31]. These approaches are only successful if the lower layers can provide accurate",
+            "of Asymmetry Some fraction of ETX's gains comes from avoiding extremely asymmetric links. The problem of routing when there are asymmetric links has been addressed in previous work by Lundgren et al. =-=[22]-=- and by Chin et al. [8]. These authors propose a link handshaking scheme to detect and avoid asymmetric links. In this scheme, a node X only accepts route updates from a neighboring node Y if Y is adv es the ACK delivery ratio for each link. 6. Related Work The behavior of routing protocols over lossy links has been addressed and evaluated by real implementations in several papers. Lundgren et al. =-=[22] coin the -=-term &quot;gray zones&quot; to refer to links that deliver routing protocol data but not data traffic. They propose using link handshaking and counting route broadcasts to filter out gray zone links.  ink capacity and generate interference. A number of existing ad hoc wireless routing algorithms collect per-link signal strength information and apply a threshold to avoid links with high loss ratios =-=[8, 9, 10, 11, 14, 17, 22, 28]-=-. This approach may eliminate links that are necessary for connectivity, or fail to distinguish accurately between links; both of these are likely to be issues if many links have intermediate loss rat",
+            "of-Service (QoS) algorithms approach route selection from the top down. Some techniques explicitly schedule transmission slots in time or frequency division MAC layers to provide bandwidth guarantees =-=[7, 13, 21, 23, 34]-=-, while others treat the MAC as opaque, and rely upon it for bandwidth and delay information and constraints [6, 30, 31]. These approaches are only successful if the lower layers can provide accurate",
+            "nk loss ratios is to improve the apparent loss ratio with some form of redundancy. Forward error correction, MAC-level acknowledgment and retransmission, and solutions such as Snoop-TCP [3] and Tulip =-=[24]-=- all take this approach. 1 1.2 1.4 1.6 1.8 1 1.2 1.4 1.6 1.8 Actual count Predicted count Run R5: 30 mW, 104-byte packets y=x Figure 15: Because ETX measures with 134-byte probes, it underestimates AC",
+            "m '03, September 14--19, 2003, San Diego, California, USA. Copyright 2003 ACM 1-58113-753-2/03/0009 ...$5.00. 1. Introduction Much of the recent work in ad hoc routing protocols for wireless networks =-=[25, 15, 26]-=- has focused on coping with mobile nodes, rapidly changing topologies, and scalability. Less attention has been paid to finding high-quality paths in the face of lossy wireless links. This paper prese gnificantly less throughput than the best available. Second, it presents the design, implementation, and evaluation of the ETX metric. Third, it describes a set of detailed design changes to the DSDV =-=[25]-=- and DSR [15] protocols (to which ETX is an extension), that enable them to more accurately choose routes with the best metric. This work is part of an effort to deploy a production-quality multi-hop  ority queuing described below, as well as easy access to transmission failure notification from the 802.11 MAC layer. The DSDV protocol is implemented following the description by Perkins and Bhagwat =-=[25]-=-, with ambiguities resolved by consulting Broch et al. [5] and the Rice/CMU implementation in the ns simulator [1, 27]. The DSR implementation follows the IETF Internet-Draft, version 9 [16]. 4.1 Oper  used. The CMU ns DSDV implementation does not advertise a route until 2WST has passed since that particular route was heard. However, according to our interpretation of the original DSDV description =-=[25]-=-, the waiting time before advertising a route should start when the first route of each sequence number is heard. The second change is that our implementation does not use linklevel feedback (i.e. 802",
+            "m '03, September 14--19, 2003, San Diego, California, USA. Copyright 2003 ACM 1-58113-753-2/03/0009 ...$5.00. 1. Introduction Much of the recent work in ad hoc routing protocols for wireless networks =-=[25, 15, 26]-=- has focused on coping with mobile nodes, rapidly changing topologies, and scalability. Less attention has been paid to finding high-quality paths in the face of lossy wireless links. This paper prese",
+            "r. The DSDV protocol is implemented following the description by Perkins and Bhagwat [25], with ambiguities resolved by consulting Broch et al. [5] and the Rice/CMU implementation in the ns simulator =-=[1, 27]-=-. The DSR implementation follows the IETF Internet-Draft, version 9 [16]. 4.1 Operation of DSDV DSDV is a distance-vector protocol, which uses sequence numbers to ensure freshness, and a settling time",
+            "ink capacity and generate interference. A number of existing ad hoc wireless routing algorithms collect per-link signal strength information and apply a threshold to avoid links with high loss ratios =-=[8, 9, 10, 11, 14, 17, 22, 28]-=-. This approach may eliminate links that are necessary for connectivity, or fail to distinguish accurately between links; both of these are likely to be issues if many links have intermediate loss rat",
+            "that radios have a fixed transmit power level. With variable power radios, it might be preferable to maximize hop-count, thereby decreasing interference and minimizing the energy used by each packet =-=[29, 12, 18]-=-. ETX does not attempt to route around congested links, and thus should not suffer from the oscillations that sometimes plague loadadaptive routing metrics such as end-to-end delay. To a first approxi low transmit power levels to be changed to make links better behaved. Existing systems exploit this idea, often with a focus on minimizing the energy consumption required to successfully deliver data =-=[12, 18, 29]-=-. 7. Conclusions This paper introduces a new metric for multi-hop wireless networks, called ETX. Route selection using ETX accounts for link loss ratios, the asymmetry of the loss ratios in the two di",
+            "n time or frequency division MAC layers to provide bandwidth guarantees [7, 13, 21, 23, 34], while others treat the MAC as opaque, and rely upon it for bandwidth and delay information and constraints =-=[6, 30, 31]-=-. These approaches are only successful if the lower layers can provide accurate information about the actual links, such as the average number of usable transmission slots, or the achievable throughpu",
+            "n time or frequency division MAC layers to provide bandwidth guarantees [7, 13, 21, 23, 34], while others treat the MAC as opaque, and rely upon it for bandwidth and delay information and constraints =-=[6, 30, 31]-=-. These approaches are only successful if the lower layers can provide accurate information about the actual links, such as the average number of usable transmission slots, or the achievable throughpu",
+            "ollowing the requirements for networks which require bidirectional links to send unicast data. The implementation is based on one developed by Audun Tornquist at the University of Colorado at Boulder =-=[32]-=-. This section reviews DSR's basic operation as described in the draft, and describes our modifications to support ETX. DSR is a reactive routing protocol, in which a node issues a route request only",
+            "he graph shows the broadcast delivery ratio versus packet size, for a few links on the test-bed. The links shown are, from top to bottom: 12 # 1, 11 # 13, 23 # 36, 21 # 19, and 17 # 18. Yarvis et al. =-=[33]-=- observe that hop-count performs poorly as a routing metric for a sensor network, and present the results of using a loss-aware metric instead. Their path metric approximates the product of the per-li",
+            "of-Service (QoS) algorithms approach route selection from the top down. Some techniques explicitly schedule transmission slots in time or frequency division MAC layers to provide bandwidth guarantees =-=[7, 13, 21, 23, 34]-=-, while others treat the MAC as opaque, and rely upon it for bandwidth and delay information and constraints [6, 30, 31]. These approaches are only successful if the lower layers can provide accurate"
+        ],
+        "10.1.1.113.4100": [
+            "al-of-Service (DoS) attacks against MAC layer protocols are also beyond the scope of the paper; MAC layer protocols that do not employ some form of carrier sense, such as pure ALOHA and Slotted ALOHA =-=[1]-=-, are less vulnerable to DoS attacks, although they tend to use the channel less efficiently. We assume that the wireless network may drop, corrupt, duplicate, or reorder packets. We also assume that",
+            "d with at least 1.2 GHz Pentium III CPUs, which should also be able to perform 1.5 million hash operations per second. Current commodity wireless LAN products such as commonly used IEEE 802.11b cards =-=[2]-=- provide a transmission data rate of 11 Mbps and a range of 250 m. Given the same time synchronization, rekeying interval, minimum packet size, and message authentication code length, the tree has dep",
+            "es per second. Repetitive, simple functions like hashes can also be efficiently implemented in hardware; Helion Technology [16] claims a 20k gate ASIC core design (a third the complexity of Bluetooth =-=[3]-=- and less than a third the complexity of IEEE 802.11 [21]) capable of more than 1.9 million hashes per second and a Xilinx FPGA design using 1650 LUTs capable of 1 million hashes per second. In terms",
+            "k Medium Access Control protocol at the link layer, and we use \u201cHMAC\u201d to refer to a message authentication code used for authentication (HMAC is a particular instance of a message authentication code =-=[4]-=-). For reasons such as differences in wireless interference, transmit power, or antenna operation, links between nodes in a wireless network may at times successfully work in only one direction; such  use message authentication codes for authentication: the sender S and receiver R must share a secret key K, which they use in conjunction with a message authentication code function (for example HMAC =-=[4]-=-) to authenticate messages they exchange. To send a message M to a receiver R, the sender S sends S \u2192 R : \u2329M,HMACK(M)\u232a , where the notation HMACK(M) represents the message authentication code computed rive a key Ki that the sender has not yet disclosed. To construct the PRF function F, we can use a pseudo-random permutation, i.e., a block cipher [14], or a message authentication code, such as HMAC =-=[4]-=-. The sender selects a key expiration interval I, and thus determines a schedule with which each of its keys will expire. Specifically, key K0 expires at time T0, keyK1 expires at time T1 = T0 + I, ..",
+            "REQUEST packets), or selectively discarding or modifying certain data packets. 1977 The neighbor discovery mechanisms of periodic (proactive) routing protocols such as DSDV [30], OLSR [36], and TBRPF =-=[5]-=- rely heavily on the reception of broadcast packets as a means for neighbor detection, and are also extremely vulnerable to this attack. For example, OLSR and TBRPF use HELLO packets for neighbor dete",
+            "e more widely utilized in future systems at reduced expense, size, weight, and power consumption. In addition, the time synchronization signal itself in such systems may be subject to certain attacks =-=[6, 12]-=-. Esoteric hardware such as cesium-beam clocks, rubidium clocks, and hydrogen maser clocks, could also be used in special applications today to provide sufficiently accurate time synchronization for m",
+            "ly expensive for the verifier (receiver), but overwhelmingly expensive for the signer (sender). On less powerful CPUs, each digital signature generation and verification takes on the order of seconds =-=[7]-=-. 1980 Since many wireless applications rely heavily on broadcast communication, and since setting up O(n 2 ) keys is expensive, we design the TIK protocol in Section V-C, based on a new protocol for",
+            "de separate message authentication codes in the packet could be avoided by having multiple receivers share the same key, but this might allow a subset of colluding receivers to impersonate the sender =-=[8]-=-. Instead, attaching a digital signature to each packet could be used to solve the two problems discussed above: each node needs to have only one public-private key pair, and each node needs to know o",
+            "must be on the order of a few microseconds or even hundreds of nanoseconds. This level of time synchronization can be achieved now with offthe-shelf hardware based on LORAN-C [28], WWVB [29], or GPS =-=[9, 42]-=-; although such hardware is not currently a common part of wireless network nodes, it can be deployed in networks today and is expected to become more widely utilized in future systems at reduced expe",
+            "etworks and applications. One example is any wireless access control system that is based on physical proximity, such as wireless car keys, or proximity and token based access control systems for PCs =-=[10, 22]-=-. In such systems, an attacker could relay the authentication exchanges to gain unauthorized access. One partial approach for preventing wormhole attacks might be to use a secret method for modulating",
+            "radio is kept inside tamper-resistant hardware. Another approach, known as RF watermarking, authenticates a wireless transmission by modulating the RF waveform in a way known only to authorized nodes =-=[11]-=-. RF watermarking relies on keeping secret the knowledge of which RF waveform parameters are being modulated; furthermore, if that waveform is exactly captured at the receiving end of the wormhole and",
+            "e more widely utilized in future systems at reduced expense, size, weight, and power consumption. In addition, the time synchronization signal itself in such systems may be subject to certain attacks =-=[6, 12]-=-. Esoteric hardware such as cesium-beam clocks, rubidium clocks, and hydrogen maser clocks, could also be used in special applications today to provide sufficiently accurate time synchronization for m",
+            "the different stages of the TIK protocol in detail: sender setup, receiver bootstrapping, and sending and verifying authenticated packets.s1) Sender Setup: The sender uses a pseudo-random function(PRF=-=[13]-=-)F and a secret master key X to derive a series of keys K0,K1,...,Kw, where Ki = FX(i). The main advantage of this method of key generation is that the sender can efficiently access the keys in any or",
+            "is computationally intractable for an attacker to derive a key Ki that the sender has not yet disclosed. To construct the PRF function F, we can use a pseudo-random permutation, i.e., a block cipher =-=[14]-=-, or a message authentication code, such as HMAC [4]. The sender selects a key expiration interval I, and thus determines a schedule with which each of its keys will expire. Specifically, key K0 expir",
+            "are predominantly used for this purpose. One of the first uses of one-way hash chains was for one-time passwords by Lamport [24], which Haller later used to design the S/KEY one-time password system =-=[15]-=-. To motivate why we use a tree structure instead of a one-way hash chain to authenticate values, we briefly describe the drawbacks of a one-way chain. 1) One-way Hash Chain: Consider the chain of len",
+            "hou and Haas [44] propose such a public key infrastructure; Hubaux, Butty\u00e1n, and \u010capkun bootstrap trust relationships from PGP-like certificates without relying on a trusted public key infrastructure =-=[17]-=-; Kong et al [23] propose asymmetric mechanisms for threshold signatures for certificates. Alternatively, a trusted node can securely distribute an authenticated TIK key using only symmetric-key crypt",
+            "ecially significant when packets are authenticated hop-by-hop, as may be required in a multi-hop ad hoc network routing protocol. The IEEE 802.11i Task Group is designing modifications to IEEE 802.11 =-=[18]-=- to improve security. These modifications generally use a single shared key, or, when multiple keys are used, the keys are used between multiple clients and a single base station. Since base stations",
+            "t hear a packet transmission directly from some node consider themselves to be in range of (and thus a neighbor of) that node. For example, when used against an on-demand routing protocol such as DSR =-=[19]-=- or AODV [31], a powerful application of the wormhole attack can be mounted by tunneling each ROUTE REQUEST packet directly to the destination target node of the REQUEST. When the destination node\u2019s n",
+            "s per second, for a total of 39,500 hash functions per second, which is well within the capability of an iPaq, with 82.2% of its CPU time to spare. In a sensor network such as Hollar et al\u2019s weC mote =-=[20, 43]-=-, nodes may only be able to achieve time synchronization accurate to 1 s, have a 19.6 kbps link speed, and 20 m range. In this case, the smallest packet that can be authenticated is 4900 bytes; since",
+            "can also be efficiently implemented in hardware; Helion Technology [16] claims a 20k gate ASIC core design (a third the complexity of Bluetooth [3] and less than a third the complexity of IEEE 802.11 =-=[21]-=-) capable of more than 1.9 million hashes per second and a Xilinx FPGA design using 1650 LUTs capable of 1 million hashes per second. In terms of memory consumption, existing handheld devices, such as",
+            "etworks and applications. One example is any wireless access control system that is based on physical proximity, such as wireless car keys, or proximity and token based access control systems for PCs =-=[10, 22]-=-. In such systems, an attacker could relay the authentication exchanges to gain unauthorized access. One partial approach for preventing wormhole attacks might be to use a secret method for modulating",
+            "propose such a public key infrastructure; Hubaux, Butty\u00e1n, and \u010capkun bootstrap trust relationships from PGP-like certificates without relying on a trusted public key infrastructure [17]; Kong et al =-=[23]-=- propose asymmetric mechanisms for threshold signatures for certificates. Alternatively, a trusted node can securely distribute an authenticated TIK key using only symmetric-key cryptography [33] or n",
+            "an important primitive used in many security protocols. One-way hash chains are predominantly used for this purpose. One of the first uses of one-way hash chains was for one-time passwords by Lamport =-=[24]-=-, which Haller later used to design the S/KEY one-time password system [15]. To motivate why we use a tree structure instead of a one-way hash chain to authenticate values, we briefly describe the dra",
+            "computationally expensive asymmetric cryptography. For example, the popular 1024bit RSA digital signature algorithm [37], roughly equivalent to use of a 72-bit key in a symmetric encryption algorithm =-=[25]-=-, requires about 10 ms on an 800 MHz Pentium III processor for signature generation. Signature verification is more efficient, but still requires about 0.5 ms on a fast workstation. Adding a digital s",
+            "ven Ci and Ci\u22121, that satisfies Ci\u22121 = H(C \u2032 i ). (Menezes, van Oorschot, and Vanstone, have a more detailed discussion on one-way hash functions or the second pre-image collision resistance property =-=[26]-=-.) Therefore, if we know that one-way chain value Ci is authentic, and we later learn Ci+1 with the property that Ci = H(Ci+1), we know that value Ci+1 is authentic and is the value that follows Ci on",
+            "t \u201cblind\u201d all the values with a one-way hash function H to prevent disclosing additional values (as we will describe below), so v \u2032 i = H(vi) for each i. We then use the Merkle hash tree construction =-=[27]-=- to commit to the values v \u2032 0,...,v \u2032 w\u22121. Each internal node of the binary tree is derived from its two child nodes. Considersv \u2032 0 m01 v \u2032 1 m03 v \u2032 2 m23 v \u2032 3 m07 v0 v1 v2 v3 v4 v5 v6 v7 v \u2032 4 m4",
+            "poral leashes, generally must be on the order of a few microseconds or even hundreds of nanoseconds. This level of time synchronization can be achieved now with offthe-shelf hardware based on LORAN-C =-=[28]-=-, WWVB [29], or GPS [9, 42]; although such hardware is not currently a common part of wireless network nodes, it can be deployed in networks today and is expected to become more widely utilized in fut ntly tight clock synchronization can be achieved in a wireless LAN using commercial GPS receivers [42], and wireless MAN technology could be sufficiently time-synchronized using either GPS or LORAN-C =-=[28]-=- radio signals. A MAC layer protocol using TIK efficiently protects against replay, spoofing, and wormhole attacks, and ensures strong freshness. TIK is implementable with current technologies, and do",
+            "es, generally must be on the order of a few microseconds or even hundreds of nanoseconds. This level of time synchronization can be achieved now with offthe-shelf hardware based on LORAN-C [28], WWVB =-=[29]-=-, or GPS [9, 42]; although such hardware is not currently a common part of wireless network nodes, it can be deployed in networks today and is expected to become more widely utilized in future systems",
+            "ins the wormhole for ROUTE REQUEST packets), or selectively discarding or modifying certain data packets. 1977 The neighbor discovery mechanisms of periodic (proactive) routing protocols such as DSDV =-=[30]-=-, OLSR [36], and TBRPF [5] rely heavily on the reception of broadcast packets as a means for neighbor detection, and are also extremely vulnerable to this attack. For example, OLSR and TBRPF use HELLO",
+            "et transmission directly from some node consider themselves to be in range of (and thus a neighbor of) that node. For example, when used against an on-demand routing protocol such as DSR [19] or AODV =-=[31]-=-, a powerful application of the wormhole attack can be mounted by tunneling each ROUTE REQUEST packet directly to the destination target node of the REQUEST. When the destination node\u2019s neighbors hear",
+            "efficient instant authentication for broadcast communication in wireless networks. TIK stands for TESLA with Instant Key disclosure, and is an extension of the TESLA broadcast authentication protocol =-=[32]-=-. We contribute the novel observation that a receiver can verify the TESLA security condition (that the corresponding key has not yet been disclosed) as it receives the packet (explained below); this   packets that carry a message authentication code computed with Ki. This use of delayed key disclosure and time synchronization for secure broadcast authentication was also used by the TESLA protocol =-=[32]-=-. The above protocol has the drawback that message authentication is delayed; the receiver must wait for the key before it can authenticate the packet. We observe that we can remove the authentication",
+            "t al [23] propose asymmetric mechanisms for threshold signatures for certificates. Alternatively, a trusted node can securely distribute an authenticated TIK key using only symmetric-key cryptography =-=[33]-=- or non-cryptographic approaches [40]. IV. DETECTING WORMHOLE ATTACKS In this section, we introduce the notion of a packet leash as a general mechanism for detecting and thus defending against wormhol for the tree of 2\u2308 2 \u2309+1 +2\u230aD 2 \u230b+1 \u2212 2. Only the root of each new tree needs to be distributed, and as mentioned in Section III, these values can be distributed using only symmetric-key cryptography =-=[33]-=-, non-cryptographic approaches [40], or by sending them using the current hash tree for authentication. C. TIK Protocol Description Our TIK protocol implements temporal leashes and provides efficient",
+            "al links. Security attacks on the wireless network\u2019s physical layer are beyond the scope of this paper. Spread spectrum has been studied as a mechanism for securing the physical layer against jamming =-=[34]-=-. Denial-of-Service (DoS) attacks against MAC layer protocols are also beyond the scope of the paper; MAC layer protocols that do not employ some form of carrier sense, such as pure ALOHA and Slotted",
+            "3870, come equipped with 32 MB of Flash and 64 MB of RAM. Modern notebooks can generally be equipped with hundreds of megabytes of RAM. A high-end wireless LAN card such as the Proxim Harmony 802.11a =-=[35]-=- has a transmission range potentially as far ass250 m and data rate as high as 108 Mbps. With time synchronization provided by a Trimble Thunderbolt GPS-Disciplined Clock [42], the synchronization err",
+            "mhole for ROUTE REQUEST packets), or selectively discarding or modifying certain data packets. 1977 The neighbor discovery mechanisms of periodic (proactive) routing protocols such as DSDV [30], OLSR =-=[36]-=-, and TBRPF [5] rely heavily on the reception of broadcast packets as a means for neighbor detection, and are also extremely vulnerable to this attack. For example, OLSR and TBRPF use HELLO packets fo",
+            "error in location information \u03b4, and the locations of the receiver pr and the sender ps, then dsr can be bounded by dsr \u2264 ||ps\u2212pr|| +2\u03bd \u00b7 (tr \u2212 ts +\u2206)+\u03b4. A regular digital signature scheme, e.g., RSA =-=[37]-=-, or other authentication technique, can be used to allow a receiver to authenticate the location and timestamp in the received packet. In certain circumstances, bounding the distance between the send l signatures have several drawbacks. First, digital signatures are usually based on computationally expensive asymmetric cryptography. For example, the popular 1024bit RSA digital signature algorithm =-=[37]-=-, roughly equivalent to use of a 72-bit key in a symmetric encryption algorithm [25], requires about 10 ms on an 800 MHz Pentium III processor for signature generation. Signature verification is more",
+            "is signature generation latency: either increase the minimum transmission unit to allow computation to overlap with transmission, or use a more efficient signature scheme, such as Schnorr\u2019s signature =-=[38]-=-, which enables efficient signature generation after pre-processing. 1979 V. TEMPORAL LEASHES AND THE TIK PROTOCOL In this section, we discuss temporal leashes in more detail and present the design an",
+            "cheme (i.e., a signature providing non-repudiation), is that an attacker can be caught if it pretends to reside at multiple locations. This use of non-repudiation was also proposed by Sirois and Kent =-=[39]-=-. When a legitimate node overhears the attacker claiming to be in different locations that would only be possible if the attacker could travel at a velocity above the maximum node velocity \u03bd, the legi",
+            "ms for threshold signatures for certificates. Alternatively, a trusted node can securely distribute an authenticated TIK key using only symmetric-key cryptography [33] or non-cryptographic approaches =-=[40]-=-. IV. DETECTING WORMHOLE ATTACKS In this section, we introduce the notion of a packet leash as a general mechanism for detecting and thus defending against wormhole attacks. A leash is any information  \u2212 2. Only the root of each new tree needs to be distributed, and as mentioned in Section III, these values can be distributed using only symmetric-key cryptography [33], non-cryptographic approaches =-=[40]-=-, or by sending them using the current hash tree for authentication. C. TIK Protocol Description Our TIK protocol implements temporal leashes and provides efficient instant authentication for broadcas",
+            "ks, we measured computational power and memory currently available in mobile devices. To measure the number of repeated hashes that can be computed per second, we optimized the MD5 hash code from ISI =-=[41]-=- to achieve maximum performance for repeated hashing. Our optimized version performs 10 million hash function evaluations in 7.544 s on a Pentium III running at 1 GHz, representing a rate of 1.3 milli",
+            "must be on the order of a few microseconds or even hundreds of nanoseconds. This level of time synchronization can be achieved now with offthe-shelf hardware based on LORAN-C [28], WWVB [29], or GPS =-=[9, 42]-=-; although such hardware is not currently a common part of wireless network nodes, it can be deployed in networks today and is expected to become more widely utilized in future systems at reduced expe s, but may allow tunneling of up to 2c\u2206 past the actual normal transmission range.sSender Time at Sender Time at Receiver ts HMAC M Receiver HMAC \u2264 (ts + \u03c4 +\u2206) \u2264 (Ti \u2212 \u2206) With a GPS-disciplined clock =-=[42]-=-, time synchronization to within \u2206=183 ns with probability 1\u221210 \u221210 is possible. If a transmitter has a 250 m range, the \u03c4 \u2212\u2206 threshold accepts all packets sent less than 140 m and some packets sent b e Proxim Harmony 802.11a [35] has a transmission range potentially as far ass250 m and data rate as high as 108 Mbps. With time synchronization provided by a Trimble Thunderbolt GPS-Disciplined Clock =-=[42]-=-, the synchronization error can be as low as 183 ns with probability 1\u221210 \u221210 . If authentic keys are re-established every day, with a 20-byte minimum packet size and an 80bit message authentication c tance longer than the nominal range of the radio, or any other range that might be specified. Sufficiently tight clock synchronization can be achieved in a wireless LAN using commercial GPS receivers =-=[42]-=-, and wireless MAN technology could be sufficiently time-synchronized using either GPS or LORAN-C [28] radio signals. A MAC layer protocol using TIK efficiently protects against replay, spoofing, and",
+            "s per second, for a total of 39,500 hash functions per second, which is well within the capability of an iPaq, with 82.2% of its CPU time to spare. In a sensor network such as Hollar et al\u2019s weC mote =-=[20, 43]-=-, nodes may only be able to achieve time synchronization accurate to 1 s, have a 19.6 kbps link speed, and 20 m range. In this case, the smallest packet that can be authenticated is 4900 bytes; since",
+            "bution; a trusted entity can sign public-key certificates for each node, and the nodes can then use their public-key to sign a new (symmetric) key being 1978 distributed for use in TIK. Zhou and Haas =-=[44]-=- propose such a public key infrastructure; Hubaux, Butty\u00e1n, and \u010capkun bootstrap trust relationships from PGP-like certificates without relying on a trusted public key infrastructure [17]; Kong et al"
+        ],
+        "10.1.1.132.4609": [
+            "periodically, setting the \u201cDuration\u201d field of each frame greater than or equal to the interval between such frames. Less sophisticated Medium Access Control protocols, such as ALOHA and Slotted ALOHA =-=[1]-=-, are not vulnerable to such attacks but have lower efficiency. In this paper, we disregard attacks on Medium Access Control protocols. We assume that the network may drop, corrupt, reorder, or duplic",
+            "t scale to large ad hoc networks, and may be vulnerable to single-node compromise. Perrig et al [45] use symmetric primitives to secure routing between nodes and a trusted base station. Basagni et al =-=[2]-=- use a network-wide symmetric key to secure routing communication, which is vulnerable to a single node compromise, although they specify the use of secure hardware to limit the damage that can be don",
+            "B (one key for each direction of communication). \u2022 MACKAB (M) denotes the computation of the message authentication code (MAC) of message M with the MAC key KAB, for example using the HMAC algorithm =-=[3]-=-.sFor notational convenience we assume hash and MAC functions that take a variable number of arguments, simply concatenating them in computing the function. 6.2. Design Goals We aim for resilience aga odes with malicious messages, overwhelming them with the cost of verifying authentication. Thus, for point-to-point authentication of a message, we use a message authentication code (MAC) (e.g., HMAC =-=[3]-=-) and a shared key between the two parties. However, setting up the shared keys between the initiator and all the nodes on the path to the target may be expensive. We thus also propose using the TESLA",
+            "hough the time synchronization signal itself may be subject to attack [15]. We assume that nodes compensate clock drift with periodic re-synchronization. Microcomputer-compensated crystal oscillators =-=[4]-=- can provide sub-second accuracy for several months; if normal crystal oscil14 lators are used, \u2206 can be chosen to be as large as necessary, though a corresponding reduction in protocol responsiveness",
+            "y, since many wireless Medium Access Control protocols require bidirectional links, as they require the exchange of several link-layer frames between a source and destination to help avoid collisions =-=[5, 24]-=-. Medium Access Control protocols are also often vulnerable to attack. For example, in IEEE 802.11, an attacker can paralyze nodes in its neighborhood by sending Clear-To-Send (CTS) frames periodicall",
+            "higher overhead than on-demand protocols and may not be suitable in highly mobile networks. Routing protocol intrusion detection has also been studied as a mechanism for detecting misbehaving routers =-=[6, 10, 36]-=-. 9. CONCLUSIONS This paper has presented the design and evaluation of Ariadne, a new ad hoc network routing protocol that provides security against one compromised node and arbitrary active attackers",
+            "to send to that destination. On-demand routing protocols have been demonstrated to perform better with significantly lower overheads than periodic (or proactive) routing protocols in many situations =-=[7, 25, 35, 41]-=-, since they are able to react quickly to the many changes that may occur in node connectivity, yet are able to reduce (or eliminate) routing overhead in periods or areas of the network in which chang  each path traversed by a REPLY. 7. ARIADNE EVALUATION 7.1. Simulation-Based Performance Evaluation To evaluate the Ariadne without attackers, we used the ns-2 simulator, with our mobility extensions =-=[7]-=-. The ns-2 simulator has been used extensively in evaluating the performance of ad hoc network routing protocols. These simulations model radio propagation using the realistic two-ray ground reflectio  with a velocity uniformly chosen between 0andvmax. When it arrives, it waits for the pause time and repeats the process. Like much previous work in evaluating ad hoc network routing protocols (e.g., =-=[7, 18, 25]-=-), we use a rectangular space of size 1500 m \u00d7 300 m to increase the average number of hops in routes used relative to a square space of equal area, creating a more challenging environment for the rou",
+            "ed nodes is expensive, and we assume that nodes in the ad hoc network may be so constrained. For example, Brown et al analyze the computation time of digital signature algorithms on various platforms =-=[8]-=-; on a Palm Pilot or RIM pager, a 512-bit RSA [49] signature generation takes 2.4\u20135.8 seconds and signature verification takes 0.1\u20130.6 seconds, depending on the public exponent. When Ariadne uses TESL",
+            "above, when the nodes in an ad hoc network are generally unable to verify asymmetric signatures quickly enough, or when network bandwidth is insufficient, these protocols may not be suitable. Cheung =-=[9]-=-, Hauser et al [16], and Zhang [57] describe symmetric-key approaches to the authentication of link-state updates, but they do not discuss mechanisms for detecting the status of these links. In wired  s 255. In a wireless ad hoc network, this technique cannot be used. Furthermore, these protocols assume the use of periodic routing protocols, which are not always suitable in ad hoc networks. Cheung =-=[9]-=- uses cryptographic mechanisms similar to those used in Ariadne with TESLA, but optimistically integrates routing data before it is authenticated, adversely affecting security. A number of other resea",
+            "higher overhead than on-demand protocols and may not be suitable in highly mobile networks. Routing protocol intrusion detection has also been studied as a mechanism for detecting misbehaving routers =-=[6, 10, 36]-=-. 9. CONCLUSIONS This paper has presented the design and evaluation of Ariadne, a new ad hoc network routing protocol that provides security against one compromised node and arbitrary active attackers",
+            "nce between any two nodes\u2019 clocks does not exceed \u2206; the value of \u2206 must be known by all nodes in the network. Accurate time synchronization can be maintained with off-the-shelf hardware based on GPS =-=[11, 53]-=-, although the time synchronization signal itself may be subject to attack [15]. We assume that nodes compensate clock drift with periodic re-synchronization. Microcomputer-compensated crystal oscilla",
+            "d value to determine if the computed value matches a previous known authentic key on the chain. Coppersmith and Jakobsson present efficient mechanisms for storing and generating values of hash chains =-=[12]-=-. Each sender pre-determines a schedule at which it publishes (or discloses) each key of its one-way key chain, in the reverse order from generation; that is, a sender publishes its keys in the order",
+            "tocols, and describes techniques for securing distance-vector protocols. However, these techniques are vulnerable to the compromise of a single node. Zhou and Haas [58], Zapata [56], and Dahill et al =-=[13]-=- propose the use of asymmetric cryptography to secure on-demand ad hoc network routing protocols. However, as above, when the nodes in an ad hoc network are generally unable to verify asymmetric signa",
+            "h node and sets up shared secret keys with communicating nodes, such as in Kerberos [33] or SPINS [45]; bootstrap shared secret keys from a Public Key Infrastructure (PKI) using protocols such as TLS =-=[14]-=-; or pre-load shared secret keys at initialization, possibly through physical contact [52]. Menezes et al discuss several key setup protocols [38]. To set up authentic public keys, we can either embed",
+            "y all nodes in the network. Accurate time synchronization can be maintained with off-the-shelf hardware based on GPS [11, 53], although the time synchronization signal itself may be subject to attack =-=[15]-=-. We assume that nodes compensate clock drift with periodic re-synchronization. Microcomputer-compensated crystal oscillators [4] can provide sub-second accuracy for several months; if normal crystal",
+            "odes in an ad hoc network are generally unable to verify asymmetric signatures quickly enough, or when network bandwidth is insufficient, these protocols may not be suitable. Cheung [9], Hauser et al =-=[16]-=-, and Zhang [57] describe symmetric-key approaches to the authentication of link-state updates, but they do not discuss mechanisms for detecting the status of these links. In wired networks, a common",
+            "ting data before it is authenticated, adversely affecting security. A number of other researchers have also proposed the use of symmetric schemes for authenticating routing control packets. Heffernan =-=[17]-=- proposes a mechanism requiring shared keys between all communicating routers. This scheme may not scale to large ad hoc networks, and may be vulnerable to single-node compromise. Perrig et al [45] us",
+            "other route to that destination in its Cache, or it may attempt a new Route Discovery for that target if necessary. The DSR protocol also defines a number of optimizations to these mechanisms (e.g., =-=[18, 19, 26, 27, 28, 32]-=-). Some of these optimizations are relatively easy to secure; for example, flow state [19] requires only broadcast authentication of control messages, whereas link-state caching [18] requires some mec mum Time Synchronization Error (\u2206) 0.1 seconds Hash Length (\u03c1) 80 bits not allow the use of prefixes of routes in the Route Cache. We compare this version of Ariadne versus the current version of DSR =-=[18]-=-, which we call simply \u201cDSR,\u201d and with an unoptimized version of DSR, which we call \u201cDSR-NoOpt.\u201d In DSR-NoOpt, we disabled all protocol optimizations not present in Ariadne. By comparing Ariadne with   with a velocity uniformly chosen between 0andvmax. When it arrives, it waits for the pause time and repeats the process. Like much previous work in evaluating ad hoc network routing protocols (e.g., =-=[7, 18, 25]-=-), we use a rectangular space of size 1500 m \u00d7 300 m to increase the average number of hops in routes used relative to a square space of equal area, creating a more challenging environment for the rou",
+            "other route to that destination in its Cache, or it may attempt a new Route Discovery for that target if necessary. The DSR protocol also defines a number of optimizations to these mechanisms (e.g., =-=[18, 19, 26, 27, 28, 32]-=-). Some of these optimizations are relatively easy to secure; for example, flow state [19] requires only broadcast authentication of control messages, whereas link-state caching [18] requires some mec",
+            "adver22 saries, and they do not authenticate intermediate nodes that forward ROUTE REQUESTs, and thus do not handle authorization. Yi et al [55] discuss authorization issues. Our previous work, SEAD =-=[20]-=-, uses hash chains to authenticate routing updates sent by a distance-vector protocol; however, that approach builds on a periodic protocol, and such protocols tend to have higher overhead than on-dem",
+            "onment is Active-0-x. As we discuss in Section 6.2, we can thus secure a network with tamperproof hardware through a network-wide shared secret key for all message authentication, with packet leashes =-=[21]-=- (both implemented within the secure hardware).s5. AD HOC NETWORK ROUTING SECURITY In this section, we define a taxonomy of types of attackers and discuss specific attacks against ad hoc network routi od node, causing other good nodes to add that node to their blacklists, thus avoiding that node in routes. A more subtle type of routing disruption attack is the creation of a wormhole in the network =-=[21]-=-, using a pair of attacker nodes A and B linked via a private network connection. Every packet that A receives from the ad hoc network, A forwards through the wormhole to B, to then be rebroadcast by  cker is relatively easy. A network-wide shared secret key limits the attacker to replaying messages. Thus the main attacks remaining are the wormhole and rushing attacks (Section 5.2). Packet leashes =-=[21]-=- can prevent both attacks because they prevent an Active-0-x attacker from retransmitting packets. Most routing disruption attacks we present in Section 5.2 are caused by malicious injection or alteri e of the attackers. When replay protection and a global MAC key are used, an Active-0-x attacker (for x \u2265 1) can at most perform wormhole and rushing attacks. Packet leashes can prevent these attacks =-=[21]-=-. An Active-1-1 attacker may attempt the following attacks: \u2022 Create a gray hole or black hole by removing nodes in a ROUTE REQUEST; however, the per-hop hash mechanism in each REQUEST prevents such t",
+            "ckers may also create a virtual vertex cut that they control. The rushing attack is a malicious attack that is targeted against on-demand routing protocols that use duplicate suppression at each node =-=[22]-=-. An attacker disseminates ROUTE REQUESTs quickly throughout the network, suppressing any later legitimate ROUTE REQUESTs when nodes drop them due to the duplicate suppression. An example of a resourc Route Discovery chain elements with time (Section 6.6). \u2022 Perform a rushing attack (Section 5.2). Rushing attacks can be probabilistically prevented by slightly modifying the Route Discovery protocol =-=[22]-=-. Multiple attackers that have compromised one node (Active-1-x, for x>1) may attempt to construct a wormhole, but append the address and key of the compromised node in each REQUEST forwarded across t",
+            "or assume a PKI and embed the trusted Certification Authority\u2019s public key in each node and then use that key to authenticate the public keys of other nodes. Another approach proposed by Hubaux et al =-=[23]-=- bootstraps trust relationships based on PGP-like certificates. Ariadne also requires that each node have an authentic element from the Route Discovery chain (Section 6.6) of every node initiating Rou",
+            "y, since many wireless Medium Access Control protocols require bidirectional links, as they require the exchange of several link-layer frames between a source and destination to help avoid collisions =-=[5, 24]-=-. Medium Access Control protocols are also often vulnerable to attack. For example, in IEEE 802.11, an attacker can paralyze nodes in its neighborhood by sending Clear-To-Send (CTS) frames periodicall for physical phenomena such as signal strength, propagation delay, capture effect, and interference. The Medium Access Control protocol used is the IEEE 802.11 Distributed Coordination Function (DCF) =-=[24]-=-. The parameters used for our simulation are given in Table 1. We evaluated the version of Ariadne that uses TESLA for broadcast authentication and shared keys only between communicating nodes (withou",
+            "to send to that destination. On-demand routing protocols have been demonstrated to perform better with significantly lower overheads than periodic (or proactive) routing protocols in many situations =-=[7, 25, 35, 41]-=-, since they are able to react quickly to the many changes that may occur in node connectivity, yet are able to reduce (or eliminate) routing overhead in periods or areas of the network in which chang  with a velocity uniformly chosen between 0andvmax. When it arrives, it waits for the pause time and repeats the process. Like much previous work in evaluating ad hoc network routing protocols (e.g., =-=[7, 18, 25]-=-), we use a rectangular space of size 1500 m \u00d7 300 m to increase the average number of hops in routes used relative to a square space of equal area, creating a more challenging environment for the rou",
+            "d; broadcast authentication such as TESLA also allows some additional protocol optimizations. In Section 2 of this paper, we summarize the basic operation of the Dynamic Source Routing protocol (DSR) =-=[26, 27, 28]-=-, on which we base the design of our new secure routing protocol, and in Section 3, we review the TESLA broadcast authentication protocol that we use in Ariadne. In Section 4, we describe our assumpti ent our conclusions. 2. BASIC OPERATION OF DSR We base the design of our secure on-demand ad hoc network routing protocol, Ariadne, on the basic operation of the Dynamic Source Routing protocol (DSR) =-=[26, 27, 28]-=-. DSR is an entirely on-demand ad hoc network routing protocol composed of two parts: Route Discovery and Route Maintenance. In this section, we describe the basic form of Route Discovery and Route Ma  other route to that destination in its Cache, or it may attempt a new Route Discovery for that target if necessary. The DSR protocol also defines a number of optimizations to these mechanisms (e.g., =-=[18, 19, 26, 27, 28, 32]-=-). Some of these optimizations are relatively easy to secure; for example, flow state [19] requires only broadcast authentication of control messages, whereas link-state caching [18] requires some mec",
+            "d; broadcast authentication such as TESLA also allows some additional protocol optimizations. In Section 2 of this paper, we summarize the basic operation of the Dynamic Source Routing protocol (DSR) =-=[26, 27, 28]-=-, on which we base the design of our new secure routing protocol, and in Section 3, we review the TESLA broadcast authentication protocol that we use in Ariadne. In Section 4, we describe our assumpti ent our conclusions. 2. BASIC OPERATION OF DSR We base the design of our secure on-demand ad hoc network routing protocol, Ariadne, on the basic operation of the Dynamic Source Routing protocol (DSR) =-=[26, 27, 28]-=-. DSR is an entirely on-demand ad hoc network routing protocol composed of two parts: Route Discovery and Route Maintenance. In this section, we describe the basic form of Route Discovery and Route Ma  other route to that destination in its Cache, or it may attempt a new Route Discovery for that target if necessary. The DSR protocol also defines a number of optimizations to these mechanisms (e.g., =-=[18, 19, 26, 27, 28, 32]-=-). Some of these optimizations are relatively easy to secure; for example, flow state [19] requires only broadcast authentication of control messages, whereas link-state caching [18] requires some mec pact of adding security, independent of the performance impact of the DSR optimizations removed to allow the security changes. Each node in our simulation moves according to the random waypoint model =-=[27]-=-: a node starts at a random position, waits for a duration called the pause time, and then chooses a new random location and moves there with a velocity uniformly chosen between 0andvmax. When it arri",
+            "d; broadcast authentication such as TESLA also allows some additional protocol optimizations. In Section 2 of this paper, we summarize the basic operation of the Dynamic Source Routing protocol (DSR) =-=[26, 27, 28]-=-, on which we base the design of our new secure routing protocol, and in Section 3, we review the TESLA broadcast authentication protocol that we use in Ariadne. In Section 4, we describe our assumpti ent our conclusions. 2. BASIC OPERATION OF DSR We base the design of our secure on-demand ad hoc network routing protocol, Ariadne, on the basic operation of the Dynamic Source Routing protocol (DSR) =-=[26, 27, 28]-=-. DSR is an entirely on-demand ad hoc network routing protocol composed of two parts: Route Discovery and Route Maintenance. In this section, we describe the basic form of Route Discovery and Route Ma  other route to that destination in its Cache, or it may attempt a new Route Discovery for that target if necessary. The DSR protocol also defines a number of optimizations to these mechanisms (e.g., =-=[18, 19, 26, 27, 28, 32]-=-). Some of these optimizations are relatively easy to secure; for example, flow state [19] requires only broadcast authentication of control messages, whereas link-state caching [18] requires some mec",
+            "t hop indicated in the packet\u2019s header, and attempts to confirm that the packet was received by that next node; a node may confirm this by means of a link-layer acknowledgment, passive acknowledgment =-=[29]-=-, or network-layer acknowledgment. If, after a limited number of local retransmissions of the packet, a node in the route is unable to make this confirmation, it returns a ROUTE ERROR to the original",
+            "nd guaranteeing available bandwidth in a wireless environment is difficult [31]. Other wired network protocols have secured periodic routing protocols with asymmetric cryptography, such as Kent et al =-=[30]-=-, Perlman\u2019s link-state NPBR, Kumar\u2019s secure link-state protocol [34], andSmithetal[50,51].However,nodesinanadhocnetworkmay not have sufficient resources to verify an asymmetric signature; in particula",
+            "resources necessary for digital signature verification and in terms of its bandwidth requirements. Furthermore, estimating and guaranteeing available bandwidth in a wireless environment is difficult =-=[31]-=-. Other wired network protocols have secured periodic routing protocols with asymmetric cryptography, such as Kent et al [30], Perlman\u2019s link-state NPBR, Kumar\u2019s secure link-state protocol [34], andSm",
+            "other route to that destination in its Cache, or it may attempt a new Route Discovery for that target if necessary. The DSR protocol also defines a number of optimizations to these mechanisms (e.g., =-=[18, 19, 26, 27, 28, 32]-=-). Some of these optimizations are relatively easy to secure; for example, flow state [19] requires only broadcast authentication of control messages, whereas link-state caching [18] requires some mec",
+            "et up shared secret keys, we can use a variety of mechanisms: a key distribution center shares a secret key with each node and sets up shared secret keys with communicating nodes, such as in Kerberos =-=[33]-=- or SPINS [45]; bootstrap shared secret keys from a Public Key Infrastructure (PKI) using protocols such as TLS [14]; or pre-load shared secret keys at initialization, possibly through physical contac",
+            "ficult [31]. Other wired network protocols have secured periodic routing protocols with asymmetric cryptography, such as Kent et al [30], Perlman\u2019s link-state NPBR, Kumar\u2019s secure link-state protocol =-=[34]-=-, andSmithetal[50,51].However,nodesinanadhocnetworkmay not have sufficient resources to verify an asymmetric signature; in particular, an attacker can trivially flood a victim with packets containing",
+            "to send to that destination. On-demand routing protocols have been demonstrated to perform better with significantly lower overheads than periodic (or proactive) routing protocols in many situations =-=[7, 25, 35, 41]-=-, since they are able to react quickly to the many changes that may occur in node connectivity, yet are able to reduce (or eliminate) routing overhead in periods or areas of the network in which chang",
+            "nd would otherwise have been used. In ad hoc network routing protocols that attempt to keep track of perceived malicious nodes in a \u201cblacklist\u201d at each node, such as is done in watchdog and pathrater =-=[36]-=-, an attacker may blackmail a good node, causing other good nodes to add that node to their blacklists, thus avoiding that node in routes. A more subtle type of routing disruption attack is the creati iscovered route. In particular, we have not presented a means of determining whether intermediate nodes are in fact forwarding packets that they have been requested to forward. Watchdog and pathrater =-=[36]-=- attempt to solve this problem by identifying the attacking nodes and avoiding them in the routes used. Instead, we choose routes based on their prior performance in packet delivery. Introducing mecha higher overhead than on-demand protocols and may not be suitable in highly mobile networks. Routing protocol intrusion detection has also been studied as a mechanism for detecting misbehaving routers =-=[6, 10, 36]-=-. 9. CONCLUSIONS This paper has presented the design and evaluation of Ariadne, a new ad hoc network routing protocol that provides security against one compromised node and arbitrary active attackers"
+        ],
+        "10.1.1.137.7197": [
+            "ecause they do not converge quickly enough or scale well as mobility increases. A number of alternative protocols have been proposed, including a dynamic sequenced distance vector (DSDV) based scheme =-=[1]-=-, dynamic source routing [2], link reversal [3], TORA [4], routing using a virtual backbone [5], zone routing [6], cluster-based routing [7], and tree-multicast-based routing strategies [8]. IEEE Pers",
+            "quickly enough or scale well as mobility increases. A number of alternative protocols have been proposed, including a dynamic sequenced distance vector (DSDV) based scheme [1], dynamic source routing =-=[2]-=-, link reversal [3], TORA [4], routing using a virtual backbone [5], zone routing [6], cluster-based routing [7], and tree-multicast-based routing strategies [8]. IEEE Personal Communications \u2022 Februa",
+            "cale well as mobility increases. A number of alternative protocols have been proposed, including a dynamic sequenced distance vector (DSDV) based scheme [1], dynamic source routing [2], link reversal =-=[3]-=-, TORA [4], routing using a virtual backbone [5], zone routing [6], cluster-based routing [7], and tree-multicast-based routing strategies [8]. IEEE Personal Communications \u2022 February 2001sThere has b  load conditions. Implementation Simulation Parameters \u2014 For our experiments we have used a fixed packet size of 200 bytes and data rate of 12.8 kb/s which are reasonable values for wireless networks =-=[3]-=-. The number of hops between the source and destination is 0.5 1 1.5 2 2.5 Route reestablishment delay (s) \u25a0 Figure 4. Throughput vs. RRD for medium load. set to 10 and the corresponding window size i",
+            "as mobility increases. A number of alternative protocols have been proposed, including a dynamic sequenced distance vector (DSDV) based scheme [1], dynamic source routing [2], link reversal [3], TORA =-=[4]-=-, routing using a virtual backbone [5], zone routing [6], cluster-based routing [7], and tree-multicast-based routing strategies [8]. IEEE Personal Communications \u2022 February 2001sThere has been a lot",
+            "ernative protocols have been proposed, including a dynamic sequenced distance vector (DSDV) based scheme [1], dynamic source routing [2], link reversal [3], TORA [4], routing using a virtual backbone =-=[5]-=-, zone routing [6], cluster-based routing [7], and tree-multicast-based routing strategies [8]. IEEE Personal Communications \u2022 February 2001sThere has been a lot of research in recent years on reliabl",
+            "have been proposed, including a dynamic sequenced distance vector (DSDV) based scheme [1], dynamic source routing [2], link reversal [3], TORA [4], routing using a virtual backbone [5], zone routing =-=[6]-=-, cluster-based routing [7], and tree-multicast-based routing strategies [8]. IEEE Personal Communications \u2022 February 2001sThere has been a lot of research in recent years on reliable transport protoc",
+            "ing a dynamic sequenced distance vector (DSDV) based scheme [1], dynamic source routing [2], link reversal [3], TORA [4], routing using a virtual backbone [5], zone routing [6], cluster-based routing =-=[7]-=-, and tree-multicast-based routing strategies [8]. IEEE Personal Communications \u2022 February 2001sThere has been a lot of research in recent years on reliable transport protocols for cellular wireless n",
+            "sed scheme [1], dynamic source routing [2], link reversal [3], TORA [4], routing using a virtual backbone [5], zone routing [6], cluster-based routing [7], and tree-multicast-based routing strategies =-=[8]-=-. IEEE Personal Communications \u2022 February 2001sThere has been a lot of research in recent years on reliable transport protocols for cellular wireless networks. In cellular wireless networks, there are",
+            null,
+            null,
+            null,
+            "ection between two MHs is split into separate connections. Each MH has a connection with its base station, and the base station establishes a proxy connection on behalf of the MHs. The Snoop protocol =-=[12]-=- follows the approach of making simple modifications at the base stations to improve performance. Packets are cached at the base station, and local retransmissions are performed to alleviate problems",
+            "stations to improve performance. Packets are cached at the base station, and local retransmissions are performed to alleviate problems caused by high bit error rates. In the fast retransmit approach =-=[13]-=-, a triplicate acknowledgment is sent by the destination MH to the TCP source to ensure that the source immediately resumes transmission after a handoff. Another approach suggested by Bakshi et al. [1",
+            "3], a triplicate acknowledgment is sent by the destination MH to the TCP source to ensure that the source immediately resumes transmission after a handoff. Another approach suggested by Bakshi et al. =-=[14]-=- uses feedback packets from base stations to inform the TCP sender of wireless link errors and prevents loss of performance by resetting timers and avoiding timeouts. The work closest to ours are Free nding any further packets until the route is restored. Feedback-based schemes for TCP have already been proposed in the form of explicit congestion notification (ECN) [22] for fixed networks and EBSN =-=[14]-=- in cellular networks. As we do not have a reliable backbone in case of ad-hoc networks, neither of these methods is directly applicable in our case. Our scheme, which we call TCP-Feedback (TCP-F), is",
+            "eedback packets from base stations to inform the TCP sender of wireless link errors and prevents loss of performance by resetting timers and avoiding timeouts. The work closest to ours are Freeze-TCP =-=[15]-=- and MTCP [16], both in cellular networks. In Freeze-TCP, when a receiver senses an impending disconnection (say because of severe fading, hard handoff), it sends a few ACKs with advertised window siz",
+            "s from base stations to inform the TCP sender of wireless link errors and prevents loss of performance by resetting timers and avoiding timeouts. The work closest to ours are Freeze-TCP [15] and MTCP =-=[16]-=-, both in cellular networks. In Freeze-TCP, when a receiver senses an impending disconnection (say because of severe fading, hard handoff), it sends a few ACKs with advertised window size equal to 0,  anisms heavily depend on the presence of the wired base station network, and hence cannot be directly applied in ad hoc networks, where all nodes are mobile and all links wireless. Holland and Vaidya =-=[16]-=- provide a comprehensive analysis of the effect of mobility on TCP throughput. The work described above is instructive in understanding the effect of packet loss on TCP performance and serves as a goo",
+            "established, fast transmit is enabled by triple ACK. In simulated experiments, the performance improvement of Freeze-TCP with triple acks ranges from 25 to 51 percent over normal TCP. Brown and Singh =-=[17]-=- propose MTCP. This approach is like I-TCP, and the single TCP connection is split into two: one from the source to a supervisor host (SH) and the second from the SH to an MH. The SH is a machine that",
+            "r, to improve TCP performance, when ACKs do not arrive (because of MH disconnection, etc.), the SH chokes the sender; when the MH reconnects, MTCP allows the sender to transmit at full throttle. WTCP =-=[18]-=- is another method for reliable delivery in wireless WANs using a CDPD network involving last-hop wireless links. The receiver of a stream computes the rate by using interpacket delays and communicate",
+            null,
+            null,
+            null,
+            "n control and can refrain from sending any further packets until the route is restored. Feedback-based schemes for TCP have already been proposed in the form of explicit congestion notification (ECN) =-=[22]-=- for fixed networks and EBSN [14] in cellular networks. As we do not have a reliable backbone in case of ad-hoc networks, neither of these methods is directly applicable in our case. Our scheme, which",
+            "window, which adversely affects TCP\u2019s cumulative acknowledgment scheme. Therefore, it may be worthwhile exploring alternative end-to-end acknowledgment schemes such as selective acknowledgment (SACK) =-=[23]-=- and comparing their performance with cumulative acknowledgment. Acknowledgments The authors wish to thank Sridhar Alagar and Ramki Rajagopalan for various comments and discussions. The authors would",
+            "ecause they do not converge quickly enough or scale well as mobility increases. A number of alternative protocols have been proposed, including a dynamic sequenced distance vector (DSDV) based scheme =-=[1]-=-, dynamic source routing [2], link reversal [3], TORA [4], routing using a virtual backbone [5], zone routing [6], cluster-based routing [7], and tree-multicast-based routing strategies [8]. IEEE Pers",
+            "quickly enough or scale well as mobility increases. A number of alternative protocols have been proposed, including a dynamic sequenced distance vector (DSDV) based scheme [1], dynamic source routing =-=[2]-=-, link reversal [3], TORA [4], routing using a virtual backbone [5], zone routing [6], cluster-based routing [7], and tree-multicast-based routing strategies [8]. IEEE Personal Communications \u2022 Februa",
+            "cale well as mobility increases. A number of alternative protocols have been proposed, including a dynamic sequenced distance vector (DSDV) based scheme [1], dynamic source routing [2], link reversal =-=[3]-=-, TORA [4], routing using a virtual backbone [5], zone routing [6], cluster-based routing [7], and tree-multicast-based routing strategies [8]. IEEE Personal Communications \u2022 February 2001sThere has b  load conditions. Implementation Simulation Parameters \u2014 For our experiments we have used a fixed packet size of 200 bytes and data rate of 12.8 kb/s which are reasonable values for wireless networks =-=[3]-=-. The number of hops between the source and destination is 0.5 1 1.5 2 2.5 Route reestablishment delay (s) \u25a0 Figure 4. Throughput vs. RRD for medium load. set to 10 and the corresponding window size i"
+        ],
+        "10.1.1.21.7931": [
+            ", to the best of our knowledge have not been reported before. After our work was completed, Arbaugh et. al have found several extensions that may make these weaknesses even more dangerous in practice =-=[2, 1]-=-. 2.2 Attack Practicality Before describing the attacks, we would like to discuss the feasibility of mounting them in practice. In addition to the cryptographic considerations discussed in the section",
+            ", to the best of our knowledge have not been reported before. After our work was completed, Arbaugh et. al have found several extensions that may make these weaknesses even more dangerous in practice =-=[2, 1]-=-. 2.2 Attack Practicality Before describing the attacks, we would like to discuss the feasibility of mounting them in practice. In addition to the cryptographic considerations discussed in the section ttacks that may be able to monitor a packet being sent and jam the receiver at the same time; at best such attacks would allow to reuse an IV once. 185 also discovered independently by Arbaugh et al. =-=[2]-=- based on a preliminary version of our results. 4.4 Message Decryption What may be surprising is that the ability to modify encrypted packets without detection can also be leveraged to decrypt message",
+            "hich were in effect at the time the protocol was drafted. This key length is short enough to make brute-force attacks practical to individuals and organizations with fairly modest computing resources =-=[3, 8]. Ho-=-wever, it is straightforward to extend the protocol to use larger keys, and several equipment manufacturers offer a socalled \u201c128-bit\u201d version (which actually uses 104-bit keys, despite its mislea",
+            "e initially discovered by Bellovin and Wagner in the context of the IP Security protocol, where their existence was blamed on the use of encryption without also using a MAC for message authentication =-=[4]-=-. As a result, Bellovin proposed asdesign principle for IP Security: all encryption modes of operation should also use a MAC. It seems that the same rule of thumb applies to the WEP protocol as well,  f the same issues as WEP. Even if the protocol could not be reused as-is, a review of its design and past analysis would have been very instructive. Some of the previously published problems in IPSEC =-=[4]-=- share many similarities with the attacks presented in this paper. Public review is also of great importance. If WEP had been examined by the cryptographic community before it was enacted into an inte",
+            "he old IP checksum was \ufffd (which we do not necessarily know, since it is encrypted), the new one should be \ufffd \ufffd \ufffd \ufffd \u00c0 \ufffd \u00c4s\ufffd\u00c0s\ufffd\u00c4 (where the additions and subtractions here and below a=-=re one\u2019scomplement) [5, 14]. The -=-trick is that we only know how to modify a packet by applying an XOR to it, and we don\u2019t necessarily know what we need to XORsto \ufffd to get \ufffd , even though we do know what we would need to add (na",
+            "y before it was enacted into an international standard, many of the flaws would have been almost surely eliminated. (For example, the dangers of using a CRC to ensure message integrity are well-known =-=[9, 21, 6].)-=- While we applaud the fact that the standard is open, there are still barriers to public review. A security researcher is faced with a financial burden to even attempt to examine the standard\u2014the co",
+            "ndancy that one can recover both \u00c8 and \u00c8 given only \u00c8 \u00a8 \u00c8 ; there are known techniques, for example, for solving such plaintext XORs by looking for two English texts that XOR to the given value \ufffd=-=\ufffd \u00a8 \u00c8 [7]. M-=-oreover, if we have \u00d2 ciphertexts that all reuse the same keystream, we have what is known as a problem of depth \u00d2. Reading traffic in depth becomes easier as \u00d2 increases, since the pairwise XOR of",
+            "hich were in effect at the time the protocol was drafted. This key length is short enough to make brute-force attacks practical to individuals and organizations with fairly modest computing resources =-=[3, 8]. Ho-=-wever, it is straightforward to extend the protocol to use larger keys, and several equipment manufacturers offer a socalled \u201c128-bit\u201d version (which actually uses 104-bit keys, despite its mislea",
+            "y before it was enacted into an international standard, many of the flaws would have been almost surely eliminated. (For example, the dangers of using a CRC to ensure message integrity are well-known =-=[9, 21, 6].)-=- While we applaud the fact that the standard is open, there are still barriers to public review. A security researcher is faced with a financial burden to even attempt to examine the standard\u2014the co",
+            "t designs should be reused whenever possible. A common tenet of protocol design is \u201cdon\u2019t doit.\u201d WEP could have benefitted from the experience gained in the design of the IP Security Protocol (I=-=PSEC) [10]-=-. Although the goals of IPSEC are somewhat different, it also aims to provide link-layer security, and as such needs to deal with many of the same issues as WEP. Even if the protocol could not be reus",
+            "about its inputs. The recipient\u2019s reaction to our forged packet\u2014either acknowledging or ignoring it\u2014can be viewed as a side channel, similar to those exploited in timing and power consumption at=-=tacks [11, 12]-=-, that allows us to learn information about the unknown plaintext. Thus, we have used the recipient as an oracle to unknowingly decrypt the intercepted ciphertext for us. This is known as a reaction a",
+            "about its inputs. The recipient\u2019s reaction to our forged packet\u2014either acknowledging or ignoring it\u2014can be viewed as a side channel, similar to those exploited in timing and power consumption at=-=tacks [11, 12]-=-, that allows us to learn information about the unknown plaintext. Thus, we have used the recipient as an oracle to unknowingly decrypt the intercepted ciphertext for us. This is known as a reaction a",
+            "hecksum (linearity). In fact, substituting any unkeyed function in place of the CRC will have no effect on the viability of the attack. Only a keyed message authentication code (MAC) such as SHA1HMAC =-=[13]-=- will offer sufficient strength to prevent this attack. Simon et. al had earlier warned in independent work that, given known plaintext for a single packet, one can use Property 2 to forge packets unt us our one bit of information on the plaintext, as claimed. 4.5 Summary In this section, we have shown the importance of using a cryptographically secure message authentication code, such as SHA1HMAC =-=[13]-=-, to protect integrity of transmissions. The use of CRC is wholly inappropriate for this purpose, and in fact any unkeyed function falls short from defending against all of the attacks in this section",
+            "he old IP checksum was \ufffd (which we do not necessarily know, since it is encrypted), the new one should be \ufffd \ufffd \ufffd \ufffd \u00c0 \ufffd \u00c4s\ufffd\u00c0s\ufffd\u00c4 (where the additions and subtractions here and below a=-=re one\u2019scomplement) [5, 14]. The -=-trick is that we only know how to modify a packet by applying an XOR to it, and we don\u2019t necessarily know what we need to XORsto \ufffd to get \ufffd , even though we do know what we would need to add (na",
+            "dcast over radio waves, interception and masquerading becomes trivial to anyone with a radio, and so there is a need to employ additional mechanisms to protect the communications. The 802.11 standard =-=[15]-=- for wireless LAN communications introduced the Wired Equivalent Privacy (WEP) protocol in an attempt to address these new problems and bring the security level of wireless systems closer to that of w lusions. 2. THE WEP PROTOCOL The Wired Equivalent Privacy protocol is used in 802.11 networks to protect link-level data during wireless transmission. It is described in detail in the 802.11 standard =-=[15]; -=-we reproduce a brief description to enable the following discussion of its properties. WEP relies on a secret key \ufffd shared between the communicating parties to protect the body of a transmitted fram ches the received checksum . This ensures that only frames with a valid checksum will be accepted by the receiver. 2.1 Security Goals The WEP protocol is intended to enforce three main security goals =-=[15]-=-: Confidentiality: The fundamental goal of WEP is to prevent casual eavesdropping. Access control: A second goal of the protocol is to protect access to a wireless network infrastructure. The 802.11 s e integrity checksum field is included for this purpose. In all three cases, the claimed security of the protocol \u201crelies on the difficulty of discovering the secret key through a brute-force attack=-=\u201d [15]-=-. There are actually two classes of WEP implementation: classic WEP, as documented in the standard, and an extended version developed by some vendors to provide larger keys. The WEP standard 181 speci",
+            "nufacturers into their 802.11 hardware and is currently in widespread use. Unfortunately, WEP falls short of accomplishing its security goals. Despite employing the well-known and believed-secure RC4 =-=[16] -=-1 \u00a3 The work was done while Ian Goldberg was a student at UC Berkeley A public description of the alleged RC4 algorithm can be found Permission to make digital or hard copies of part or all of this w",
+            "iphertext over the radio link. Symbolically, this may be represented as follows: \ufffd \ufffd \ufffd \ufffd \u00da\ufffd \u00c8 \u00a8 \u00ca \ufffd\ufffd\u00da\ufffd \ufffd where \u00c8 \ufffd \ufffd\u00c5\ufffd \u00c5 \ufffd\ufffd The format of the encrypted frame is als=-=o shown pictorially in Figure 1. in [17].-=-sXOR v Plaintext Message CRC Keystream = RC4(v,k) Ciphertext Transmitted Data Figure 1: Encrypted WEP Frame. We will consistently use the term message (symbolically, \u00c5) to refer to the initial frame",
+            "f the dangers of keystream reuse attacks. Nor is it the first protocol to fall prey to stream-cipher-based attacks; see, for example, the analysis of an earlier version of the Microsoft PPTP protocol =-=[18]-=-. In light of this, a protocol designer should give careful consideration to the complications that the use of stream ciphers adds to a protocol when choosing an encryption algorithm.s4. MESSAGE AUTHE",
+            "ject completely new traffic into the network. A number of these results (particularly the IV reuse weaknesses described in Section 3) have been anticipated in earlier independent work by Simon et. al =-=[19]-=- and by Walker [24]. The serious flaws in the WEP checksum (see Section 4), however, to the best of our knowledge have not been reported before. After our work was completed, Arbaugh et. al have found ient strength to prevent this attack. Simon et. al had earlier warned in independent work that, given known plaintext for a single packet, one can use Property 2 to forge packets until the IV changes =-=[19], -=-and they too recommended replacing WEP\u2019s checksum with a MAC. However, they did not appear to recognize the possibility to replay old IV values indefinitely (Property 3), which heightens the impact",
+            "increases, since the pairwise XOR of every pair of plaintexts can be computed, and many classical techniques are known for solving such problems (e.g., frequency analysis, dragging cribs, and so on) =-=[20, 22]. -=-Note that there are two conditions required for this class of attacks to succeed: \u00af The availability of ciphertexts where some portion of the keystream is used more than once, and \u00af Partial knowledg",
+            "y before it was enacted into an international standard, many of the flaws would have been almost surely eliminated. (For example, the dangers of using a CRC to ensure message integrity are well-known =-=[9, 21, 6].)-=- While we applaud the fact that the standard is open, there are still barriers to public review. A security researcher is faced with a financial burden to even attempt to examine the standard\u2014the co",
+            "increases, since the pairwise XOR of every pair of plaintexts can be computed, and many classical techniques are known for solving such problems (e.g., frequency analysis, dragging cribs, and so on) =-=[20, 22]. -=-Note that there are two conditions required for this class of attacks to succeed: \u00af The availability of ciphertexts where some portion of the keystream is used more than once, and \u00af Partial knowledg",
+            "eans that each low-security option offered by the standard must be supported by everyone, and is thus available to the attacker. This situation is analogous to the ciphersuite rollback attacks on SSL =-=[23]-=-, which also made use of a standard that included both high-security and low-security options. Consequently, to avoid security at the least-common denominator level, we suggest that the 802.11 standar",
+            "traffic into the network. A number of these results (particularly the IV reuse weaknesses described in Section 3) have been anticipated in earlier independent work by Simon et. al [19] and by Walker =-=[24]-=-. The serious flaws in the WEP checksum (see Section 4), however, to the best of our knowledge have not been reported before. After our work was completed, Arbaugh et. al have found several extensions"
+        ],
         "10.1.1.61.2545": [
             ", and other factors, the change may be frequent and may cause large variations in RTT. This will degrade the TCP performance, because the normal operation of TCP relies on a smooth measurement of RTT =-=[1]-=-. How to enhance a TCP so that it is robust to large RTT variations has not been thoroughly studied for both mobile ad hoc networks and WMNs. 10.1.2. Entirely new transport protocols As discussed befo",
             "within the global network is difficult to achieve [62]. Thus, distributed multiple access schemes such as CSMA/ CA are more favorable. However, CSMA/CA has very low frequency spatial-reuse efficiency =-=[2]-=-, which significantly limits the scalability of CSMA/CA-based multi-hop networks. To improve the scalability of WMNs, designing a hybrid multiple access scheme with CSMA/CA and TDMA or CDMA is an inte ped for the purpose of reducing power consumptions [33,147,131]. These schemes reduce exposed nodes problem, especially in a dense network, and thus, improve the spectrum spatial-reuse factor in WMNs =-=[2]-=-. However, hidden nodes still exist and may become worse because lower transmission power level reduces the possibility of detecting a potential interfering node [72]. \u2022 Proposing innovative MAC proto",
@@ -161,136 +332,260 @@
             "ity scheme is desired for network protocols. For a security monitoring system, a cross-layer framework also needs to be developed. A framework of intrusion detection in ad hoc networks is proposed in =-=[146]-=-. However, how to design and implement a practical security monitoring system, including cross-layer secure network protocols and various intrusion detection algorithms, is a challenging research topi",
             "face other difficulties such as cost, system complexity, and practicality of fast steerable directional antennas. The second set of schemes is developed for the purpose of reducing power consumptions =-=[33,147,131]-=-. These schemes reduce exposed nodes problem, especially in a dense network, and thus, improve the spectrum spatial-reuse factor in WMNs [2]. However, hidden nodes still exist and may become worse bec",
             "ible with IEEE 802.11 standards in the sense of supporting both meshcapable and conventional Wi-Fi clients. Such WMNs also need to be inter-operable with other wireless networks such as WiMAX, ZigBee =-=[148]-=-, and cellular networks. Based on their characteristics, WMNs are generally considered as a type of ad-hoc networks due to the lack of wired infrastructure that exists in cellular or Wi-Fi networks th minism while assigning contentionbased, best-effort access periods. IEEE 802.15.4 is intended for telemetry with low data rate, long battery life and low device cost requirements. The ZigBee Alliance =-=[148]-=- is developing higher-level protocols that will run over 802.15.4 MAC and PHY layers that operate in unlicensed bands worldwide. Raw data rates of 250 Kbps can be achieved at 2.4 GHz (16 channels), 40"
-        ],
-        "10.1.1.83.6019": []
+        ]
     },
     "cited_paper_doi": {
-        "10.1.1.10.8094": [
-            "10.1.1.16.1408",
-            "10.1.1.165.574",
-            "10.1.1.20.9595",
-            "10.1.1.29.3606",
-            "10.1.1.138.3623",
-            "10.1.1.10.8652",
-            "10.1.1.113.4100",
-            "10.1.1.132.4609",
-            "10.1.1.130.6088",
-            "10.1.1.377.5273",
-            "10.1.1.129.426",
-            "10.1.1.108.762",
-            "10.1.1.192.7018",
-            "10.1.1.156.3699",
-            "10.1.1.20.1862",
-            "10.1.1.118.9511",
-            "10.1.1.10.1548",
-            "10.1.1.17.5360",
-            "10.1.1.13.1596",
-            "10.1.1.24.7320",
-            "10.1.1.11.4819",
-            "10.1.1.10.5263",
-            "10.1.1.13.1450",
-            "10.1.1.100.4755",
-            "10.1.1.13.8133"
-        ],
-        "10.1.1.10.8652": [
-            "10.1.1.20.8248",
+        "10.1.1.10.1548": [
             "10.1.1.117.2921",
-            "10.1.1.20.9595",
-            "10.1.1.11.4819",
-            "10.1.1.44.8982",
-            "10.1.1.132.4609",
-            "10.1.1.130.6088",
+            "10.1.1.40.8504",
+            "10.1.1.42.4231",
+            "10.1.1.38.3571",
             "10.1.1.129.426",
-            "10.1.1.108.762",
-            "10.1.1.21.9663",
             "10.1.1.20.5356",
-            "10.1.1.113.555",
-            "10.1.1.10.1548",
-            "10.1.1.16.1868",
-            "10.1.1.13.1596",
-            "10.1.1.24.7320",
-            "10.1.1.13.1450",
-            "10.1.1.13.8133"
+            "10.1.1.30.3638",
+            "10.1.1.44.8758",
+            "10.1.1.42.718"
         ],
-        "10.1.1.116.5688": [
-            "10.1.1.15.3815",
-            "10.1.1.35.5130",
-            "10.1.1.135.9318",
-            "10.1.1.14.5452"
-        ],
-        "10.1.1.131.6584": [
-            "10.1.1.101.2658",
-            "10.1.1.117.2921",
+        "10.1.1.10.5015": [
+            "10.1.1.117.6416",
+            "10.1.1.111.1560",
             "10.1.1.37.5539",
-            "10.1.1.199.5994",
-            "10.1.1.78.1446"
+            "10.1.1.129.8128",
+            "10.1.1.24.5698",
+            "10.1.1.21.329",
+            "10.1.1.28.2270",
+            "10.1.1.1.4871",
+            "10.1.1.10.1548",
+            "10.1.1.24.6602",
+            "10.1.1.19.6069",
+            "10.1.1.16.8773",
+            "10.1.1.110.9916",
+            "10.1.1.377.5273",
+            "10.1.1.117.2921",
+            "10.1.1.113.2393",
+            "10.1.1.39.1517",
+            "10.1.1.125.5750",
+            "10.1.1.13.1261",
+            "10.1.1.19.2690",
+            "10.1.1.147.5383",
+            "10.1.1.11.4175"
+        ],
+        "10.1.1.104.2898": [
+            "10.1.1.53.5915",
+            "10.1.1.40.5315",
+            "10.1.1.23.5789"
+        ],
+        "10.1.1.11.7793": [
+            "10.1.1.39.4013",
+            "10.1.1.142.5136",
+            "10.1.1.31.3487",
+            "10.1.1.92.8693",
+            "10.1.1.45.3663",
+            "10.1.1.86.7793",
+            "10.1.1.94.7634",
+            "10.1.1.12.6256",
+            "10.1.1.17.8677",
+            "10.1.1.117.9392",
+            "10.1.1.28.9678",
+            "10.1.1.12.1697",
+            "10.1.1.112.4473",
+            "10.1.1.56.3236",
+            "10.1.1.40.3630",
+            "10.1.1.17.6590",
+            "10.1.1.135.9046",
+            "10.1.1.48.6601",
+            "10.1.1.116.8657",
+            "10.1.1.106.766",
+            "10.1.1.134.1839",
+            "10.1.1.40.5588",
+            "10.1.1.116.2833",
+            "10.1.1.20.4762",
+            "10.1.1.92.5721",
+            "10.1.1.23.3081",
+            "10.1.1.140.8575",
+            "10.1.1.112.463",
+            "10.1.1.177.9863",
+            "10.1.1.18.2263",
+            "10.1.1.24.917",
+            "10.1.1.127.6130",
+            "10.1.1.19.7921",
+            "10.1.1.159.9831",
+            "10.1.1.117.697",
+            "10.1.1.52.166",
+            "10.1.1.12.9061",
+            "10.1.1.33.1038",
+            "10.1.1.27.5564",
+            "10.1.1.38.838",
+            "10.1.1.107.4236",
+            "10.1.1.35.7905",
+            "10.1.1.108.1721",
+            "10.1.1.141.5436",
+            "10.1.1.46.6075",
+            "10.1.1.12.621",
+            "10.1.1.99.2528",
+            "10.1.1.52.3002",
+            "10.1.1.89.8082",
+            "10.1.1.27.2478",
+            "10.1.1.42.854"
+        ],
+        "10.1.1.111.1560": [
+            "10.1.1.146.1122",
+            "10.1.1.113.555",
+            "10.1.1.78.1446",
+            "10.1.1.53.7718",
+            "10.1.1.30.9907",
+            "10.1.1.49.880"
+        ],
+        "10.1.1.113.4100": [
+            "10.1.1.134.8430",
+            "10.1.1.145.1959",
+            "10.1.1.13.7013",
+            "10.1.1.44.6790",
+            "10.1.1.130.6088",
+            "10.1.1.115.3829",
+            "10.1.1.123.2014",
+            "10.1.1.15.7590",
+            "10.1.1.156.3699",
+            "10.1.1.99.2838",
+            "10.1.1.115.9053",
+            "10.1.1.10.1548",
+            "10.1.1.13.1596",
+            "10.1.1.42.9484",
+            "10.1.1.40.5588",
+            "10.1.1.13.1450",
+            "10.1.1.52.1930",
+            "10.1.1.13.8133",
+            "10.1.1.144.8478"
+        ],
+        "10.1.1.113.555": [
+            "10.1.1.43.8525",
+            "10.1.1.178.4332"
+        ],
+        "10.1.1.116.8816": [
+            "10.1.1.53.5915",
+            "10.1.1.11.7793",
+            "10.1.1.104.2898",
+            "10.1.1.45.3663",
+            "10.1.1.142.5136",
+            "10.1.1.140.5700",
+            "10.1.1.135.9046",
+            "10.1.1.31.772",
+            "10.1.1.45.9364",
+            "10.1.1.40.8504"
+        ],
+        "10.1.1.117.6416": [
+            "10.1.1.153.7538",
+            "10.1.1.117.2921",
+            "10.1.1.102.1879",
+            "10.1.1.37.5608",
+            "10.1.1.111.4133",
+            "10.1.1.138.3623",
+            "10.1.1.112.2772",
+            "10.1.1.298.1586",
+            "10.1.1.35.1326",
+            "10.1.1.126.5587"
+        ],
+        "10.1.1.118.8747": [
+            "10.1.1.126.7059",
+            "10.1.1.37.9720",
+            "10.1.1.169.2731",
+            "10.1.1.152.6888",
+            "10.1.1.51.9039",
+            "10.1.1.11.2745",
+            "10.1.1.376.1793",
+            "10.1.1.383.2875"
+        ],
+        "10.1.1.129.8128": [
+            "10.1.1.37.2042",
+            "10.1.1.56.3823",
+            "10.1.1.182.501",
+            "10.1.1.49.880",
+            "10.1.1.44.7888",
+            "10.1.1.146.1122",
+            "10.1.1.113.555",
+            "10.1.1.53.7718"
+        ],
+        "10.1.1.13.6860": [
+            "10.1.1.11.4819",
+            "10.1.1.118.9511",
+            "10.1.1.129.4922",
+            "10.1.1.10.8652",
+            "10.1.1.105.5233",
+            "10.1.1.12.5615",
+            "10.1.1.156.3699",
+            "10.1.1.13.8133"
         ],
         "10.1.1.132.4609": [
-            "10.1.1.10.8094",
-            "10.1.1.165.574",
-            "10.1.1.10.8652",
-            "10.1.1.108.762",
-            "10.1.1.54.1407",
             "10.1.1.134.8430",
-            "10.1.1.29.3606",
-            "10.1.1.11.7750",
             "10.1.1.153.7538",
-            "10.1.1.130.6088",
+            "10.1.1.165.574",
+            "10.1.1.117.2921",
             "10.1.1.20.9595",
-            "10.1.1.117.2921",
-            "10.1.1.11.2745",
-            "10.1.1.11.4819",
-            "10.1.1.113.4100",
-            "10.1.1.377.5273",
-            "10.1.1.125.7013",
-            "10.1.1.192.7018",
-            "10.1.1.31.6796",
-            "10.1.1.16.730",
-            "10.1.1.129.426",
-            "10.1.1.115.2071"
-        ],
-        "10.1.1.135.8418": [
-            "10.1.1.52.3155",
-            "10.1.1.115.5210"
-        ],
-        "10.1.1.138.3623": [
-            "10.1.1.24.4120",
-            "10.1.1.153.7538",
-            "10.1.1.44.7888",
-            "10.1.1.135.5655",
-            "10.1.1.135.9814",
-            "10.1.1.18.1007"
-        ],
-        "10.1.1.138.7893": [
-            "10.1.1.377.5273",
-            "10.1.1.113.555"
-        ],
-        "10.1.1.153.7538": [
-            "10.1.1.132.3407"
-        ],
-        "10.1.1.165.574": [
-            "10.1.1.126.7059",
             "10.1.1.29.3606",
-            "10.1.1.15.7059",
-            "10.1.1.156.4218"
-        ],
-        "10.1.1.192.7018": [
-            "10.1.1.221.6245",
-            "10.1.1.111.9051",
-            "10.1.1.40.1244",
-            "10.1.1.10.117",
-            "10.1.1.137.5264",
-            "10.1.1.53.9705",
+            "10.1.1.11.4819",
+            "10.1.1.54.1407",
+            "10.1.1.31.6796",
+            "10.1.1.125.7013",
+            "10.1.1.10.8652",
+            "10.1.1.113.4100",
+            "10.1.1.10.8094",
+            "10.1.1.130.6088",
+            "10.1.1.377.5273",
             "10.1.1.129.426",
-            "10.1.1.113.555",
-            "10.1.1.24.4120",
+            "10.1.1.108.762",
+            "10.1.1.11.7750",
+            "10.1.1.192.7018",
+            "10.1.1.11.2745",
+            "10.1.1.115.2071",
+            "10.1.1.16.730"
+        ],
+        "10.1.1.133.1420": [],
+        "10.1.1.137.7197": [
+            "10.1.1.40.7252",
+            "10.1.1.19.3122",
+            "10.1.1.20.5356",
+            "10.1.1.299.2673",
+            "10.1.1.161.5794",
+            "10.1.1.125.5511",
+            "10.1.1.34.9967",
+            "10.1.1.160.6569"
+        ],
+        "10.1.1.142.5136": [],
+        "10.1.1.161.5794": [
+            "10.1.1.52.3644",
+            "10.1.1.125.5511",
+            "10.1.1.11.9902",
+            "10.1.1.113.2393",
+            "10.1.1.31.3128",
+            "10.1.1.40.7252",
+            "10.1.1.12.75",
+            "10.1.1.52.6406",
+            "10.1.1.39.8863",
+            "10.1.1.48.8306"
+        ],
+        "10.1.1.19.3122": [
+            "10.1.1.34.7443",
+            "10.1.1.113.2393",
+            "10.1.1.36.479",
             "10.1.1.117.2921",
-            "10.1.1.43.2248",
-            "10.1.1.22.1127",
-            "10.1.1.34.6916",
-            "10.1.1.34.5771",
-            "10.1.1.41.8709",
-            "10.1.1.20.5356"
+            "10.1.1.40.7252",
+            "10.1.1.110.8641",
+            "10.1.1.15.8599",
+            "10.1.1.160.6569",
+            "10.1.1.40.4425",
+            "10.1.1.137.5264",
+            "10.1.1.192.7018",
+            "10.1.1.24.4120"
+        ],
+        "10.1.1.2.6760": [
+            "10.1.1.113.4100",
+            "10.1.1.113.555",
+            "10.1.1.10.1548",
+            "10.1.1.132.4609",
+            "10.1.1.13.6860",
+            "10.1.1.21.7931",
+            "10.1.1.129.426",
+            "10.1.1.10.8652"
         ],
         "10.1.1.20.5356": [
             "10.1.1.4.7923",
@@ -300,111 +595,123 @@
             "10.1.1.21.9663",
             "10.1.1.129.426"
         ],
-        "10.1.1.21.5598": [
-            "10.1.1.92.4082"
+        "10.1.1.21.7931": [
+            "10.1.1.35.7602",
+            "10.1.1.29.9565",
+            "10.1.1.27.5178",
+            "10.1.1.118.8747",
+            "10.1.1.133.1420",
+            "10.1.1.40.1788",
+            "10.1.1.39.8123",
+            "10.1.1.383.2086",
+            "10.1.1.12.1230"
         ],
-        "10.1.1.29.5228": [
-            "10.1.1.100.5145",
-            "10.1.1.330.2279",
-            "10.1.1.44.3969",
-            "10.1.1.101.2658",
-            "10.1.1.102.1879",
-            "10.1.1.117.2921"
+        "10.1.1.24.5698": [
+            "10.1.1.78.1446",
+            "10.1.1.153.7538"
         ],
-        "10.1.1.320.6180": [
-            "10.1.1.69.5504",
-            "10.1.1.21.5598",
-            "10.1.1.116.5688",
-            "10.1.1.135.8418"
+        "10.1.1.27.5178": [
+            "10.1.1.37.9720",
+            "10.1.1.135.1231"
+        ],
+        "10.1.1.29.9565": [
+            "10.1.1.134.8430",
+            "10.1.1.39.8123",
+            "10.1.1.89.6557"
+        ],
+        "10.1.1.299.2673": [
+            "10.1.1.161.2868",
+            "10.1.1.41.7640",
+            "10.1.1.12.7515",
+            "10.1.1.105.3329",
+            "10.1.1.38.814"
+        ],
+        "10.1.1.37.5539": [
+            "10.1.1.24.4120",
+            "10.1.1.35.5179",
+            "10.1.1.24.6112"
+        ],
+        "10.1.1.45.3663": [
+            "10.1.1.106.8552",
+            "10.1.1.88.1105",
+            "10.1.1.86.7793",
+            "10.1.1.94.7634",
+            "10.1.1.12.6256",
+            "10.1.1.89.8082",
+            "10.1.1.146.3429"
+        ],
+        "10.1.1.53.5915": [
+            "10.1.1.36.9424",
+            "10.1.1.13.8352",
+            "10.1.1.55.7921",
+            "10.1.1.54.9408",
+            "10.1.1.119.7694",
+            "10.1.1.139.3799",
+            "10.1.1.178.4332"
         ],
         "10.1.1.61.2545": [
-            "10.1.1.320.6180",
-            "10.1.1.7.5779",
-            "10.1.1.83.6019",
-            "10.1.1.132.4609",
-            "10.1.1.14.4547",
-            "10.1.1.10.7211",
-            "10.1.1.374.252",
-            "10.1.1.58.3631",
-            "10.1.1.128.7155",
-            "10.1.1.25.3759",
-            "10.1.1.12.4550",
             "10.1.1.2.6760",
-            "10.1.1.116.8816",
-            "10.1.1.58.2667",
-            "10.1.1.21.7931",
-            "10.1.1.3.5380",
-            "10.1.1.96.5516",
-            "10.1.1.15.3014",
-            "10.1.1.221.1142",
-            "10.1.1.200.4981",
-            "10.1.1.11.3061",
-            "10.1.1.12.8061",
-            "10.1.1.58.1857",
-            "10.1.1.130.6088",
-            "10.1.1.106.2623",
-            "10.1.1.1.5244",
-            "10.1.1.111.4133",
-            "10.1.1.128.9649",
-            "10.1.1.114.2307",
-            "10.1.1.138.2480",
-            "10.1.1.221.2247",
-            "10.1.1.41.838",
-            "10.1.1.23.904",
             "10.1.1.137.7197",
-            "10.1.1.20.1673",
-            "10.1.1.117.453",
-            "10.1.1.4.5139",
-            "10.1.1.127.3891",
-            "10.1.1.12.8453",
-            "10.1.1.20.836",
-            "10.1.1.77.6772",
-            "10.1.1.330.8026",
-            "10.1.1.92.4343",
-            "10.1.1.16.8298",
-            "10.1.1.109.7830",
-            "10.1.1.117.6416",
-            "10.1.1.112.2848",
-            "10.1.1.111.6423",
-            "10.1.1.13.4941",
+            "10.1.1.21.7931",
+            "10.1.1.116.8816",
             "10.1.1.10.5015",
-            "10.1.1.106.9714",
+            "10.1.1.109.7830",
+            "10.1.1.111.6423",
+            "10.1.1.20.836",
+            "10.1.1.138.3623",
+            "10.1.1.96.5516",
+            "10.1.1.83.6019",
+            "10.1.1.221.1142",
+            "10.1.1.14.4547",
+            "10.1.1.12.8453",
+            "10.1.1.320.6180",
+            "10.1.1.15.3014",
+            "10.1.1.112.2848",
+            "10.1.1.117.6416",
+            "10.1.1.4.7783",
+            "10.1.1.13.4941",
+            "10.1.1.128.9649",
+            "10.1.1.3.5380",
+            "10.1.1.5.9823",
+            "10.1.1.25.3759",
+            "10.1.1.16.8298",
+            "10.1.1.111.4133",
             "10.1.1.131.6584",
             "10.1.1.20.3861",
-            "10.1.1.4.7783",
-            "10.1.1.137.2493",
-            "10.1.1.138.3623",
-            "10.1.1.10.3898",
-            "10.1.1.113.4100",
-            "10.1.1.5.9823",
+            "10.1.1.58.2667",
             "10.1.1.1.2405",
-            "10.1.1.3.4523",
-            "10.1.1.101.5323"
-        ],
-        "10.1.1.7.5779": [
-            "10.1.1.153.7538",
+            "10.1.1.12.4550",
+            "10.1.1.4.5139",
+            "10.1.1.106.9714",
+            "10.1.1.101.5323",
+            "10.1.1.330.8026",
+            "10.1.1.221.2247",
+            "10.1.1.117.453",
+            "10.1.1.130.6088",
+            "10.1.1.10.7211",
+            "10.1.1.58.1857",
+            "10.1.1.200.4981",
+            "10.1.1.127.3891",
             "10.1.1.41.838",
-            "10.1.1.138.3623",
-            "10.1.1.192.7018",
-            "10.1.1.23.5864"
-        ],
-        "10.1.1.83.6019": [
-            "10.1.1.138.7893",
-            "10.1.1.20.5356",
-            "10.1.1.131.6584",
-            "10.1.1.29.5228",
-            "10.1.1.160.9380",
-            "10.1.1.47.1724",
-            "10.1.1.25.1878",
-            "10.1.1.117.2921",
-            "10.1.1.10.4428",
-            "10.1.1.101.2658",
-            "10.1.1.129.426",
-            "10.1.1.21.9663",
-            "10.1.1.21.8591",
-            "10.1.1.192.7018",
-            "10.1.1.100.5145",
-            "10.1.1.24.1544"
+            "10.1.1.12.8061",
+            "10.1.1.23.904",
+            "10.1.1.128.7155",
+            "10.1.1.137.2493",
+            "10.1.1.138.2480",
+            "10.1.1.1.5244",
+            "10.1.1.92.4343",
+            "10.1.1.3.4523",
+            "10.1.1.77.6772",
+            "10.1.1.20.1673",
+            "10.1.1.113.4100",
+            "10.1.1.132.4609",
+            "10.1.1.11.3061",
+            "10.1.1.7.5779",
+            "10.1.1.10.3898",
+            "10.1.1.374.252",
+            "10.1.1.58.3631",
+            "10.1.1.106.2623",
+            "10.1.1.114.2307"
         ]
     },
     "cited_paper_url": [
@@ -419,79 +726,265 @@
             "year": "Wireless mesh networks: a survey."
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.135.8418&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.116.5688&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.21.5598&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.69.5504&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.138.3623&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.41.838&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.192.7018&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.153.7538&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.23.5864&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.2658&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.1544&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.21.8591&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.2921&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.138.7893&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.47.1724&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.29.5228&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.1548&type=sc"
         },
         {
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.426&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.192.7018&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.132.4609&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.100.5145&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.4100&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.21.9663&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.21.7931&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.555&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.8652&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.6860&type=sc"
         },
         {
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.5356&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.25.1878&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.125.5511&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.131.6584&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.7252&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.4428&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.19.3122&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.160.9380&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.161.5794&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.299.2673&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.160.6569&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.34.9967&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.39.8123&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.118.8747&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.27.5178&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.1788&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.383.2086&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.133.1420&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.35.7602&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.29.9565&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.1230&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.45.9364&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.31.772&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.8504&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.104.2898&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.140.5700&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.135.9046&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.45.3663&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.142.5136&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.53.5915&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.7793&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.1261&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.2393&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.5698&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.2921&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.6602&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.8128&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.125.5750&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.147.5383&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.111.1560&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.19.2690&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.377.5273&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.4175&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.110.9916&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.6416&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.21.329&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.39.1517&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.1548&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.28.2270&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.37.5539&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.1.4871&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.19.6069&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.16.8773&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.134.8430&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.145.1959&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.7013&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.44.6790&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.130.6088&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.115.3829&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.123.2014&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.15.7590&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.156.3699&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.99.2838&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.115.9053&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.1548&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.1596&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.42.9484&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.5588&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.1450&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.52.1930&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.8133&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.144.8478&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.43.8525&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.178.4332&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.2921&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.8504&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.42.4231&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.38.3571&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.426&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.5356&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.30.3638&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.44.8758&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.42.718&type=sc"
         },
         {
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.134.8430&type=sc"
@@ -560,100 +1053,64 @@
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.16.730&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.92.4082&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.4819&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.15.3815&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.118.9511&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.35.5130&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.4922&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.135.9318&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.8652&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.14.5452&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.105.5233&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.52.3155&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.5615&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.115.5210&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.156.3699&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.132.3407&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.8133&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.4120&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.34.7443&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.153.7538&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.2393&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.44.7888&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.135.5655&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.135.9814&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.18.1007&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.221.6245&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.111.9051&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.1244&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.117&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.137.5264&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.53.9705&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.426&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.555&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.4120&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.36.479&type=sc"
         },
         {
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.2921&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.43.2248&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.7252&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.22.1127&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.110.8641&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.34.6916&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.15.8599&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.34.5771&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.160.6569&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.41.8709&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.4425&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.5356&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.137.5264&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.377.5273&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.192.7018&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.555&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.4120&type=sc"
         },
         {
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.4.7923&type=sc"
@@ -674,178 +1131,379 @@
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.426&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.2658&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.161.2868&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.2921&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.41.7640&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.37.5539&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.7515&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.199.5994&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.105.3329&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.78.1446&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.38.814&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.100.5145&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.52.3644&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.330.2279&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.125.5511&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.44.3969&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.9902&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.2658&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.2393&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.102.1879&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.31.3128&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.2921&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.7252&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.16.1408&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.75&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.165.574&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.52.6406&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.9595&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.39.8863&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.29.3606&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.48.8306&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.138.3623&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.134.8430&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.8652&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.39.8123&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.4100&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.89.6557&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.132.4609&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.37.9720&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.130.6088&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.377.5273&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.426&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.108.762&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.192.7018&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.156.3699&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.1862&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.118.9511&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.1548&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.17.5360&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.1596&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.7320&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.4819&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.5263&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.1450&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.100.4755&type=sc"
-        },
-        {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.8133&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.135.1231&type=sc"
         },
         {
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.126.7059&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.29.3606&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.37.9720&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.15.7059&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.169.2731&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.156.4218&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.152.6888&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.8248&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.51.9039&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.2745&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.376.1793&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.383.2875&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.36.9424&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.8352&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.55.7921&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.54.9408&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.119.7694&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.139.3799&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.178.4332&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.39.4013&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.142.5136&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.31.3487&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.92.8693&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.45.3663&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.86.7793&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.94.7634&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.6256&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.17.8677&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.9392&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.28.9678&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.1697&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.112.4473&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.56.3236&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.3630&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.17.6590&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.135.9046&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.48.6601&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.116.8657&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.106.766&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.134.1839&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.5588&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.116.2833&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.4762&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.92.5721&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.23.3081&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.140.8575&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.112.463&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.177.9863&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.18.2263&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.917&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.127.6130&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.19.7921&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.159.9831&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.697&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.52.166&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.9061&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.33.1038&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.27.5564&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.38.838&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.107.4236&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.35.7905&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.108.1721&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.141.5436&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.46.6075&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.621&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.99.2528&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.52.3002&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.89.8082&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.27.2478&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.42.854&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.53.5915&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.5315&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.23.5789&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.106.8552&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.88.1105&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.86.7793&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.94.7634&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.12.6256&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.89.8082&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.146.3429&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.153.7538&type=sc"
         },
         {
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.117.2921&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.9595&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.102.1879&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.4819&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.37.5608&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.44.8982&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.111.4133&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.132.4609&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.138.3623&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.130.6088&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.112.2772&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.129.426&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.298.1586&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.108.762&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.35.1326&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.21.9663&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.126.5587&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.5356&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.146.1122&type=sc"
         },
         {
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.555&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.10.1548&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.78.1446&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.16.1868&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.53.7718&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.1596&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.30.9907&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.7320&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.49.880&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.1450&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.4120&type=sc"
         },
         {
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.13.8133&type=sc"
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.35.5179&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.24.6112&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.37.2042&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.56.3823&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.182.501&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.49.880&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.44.7888&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.146.1122&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.113.555&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.53.7718&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.78.1446&type=sc"
+        },
+        {
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.153.7538&type=sc"
         }
     ],
     "doi": "10.1.1.61.2545",
