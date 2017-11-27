@@ -2,7 +2,7 @@ from pathlib import Path
 import os
 import json
 from collections import OrderedDict
-
+import operator
 
 # Set up spaCy
 from spacy.lang.en import English
@@ -75,6 +75,10 @@ def parse_citation_list(paper_list):
         build_list = build_list + [key]
         build_list  = build_list + paper_list[key]
 
+    '''
+    for item in build_list:
+        print item
+    '''
     return build_list
 
 def access_feature(feat, feat_name):
@@ -117,81 +121,87 @@ def combine_feature(str1, str2):
 
     return txt_str
 
+def compute_scores(data):
+
+    paper_keys = []
+    cited_data = OrderedDict()
+    features = ['abstract', 'citation_contexts']
 
 
+    if not paper_keys:
+        paper_keys = data.keys()
 
-parent_dir = str(Path().resolve().parent)
-source_path = os.path.join(parent_dir, 'output')
+    cited_papers = []
+    for cited_paper in data['abstract'].keys():
+        # Get unicode features
+        str1 = access_feature(data['abstract'][cited_paper], "abstract")  # Abstract
+        str2 = access_feature(data["citation_contexts"][cited_paper], "citation_contexts")  # Citation context
+        # Combine features
+        txt_str = combine_feature(str1, str2)
+        if cited_paper == ref_paper_doi:
+            ref_doc = txt_str
+        else:
+            cited_data[cited_paper] = txt_str
+            cited_papers.append(cited_paper)
 
-# Read the files in the outpur dictionary
-f = []
-for (dirpath, dirnames, filenames) in os.walk(source_path):
-    f.extend(filenames)
+    # print cited_paper, ref_paper
+    parse_list = parse_citation_list(data["cited_paper_doi"])
+    '''
+    parsedText = parse_text_spacy(txt_str)  # Parse the aggregated text via spacy parser
 
-# ref_paper = '10.1.1.30.6583.json'
-ref_paper = u'10.1.1.61.2545.json'  # Change it to the file name read from the console
-ref_paper_doi = ref_paper.split('.json')[0]
-ref_doc = None
+    # Aggregate the parsed text into a string
+    txt_str = ''
+    for entity in parsedText:
+        txt_str = txt_str + str(entity)
+        txt_str = txt_str + ' '
 
-paper_keys = []
-cited_data = OrderedDict()
-features = ['abstract', 'citation_contexts']
-# [u'doi', u'author', u'abstract', u'title', u'citation_contexts', u'cited_paper_doi', u'cited_paper_url']
+    '''
 
-# for file_name in filenames:
-# Reading data from the other file
-filepath = os.path.join(source_path, ref_paper)
-with open(filepath) as json_file:
-    data = json.load(json_file)
-json_file.close()  # close the file
+    similarity_score = dict()
 
-if not paper_keys:
-    paper_keys = data.keys()
-
-
-cited_papers = []
-for cited_paper in data['abstract'].keys():
-    # Get unicode features
-    str1 = access_feature(data['abstract'][cited_paper], "abstract")  # Abstract
-    str2 = access_feature(data["citation_contexts"][cited_paper], "citation_contexts")  # Citation context
-    # Combine features
-    txt_str = combine_feature(str1, str2)
-    if cited_paper == ref_paper_doi:
-        ref_doc = txt_str
-    else:
-        cited_data[cited_paper] = txt_str
-        cited_papers.append(cited_paper)
-
-#    print cited_paper, ref_paper
-parse_list = parse_citation_list(data["cited_paper_doi"])
-'''
-parsedText = parse_text_spacy(txt_str)  # Parse the aggregated text via spacy parser
-
-# Aggregate the parsed text into a string
-txt_str = ''
-for entity in parsedText:
-    txt_str = txt_str + str(entity)
-    txt_str = txt_str + ' '
-
-
-'''
-
-similarity_score = OrderedDict()
-
-'''
-# Find the similarity of the reference document with the other documents
-for key in cited_data.keys():
-    similarity_score[key] = ref_doc.similarity(cited_data[key])
-    print key, similarity_score[key]
-
-'''
-if bool(ref_doc):
-    print ref_doc, '\n\n'
-
-    # Find the cosine similarity of the documents
+    '''
+    # Find the similarity of the reference document with the other documents
     for key in cited_data.keys():
-        similarity_score[key] = cosine_sim(ref_doc, cited_data[key])
+        similarity_score[key] = ref_doc.similarity(cited_data[key])
         print key, similarity_score[key]
 
-else:
-    print 'Empty content in base paper.\n Can\' compute scores.'
+    '''
+    if bool(ref_doc):
+        print ref_doc, '\n\n'
+
+        # Find the cosine similarity of the documents
+        for key in cited_data.keys():
+            similarity_score[key] = cosine_sim(ref_doc, cited_data[key])
+            print key, similarity_score[key]
+
+    else:
+        print 'Empty content in base paper.\n Can\' compute scores.'
+
+
+    sorted_score = sorted(similarity_score.items(), key=operator.itemgetter(1), reverse=True)
+    print sorted_score
+    return sorted_score
+
+if __name__ == "__main__":
+    parent_dir = str(Path().resolve().parent)
+    source_path = os.path.join(parent_dir, 'output')
+
+    # Read the files in the outpur dictionary
+    f = []
+    for (dirpath, dirnames, filenames) in os.walk(source_path):
+        f.extend(filenames)
+
+    # ref_paper = '10.1.1.30.6583.json'
+    ref_paper = u'10.1.1.61.2545.json'  # Change it to the file name read from the console
+    ref_paper_doi = ref_paper.split('.json')[0]
+    ref_doc = None
+
+
+    # for file_name in filenames:
+    # Reading data from the other file
+    filepath = os.path.join(source_path, ref_paper)
+    with open(filepath) as json_file:
+        data = json.load(json_file)
+    json_file.close()  # close the file
+
+    score_list = compute_scores(data)
