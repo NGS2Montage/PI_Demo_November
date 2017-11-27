@@ -121,7 +121,7 @@ def combine_feature(str1, str2):
 
     return txt_str
 
-def compute_scores(data):
+def compute_scores(data, ref_paper_doi):
 
     paper_keys = []
     cited_data = OrderedDict()

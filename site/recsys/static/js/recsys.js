@@ -3,28 +3,11 @@ var app = {
   abstract: "",
   authors: [],
 
-  refill: function (msg) {
-    app.title = msg.title;
-    app.abstract = msg.abstract;
-    app.authors = msg.author;
-
-    // var recData = msg.cited_paper_data.map(function (cite) {
-    //   return [cite.title, cite.Author, cite.Year];
-    // });
-
-    var recData = msg.cited_paper_url.map(function (cite) {
-      return [cite, '', ''];
-    });
-
-    $('#rec-table').dataTable().fnClearTable();
-    $('#rec-table').dataTable().fnAddData(recData);
-  },
-
   init: function () {
     app.table = $('#rec-table').DataTable({
         serverSide: true,
         deferLoading: 0,
-        // data: [],
+
         paging: false,
         searching: false,
         info: false,
@@ -32,25 +15,19 @@ var app = {
             {title: "Title"},
             {title: "Author"},
             {title: "Year"},
+            {title: "Score"},
         ],
         ajax: {
           url: '/rec-sys/recommendations/?doi=10.1.1.30.6583',
           dataSrc: function ( json ) {
             console.log(json);
             return json.cited_paper_url.map(function (d) {
-              return [d.title, d.author.join(', '), d.year];
+              return [d.title, d.author.join(', '), d.year, '-'];
             })
-            // return json.data;
           },
         },
         processing: true,
 
-        // columnDefs: [{
-        //     "targets": [0],
-        //     render: function (data, type, row) {
-        //       return '<a rel="noopener noreferrer" target="_blank" href="' + data + '">' + data.substring(49) + '</a>'
-        //     },
-        // }],
     });
   }
 };
@@ -62,40 +39,28 @@ var app = {
     rivets.bind(document.getElementById('app-view'), {app: app});
     app.init();
 
+    var filterForm = document.getElementById('filter-form');
+    filterForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      var ajaxURL = '/rec-sys/scores/?doi=' + $('#doi-input').val();
+      console.log("Setting table url to ", ajaxURL);
+      app.table.ajax.url(ajaxURL);
+
+      app.table.ajax.reload();
+    });
+
     var form = document.getElementById('doi-form');
     form.addEventListener('submit', function(event) {
       event.preventDefault();
       event.stopPropagation();
-
-      // app.table.data = function ( d ) {
-      //   return $.extend( {}, d, {
-      //     "doi": $('#doi-input').val()
-      //   } );
-      // };
 
       var ajaxURL = '/rec-sys/recommendations/?doi=' + $('#doi-input').val();
       console.log("Setting table url to ", ajaxURL);
       app.table.ajax.url(ajaxURL);
 
       app.table.ajax.reload();
-
-
-      // var doiInput = document.getElementById('doi-input');
-      // console.log(doiInput.value);
-
-
-      // // table.ajax.url( 'newData.json' )
-
-      // $.ajax({
-      //     method: "GET",
-      //     url: "/rec-sys/recommendations/",
-      //     data: { doi: doiInput.value }
-      // })
-      //   .done(function( msg ) {
-      //     console.log(msg);
-      //     app.refill(msg);
-      //   });
-
     }, false);
   }, false);
 })();
