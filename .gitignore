@@ -7,3 +7,5 @@
 *.sqlite3
 site/static/
 site/logs/*.log
+
+*~
