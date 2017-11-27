@@ -33,7 +33,7 @@ def fetch_base_details(doi):
     except:
         author = None
     try:
-        year = result['title']
+        year = result['year']
     except:
         year = None
 
