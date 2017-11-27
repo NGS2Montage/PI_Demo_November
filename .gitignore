@@ -7,5 +7,6 @@
 *.sqlite3
 site/static/
 site/logs/*.log
+data_dir/
 
 *~

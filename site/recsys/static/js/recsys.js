@@ -22,7 +22,7 @@ var app = {
 
   init: function () {
     app.table = $('#rec-table').DataTable({
-        // deferRender: true,
+        deferRender: true,
         // data: [],
         paging: false,
         searching: false,

@@ -193,7 +193,7 @@ def add_more_data(data, base_doi):
         for _doi, _doi_list in cit_doi_list.iteritems ():
             augmented_doi_list[_doi] = _doi_list
 
-        list_enriched_cit_urls = enriched_cit_urls (cit_doi_list[b_doi], details=False)
+        list_enriched_cit_urls = enriched_cit_urls (cit_doi_list[b_doi], details=True)
         augmented_citation_list_url.extend (list_enriched_cit_urls)
 
     # add in the abstracts and contexts
