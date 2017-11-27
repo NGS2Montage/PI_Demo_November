@@ -22,7 +22,8 @@ var app = {
 
   init: function () {
     app.table = $('#rec-table').DataTable({
-        deferRender: true,
+        serverSide: true,
+        deferLoading: 0,
         // data: [],
         paging: false,
         searching: false,
@@ -35,7 +36,6 @@ var app = {
         ajax: {
           url: '/rec-sys/recommendations/?doi=10.1.1.30.6583',
           dataSrc: function ( json ) {
-            console.log("Hi there")
             console.log(json);
             return json.cited_paper_url.map(function (d) {
               return [d.title, d.author.join(', '), d.year];
