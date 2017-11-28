@@ -192,9 +192,8 @@ if __name__ == "__main__":
         f.extend(filenames)
 
     # ref_paper = '10.1.1.30.6583.json'
-    ref_paper = u'10.1.1.61.2545.json'  # Change it to the file name read from the console
-    ref_paper_doi = ref_paper.split('.json')[0]
-    ref_doc = None
+    ref_paper_doi = raw_input('Ente the ref paper doi: ')  # Change it to the file name read from the console
+    ref_paper = ref_paper_doi + '.json'
 
 
     # for file_name in filenames:
@@ -204,4 +203,5 @@ if __name__ == "__main__":
         data = json.load(json_file)
     json_file.close()  # close the file
 
-    score_list = compute_scores(data)
+    score_list = compute_scores(data, ref_paper_doi)
+
