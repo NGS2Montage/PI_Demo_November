@@ -3,10 +3,12 @@
         "10.1.1.101.9086": "The experimental evidence accumulated over the past 20 years indicates that text indexing systems based on the assignment of appropriately weighted single terms produce retrieval results that are superior to those obtainable with other more elaborate text representations. These results depend crucially on the choice of effective term-weighting systems. This article summarizes the insights gained in automatic term weighting, and provides baseline single-term-indexing models with which other more elaborate content analysis procedures can be compared.",
         "10.1.1.103.8364": "In almost all computer applications, users must enter correct words for the desired objects or actions. For success without extensive training, or in first-tries for new targets, the system must recognize terms that will be chosen spontaneously. We studied spontaneous word choice for objects in five application-related domains, and found the variability to be surprisingly large. In every case two people favored the same term with probability <0.20. Simulations show how this fundamental property of language limits the success of various design methodologies for vocabulary-driven interaction. For example, the popular approach in which access is via one designer's favorite single word will result in 80-90 percent failure rates in many common situations. An optimal strategy, unlimited aliasing, is derived and shown to be capable of several-fold improvements.",
         "10.1.1.104.3739": "predicated on the belief that information filtering can be more effective when humans are involved in the filtering process. Tapestry was designed to support both content-based filtering and collaborative filtering, which entails people collaborating to help each other perform filtering by recording their reactions to documents they read. The reactions are called annotations; they can be accessed by other people\u2019s filters. Tapestry is intended to handle any incoming stream of electronic documents and serves both as a mail filter and repository; its components are the indexer, document store, annotation store, filterer, little box, remailer, appraiser and reader/browser. Tapestry\u2019s client/server architecture, its various components, and the Tapestry query language are described.",
+        "10.1.1.108.8490": "A new method for automatic indexing and retrieval is described. The approach is to take advantage of implicit higher-order structure in the association of terms with documents (\u201csemantic structure\u201d) in order to improve the detection of relevant documents on the basis of terms found in queries. The particular technique used is singular-value decomposition, in which a large term by document matrix is decomposed into a set of ca. 100 or-thogonal factors from which the original matrix can be approximated by linear combination. Documents are represented by ca. 100 item vectors of factor weights. Queries are represented as pseudo-document vectors formed from weighted combinations of terms, and documents with supra-threshold cosine values are re-turned. initial tests find this completely automatic method for retrieval to be promising.",
         "10.1.1.11.8981": "The installation of high-speed networks using optical fiber and high bandwidth messsage forwarding gateways is changing the physical capabilities of information systems. These capabilities must be complemented with corresponding software systems advances to obtain a real benefit. Without smart software we will gain access to more data, but not improve access to the type and quality of information needed for decision making. To develop the concepts needed for future information systems we model information processing as an interaction of data and knowledge. This model provides criteria for a high-level functional partitioning. These partitions are mapped into information process-ing modules. The modules are assigned to nodes of the distributed information systems. A central role is assigned to modules that mediate between the users ' workstations and data re-sources. Mediators contain the administrative and technical knowledge to create information needed for decision-making. Software which mediates is common today, but the structure, the interfaces, and implementations vary greatly, so that automation of integration is awkward. By formalizing and implementing mediation we establish a partitioned information sys-",
         "10.1.1.136.4322": "Collaborative filters help people make choices based on the opinions of other people. GroupLens is a system for collaborative filtering of netnews, to help people find articles they will like in the huge stream of available articles. News reader clients display predicted scores and make it easy for users to rate articles after they read them. Rating servers, called Better Bit Bureaus, gather and disseminate the ratings. The rating servers predict scores based on the heuristic that people who agreed in the past will probably agree again. Users can protect their privacy by entering ratings under pseudonyms, without reducing the effectiveness of the score prediction. The entire architecture is open: alternative software for news clients and Better Bit Bureaus can be developed independently and can interoperate with the components we have developed.",
         "10.1.1.216.4270": "In this paper, we introduce ephemeral interest groups for supporting informal communication. Ephemeral interest groups are electronic discussion groups that, in contrast to bulletin boards and the like, are short-lived and ad hoc. They are designed as a medium for informal discussions of items broadcast to a wider community. We have implemented a prototype system to explore ephemeral interest groups. We discuss the goals of the system, characterize its evolution over the last ten months of deployment, and sketch our plans for future developments.",
-        "10.1.1.30.6583": "This paper describes a technique for making personalized recommendations from any type of database to a user based on similarities between the interest profile of that user and those of other users. In particular, we discuss the implementation of a networked system called Ringo, which makes personalized recommendations for music albums and artists. Ringo's database of users and artists grows dynamically as more people use the system and enter more information. Four different algorithms for making recommendations by using social information filtering were tested and compared. We present quantitative and qualitative results obtained from the use of Ringo by more than 2000 people."
+        "10.1.1.30.6583": "This paper describes a technique for making personalized recommendations from any type of database to a user based on similarities between the interest profile of that user and those of other users. In particular, we discuss the implementation of a networked system called Ringo, which makes personalized recommendations for music albums and artists. Ringo's database of users and artists grows dynamically as more people use the system and enter more information. Four different algorithms for making recommendations by using social information filtering were tested and compared. We present quantitative and qualitative results obtained from the use of Ringo by more than 2000 people.",
+        "10.1.1.92.3553": "Relevance feedback is an automatic process, introduced over 20 years ago, designed to produce improved query formulations following an initial retrieval operation. The principal relevance feedback methods described over the years are examined briefly, and evaluation data are included to demonstrate the effectiveness of the various methods. Prescriptions are given for conducting text re-trieval operations iteratively using relevance feedback. Introduction to Relevance Feedback It is well known that the original query formulation process is not transparent to most information system users. In particular, without detailed knowledge of the collection make-up, and of the retrieval environment, most users find"
     },
     "author": [
         "Upendra Shardanand",
@@ -51,6 +53,44 @@
             "various components of the current Tapestry system. Database Manager Tapestry stores documents, annotations, and filter queries in a commercial relational database management system provided by Sybase =-=[11]-=-. Information about messages is stored in a set of relational tables. A single table does not suffice since this information does not fit cleanly into the relational model. In particular, there is no",
             "t the Xerox Palo Alto Research Center. The motivation for Tapestry comes from the increasing use of electronic mail, which is resulting in users being inundated by a huge stream of incoming documents =-=[2, 7, 12]-=-. One way to handle large volumes of mail is to provide mailing lists, enabling users to subscribe only to those lists of interest to them. However, as illustrated in Figure 1, the set of documents of",
             "ctical. This remainder of this section gives an overview of techniques for providing continuous semantics in an effective and efficient manner. An earlier paper gives full details of how this is done =-=[13]-=-. The key to providing efficient continuous semantics is the following observation: Given a query whose result set is nondecreasing over time, the simple technique of periodically executing the query  ACM Dec 1992 v35 n12 p61(10) Page 8 Using collaborative filtering to weave an information Tapestry. dependent on the overall size of the database. See our paper on continuous queries for more details =-=[13]-=-. Remailer Messages that are selected by a user\u2019s filter queries are queued up for delivery to that user. These queues, which constitute the users\u2019 \u2019little boxes\u2019, are also stored in the Tapestry data"
+        ],
+        "10.1.1.108.8490": [
+            null,
+            "lassification analyses are frequently used for term and document clustering (Sparck Jones, 1971; Salton, 1968; Jardin & van Rijsbergen, 1971). Latent class analysis (Baker, 1962) and factor analysis (=-=Atherton & Borko, 1965-=-; Borko & Bemick, 1963; Ossorio, 1966) have also been explored before for automatic document indexing and retrieval. In document clustering, for example, a notion of distance is defined such that two  ess. The explicit representation of both terms and documents in the same space makes retrieving documents relevant to user queries a straightforward matter. Previous work by Borko and his colleagues (=-=Atherton & Borko, 1965-=-; Borko & Bemick, 1963) is similar in name to our approach, but used the factor space only for document clustering, not document retrieval, and computational simplifications reduced its representation",
+            "in the literature. Hierarchical classification analyses are frequently used for term and document clustering (Sparck Jones, 1971; Salton, 1968; Jardin & van Rijsbergen, 1971). Latent class analysis (=-=Baker, 1962-=-) and factor analysis (Atherton & Borko, 1965; Borko & Bemick, 1963; Ossorio, 1966) have also been explored before for automatic document indexing and retrieval. In document clustering, for example, a",
+            "en reported in studies of interindexer consistency (Tarr & Borko, 1974) and in the generation of search terms by either expert intermediaries (Fidel, 1985) or less experienced searchers (Liley, 1954; =-=Bates, 1986-=-). The prevalence of synonyms tends to decrease the \u201crecall\u201d performance of retrieval systems. By polysemy we refer to the general fact that most words have more than one distinct meaning (homography)",
+            "re frequently used for term and document clustering (Sparck Jones, 1971; Salton, 1968; Jardin & van Rijsbergen, 1971). Latent class analysis (Baker, 1962) and factor analysis (Atherton & Borko, 1965; =-=Borko & Bemick, 1963-=-; Ossorio, 1966) have also been explored before for automatic document indexing and retrieval. In document clustering, for example, a notion of distance is defined such that two documents are consider entation of both terms and documents in the same space makes retrieving documents relevant to user queries a straightforward matter. Previous work by Borko and his colleagues (Atherton & Borko, 1965; =-=Borko & Bemick, 1963-=-) is similar in name to our approach, but used the factor space only for document clustering, not document retrieval, and computational simplifications reduced its representational power. In Borko and",
+            "have positions in the structure. Then a query can be placed at the centroid of its term points. Thus for both elegance and retrieval mechanisms, we needed what are called two-mode proximity methods (=-=Carroll and Arabie, 1980-=-), that start with a rectangular matrix and construct explicit representations of both row and column objects. One such method is multidimensional unfolding (Coombs, 1964; Heiser, 1981; Desarbo & Carr ther in some space or structure. Such models include: hierarchical, partition and overlapping clusterings; ultrametric and additive trees; and factoranalytic and multidimensional distance models (see =-=Carroll & Arabie, 1980-=- for a survey). Aiding information retrieval by discovering latent proximity structure has at least two lines of precedence in the literature. Hierarchical classification analyses are frequently used",
+            "terms and documents would appear as points in a single space with similarity related monotonically to Euclidean distance. Another is two-mode factor analysis (Harshman, 1970; Harshman & Lundy, 1984a; =-=Carroll & Chang, 1970-=-; Kruskal, 1978), in which terms and documents would again be represented as points in a space, but similarity is given by the inner product between points. A final candidate is unfolding in trees (Fu",
+            null,
+            "roximity methods (Carroll and Arabie, 1980), that start with a rectangular matrix and construct explicit representations of both row and column objects. One such method is multidimensional unfolding (=-=Coombs, 1964-=-; Heiser, 1981; Desarbo & Carroll. 1985), in which both terms and documents would appear as points in a single space with similarity related monotonically to Euclidean distance. Another is two-mode fa",
+            "ative numerical solution of multi-mode factor-analysis problems, was used for the studies reported below. (Other programs for more standard SVD are also available-e.g., Golub, Luk, and Overton, 1981; =-=Cullum, Willoughby, and Lake, 1983-=-.) \u201cDocuments\u201d consist of the full text of the title and abstract. Each document is indexed automatically; all terms occurring in more than one document and not on a stop list of 439 common words used",
+            null,
+            "Gomez, & Dumais, 1987). Comparably poor agreement has been reported in studies of interindexer consistency (Tarr & Borko, 1974) and in the generation of search terms by either expert intermediaries (=-=Fidel, 1985-=-) or less experienced searchers (Liley, 1954; Bates, 1986). The prevalence of synonyms tends to decrease the \u201crecall\u201d performance of retrieval systems. By polysemy we refer to the general fact that mo",
+            null,
+            null,
+            "in recall rate without overall loss of precision as more indexing terms, either taken from the documents or from large samples of actual users\u2019 words are added (Gomez, Lochbaum, & Landauer, in press; =-=Fumas, 1985-=-). Whether this \u201cunlimited aliasing\u201d method, which we have described elsewhere, will be effective in very large data bases reTABLE 1. Sample term by document matrix.\u201d mains to be determined. Not only",
+            null,
+            null,
+            "Desarbo & Carroll. 1985), in which both terms and documents would appear as points in a single space with similarity related monotonically to Euclidean distance. Another is two-mode factor analysis (=-=Harshman, 1970-=-; Harshman & Lundy, 1984a; Carroll & Chang, 1970; Kruskal, 1978), in which terms and documents would again be represented as points in a space, but similarity is given by the inner product between poi",
+            "ll. 1985), in which both terms and documents would appear as points in a single space with similarity related monotonically to Euclidean distance. Another is two-mode factor analysis (Harshman, 1970; =-=Harshman & Lundy, 1984-=-a; Carroll & Chang, 1970; Kruskal, 1978), in which terms and documents would again be represented as points in a space, but similarity is given by the inner product between points. A final candidate i nts both terms and documents as vectors in a space of choosable dimensionality, and the dot product or cosine between points in the space gives their similarity. In addition, a program was available (=-=Harshman & Lundy, 1984-=-b) that fit the model in time of order N2 X k\u2019. SVD or Two-Mode Factor Analysis Overview The latent semantic structure analysis starts with a matrix of terms by documents. This matrix is then analyzed of the SVD Latent Semantic Indexing (LSI) Method We have so far tried the LSI method on two standard document collections where queries and relevance judgments were available (MED and CISI). PARAFAC (=-=Harshman & Lundy, 1984-=-b), a program for the iterative numerical solution of multi-mode factor-analysis problems, was used for the studies reported below. (Other programs for more standard SVD are also available-e.g., Golub",
+            "ll. 1985), in which both terms and documents would appear as points in a single space with similarity related monotonically to Euclidean distance. Another is two-mode factor analysis (Harshman, 1970; =-=Harshman & Lundy, 1984-=-a; Carroll & Chang, 1970; Kruskal, 1978), in which terms and documents would again be represented as points in a space, but similarity is given by the inner product between points. A final candidate i nts both terms and documents as vectors in a space of choosable dimensionality, and the dot product or cosine between points in the space gives their similarity. In addition, a program was available (=-=Harshman & Lundy, 1984-=-b) that fit the model in time of order N2 X k\u2019. SVD or Two-Mode Factor Analysis Overview The latent semantic structure analysis starts with a matrix of terms by documents. This matrix is then analyzed of the SVD Latent Semantic Indexing (LSI) Method We have so far tried the LSI method on two standard document collections where queries and relevance judgments were available (MED and CISI). PARAFAC (=-=Harshman & Lundy, 1984-=-b), a program for the iterative numerical solution of multi-mode factor-analysis problems, was used for the studies reported below. (Other programs for more standard SVD are also available-e.g., Golub",
+            "ds (Carroll and Arabie, 1980), that start with a rectangular matrix and construct explicit representations of both row and column objects. One such method is multidimensional unfolding (Coombs, 1964; =-=Heiser, 1981-=-; Desarbo & Carroll. 1985), in which both terms and documents would appear as points in a single space with similarity related monotonically to Euclidean distance. Another is two-mode factor analysis",
+            null,
+            null,
+            null,
+            "ld appear as points in a single space with similarity related monotonically to Euclidean distance. Another is two-mode factor analysis (Harshman, 1970; Harshman & Lundy, 1984a; Carroll & Chang, 1970; =-=Kruskal, 1978-=-), in which terms and documents would again be represented as points in a space, but similarity is given by the inner product between points. A final candidate is unfolding in trees (Fumas, 1980), in",
+            null,
+            "eement has been reported in studies of interindexer consistency (Tarr & Borko, 1974) and in the generation of search terms by either expert intermediaries (Fidel, 1985) or less experienced searchers (=-=Liley, 1954-=-; Bates, 1986). The prevalence of synonyms tends to decrease the \u201crecall\u201d performance of retrieval systems. By polysemy we refer to the general fact that most words have more than one distinct meaning",
+            "term and document clustering (Sparck Jones, 1971; Salton, 1968; Jardin & van Rijsbergen, 1971). Latent class analysis (Baker, 1962) and factor analysis (Atherton & Borko, 1965; Borko & Bemick, 1963; =-=Ossorio, 1966-=-) have also been explored before for automatic document indexing and retrieval. In document clustering, for example, a notion of distance is defined such that two documents are considered close to the inary clustering (Borko & Bernick, 1963). Third, some attempts have relied on excessively tedious data gathering techniques, requiring the collection of thousands of similarity judgments from humans (=-=Ossorio, 1966-=-). Previously reported clustering and factor analytic approaches have also struggled with a certain representational awkwardness. Typically the original data explicitly relate two types of entities, t",
+            null,
+            "ering latent proximity structure has at least two lines of precedence in the literature. Hierarchical classification analyses are frequently used for term and document clustering (Sparck Jones, 1971; =-=Salton, 1968-=-; Jardin & van Rijsbergen, 1971). Latent class analysis (Baker, 1962) and factor analysis (Atherton & Borko, 1965; Borko & Bemick, 1963; Ossorio, 1966) have also been explored before for automatic doc",
+            "ally only n parameters for n objects). Empirically, clustering improves the computational efficiency of search; whether or not it improves retrieval success is unclear (Jardin & van Rijsbergen, 1971; =-=Salton & McGill, 1983-=-; Voorhees, 1985). JOURNAL OF THE AMERICAN SOCIETY FOR INFORMATION SCIENCE-September 1990 393sPreviously tried factor analytic approaches have taken a square symmetric matrix of similarities between p",
+            null,
+            null,
+            "e main key word for a single well-known object less than 20% of the time (Furnas, Landauer, Gomez, & Dumais, 1987). Comparably poor agreement has been reported in studies of interindexer consistency (=-=Tarr & Borko, 1974-=-) and in the generation of search terms by either expert intermediaries (Fidel, 1985) or less experienced searchers (Liley, 1954; Bates, 1986). The prevalence of synonyms tends to decrease the \u201crecall",
+            null,
+            "for n objects). Empirically, clustering improves the computational efficiency of search; whether or not it improves retrieval success is unclear (Jardin & van Rijsbergen, 1971; Salton & McGill, 1983; =-=Voorhees, 1985-=-). JOURNAL OF THE AMERICAN SOCIETY FOR INFORMATION SCIENCE-September 1990 393sPreviously tried factor analytic approaches have taken a square symmetric matrix of similarities between pairs of document"
         ],
         "10.1.1.11.8981": [
             null,
@@ -97,6 +137,32 @@
             "sign that user to one of a finite set of handbuilt, predefined user classes or stereotypes. Based on the stereotype the user belongs to, the system then makes recommendations to the user. For example =-=[5]-=- recommends novels to users based on a stereotype classification. This method is far less personalized than the social information filtering method described in this paper. The reason is that in socia",
             "igure 1). A seven point scale was selected since studies have shown that the reliability of data collected in surveys does not increase substantially if the number of choices is increased beyond seven=-=[6]-=-. Ratings are not normalized because as we expected, users rate albums in very different ways. For example, some users only give ratings to music they like (e.g. they only use 6's and 7's), while othe",
             "They are up there. 5 : Good Stuff. 4 : Doesn't turn me on, doesn't bother me. 3 : Eh. Not really my thing. 2 : Barely tolerable. 1 : Pass the earplugs. Figure 1: Ringo's scale for rating music. Ringo=-=[7]-=- is a social information filtering system which makes personalized music recommendations. People describe their listening pleasures to the system by rating some music. These ratings constitute the per  Every recommendation includes a measure of confidence which depends on factors such as the number of similar users used to make this prediction, the consistency among those users' values, etc. (cfr. =-=[7]-=- for details. ) Ringo's reply does not include any information about the identity of the other users whose profiles were used to make the recommendations. Ringo provides a range of functions apart fro ing algorithms were evaluated. Due to space limitations, the algorithms are described here briefly. Exact mathematical descriptions as well as more detailed analysis of the algorithms can be found in =-=[7]-=-. The Mean Squared Differences Algorithm. The first algorithm measures the degree of dissimilarity between two user profiles, U x and U y by the mean squared differencesbetween the two profiles: (U x  tist, L = 0:7 1.1 1.4 1.1 1.5 65 Table 1: Summary of results. Results A summary of some of our results (for different values of the threshold L) are presented in table 1. More details can be found in =-=[7]-=-. Overall, in terms of accuracy and the percentage of target values which can be predicted, the constrained Pearson r algorithm performed the best on our dataset if we take into account the error as w"
+        ],
+        "10.1.1.92.3553": [
+            "nts are vant items, not originally seen by the user. also used in the feedback process. Various solutions offer themselves for measuring the true advantage provided by the relevance feedback process (=-=Chang, Cirillo, & Razon, 1971-=-). One possibility is the socalled residual collection system where all items previously seen by the user (whether relevant or not) are simply removed from the collection, and both the initial and any",
+            null,
+            "s such as (Term i and Term i) or (Term i and Term j and Term k) that are derived from previously retrieved relevant documents. These conjuncts are then incorporated in the revised query formulations (=-=Dillon & Desper, 1980-=-; Salton, Voorhees, & Fox, 1984; Fox, 1983; Salton, Fox, & Voorhees, 1985). The application of relevance feedback methods in Boolean query environments is not further discussed in this note. Many desc",
+            "d Term k) that are derived from previously retrieved relevant documents. These conjuncts are then incorporated in the revised query formulations (Dillon & Desper, 1980; Salton, Voorhees, & Fox, 1984; =-=Fox, 1983-=-; Salton, Fox, & Voorhees, 1985). The application of relevance feedback methods in Boolean query environments is not further discussed in this note. Many descriptions of the relevance feedback process",
+            "rocess provides a powerful query construction method. Probabilistic Feedback Methods An alternative relevance feedback methodology is based on the probabilistic retrieval model (van Rijsbergen, 1979; =-=Harper, 1980-=-; Robertson & Sparck Jones, 1976; Robertson, van Rijsbergen, & Porter, 1981; Yu, Buckley, Lam, & Salton, 1983). In that case an optimal retrieval rule is used to rank the documents in decreasing order",
+            "vance feedback process was designed to be used with vecfor queries, that is, query statements consisting of sets of possibly weighted search terms used without Boolean operators (Rocchio, 1966; 1971; =-=Ide, 1971-=-; Ide & Salton, 1971; Salton, 1971). A particular search expression might then be written as e, = h,q*r . . . ,411 (1) where qi represents the weight of term i in query Q,. The term weights are often  24 83.78 1033 51.60 22.78 1.54 72.70 30 10.10 6.03 1.12 90.76 11429 19.96 10.84 1.21 84.03 loo 7.16 2.36 1.00 100.00 resemble the previously obtained relevant items. When an the new query statements (=-=Ide, 1971-=-; Ide & Salton, 1971). item originally retrieved with a retrieval rank of 7 or 8 In the \u201cdec-hi\u201d system, all identified relevant items but is again obtained with a rank of 1 or 2 in the feedback only",
+            "ack process was designed to be used with vecfor queries, that is, query statements consisting of sets of possibly weighted search terms used without Boolean operators (Rocchio, 1966; 1971; Ide, 1971; =-=Ide & Salton, 1971-=-; Salton, 1971). A particular search expression might then be written as e, = h,q*r . . . ,411 (1) where qi represents the weight of term i in query Q,. The term weights are often restricted to the ra 33 51.60 22.78 1.54 72.70 30 10.10 6.03 1.12 90.76 11429 19.96 10.84 1.21 84.03 loo 7.16 2.36 1.00 100.00 resemble the previously obtained relevant items. When an the new query statements (Ide, 1971; =-=Ide & Salton, 1971-=-). item originally retrieved with a retrieval rank of 7 or 8 In the \u201cdec-hi\u201d system, all identified relevant items but is again obtained with a rank of 1 or 2 in the feedback only one retrieved nonrel",
+            "factor may provide unsatisfactory estimates in some cases, and alternative adjustments have been proposed to compute pi and ui, such that n,/N or (ni - r,)/(N - R) (Yu, Buckley, Lam, & Salton, 1983; =-=Robertson, 1986-=-; Wu & Salton, 1981). When no relevant items are initially retrieved (that is, R = 0), the best estimate for pi, the probability that a term occurs in a relevant document, is simply its probability of",
+            null,
+            null,
+            "ts. The original relevance feedback process was designed to be used with vecfor queries, that is, query statements consisting of sets of possibly weighted search terms used without Boolean operators (=-=Rocchio, 1966-=-; 1971; Ide, 1971; Ide & Salton, 1971; Salton, 1971). A particular search expression might then be written as e, = h,q*r . . . ,411 (1) where qi represents the weight of term i in query Q,. The term w s inner product computations to assess the similarity between query and document vectors, the best query leading to the retrieval of many relevant items from a collection of documents is of the form (=-=Rocchio, 1966-=-; 1971) The Di used in (4) represent document vectors, and lDil is the corresponding Euclidian vector length. Further N is the assumed collection size and n the number of relevant documents in the col E AMERICAN SOCIETY FOR INFORMATION SCIENCE- June 1990 The vector adjustment methods termed \u201cRocchio\u201d in Table 3 uses reduced document weights to modify the queries as shown earlier in expression (6) (=-=Rocchio, 1966-=-; 1971). Several different values are used experimentally for the p and y parameters of equation (6) to assign greater or lesser values to the relevant items compared with the nonrelevant, including /",
+            null,
+            "ocess was designed to be used with vecfor queries, that is, query statements consisting of sets of possibly weighted search terms used without Boolean operators (Rocchio, 1966; 1971; Ide, 1971; Ide & =-=Salton, 1971-=-; Salton, 1971). A particular search expression might then be written as e, = h,q*r . . . ,411 (1) where qi represents the weight of term i in query Q,. The term weights are often restricted to the ra 60 22.78 1.54 72.70 30 10.10 6.03 1.12 90.76 11429 19.96 10.84 1.21 84.03 loo 7.16 2.36 1.00 100.00 resemble the previously obtained relevant items. When an the new query statements (Ide, 1971; Ide & =-=Salton, 1971-=-). item originally retrieved with a retrieval rank of 7 or 8 In the \u201cdec-hi\u201d system, all identified relevant items but is again obtained with a rank of 1 or 2 in the feedback only one retrieved nonrel",
+            "eedback methods are much more effective than others. Indeed, a poorly conceived arbitrary query reformulation can easily produce a deterioration in retrieval effectiveness rather than an improvement (=-=Salton & Buckley, 1988-=-). The current note is thus designed to specify useful relevance feedback procedures, and to determine the amount of improvement obtainable with one feedback iteration in particular cases. Basic Feedb ined in Table 1. The foregoing weight assignment produces term weights varying between 0 and 1. It is known that a high order of performance is obtained with the weight assignment of expression (14) (=-=Salton & Buckley, 1988-=-). For the experiments, the assumption is made that the top 15 items retrieved in the initial search are judged for relevance, and the information contained in these relevant and nonrelevant retrieved d and unweighted document vectors, respectively, shows that the weighted terms produce much better results in a feedback environment. This confirms results produced by earlier term weighting studies (=-=Salton & Buckley, 1988-=-). The paired comparisons included in Table 4 between full query expansion (where all terms from the previously retrieved relevant documents are incorporated in the feedback query) and restricted expa rior to those for the corresponding weighted term assignments. It was noted in earlier studies that the characteristics of the NPL collection differ substantially from those of the other collections (=-=Salton & Buckley, 1988-=-). The data of Table 2 show that both the document and the query vectors are much shorter for NPL than for the other collections, and the variation in query length (standard deviation of 2.36 for a me",
+            "eedback methods are much more effective than others. Indeed, a poorly conceived arbitrary query reformulation can easily produce a deterioration in retrieval effectiveness rather than an improvement (=-=Salton & Buckley, 1988-=-). The current note is thus designed to specify useful relevance feedback procedures, and to determine the amount of improvement obtainable with one feedback iteration in particular cases. Basic Feedb ined in Table 1. The foregoing weight assignment produces term weights varying between 0 and 1. It is known that a high order of performance is obtained with the weight assignment of expression (14) (=-=Salton & Buckley, 1988-=-). For the experiments, the assumption is made that the top 15 items retrieved in the initial search are judged for relevance, and the information contained in these relevant and nonrelevant retrieved d and unweighted document vectors, respectively, shows that the weighted terms produce much better results in a feedback environment. This confirms results produced by earlier term weighting studies (=-=Salton & Buckley, 1988-=-). The paired comparisons included in Table 4 between full query expansion (where all terms from the previously retrieved relevant documents are incorporated in the feedback query) and restricted expa rior to those for the corresponding weighted term assignments. It was noted in earlier studies that the characteristics of the NPL collection differ substantially from those of the other collections (=-=Salton & Buckley, 1988-=-). The data of Table 2 show that both the document and the query vectors are much shorter for NPL than for the other collections, and the variation in query length (standard deviation of 2.36 for a me",
+            "hat are derived from previously retrieved relevant documents. These conjuncts are then incorporated in the revised query formulations (Dillon & Desper, 1980; Salton, Voorhees, & Fox, 1984; Fox, 1983; =-=Salton, Fox, & Voorhees, 1985-=-). The application of relevance feedback methods in Boolean query environments is not further discussed in this note. Many descriptions of the relevance feedback process are found in the literature. W  +26% fll% Rank 43 52 33 Precision .1669 .1305 .1777 Improvement +14% +lo% +54% Rank 33 28 Precision .1800 .I484 Improvement +23% +25% be obtainable when additional feedback searches are carried out (=-=Salton et al., 1985-=-). The actual amount of improvement produced by one iteration of the feedback process varies widely, ranging from 47% for the CISI collection to 160 percent for the CRAN collection for the \u201cIde dec hi",
+            null,
+            null,
+            null,
+            "lean query environments is not further discussed in this note. Many descriptions of the relevance feedback process are found in the literature. With the exception of some specialpurpose applications (=-=Vemimb, 1977-=-), the method has, however, never been applied on a large scale in actual operational retrieval environments. Some recent proposals, originating in the computer science community, do suggest that a re",
+            "nce community, do suggest that a relevance feedback system should form the basis for the implementation of modem text retrieval operations in parallel processing environments (Stanfill & Kahle, 1986; =-=Waltz, 1987-=-). It is possible that the time for a practical utilization of relevance feedback operations is now finally at hand. A study of the previously mentioned parallel processing application reveals that th",
+            "de unsatisfactory estimates in some cases, and alternative adjustments have been proposed to compute pi and ui, such that n,/N or (ni - r,)/(N - R) (Yu, Buckley, Lam, & Salton, 1983; Robertson, 1986; =-=Wu & Salton, 1981-=-). When no relevant items are initially retrieved (that is, R = 0), the best estimate for pi, the probability that a term occurs in a relevant document, is simply its probability of occurrence in the",
+            "lternative relevance feedback methodology is based on the probabilistic retrieval model (van Rijsbergen, 1979; Harper, 1980; Robertson & Sparck Jones, 1976; Robertson, van Rijsbergen, & Porter, 1981; =-=Yu, Buckley, Lam, & Salton, 1983-=-). In that case an optimal retrieval rule is used to rank the documents in decreasing order according to expression 1% Pr(x ) rel) Pr(x ( nonrel) where PI-(X 1 rel) and Pr(x 1 nonrel) represent the pr s. For example, the 0.5 adjustment factor may provide unsatisfactory estimates in some cases, and alternative adjustments have been proposed to compute pi and ui, such that n,/N or (ni - r,)/(N - R) (=-=Yu, Buckley, Lam, & Salton, 1983-=-; Robertson, 1986; Wu & Salton, 1981). When no relevant items are initially retrieved (that is, R = 0), the best estimate for pi, the probability that a term occurs in a relevant document, is simply i",
+            null
         ]
     },
     "cited_paper_doi": {
@@ -113,14 +179,14 @@
         "10.1.1.115.8343": [],
         "10.1.1.136.4322": [
             "10.1.1.216.4270",
-            "10.1.1.108.8490",
-            "10.1.1.104.3739",
-            "10.1.1.304.3089",
             "10.1.1.18.5430",
-            "10.1.1.101.9086",
-            "10.1.1.92.3553",
             "10.1.1.28.188",
-            "10.1.1.11.8981"
+            "10.1.1.304.3089",
+            "10.1.1.101.9086",
+            "10.1.1.104.3739",
+            "10.1.1.11.8981",
+            "10.1.1.92.3553",
+            "10.1.1.108.8490"
         ],
         "10.1.1.146.3168": [
             "10.1.1.136.4322",
@@ -150,10 +216,10 @@
             "10.1.1.92.3553"
         ],
         "10.1.1.30.6583": [
+            "10.1.1.146.3168",
             "10.1.1.108.8490",
-            "10.1.1.104.3739",
             "10.1.1.136.4322",
-            "10.1.1.146.3168"
+            "10.1.1.104.3739"
         ],
         "10.1.1.304.3089": [
             "10.1.1.101.7968",
@@ -168,40 +234,154 @@
             "10.1.1.101.9086"
         ]
     },
-    "cited_paper_url": [
-        {
-            "author": [
-                "Upendra Shardanand",
-                "Pattie Maes"
-            ],
-            "title": "Social Information Filtering: Algorithms for Automating \"Word of Mouth\".",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.30.6583&type=sc",
-            "year": "1995"
-        },
-        {
+    "cited_paper_url": {
+        "10.1.1.101.7968": {
             "author": null,
+            "doi": "10.1.1.101.7968",
             "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.115.8343&type=sc",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.7968&type=sc",
             "year": null
         },
-        {
+        "10.1.1.101.9086": {
+            "author": [
+                "Gerard Salton",
+                "Chris Buckley"
+            ],
+            "doi": "10.1.1.101.9086",
+            "title": "Term-Weighting Approaches in Automatic Text Retrieval.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.9086&type=sc",
+            "year": "1988"
+        },
+        "10.1.1.103.8364": {
             "author": [
                 "George W. Furnas",
                 "Thomas K. Landauer",
                 "Louis M. Gomez",
                 "Susan T. Dumais"
             ],
+            "doi": "10.1.1.103.8364",
             "title": "The Vocabulary Problem in Human-System Communication.",
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.103.8364&type=sc",
             "year": "1987"
         },
-        {
+        "10.1.1.104.3739": {
+            "author": [
+                "David Goldberg",
+                "David A. Nichols",
+                "Brian M. Oki",
+                "Douglas B. Terry"
+            ],
+            "doi": "10.1.1.104.3739",
+            "title": "Using Collaborative Filtering to Weave an Information Tapestry.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.104.3739&type=sc",
+            "year": "1992"
+        },
+        "10.1.1.104.7500": {
+            "author": [
+                "Nicholas J. Belkin",
+                "W. Bruce Croft"
+            ],
+            "doi": "10.1.1.104.7500",
+            "title": "Information Filtering and Information Retrieval: Two Sides of the Same Coin?",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.104.7500&type=sc",
+            "year": "1992"
+        },
+        "10.1.1.108.8490": {
+            "author": [
+                "Scott C. Deerwester",
+                "Susan T. Dumais",
+                "Thomas K. Landauer",
+                "George W. Furnas",
+                "Richard A. Harshman"
+            ],
+            "doi": "10.1.1.108.8490",
+            "title": "Indexing by Latent Semantic Analysis.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.108.8490&type=sc",
+            "year": "1990"
+        },
+        "10.1.1.11.8981": {
+            "author": "Gio Wiederhold",
+            "doi": "10.1.1.11.8981",
+            "title": "Mediators in the Architecture of Future Information Systems.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.8981&type=sc",
+            "year": "1992"
+        },
+        "10.1.1.115.8343": {
             "author": null,
+            "doi": "10.1.1.115.8343",
             "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.366.4995&type=sc",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.115.8343&type=sc",
             "year": null
         },
-        {
+        "10.1.1.123.1085": {
+            "author": "Peter P. Chen",
+            "doi": "10.1.1.123.1085",
+            "title": "The Entity-Relationship Model - Toward a Unified View of Data.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.123.1085&type=sc",
+            "year": "1976"
+        },
+        "10.1.1.124.1996": {
+            "author": "Frank G. Halasz",
+            "doi": "10.1.1.124.1996",
+            "title": "Reflections on NoteCards: seven issues for the next generation of hypermedia systems.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.124.1996&type=sc",
+            "year": "2001"
+        },
+        "10.1.1.136.4322": {
+            "author": [
+                "Paul Resnick",
+                "Neophytos Iacovou",
+                "Mitesh Suchak",
+                "Peter Bergstrom",
+                "John Riedl"
+            ],
+            "doi": "10.1.1.136.4322",
+            "title": "GroupLens: An Open Architecture for Collaborative Filtering of Netnews.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.136.4322&type=sc",
+            "year": "1994"
+        },
+        "10.1.1.161.3944": {
+            "author": [
+                "James D. Hollan",
+                "Scott Stornetta"
+            ],
+            "doi": "10.1.1.161.3944",
+            "title": "Beyond Being There.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.161.3944&type=sc",
+            "year": "1992"
+        },
+        "10.1.1.17.7170": {
+            "author": [
+                "Gerhard Fischer",
+                "Curt Stevens"
+            ],
+            "doi": "10.1.1.17.7170",
+            "title": "Information access in complex, poorly structured information spaces.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.17.7170&type=sc",
+            "year": "1991"
+        },
+        "10.1.1.18.5430": {
+            "author": null,
+            "doi": "10.1.1.18.5430",
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.18.5430&type=sc",
+            "year": null
+        },
+        "10.1.1.20.7849": {
+            "author": null,
+            "doi": "10.1.1.20.7849",
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.7849&type=sc",
+            "year": null
+        },
+        "10.1.1.211.5460": {
+            "author": null,
+            "doi": "10.1.1.211.5460",
+            "title": null,
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.211.5460&type=sc",
+            "year": null
+        },
+        "10.1.1.216.4270": {
             "author": [
                 "Laurence Brothers",
                 "James D. Hollan",
@@ -211,428 +391,113 @@
                 "George W. Furnas",
                 "Michael L. Littman"
             ],
+            "doi": "10.1.1.216.4270",
             "title": "Supporting Informal Communication via Ephemeral Interest Groups.",
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.216.4270&type=sc",
             "year": "1992"
         },
-        {
+        "10.1.1.28.188": {
             "author": null,
+            "doi": "10.1.1.28.188",
             "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.108.8490&type=sc",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.28.188&type=sc",
             "year": null
         },
-        {
+        "10.1.1.30.6583": {
             "author": [
-                "David Goldberg",
-                "David A. Nichols",
-                "Brian M. Oki",
-                "Douglas B. Terry"
+                "Upendra Shardanand",
+                "Pattie Maes"
             ],
-            "title": "Using Collaborative Filtering to Weave an Information Tapestry.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.104.3739&type=sc",
-            "year": "1992"
+            "doi": "10.1.1.30.6583",
+            "title": "Social Information Filtering: Algorithms for Automating \"Word of Mouth\".",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.30.6583&type=sc",
+            "year": "1995"
         },
-        {
+        "10.1.1.304.3089": {
             "author": null,
+            "doi": "10.1.1.304.3089",
             "title": null,
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.304.3089&type=sc",
             "year": null
         },
-        {
+        "10.1.1.324.3588": {
             "author": null,
+            "doi": "10.1.1.324.3588",
             "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.18.5430&type=sc",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.324.3588&type=sc",
             "year": null
         },
-        {
-            "author": [
-                "Gerard Salton",
-                "Chris Buckley"
-            ],
-            "title": "Term-Weighting Approaches in Automatic Text Retrieval.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.9086&type=sc",
-            "year": "1988"
-        },
-        {
+        "10.1.1.366.4995": {
             "author": null,
+            "doi": "10.1.1.366.4995",
             "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.92.3553&type=sc",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.366.4995&type=sc",
             "year": null
         },
-        {
+        "10.1.1.37.3094": {
             "author": null,
+            "doi": "10.1.1.37.3094",
             "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.28.188&type=sc",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.37.3094&type=sc",
             "year": null
         },
-        {
-            "author": "Gio Wiederhold",
-            "title": "Mediators in the Architecture of Future Information Systems.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.8981&type=sc",
-            "year": "1992"
-        },
-        {
-            "author": [
-                "David Goldberg",
-                "David A. Nichols",
-                "Brian M. Oki",
-                "Douglas B. Terry"
-            ],
-            "title": "Using Collaborative Filtering to Weave an Information Tapestry.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.104.3739&type=sc",
-            "year": "1992"
-        },
-        {
-            "author": [
-                "Paul Resnick",
-                "Neophytos Iacovou",
-                "Mitesh Suchak",
-                "Peter Bergstrom",
-                "John Riedl"
-            ],
-            "title": "GroupLens: An Open Architecture for Collaborative Filtering of Netnews.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.136.4322&type=sc",
-            "year": "1994"
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.28.188&type=sc",
-            "year": null
-        },
-        {
-            "author": "Peter P. Chen",
-            "title": "The Entity-Relationship Model - Toward a Unified View of Data.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.123.1085&type=sc",
-            "year": "1976"
-        },
-        {
-            "author": "Frank G. Halasz",
-            "title": "Reflections on NoteCards: seven issues for the next generation of hypermedia systems.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.124.1996&type=sc",
-            "year": "2001"
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.161.3944&type=sc",
-            "year": null
-        },
-        {
-            "author": [
-                "Gerhard Fischer",
-                "Curt Stevens"
-            ],
-            "title": "Information access in complex, poorly structured information spaces.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.17.7170&type=sc",
-            "year": "1991"
-        },
-        {
-            "author": [
-                "David Goldberg",
-                "David A. Nichols",
-                "Brian M. Oki",
-                "Douglas B. Terry"
-            ],
-            "title": "Using Collaborative Filtering to Weave an Information Tapestry.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.104.3739&type=sc",
-            "year": "1992"
-        },
-        {
-            "author": [
-                "Paul Resnick",
-                "Neophytos Iacovou",
-                "Mitesh Suchak",
-                "Peter Bergstrom",
-                "John Riedl"
-            ],
-            "title": "GroupLens: An Open Architecture for Collaborative Filtering of Netnews.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.136.4322&type=sc",
-            "year": "1994"
-        },
-        {
+        "10.1.1.38.4885": {
             "author": [
                 "Katia Obraczka",
                 "Peter B. Danzig",
                 "Shih-Hao Li"
             ],
+            "doi": "10.1.1.38.4885",
             "title": "Internet Resource Discovery Services.",
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.38.4885&type=sc",
             "year": "1993"
         },
-        {
+        "10.1.1.40.5588": {
             "author": [
                 "Ronald L. Rivest",
                 "Adi Shamir",
                 "Leonard M. Adleman"
             ],
+            "doi": "10.1.1.40.5588",
             "title": "A Method for Obtaining Digital Signatures and Public-Key Cryptosystems.",
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.40.5588&type=sc",
             "year": "1978"
         },
-        {
+        "10.1.1.48.2706": {
             "author": null,
+            "doi": "10.1.1.48.2706",
             "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.87.7443&type=sc",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.48.2706&type=sc",
             "year": null
         },
-        {
-            "author": [
-                "Gerard Salton",
-                "Chris Buckley"
-            ],
-            "title": "Term-Weighting Approaches in Automatic Text Retrieval.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.9086&type=sc",
-            "year": "1988"
-        },
-        {
+        "10.1.1.48.4548": {
             "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.7968&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
+            "doi": "10.1.1.48.4548",
             "title": null,
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.48.4548&type=sc",
             "year": null
         },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.37.3094&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.324.3588&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.108.8490&type=sc",
-            "year": null
-        },
-        {
-            "author": [
-                "Nicholas J. Belkin",
-                "W. Bruce Croft"
-            ],
-            "title": "Information Filtering and Information Retrieval: Two Sides of the Same Coin?",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.104.7500&type=sc",
-            "year": "1992"
-        },
-        {
-            "author": [
-                "Gerhard Fischer",
-                "Curt Stevens"
-            ],
-            "title": "Information access in complex, poorly structured information spaces.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.17.7170&type=sc",
-            "year": "1991"
-        },
-        {
-            "author": [
-                "David Goldberg",
-                "David A. Nichols",
-                "Brian M. Oki",
-                "Douglas B. Terry"
-            ],
-            "title": "Using Collaborative Filtering to Weave an Information Tapestry.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.104.3739&type=sc",
-            "year": "1992"
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.211.5460&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.7849&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.48.2706&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.92.3553&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.366.4995&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.115.8343&type=sc",
-            "year": null
-        },
-        {
-            "author": [
-                "George W. Furnas",
-                "Thomas K. Landauer",
-                "Louis M. Gomez",
-                "Susan T. Dumais"
-            ],
-            "title": "The Vocabulary Problem in Human-System Communication.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.103.8364&type=sc",
-            "year": "1987"
-        },
-        {
-            "author": [
-                "Laurence Brothers",
-                "James D. Hollan",
-                "Jakob Neilsen",
-                "Scott Stornetta",
-                "Steven P. Abney",
-                "George W. Furnas",
-                "Michael L. Littman"
-            ],
-            "title": "Supporting Informal Communication via Ephemeral Interest Groups.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.216.4270&type=sc",
-            "year": "1992"
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.108.8490&type=sc",
-            "year": null
-        },
-        {
-            "author": [
-                "David Goldberg",
-                "David A. Nichols",
-                "Brian M. Oki",
-                "Douglas B. Terry"
-            ],
-            "title": "Using Collaborative Filtering to Weave an Information Tapestry.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.104.3739&type=sc",
-            "year": "1992"
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.304.3089&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.18.5430&type=sc",
-            "year": null
-        },
-        {
+        "10.1.1.87.7443": {
             "author": [
                 "Gerard Salton",
                 "Chris Buckley"
             ],
-            "title": "Term-Weighting Approaches in Automatic Text Retrieval.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.101.9086&type=sc",
+            "doi": "10.1.1.87.7443",
+            "title": "Parallel Text Search Methods.",
+            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.87.7443&type=sc",
             "year": "1988"
         },
-        {
-            "author": null,
-            "title": null,
+        "10.1.1.92.3553": {
+            "author": [
+                "Gerard Salton",
+                "Chris Buckley"
+            ],
+            "doi": "10.1.1.92.3553",
+            "title": "Improving retrieval performance by relevance feedback.",
             "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.92.3553&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.28.188&type=sc",
-            "year": null
-        },
-        {
-            "author": "Gio Wiederhold",
-            "title": "Mediators in the Architecture of Future Information Systems.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.11.8981&type=sc",
-            "year": "1992"
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.366.4995&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.324.3588&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.108.8490&type=sc",
-            "year": null
-        },
-        {
-            "author": [
-                "Nicholas J. Belkin",
-                "W. Bruce Croft"
-            ],
-            "title": "Information Filtering and Information Retrieval: Two Sides of the Same Coin?",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.104.7500&type=sc",
-            "year": "1992"
-        },
-        {
-            "author": [
-                "Gerhard Fischer",
-                "Curt Stevens"
-            ],
-            "title": "Information access in complex, poorly structured information spaces.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.17.7170&type=sc",
-            "year": "1991"
-        },
-        {
-            "author": [
-                "David Goldberg",
-                "David A. Nichols",
-                "Brian M. Oki",
-                "Douglas B. Terry"
-            ],
-            "title": "Using Collaborative Filtering to Weave an Information Tapestry.",
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.104.3739&type=sc",
-            "year": "1992"
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.211.5460&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.20.7849&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.48.2706&type=sc",
-            "year": null
-        },
-        {
-            "author": null,
-            "title": null,
-            "url": "http://citeseerx.ist.psu.edu/viewdoc/similar?doi=10.1.1.92.3553&type=sc",
-            "year": null
+            "year": "1990"
         }
-    ],
+    },
     "doi": "10.1.1.30.6583",
     "title": "Social Information Filtering: Algorithms for Automating \"Word of Mouth\"."
 }

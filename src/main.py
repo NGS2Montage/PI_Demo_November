@@ -10,7 +10,7 @@ import random
 # open a single connection to speed up things
 dbi = mongoDBI.mongoDBI (constants.db_name)
 num_parallel = 5
-threshold = 15
+threshold = 20
 
 
 # Fetch Title, Author, Year
@@ -177,16 +177,17 @@ def add_more_data(data, base_doi):
     augmented_abstract = base_abstract
 
     augmented_doi_list = base_citation_list_doi
-    augmented_citation_list_url.extend (base_citation_list_url)
+    augmented_citation_list_url = base_citation_list_url
+   
     try:
         base_doi_list = base_citation_list_doi[base_doi]
     except:
         return data, []
 
     random.shuffle (base_doi_list)
-    # base_doi_list = base_doi_list[0:5]
-    for b_doi in base_doi_list:
+   
 
+    for b_doi in base_doi_list:
         cit_doi_list = search_citations (b_doi)
         if cit_doi_list is None:
             continue
@@ -194,10 +195,13 @@ def add_more_data(data, base_doi):
             augmented_doi_list[_doi] = _doi_list
 
         list_enriched_cit_urls = enriched_cit_urls (cit_doi_list[b_doi], details=True)
-        augmented_citation_list_url.extend (list_enriched_cit_urls)
+	for item_enriched_cit_url in list_enriched_cit_urls:
+		print '> ',item_enriched_cit_url
+		for doi_ref, doi_data in item_enriched_cit_url.items():
+			augmented_citation_list_url[doi_ref] = doi_data 
+    
 
     # add in the abstracts and contexts
-
     add_abs_context = Parallel (n_jobs=num_parallel) (delayed (fetch_abstract_context) (doi) for doi in base_doi_list)
 
     for item in add_abs_context:
@@ -226,18 +230,22 @@ def add_more_data(data, base_doi):
 
 def create_cit_url_dict(doi, details=False):
     cit_dict = {}
+    cit_dict ['doi'] = doi
     if details:
         title, author, year = fetch_base_details (doi)
         cit_dict['title'] = title
         cit_dict['author'] = author
         cit_dict['year'] = year
     cit_dict['url'] = utils.get_url (doi)
-    return cit_dict
+    return { doi : cit_dict }
 
 
-def enriched_cit_urls(doi_list, details=False):
+
+# Make the creation of citation dictionary parallel
+def enriched_cit_urls(doi_list, details = False):
     result = Parallel (n_jobs=num_parallel) (delayed (create_cit_url_dict) (doi, details) for doi in doi_list)
     return result
+
 
 
 def fetch_data_helper(doi):
@@ -249,7 +257,14 @@ def fetch_data_helper(doi):
     data['author'] = author
     data['abstract'] = abstract
     data['cited_paper_doi'] = citation_list_doi
-    data['cited_paper_url'] = enriched_cit_urls (citation_list_doi, True)
+
+
+    data['cited_paper_url'] = {}
+    cit_url_dict_list = enriched_cit_urls (citation_list_doi, details = True)
+    
+    for item in cit_url_dict_list :
+	for key,value in item.items():
+	    data['cited_paper_url'][key] = value
     data['citation_contexts'] = citation_contexts
     return data
 
@@ -278,7 +293,6 @@ def fetch_data(doi):
             break
 
     return data
-
 
 
 def fetch_and_write_data(doi):
