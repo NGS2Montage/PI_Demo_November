@@ -2,7 +2,7 @@ import json
 
 from django.db import models
 
-from main import fetch_data_helper
+from main import fetch_data
 
 
 class BuilderManager(models.Manager):
@@ -13,5 +13,5 @@ class BuilderManager(models.Manager):
             return r[0]
 
         print("No {} - building".format(doi))
-        cite_data = fetch_data_helper(doi)
+        cite_data = fetch_data(doi)
         return self.create(doi=doi, cite_data=json.dumps(cite_data))
