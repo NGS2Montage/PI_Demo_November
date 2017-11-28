@@ -5,7 +5,7 @@ from collections import OrderedDict
 import operator
 
 # Set up spaCy
-from spacy.lang.en import English
+# from spacy.lang.en import English
 
 # Setup nltk and other preprocessor
 import nltk
