@@ -17,6 +17,10 @@ var app = {
             {title: "Year"},
             {title: "Score"},
         ],
+        order: [
+          [3, 'desc'],
+          [2, 'desc']
+        ],
         ajax: {
           url: '/rec-sys/recommendations/?doi=blank',
           dataSrc: function ( json ) {
