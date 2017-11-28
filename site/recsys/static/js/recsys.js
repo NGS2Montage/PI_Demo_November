@@ -18,13 +18,24 @@ var app = {
             {title: "Score"},
         ],
         order: [
-          [3, 'desc'],
-          [2, 'desc']
+          [3, 'desc']
         ],
         ajax: {
           url: '/rec-sys/recommendations/?doi=blank',
           dataSrc: function ( json ) {
             console.log(json);
+            if (json.cited_paper_url.length == 0) {
+              app.title = '';
+              app.abstract = '';
+              app.authors = '';
+              return [[]];
+            }
+
+            app.title = json.title;
+            app.abstract = json.abstract[json.doi];
+            app.authors = json.author;
+
+            $('#this-div').removeClass('invisible');
 
             return Object.keys(json.cited_paper_url).filter(function (doi) {
               var paper = json.cited_paper_url[doi];
@@ -55,17 +66,6 @@ var app = {
   window.addEventListener('load', function() {
     rivets.bind(document.getElementById('app-view'), {app: app});
     app.init();
-
-    // var filterForm = document.getElementById('filter-form');
-    // filterForm.addEventListener('submit', function(event) {
-    //   event.preventDefault();
-    //   event.stopPropagation();
-
-    //   var ajaxURL = '/rec-sys/scores/?doi=' + $('#doi-input').val();
-    //   console.log("Setting table url to ", ajaxURL);
-    //   app.table.ajax.url(ajaxURL);
-    //   app.table.ajax.reload();
-    // });
 
     var form = document.getElementById('doi-form');
     form.addEventListener('submit', function(event) {
