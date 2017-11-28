@@ -196,9 +196,8 @@ def add_more_data(data, base_doi):
 
         list_enriched_cit_urls = enriched_cit_urls (cit_doi_list[b_doi], details=True)
 	for item_enriched_cit_url in list_enriched_cit_urls:
-		print '> ',item_enriched_cit_url
-		for doi_ref, doi_data in item_enriched_cit_url.items():
-			augmented_citation_list_url[doi_ref] = doi_data 
+	    for doi_ref, doi_data in item_enriched_cit_url.items():
+		augmented_citation_list_url[doi_ref] = doi_data 
     
 
     # add in the abstracts and contexts
