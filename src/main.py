@@ -254,6 +254,13 @@ def fetch_data_helper(doi):
     return data
 
 
+# -------------------------- End of Auxilliary Function ---------------------- #
+
+
+# This function to be called to return the data
+# Input : doi , type string. eg. 10.1.1.30.6583 
+# Return python dictionary
+
 def fetch_data(doi):
     # Write to file
     global threshold
@@ -270,26 +277,15 @@ def fetch_data(doi):
         if len (data['abstract']) >= threshold:
             break
 
-    write_output (doi, data)
+    return data
+
+
+
+def fetch_and_write_data(doi):
+    data = fetch_data(doi)
+    write_output (doi, data) 
     return
 
-
-def fetch_augmented_data(doi):
-    data = fetch_data_helper (doi)
-    global threshold
-    augmented_data, added_doi = add_more_data (data, doi)
-
-    added_doi_1 = []
-    for a_doi in added_doi:
-        data, addn_doi = add_more_data (data, a_doi)
-        added_doi_1.append (addn_doi)
-
-    for a_doi in added_doi_1:
-        data, _ = add_more_data (data, a_doi)
-        if len (data['abstract']) >= threshold:
-            break
-
-    return augmented_data
 
 
 # ------------------------------------------------------------------------------ #
@@ -314,4 +310,4 @@ if __name__ == "__main__":
         doi_list.append (utils.get_doi_from_url (url))
 
     for doi in doi_list:
-        fetch_data (doi)
+        fetch_and_write_data (doi)
