@@ -56,16 +56,16 @@ var app = {
     rivets.bind(document.getElementById('app-view'), {app: app});
     app.init();
 
-    var filterForm = document.getElementById('filter-form');
-    filterForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-      event.stopPropagation();
+    // var filterForm = document.getElementById('filter-form');
+    // filterForm.addEventListener('submit', function(event) {
+    //   event.preventDefault();
+    //   event.stopPropagation();
 
-      var ajaxURL = '/rec-sys/scores/?doi=' + $('#doi-input').val();
-      console.log("Setting table url to ", ajaxURL);
-      app.table.ajax.url(ajaxURL);
-      app.table.ajax.reload();
-    });
+    //   var ajaxURL = '/rec-sys/scores/?doi=' + $('#doi-input').val();
+    //   console.log("Setting table url to ", ajaxURL);
+    //   app.table.ajax.url(ajaxURL);
+    //   app.table.ajax.reload();
+    // });
 
     var form = document.getElementById('doi-form');
     form.addEventListener('submit', function(event) {
