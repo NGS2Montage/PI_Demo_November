@@ -46,8 +46,15 @@ def scores(request):
     cite_obj = CitationObject.objects.get_or_build(request.GET['doi'])
     cite_data = json.loads(cite_obj.cite_data)
     scores = compute_scores(cite_data, cite_obj.doi)
-    logger.debug("*******SCORES*******")
-    logger.debug(scores)
-    logger.debug("*******SCORES*******")
 
-    return JsonResponse({"scores": scores})
+    score_data = {}
+    for s in scores:
+        score_data[s[0]] = s[1]
+
+    for doi, paper in cite_data['cited_paper_url'].iteritems():
+        if doi in score_data:
+            paper['score'] = score_data[doi]
+        else:
+            paper['score'] = None
+
+    return JsonResponse(cite_data)

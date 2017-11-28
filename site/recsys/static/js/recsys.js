@@ -21,13 +21,22 @@ var app = {
           url: '/rec-sys/recommendations/?doi=blank',
           dataSrc: function ( json ) {
             console.log(json);
-            return json.cited_paper_url.map(function (d) {
-              var authors = d.author;
+
+            return Object.keys(json.cited_paper_url).filter(function (doi) {
+              var paper = json.cited_paper_url[doi];
+              return paper.author && paper.year && paper.title;
+            }).map(function (doi) {
+              var paper = json.cited_paper_url[doi];
+              var authors = paper.author;
               if (Array.isArray(authors)) {
                 authors = authors.join(', ');
               }
-              return [d.title, authors, d.year, '-'];
-            })
+              var score = '-';
+              if ('score' in paper && paper.score) {
+                score = parseFloat(Math.round(paper.score * 10000) / 10000).toFixed(4);
+              }
+              return [paper.title, authors, paper.year, score];
+            });
           },
         },
         processing: true,
@@ -51,7 +60,6 @@ var app = {
       var ajaxURL = '/rec-sys/scores/?doi=' + $('#doi-input').val();
       console.log("Setting table url to ", ajaxURL);
       app.table.ajax.url(ajaxURL);
-
       app.table.ajax.reload();
     });
 
