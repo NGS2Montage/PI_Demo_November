@@ -167,19 +167,19 @@ def compute_scores(data, ref_paper_doi):
 
     '''
     if bool(ref_doc):
-        print ref_doc, '\n\n'
+        # print ref_doc, '\n\n'
 
         # Find the cosine similarity of the documents
         for key in cited_data.keys():
             similarity_score[key] = cosine_sim(ref_doc, cited_data[key])
-            print key, similarity_score[key]
+            # print key, similarity_score[key]
 
     else:
         print 'Empty content in base paper.\n Can\' compute scores.'
 
 
     sorted_score = sorted(similarity_score.items(), key=operator.itemgetter(1), reverse=True)
-    print sorted_score
+    # print sorted_score
     return sorted_score
 
 if __name__ == "__main__":
