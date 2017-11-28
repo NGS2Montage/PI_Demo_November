@@ -131,18 +131,34 @@ def compute_scores(data, ref_paper_doi):
     if not paper_keys:
         paper_keys = data.keys()
 
-    cited_papers = []
-    for cited_paper in data['abstract'].keys():
+    # A U B Operation on two sets A and B
+
+    cited_papers = list(set(data["citation_contexts"].keys()) - set(data['abstract'].keys())) + data['abstract'].keys()
+    '''
+    print set(data["citation_contexts"].keys()) - set(doi_list)
+    print set(data["abstract"].keys()) - set(doi_list)
+    '''
+
+    for cited_paper in cited_papers:
         # Get unicode features
-        str1 = access_feature(data['abstract'][cited_paper], "abstract")  # Abstract
-        str2 = access_feature(data["citation_contexts"][cited_paper], "citation_contexts")  # Citation context
+        try:
+            str1 = access_feature(data['abstract'][cited_paper], "abstract")  # Abstract
+        except:
+            str1 = u' '
+
+        try:
+            str2 = access_feature(data["citation_contexts"][cited_paper], "citation_contexts")  # Citation context
+        except:
+            str2 = u''
+
         # Combine features
         txt_str = combine_feature(str1, str2)
         if cited_paper == ref_paper_doi:
             ref_doc = txt_str
         else:
             cited_data[cited_paper] = txt_str
-            cited_papers.append(cited_paper)
+
+    cited_papers.remove(ref_paper_doi)  # Remove the base paper from the list
 
     # print cited_paper, ref_paper
     parse_list = parse_citation_list(data["cited_paper_doi"])
@@ -172,7 +188,7 @@ def compute_scores(data, ref_paper_doi):
         # Find the cosine similarity of the documents
         for key in cited_data.keys():
             similarity_score[key] = cosine_sim(ref_doc, cited_data[key])
-            # print key, similarity_score[key]
+            print key, similarity_score[key]
 
     else:
         print 'Empty content in base paper.\n Can\' compute scores.'
@@ -204,4 +220,3 @@ if __name__ == "__main__":
     json_file.close()  # close the file
 
     score_list = compute_scores(data, ref_paper_doi)
-
