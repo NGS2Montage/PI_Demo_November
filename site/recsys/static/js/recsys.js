@@ -33,6 +33,10 @@ var app = {
 
             app.title = json.title;
             app.abstract = json.abstract[json.doi];
+
+            if (!Array.isArray(json.author)) {
+              json.author = [json.author]
+            }
             app.authors = json.author;
 
             $('#this-div').removeClass('invisible');
