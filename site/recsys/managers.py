@@ -23,11 +23,11 @@ class BuilderManager(models.Manager):
 
         scored_papers = {}
         for score_pair in scores:
-            doi = score_pair[0]
+            s_doi = score_pair[0]
             score = score_pair[1]
-            if doi in cite_data['cited_paper_url']:
-                scored_papers[doi] = cite_data['cited_paper_url'][doi]
-                scored_papers[doi]['score'] = score
+            if s_doi in cite_data['cited_paper_url']:
+                scored_papers[s_doi] = cite_data['cited_paper_url'][s_doi]
+                scored_papers[s_doi]['score'] = score
 
         cite_data['cited_paper_url'] = scored_papers
 
