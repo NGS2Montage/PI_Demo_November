@@ -26,6 +26,10 @@ def recommendations(request):
     if "doi" not in request.GET:
         raise Http404("No doi GET parameter")
 
+    if request.GET['doi'] == "blank":
+        # This is really stupid but datatables is never *quite* right
+        return JsonResponse({'cited_paper_url': []})
+
     cite_obj = CitationObject.objects.get_or_build(request.GET['doi'])
     cite_data = json.loads(cite_obj.cite_data)
 

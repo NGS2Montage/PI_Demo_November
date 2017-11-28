@@ -5,7 +5,7 @@ var app = {
 
   init: function () {
     app.table = $('#rec-table').DataTable({
-        serverSide: true,
+        // serverSide: true,
         deferLoading: 0,
 
         paging: false,
@@ -18,11 +18,15 @@ var app = {
             {title: "Score"},
         ],
         ajax: {
-          url: '/rec-sys/recommendations/?doi=10.1.1.30.6583',
+          url: '/rec-sys/recommendations/?doi=blank',
           dataSrc: function ( json ) {
             console.log(json);
             return json.cited_paper_url.map(function (d) {
-              return [d.title, d.author.join(', '), d.year, '-'];
+              var authors = d.author;
+              if (Array.isArray(authors)) {
+                authors = authors.join(', ');
+              }
+              return [d.title, authors, d.year, '-'];
             })
           },
         },
@@ -65,7 +69,7 @@ var app = {
   }, false);
 })();
 
-
+$.fn.dataTable.ext.errMode = 'throw';
 
 
 
