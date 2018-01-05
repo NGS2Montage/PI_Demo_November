@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 from urlparse import urlparse, parse_qs
 
 
-logger = logging.getLogger('recsys.forms')
+logger = logging.getLogger('recsys.scripts.scraper')
 
 
 class MissingDataException(Exception):
@@ -54,6 +54,8 @@ class Record():
         identifier_key can be "doi" or "cid"
         identifier is the actual doi or cid identification number
         """
+        logger.debug("Scraping for {} {}".format(identifier_key, identifier))
+
         url = "http://citeseerx.ist.psu.edu/viewdoc/versions"
         payload = {identifier_key: identifier}
 
