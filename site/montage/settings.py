@@ -129,6 +129,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+MEDIA_ROOT = os.path.join(os.path.join(BASE_DIR, 'montage'), 'media')
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -152,12 +153,22 @@ LOGGING = {
             'filename': os.path.join(BASE_DIR, 'logs/django.log'),
             'formatter': 'verbose'
         },
+        'recsys_file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/recsys.log'),
+            'formatter': 'verbose'
+        },
     },
     'loggers': {
         'django': {
             'handlers': ['django_file'],
             'propagate': True,
             'level': 'DEBUG',
-        }
+        },
+        'recsys': {
+            'handlers': ['recsys_file'],
+            'level': 'DEBUG',
+        },
     }
 }

@@ -6,6 +6,7 @@
 .DS_Store
 *.sqlite3
 site/static/
+site/montage/media/
 site/logs/*.log
 data_dir/
 
