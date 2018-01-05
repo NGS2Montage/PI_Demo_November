@@ -6,7 +6,6 @@ from django.apps import apps
 from django.db import models
 
 from .managers import BuilderManager
-from .tasks import Record
 
 
 class CitationObject(models.Model):
