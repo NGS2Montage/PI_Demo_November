@@ -102,9 +102,11 @@ class Record():
 
         citations = []
 
-        for tr in soup.find(id="citations").table.find_all('tr'):
-            c = Citation(tr)
-            citations.append(c)
+        citation_table = soup.find(id="citations").table
+        if citation_table is not None:
+            for tr in citation_table.find_all('tr'):
+                c = Citation(tr)
+                citations.append(c)
 
         return citations
 
