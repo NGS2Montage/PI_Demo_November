@@ -46,8 +46,6 @@ class Citation(models.Model):
         null=True,
         blank=True,
         default=None,
-        related_name='record',
-        related_query_name='records'
     )
 
     def __str__(self):
