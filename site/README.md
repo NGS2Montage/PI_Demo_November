@@ -11,6 +11,8 @@
 
 You could connect to the DB yourself and run raw SQL but I recommend using Django's objects. There is some example code below (run this from the `site/` directory):
 
+To see what's in the database, browse to `montage.cs.vt.edu/admin` (needs admin password).
+
 ## Architecture
 
 1. `Paper` objects represent a CiteSeerX record for a publication. They have a `pdf` FileField which can be opened for access to the PDF of the publication. (Also, pdfs are stored in `site/montage/media/<doi>_<random_letters>.pdf`).
