@@ -9,7 +9,7 @@ logger = logging.getLogger('recsys.scripts.follow_citations')
 
 
 def run(doi=None):
-    objects = Citation.objects.filter(record_id=None) if doi is None else Paper.objects.get(doi=doi).citation_set
+    objects = Citation.objects.filter(record_id=None) if doi is None else Paper.objects.get(doi=doi).citations
 
     # for each citation
     # If we don't already have this citation (Papers need CID?)
@@ -24,7 +24,7 @@ def run(doi=None):
             qs = Paper.objects.filter(doi=r.doi)
             if qs.exists():
                 c.paper = qs[0]
-                logger.debug("Citation already fetched: {} cites {}".format(doi, c.cid))
+                logger.debug("Citation already fetched: {} cites {}/{}".format(doi, r.doi, c.cid))
             else:
                 output = add_paper(r.toJSON())
                 logger.debug("Saving {} to record for {}".format(output[2], c))

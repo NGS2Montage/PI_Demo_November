@@ -52,15 +52,33 @@ class Citation(models.Model):
 
 
 class Paper(models.Model):
-    doi = models.CharField(max_length=50, db_index=True, unique=True)
+    doi = models.CharField(max_length=50, db_index=True, unique=True, blank=True, null=True)
+    cid = models.CharField(max_length=50, db_index=True, unique=True, blank=True, null=True)
     title = models.TextField()
-    abstract = models.TextField()
-    pdf_url = models.URLField()
-    pdf = models.FileField(upload_to=pdf_path)
+    abstract = models.TextField(blank=True)
+    pdf_url = models.URLField(blank=True)
+    pdf = models.FileField(upload_to=pdf_path, blank=True)
     venue = models.CharField(max_length=200, blank=True)
-    authors = models.ManyToManyField(Author)
-    citations = models.ManyToManyField(Citation)
+    authors = models.ManyToManyField(Author, blank=True)
+    citations = models.ManyToManyField(
+        'self',
+        through='CitationContext',
+        symmetrical=False,
+        blank=True)
     year = models.IntegerField(null=True, blank=True)
 
+    citation_only = models.BooleanField()
+    # store whether we have tried to get all data for this thing yet
+    fetched = models.BooleanField(default=False)
+
     def __str__(self):
-        return self.doi
+        return "{}/{}".format(self.doi, self.cid)
+
+
+class CitationContext(models.Model):
+    from_paper = models.ForeignKey(Paper, related_name='from_paper')
+    to_paper = models.ForeignKey(Paper, related_name='to_paper')
+    context = models.TextField(blank=True)
+    
+    def __str__(self):
+        return "{} cites {}".format(self.from_paper_id, self.to_paper_id)
