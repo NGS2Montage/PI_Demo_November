@@ -32,7 +32,8 @@ class Citation():
         if info:
             authors = info.find(class_="authors")
             if authors:
-                self.authors = authors.string[len('by '):].strip().split(', ')
+                self.authors = [a.strip() for a in authors.string[len('by '):].strip().split(', ')]
+
 
             venue = info.find(class_="pubvenue")
             if venue:
@@ -170,7 +171,7 @@ class Record():
                 elif datum == "venue":
                     self.venue = tr.find_all('td')[1].string
                 elif datum == "author name":
-                    self.authors.append(tr.find_all('td')[1].string)
+                    self.authors.append(tr.find_all('td')[1].string.strip())
 
         self.citations = self.get_citations(self.doi)
 
