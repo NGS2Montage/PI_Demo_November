@@ -22,8 +22,36 @@ def cid_from_url(url):
 
 
 class Citation():
-    def __init__(self, tr):
+    def init_from_div(self, div):
+        self.title = div.h3.a.string.strip()
+        self.url = div.h3.a.attrs['href']
+        self.doi = doi_from_url(self.url)
+        self.citation_only = False
+
+        info = div.find(class_="pubinfo")
+        if info:
+            authors = info.find(class_="authors")
+            if authors:
+                self.authors = authors.string[len('by '):].strip().split(', ')
+
+            venue = info.find(class_="pubvenue")
+            if venue:
+                self.venue = venue.string[len('- '):]
+
+            year = info.find(class_="pubyear")
+            if year:
+                self.year = year.string[len(', '):]
+
+        abstract = div.find(class_="pubabstract")
+        if abstract:
+            self.abstract = abstract.string.strip()
+
+    def __init__(self, tr, from_element="tr"):
         """Take a BeautifulSoup Tag for a tr in the citation list table."""
+        if from_element == "div":
+            self.init_from_div(tr)
+            return
+
         td = tr.find_all('td')[1]
         attrs = td.a.attrs
 
@@ -48,13 +76,71 @@ class Citation():
 
 
 class Record():
-    def __init__(self, identifier, identifier_key="doi"):
+    def add_citations(self, divs):
+        for div in divs:
+            self.citations.append(Citation(div, 'div'))
+
+    def fetch_cid_info(self, cid):
+        url = "http://citeseerx.ist.psu.edu/showciting"
+        payload = {"cid": cid}
+
+        response = requests.get(url, params=payload)
+
+        if response.status_code != 200:
+            logger.error('ERROR code {} for {}'.format(response.status_code, cid))
+            raise MissingDataException("Record {} {}".format(response.status_code, cid))
+
+        soup = BeautifulSoup(response.content, "html.parser")
+
+        title = soup.h2.string.strip()
+        if len(title) >= 6 and title[-1] == ")" and title[-6] == "(":
+            self.year = title[-5:-1]
+            title = title[:-6].strip()
+        self.title = title
+
+        authors = soup.find(id="docAuthors")
+        if authors:
+            self.authors = authors.string.strip()[len("by "):].split(", ")
+
+        venue = soup.find(id="docVenue")
+        if venue:
+            self.venue = venue.find_all('td')[1].string
+
+        self.citations = []
+        divs = soup.find_all('div', class_='result')
+        self.add_citations(divs)
+
+        next_page = soup.find(id="pager")
+        while next_page.a:
+            next_url = next_page.a.attrs['href']
+            qs = parse_qs(urlparse(next_url).query)
+
+            payload = {
+                "cid": cid,
+                "sort": "cite",
+                "start": qs['start'][0]
+            }
+            response = requests.get(url, payload)
+
+            if response.status_code != 200:
+                logger.error('ERROR code {} for {}'.format(response.status_code, next_url))
+
+            soup = BeautifulSoup(response.content, "html.parser")
+            divs = soup.find_all('div', class_='result')
+            self.add_citations(divs)
+            next_page = soup.find(id="pager")
+
+    def __init__(self, identifier, identifier_key="doi", citation_only=False):
         """Fetch a record.
 
         identifier_key can be "doi" or "cid"
         identifier is the actual doi or cid identification number
         """
         logger.debug("Scraping for {} {}".format(identifier_key, identifier))
+
+        if identifier_key == 'cid' and citation_only:
+            self.fetch_cid_info(identifier)
+            return
 
         url = "http://citeseerx.ist.psu.edu/viewdoc/versions"
         payload = {identifier_key: identifier}

@@ -1,5 +1,6 @@
 from django import forms
 from django.core.files.uploadedfile import SimpleUploadedFile
+from django.db.models import Q
 
 import logging
 import requests
@@ -85,7 +86,17 @@ def add_citations(from_paper, record):
     records_added = 0
 
     for citation in record['citations']:
-        to_paper = Paper.objects.filter(cid=citation['cid'])
+        if 'authors' in citation:
+            added, _ = add_authors(citation['authors'])
+            records_added += added
+
+        query = Q()
+        if 'cid' in citation:
+            query = query | Q(cid=citation['cid'])
+        if 'doi' in citation:
+            query = query | Q(doi=citation['doi'])
+
+        to_paper = Paper.objects.filter(query)
         if to_paper.exists():
             to_paper = to_paper[0]
         else:
@@ -94,28 +105,35 @@ def add_citations(from_paper, record):
                 to_paper = form.save()
                 records_added += 1
             else:
-                logger.error("Could not save citation {}".format(citation))
+                logger.error("Could not save citation {} {}".format(citation, form.errors))
+                break
 
-        CitationContext.objects.create(
+        _, created = CitationContext.objects.get_or_create(
             from_paper=from_paper,
             to_paper=to_paper,
             context=citation['context'] if 'context' in citation else "")
-        records_added += 1
+        if created:
+            records_added += 1
     return records_added
 
 
 def follow_citation(paper):
-    record = Record(paper.cid, 'cid')
+    record = Record(paper.cid, 'cid', paper.citation_only)
 
-    paper.doi = record.doi
-    paper.title = record.title
-    paper.abstract = record.abstract
-    paper.venue = record.venue
+    if hasattr(record, 'title'):
+        paper.title = record.title
+    if hasattr(record, 'venue'):
+        paper.venue = record.venue
+    if hasattr(record, 'year'):
+        paper.year = record.year
+
+    if not paper.citation_only:
+        paper.doi = record.doi
+        paper.abstract = record.abstract
+        paper.pdf_url = record.pdf_url
+        paper.pdf = fetch_pdf(record.doi, record.pdf_url)
+
     paper.fetched = True
-    paper.year = record.year
-    paper.pdf_url = record.pdf_url
-
-    paper.pdf = fetch_pdf(record.doi, record.pdf_url)
     paper.save()
 
     records_added = add_citations(paper, record.toJSON())
