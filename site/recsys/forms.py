@@ -6,7 +6,7 @@ import logging
 import requests
 
 from .models import Paper, Author, Citation, CitationContext
-from .scripts.scraper import Record
+from .scripts.scraper import Record, MissingDataException
 
 
 logger = logging.getLogger('recsys.forms')
@@ -118,7 +118,12 @@ def add_citations(from_paper, record):
 
 
 def follow_citation(paper):
-    record = Record(paper.cid, 'cid', paper.citation_only)
+    try:
+        record = Record(paper.cid, 'cid', paper.citation_only)
+    except MissingDataException:
+        paper.fetched = True
+        paper.save()
+        return 1
 
     if hasattr(record, 'title'):
         paper.title = record.title
