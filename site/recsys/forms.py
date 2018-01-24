@@ -120,7 +120,8 @@ def add_citations(from_paper, record):
 def follow_citation(paper):
     try:
         record = Record(paper.cid, 'cid', paper.citation_only)
-    except MissingDataException:
+    except MissingDataException as e:
+        logger.error("{}".format(e))
         paper.fetched = True
         paper.save()
         return 1
