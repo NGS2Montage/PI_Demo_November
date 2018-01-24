@@ -138,10 +138,11 @@ def follow_citation(paper):
         paper.venue = record.venue
     if hasattr(record, 'year'):
         paper.year = record.year
+    if hasattr(record, 'abstract'):
+        paper.abstract = record.abstract
 
     if not paper.citation_only:
         paper.doi = record.doi
-        paper.abstract = record.abstract
         paper.pdf_url = record.pdf_url
         paper.pdf = fetch_pdf(record.doi, record.pdf_url)
 
