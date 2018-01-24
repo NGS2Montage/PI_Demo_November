@@ -119,7 +119,13 @@ def add_citations(from_paper, record):
 
 def follow_citation(paper):
     try:
-        record = Record(paper.cid, 'cid', paper.citation_only)
+        if paper.doi is not None:
+            record = Record(paper.doi, 'doi')
+        elif paper.cid is not None:
+            record = Record(paper.cid, 'cid', paper.citation_only)
+        else:
+            logger.error("Both doi and cid are None for paper pk={}".format(paper.pk))
+            return 0
     except MissingDataException as e:
         logger.error("{}".format(e))
         paper.fetched = True
