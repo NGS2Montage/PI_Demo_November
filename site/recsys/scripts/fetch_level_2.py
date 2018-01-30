@@ -1,4 +1,5 @@
 from recsys.models import Paper
+from recsys.forms import follow_citation
 
 
 def run(doi='10.1.1.598.8940'):
