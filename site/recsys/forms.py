@@ -134,12 +134,13 @@ def follow_citation(paper):
         elif paper.cid is not None:
             record = Record(paper.cid, 'cid', paper.citation_only)
 
-            existing_paper = Paper.objects.filter(doi=record.doi)
-            if existing_paper.exists():
-                logger.debug("This paper cid={} already exists doi={}".format(paper.cid, record.doi))
-                print("This paper cid={} already exists doi={}".format(paper.cid, record.doi))
-                replace_paper(paper, existing_paper[0])
-                return 0
+            if hasattr(record, 'doi'):
+                existing_paper = Paper.objects.filter(doi=record.doi)
+                if existing_paper.exists():
+                    logger.debug("This paper cid={} already exists doi={}".format(paper.cid, record.doi))
+                    print("This paper cid={} already exists doi={}".format(paper.cid, record.doi))
+                    replace_paper(paper, existing_paper[0])
+                    return 0
         else:
             logger.error("Both doi and cid are None for paper pk={}".format(paper.pk))
             return 0
