@@ -117,12 +117,29 @@ def add_citations(from_paper, record):
     return records_added
 
 
+def replace_paper(paper, better_paper):
+    for c in CitationContext.objects.filter(to_paper=paper):
+        c.to_paper = better_paper
+        c.save()
+
+    for c in CitationContext.objects.filter(from_paper=paper):
+        c.from_paper = better_paper
+        c.save()
+
+
 def follow_citation(paper):
     try:
         if paper.doi is not None:
             record = Record(paper.doi, 'doi')
         elif paper.cid is not None:
             record = Record(paper.cid, 'cid', paper.citation_only)
+
+            existing_paper = Paper.objects.filter(doi=record.doi)
+            if existing_paper.exists():
+                logger.debug("This paper cid={} already exists doi={}".format(paper.cid, record.doi))
+                print("This paper cid={} already exists doi={}".format(paper.cid, record.doi))
+                replace_paper(paper, existing_paper[0])
+                return 0
         else:
             logger.error("Both doi and cid are None for paper pk={}".format(paper.pk))
             return 0
