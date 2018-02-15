@@ -128,6 +128,7 @@ def replace_paper(paper, better_paper):
 
 
 def follow_citation(paper, skip_citations=False):
+    records_added = 0
     try:
         if paper.doi is not None:
             record = Record(paper.doi, 'doi', skip_citations=skip_citations)
@@ -140,10 +141,10 @@ def follow_citation(paper, skip_citations=False):
                     logger.debug("This paper cid={} already exists doi={}".format(paper.cid, record.doi))
                     print("This paper cid={} already exists doi={}".format(paper.cid, record.doi))
                     replace_paper(paper, existing_paper[0])
-                    return 0
+                    return records_added
         else:
             logger.error("Both doi and cid are None for paper pk={}".format(paper.pk))
-            return 0
+            return records_added
     except MissingDataException as e:
         logger.error("{}".format(e))
         paper.fetched = True
@@ -167,7 +168,8 @@ def follow_citation(paper, skip_citations=False):
     paper.fetched = True
     paper.save()
 
-    records_added = add_citations(paper, record.toJSON())
+    if not skip_citations:
+        records_added = add_citations(paper, record.toJSON())
     return records_added
 
 
