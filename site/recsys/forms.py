@@ -127,10 +127,10 @@ def replace_paper(paper, better_paper):
         c.save()
 
 
-def follow_citation(paper):
+def follow_citation(paper, skip_citations=False):
     try:
         if paper.doi is not None:
-            record = Record(paper.doi, 'doi')
+            record = Record(paper.doi, 'doi', skip_citations=skip_citations)
         elif paper.cid is not None:
             record = Record(paper.cid, 'cid', paper.citation_only)
 

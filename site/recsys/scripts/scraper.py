@@ -131,7 +131,7 @@ class Record():
             self.add_citations(divs)
             next_page = soup.find(id="pager")
 
-    def __init__(self, identifier, identifier_key="doi", citation_only=False):
+    def __init__(self, identifier, identifier_key="doi", citation_only=False, skip_citations=False):
         """Fetch a record.
 
         identifier_key can be "doi" or "cid"
@@ -173,7 +173,8 @@ class Record():
                 elif datum == "author name":
                     self.authors.append(tr.find_all('td')[1].string.strip())
 
-        self.citations = self.get_citations(self.doi)
+        if not skip_citations:
+            self.citations = self.get_citations(self.doi)
 
     def get_citations(self, doi):
         url = "http://citeseerx.ist.psu.edu/viewdoc/citations"
