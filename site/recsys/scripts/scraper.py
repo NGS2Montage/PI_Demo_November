@@ -34,7 +34,6 @@ class Citation():
             if authors:
                 self.authors = [a.strip() for a in authors.string[len('by '):].strip().split(', ')]
 
-
             venue = info.find(class_="pubvenue")
             if venue:
                 self.venue = venue.string[len('- '):]
@@ -76,12 +75,49 @@ class Citation():
             self.context = context[0].string.strip()
 
 
+class CoCitations():
+    def __init__(self, doi):
+        url = "http://citeseerx.ist.psu.edu/viewdoc/similar"
+        payload = {
+            "doi": doi,
+            "type": "cc"
+        }
+
+        response = requests.get(url, params=payload)
+
+        if response.status_code != 200:
+            logger.error('ERROR code {} for {}'.format(response.status_code, doi))
+            raise MissingDataException("CoCitations {} {}".format(response.status_code, doi))
+
+        soup = BeautifulSoup(response.content, "html.parser")
+
+        self.co_citations = []
+
+        table = soup.find(class_="refs")
+
+        for tr in table.find_all('tr'):
+            score = tr.find(class_="title")
+            if not score:
+                continue
+
+            url = tr.a.attrs['href']
+            citation_only = ('showciting' in url)
+
+            self.co_citations.append({
+                "score": int(score.text.strip()),
+                "cid": cid_from_url(url),
+                "citation_only": citation_only,
+            })
+
+
 class Record():
     def add_citations(self, divs):
         for div in divs:
             self.citations.append(Citation(div, 'div'))
 
     def fetch_cid_info(self, cid):
+        self.cid = cid
+        
         url = "http://citeseerx.ist.psu.edu/showciting"
         payload = {"cid": cid}
 
@@ -200,5 +236,6 @@ class Record():
 
     def toJSON(self):
         obj = self.__dict__
-        obj['citations'] = [c.__dict__ for c in obj['citations']]
+        if 'citations' in obj:
+            obj['citations'] = [c.__dict__ for c in obj['citations']]
         return obj

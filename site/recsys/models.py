@@ -70,15 +70,25 @@ class Paper(models.Model):
     citation_only = models.BooleanField()
     # store whether we have tried to get all data for this thing yet
     fetched = models.BooleanField(default=False)
+    fetched_co_citations = models.BooleanField(default=False)
 
     def __str__(self):
         return "{}/{}".format(self.doi, self.cid)
+
+
+class CoCitation(models.Model):
+    paper = models.ForeignKey(Paper, on_delete=models.CASCADE)
+    with_paper = models.ForeignKey(Paper, on_delete=models.CASCADE, related_name='with_paper')
+    score = models.IntegerField()
+
+    def __str__(self):
+        return "{} co-cited with {}".format(self.paper, self.with_paper)
 
 
 class CitationContext(models.Model):
     from_paper = models.ForeignKey(Paper, related_name='from_paper')
     to_paper = models.ForeignKey(Paper, related_name='to_paper')
     context = models.TextField(blank=True)
-    
+
     def __str__(self):
-        return "{} cites {}".format(self.from_paper_id, self.to_paper_id)
+        return "{} cites {}".format(self.from_paper, self.to_paper)

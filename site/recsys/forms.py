@@ -6,7 +6,7 @@ import logging
 import requests
 
 from .models import Paper, Author, Citation, CitationContext
-from .scripts.scraper import Record, MissingDataException
+from .scripts.scraper import Record, MissingDataException, CoCitations
 
 
 logger = logging.getLogger('recsys.forms')
@@ -80,6 +80,66 @@ def fetch_pdf(doi, pdf_url):
         doi,
         response.content,
         content_type="application/pdf")
+
+
+def get_co_citations(paper):
+    if not paper.doi:
+        logger.debug("Not attempting to get co-citations when no doi cid={}".format(paper.cid))
+        return
+
+    cc = CoCitations(paper.doi)
+    print("Got {} co-citations".format(len(cc.co_citations)))
+    print(cc.co_citations)
+
+    for c in cc.co_citations:
+        deal_with_co_cite(c, paper)
+
+    paper.fetched_co_citations = True
+    paper.save()
+
+
+def deal_with_co_cite(c, paper):
+    if paper.cocitation_set.filter(with_paper__cid=c['cid']).exists():
+        print("Already know this co-citation {} with {}".format(paper, c['cid']))
+        return
+
+    with_paper = None
+    existing_paper = Paper.objects.filter(cid=c['cid'])
+    if existing_paper.exists():
+        print("Already have {}".format(c['cid']))
+        with_paper = existing_paper[0]
+    else:
+        print("Don't have cid={}".format(c['cid']))
+        r = Record(c['cid'], 'cid', citation_only=c['citation_only'])
+        record = r.toJSON()
+
+        if 'doi' in record and record['doi'] is not None:
+            existing_paper = Paper.objects.filter(doi=record['doi'])
+            if existing_paper.exists():
+                print("Do have it as doi={}".format(existing_paper[0]))
+                with_paper = existing_paper[0]
+
+    if with_paper is None:
+        print("Really don't have {}".format(c['cid']))
+        # r = Record(c['cid'], 'cid', citation_only=c['citation_only'])
+        # record = r.toJSON()
+
+        add_authors(record['authors'])
+
+        record['citation_only'] = c['citation_only']
+        record['fetched'] = True
+        form = PaperForm(record, {})
+        if form.is_valid():
+            # Row data is valid so save the record.
+            with_paper = form.save()
+
+            records_added = add_citations(with_paper, record)
+            print("{} citation records added".format(records_added))
+        else:
+            logger.error("Error getting {}: {}".format(c['cid'], form.errors))
+            return
+
+    paper.cocitation_set.create(with_paper=with_paper, score=c['score'])
 
 
 def add_citations(from_paper, record):
