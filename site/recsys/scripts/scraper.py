@@ -95,19 +95,20 @@ class CoCitations():
 
         table = soup.find(class_="refs")
 
-        for tr in table.find_all('tr'):
-            score = tr.find(class_="title")
-            if not score:
-                continue
+        if table is not None:
+            for tr in table.find_all('tr'):
+                score = tr.find(class_="title")
+                if not score:
+                    continue
 
-            url = tr.a.attrs['href']
-            citation_only = ('showciting' in url)
+                url = tr.a.attrs['href']
+                citation_only = ('showciting' in url)
 
-            self.co_citations.append({
-                "score": int(score.text.strip()),
-                "cid": cid_from_url(url),
-                "citation_only": citation_only,
-            })
+                self.co_citations.append({
+                    "score": int(score.text.strip()),
+                    "cid": cid_from_url(url),
+                    "citation_only": citation_only,
+                })
 
 
 class Record():
@@ -117,7 +118,7 @@ class Record():
 
     def fetch_cid_info(self, cid):
         self.cid = cid
-        
+
         url = "http://citeseerx.ist.psu.edu/showciting"
         payload = {"cid": cid}
 
