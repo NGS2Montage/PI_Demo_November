@@ -88,8 +88,8 @@ def get_co_citations(paper):
         return
 
     cc = CoCitations(paper.doi)
-    print("Got {} co-citations".format(len(cc.co_citations)))
-    print(cc.co_citations)
+    logger.debug("Got {} co-citations".format(len(cc.co_citations)))
+    logger.debug(cc.co_citations)
 
     for c in cc.co_citations:
         deal_with_co_cite(c, paper)
@@ -100,27 +100,27 @@ def get_co_citations(paper):
 
 def deal_with_co_cite(c, paper):
     if paper.cocitation_set.filter(with_paper__cid=c['cid']).exists():
-        print("Already know this co-citation {} with {}".format(paper, c['cid']))
+        logger.debug("Already know this co-citation {} with {}".format(paper, c['cid']))
         return
 
     with_paper = None
     existing_paper = Paper.objects.filter(cid=c['cid'])
     if existing_paper.exists():
-        print("Already have {}".format(c['cid']))
+        logger.debug("Already have {}".format(c['cid']))
         with_paper = existing_paper[0]
     else:
-        print("Don't have cid={}".format(c['cid']))
+        logger.debug("Don't have cid={}".format(c['cid']))
         r = Record(c['cid'], 'cid', citation_only=c['citation_only'])
         record = r.toJSON()
 
         if 'doi' in record and record['doi'] is not None:
             existing_paper = Paper.objects.filter(doi=record['doi'])
             if existing_paper.exists():
-                print("Do have it as doi={}".format(existing_paper[0]))
+                logger.debug("Do have it as doi={}".format(existing_paper[0]))
                 with_paper = existing_paper[0]
 
     if with_paper is None:
-        print("Really don't have {}".format(c['cid']))
+        logger.debug("Really don't have {}".format(c['cid']))
         # r = Record(c['cid'], 'cid', citation_only=c['citation_only'])
         # record = r.toJSON()
 
@@ -134,7 +134,7 @@ def deal_with_co_cite(c, paper):
             with_paper = form.save()
 
             records_added = add_citations(with_paper, record)
-            print("{} citation records added".format(records_added))
+            logger.debug("{} citation records added".format(records_added))
         else:
             logger.error("Error getting {}: {}".format(c['cid'], form.errors))
             return
