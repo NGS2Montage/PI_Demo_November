@@ -87,6 +87,7 @@ def get_co_citations(paper):
         logger.debug("Not attempting to get co-citations when no doi cid={}".format(paper.cid))
         return
 
+    logger.debug("Let's get co citations for {}".format(paper))
     cc = CoCitations(paper.doi)
     logger.debug("Got {} co-citations".format(len(cc.co_citations)))
     logger.debug(cc.co_citations)
