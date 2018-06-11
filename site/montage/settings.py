@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'huey.contrib.djhuey',
     'recsys',
     'abloop',
     'redlev',
@@ -174,4 +175,9 @@ LOGGING = {
             'level': 'DEBUG',
         },
     }
+}
+
+HUEY = {
+    'name': 'montage-recsys',
+    # 'always_eager': False,
 }
