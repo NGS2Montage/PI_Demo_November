@@ -189,7 +189,7 @@ class Paper(models.Model):
         doi = doi_from_url(url)
 
         if not doi:
-            logger.debug("doi is missing in {}".format(div.string))
+            logger.debug("doi is missing in {} from {}".format(url, self))
             return None, None
 
         paper, created = Paper.objects.get_or_create(doi=doi)
@@ -252,7 +252,14 @@ class Paper(models.Model):
                     authors.append(tr.find_all('td')[1].string.strip())
 
         self.add_authors(authors)
-        self.fetch_citations()
+
+        try:
+            self.fetch_citations()
+        except MissingDataException as e:
+            logger.error(e)
+
+        self.fetch_cocitations()
+        self.download_pdf()
         self.save()
 
     def fetch_citations(self):

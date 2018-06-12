@@ -1,7 +1,11 @@
-import huey
+import logging
+
 from huey.contrib.djhuey import db_task, enqueue
 
 from .models import Paper
+
+
+logger = logging.getLogger('recsys.tasks')
 
 
 @db_task()
@@ -10,38 +14,22 @@ def fetch_doi(doi):
 
 
 @db_task()
-def follow_something():
-    p = Paper.objects.filter(fetched=False).order_by('-added_to_db').first()
-    return p.fetch()
-
-
-@db_task()
-def follow(paper):
+def fetch(paper):
+    logger.debug("Fetching {}".format(paper))
     paper.fetch()
     return paper
 
 
-@db_task()
-def download_pdf(paper):
-    paper.download_pdf()
-    return paper
-
-
-@db_task()
-def fetch_cocitations(paper):
-    print("Implement fetch_cocitations")
-    return paper
-
-
 def do_work():
-    p = Paper.objects.filter(fetched=False).order_by('added_to_db').first()
+    # p = Paper.objects.filter(fetched=False).order_by('added_to_db').first()
 
-    if not p.citation_only:
-        pipe = (follow.s(p)
-                .then(fetch_cocitations)
-                .then(download_pdf))
-        results = enqueue(pipe)
+    wrapper = None
+    for p in Paper.objects.filter(fetched=False):
+        print("Going to enqueue {}".format(p))
+        logger.debug("Going to enqueue work on {}".format(p))
+        wrapper = fetch(p)
 
-        print([result.get(True) for result in results])
-    else:
-        follow(p)
+    if wrapper:
+        wrapper.get(blocking=True)
+        print("Done with round")
+        logger.debug("Done with a round")
