@@ -179,5 +179,5 @@ LOGGING = {
 
 HUEY = {
     'name': 'montage-recsys',
-    'always_eager': False,
+    # 'always_eager': False,
 }

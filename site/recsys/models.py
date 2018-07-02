@@ -5,6 +5,7 @@ import requests
 
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.db import models, transaction
+from django.db.models import Q
 
 from .managers import BuilderManager
 from .utils import cid_from_url, doi_from_url, stir_the_soup, MissingDataException, start_from_next_url
@@ -225,13 +226,43 @@ class Paper(models.Model):
 
         return paper, context
 
+    def subsume(self, other):
+        for cc in CitationContext.objects.filter(from_paper=other):
+            if not CitationContext.objects.filter(from_paper=self, to_paper=cc.to_paper).exists():
+                cc.from_paper = self
+                cc.save()
+
+        for cc in CitationContext.objects.filter(to_paper=other):
+            if not CitationContext.objects.filter(to_paper=self, from_paper=cc.from_paper).exists():
+                cc.to_paper = self
+                cc.save()
+
+        other.delete()
+
     def create_from_viewdoc(self, payload):
         url = "http://citeseerx.ist.psu.edu/viewdoc/versions"
 
         (response, soup) = stir_the_soup(url, payload)
 
         # paper, created = Paper.objects.get_or_create(doi=doi_from_url(response.url))
-        self.doi = doi_from_url(response.url)
+        doi = doi_from_url(response.url)
+
+        # so, if self is a cid based one we might have new info about our
+        # doi here, in fact, that doi could already be in the DB, in which
+        # case, merge? delete myself?? idk?
+        existing = Paper.objects.filter(~Q(pk=self.pk), doi=doi)
+        if existing.exists():
+            better = existing.first()
+            better.cid = self.cid
+            better.subsume(self)
+            better.save()
+            return
+            # self.subsume(existing.first())  # there really shouldn't be more than one
+            # self.save()
+            # return
+
+        # otherwise, just update this one
+        self.doi = doi
         self.citation_only = False
         self.fetched = True
 
@@ -354,7 +385,6 @@ class Paper(models.Model):
             self.doi,
             response.content,
             content_type="application/pdf")
-        self.save()
 
 
 class CoCitation(models.Model):
@@ -375,7 +405,7 @@ class CitationContext(models.Model):
     context = models.TextField(blank=True)
 
     def __str__(self):
-        return '"{}" cites "{}"'.format(self.from_paper.title, self.to_paper.title)
+        return '"{}" -> "{}"'.format(self.from_paper, self.to_paper)
 
     def __unicode__(self):
-        return u'"{}" cites "{}"'.format(self.from_paper.title, self.to_paper.title)
+        return u'"{}" -> "{}"'.format(self.from_paper, self.to_paper)
